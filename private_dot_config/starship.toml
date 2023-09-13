@@ -1,0 +1,29 @@
+format="$hostname$directory$git_branch$character"
+right_format = "$cmd_duration"
+
+# Prompt symbols 
+[character]
+success_symbol = "[](#a6e3a1 bold)"
+error_symbol = "[✗](#f38ba8)"
+vicmd_symbol = "[➜](#f9e2af)"
+
+[hostname]
+format = "[]($style)[(bg:#f5c2e7 fg:#eba0ac)$ssh_symbol$hostname](bg:#f5c2e7 fg:#a84c8d)[ ]($style)"
+style = "fg:#f5c2e7"
+ssh_only = true
+ssh_symbol = " "
+
+[directory]
+format = "[]($style)[(bg:#f5c2e7 fg:#eba0ac)$path](bg:#f5c2e7 fg:#a84c8d)[ ]($style)"
+style = "fg:#f5c2e7"
+
+[git_branch]
+format = "[]($style)[[](bg:#f5c2e7 fg:#a84c8d bold)$branch](bg:#f5c2e7 fg:#4c4f69)[ ]($style)"
+style = "fg:#f5c2e7"
+
+[cmd_duration]
+min_time = 10
+# duration & style 
+format = "[]($style)[[󰄉 ](bg:#f5c2e7 fg:#a84c8d)$duration](bg:#f5c2e7 fg:#a84c8d)[ ]($style)"
+disabled = false
+style = "fg:#f5c2e7"

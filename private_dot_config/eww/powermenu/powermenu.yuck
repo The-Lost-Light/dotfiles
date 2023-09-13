@@ -1,0 +1,31 @@
+;; power buttons
+(defwidget logout []
+    (button :class "power button" :onclick "hyprctl dispatch exit 0" ""))
+(defwidget sleep []
+    (button :class "power button" :onclick "eww close powermenu; systemctl suspend" "󰤄"))
+(defwidget reboot []
+    (button :class "power button" :onclick "systemctl reboot" ""))
+(defwidget poweroff []
+    (button :class "power button" :onclick "systemctl poweroff" "󰐥"))
+(defwidget cancel []
+    (button :class "power button" :onclick "eww close powermenu" ""))
+
+
+;; menu
+(defwidget menu []
+    (box :class "bar_class"
+        :spacing 40
+        :orientation "v"
+        (logout)
+        (sleep)
+        (reboot)
+        (poweroff)
+        (cancel)))
+
+;; window
+(defwindow powermenu :stacking "fg" :focusable "false" :monitor 0
+        :geometry (geometry :x "2%":width "100" :height "660" :anchor "center right")
+                    (menu))
+(defwindow powermenu :stacking "fg" :focusable "false" :monitor 1
+        :geometry (geometry :x "2%":width "100" :height "660" :anchor "center right")
+                    (menu))
