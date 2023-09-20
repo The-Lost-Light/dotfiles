@@ -1,9 +1,14 @@
 window {
     background-color:transparent;
 }
-.power.button {
+.power {
+	font-family: "FiraCode Nerd Font";
     font-size : 48px;
     font-weight : bold;
     background-color: #2E3440;
     border-radius: 10px;
+
+	&.poweroff {
+		color: $red;
+	}
 }

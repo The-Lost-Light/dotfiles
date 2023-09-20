@@ -2,10 +2,10 @@ local wezterm = require "wezterm"
 local module = {}
 
 function module.config(config)
-	config.use_fancy_tab_bar = true
-	config.show_tab_index_in_tab_bar = false
+	config.use_fancy_tab_bar = false
 	config.hide_tab_bar_if_only_one_tab = true
 	config.tab_bar_at_bottom = true
+	config.tab_max_width = 99
 	config.enable_scroll_bar = true
 
 	config.default_cursor_style = "BlinkingBar"
@@ -19,21 +19,18 @@ function module.config(config)
 	config.visual_bell = {
 		target = "CursorColor"
 	}
+	config.use_resize_increments = true
 	config.window_padding = {
-		left = "2cell",
-		right = "1cell",
-		top = "1cell",
-		bottom = "1cell"
-	}
-	config.window_frame = {
-		font_size = 16,
-		active_titlebar_bg = "#222436"
+		left = 0,
+		right = 0,
+		top = 0,
+		bottom = 0
 	}
 	config.colors = {
 		visual_bell = "#1e2030",
 		tab_bar = {
 			active_tab = {
-				bg_color = "#222436",
+				bg_color = "#2b2e49",
 				fg_color = "#82aaff",
 			},
 			inactive_tab = {

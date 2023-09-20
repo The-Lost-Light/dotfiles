@@ -24,7 +24,7 @@ function get_volume
 end
 
 function send_notify
-    notify-send -u low -i (get_icon) "Volume: (get_volume) %"
+    notify-send -h string:x-canonical-private-synchronous:sys-notify -u low -i (get_icon) "Volume: $(get_volume)%"
 end
 
 function increase_volume
@@ -38,12 +38,12 @@ function decrease_volume
 end
 
 
-if test "$1" = "--abc"
-	echo "123"
-else if test "$1" = "--get"
-    get_volume
-else if test "$1" = "--inc"
-    increase_volume
-else if test "$1" = "--dec"
-    decrease_volume
+argparse g/get-volume i/increase-volume d/decrease-volume -- $argv
+or return
+if set -ql _flag_get_volume
+	get_volume
+else if set -ql _flag_increase_volume
+	increase_volume
+else if set -ql _flag_decrease_volume
+	decrease_volume
 end
