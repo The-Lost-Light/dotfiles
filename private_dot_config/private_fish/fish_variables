@@ -3,6 +3,7 @@
 SETUVAR --export CONFIG:/home/mono/\x2econfig
 SETUVAR --export EDITOR:nvim
 SETUVAR ENV_VAR:Hello\x2c\x20world\x21
+SETUVAR --export PYENV_ROOT:/home/mono/\x2epyenv
 SETUVAR --export VISUAL:nvim
 SETUVAR --export XCURSOR_THEME:Bibata\x2dRainbow\x2dModern
 SETUVAR __fish_initialized:3400
@@ -46,4 +47,5 @@ SETUVAR fish_pager_color_selected_background:\x2d\x2dbackground\x3dFFCC66
 SETUVAR fish_pager_color_selected_completion:\x1d
 SETUVAR fish_pager_color_selected_description:\x1d
 SETUVAR fish_pager_color_selected_prefix:\x1d
+SETUVAR fish_user_paths:/home/mono/\x2epyenv/bin
 SETUVAR nvim:nvim

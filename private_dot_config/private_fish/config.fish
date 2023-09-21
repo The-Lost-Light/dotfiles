@@ -36,10 +36,15 @@ if status is-login
 	starship init fish | source
 	enable_transience
 
-	## initial zoxide
+	# initial zoxide
 	zoxide init --cmd cd fish | source
+	# initial pyenv
+	set -Ux PYENV_ROOT $HOME/.pyenv
+	set -U fish_user_paths $PYENV_ROOT/bin $fish_user_paths
+	pyenv init - | source
+	source (pyenv virtualenv-init - | psub)
 end
 if status is-interactive
 	# Commands to run in interactive sessions can go here
-
+	
 end
