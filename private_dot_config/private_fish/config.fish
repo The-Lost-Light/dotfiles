@@ -2,14 +2,13 @@ if status is-login
 	# Commands to run in login sessions can go here
 
 	## set environment
-	set -x VISUAL nvim
-	set -x EDITOR nvim
+	set -x VISUAL helix
+	set -x EDITOR helix
+	set -x DIFFPROG helix
 	set -x TERM wezterm
-	# set -x ALSOFT_DRIVERS pulse
+	set -x GTK_THEME Orchis-Dark-Compact
 	# disable wine auto set default application 
 	set WINEDLLOVERRIDES winemenubuilder.exe=d
-	set -x XDG_CONFIG_HOME ~/.config
-	set -x CONFIG ~/.config
 	set -U fish_greeting
 	## set language
 	set -x LANG zh_TW.UTF-8
@@ -21,7 +20,8 @@ if status is-login
 	set -x GLFW_IM_MODULE ibus
 
 	## alias
-	alias snvim "sudoedit"
+	alias hx "helix"
+	alias shx "sudoedit"
 	alias fm "joshuto"
 	alias ls "lsd"
 	alias lst "ls --tree"
