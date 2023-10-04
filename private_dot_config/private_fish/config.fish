@@ -6,7 +6,6 @@ if status is-login
 	set -x EDITOR helix
 	set -x DIFFPROG helix
 	set -x TERM wezterm
-	set -x GTK_THEME Orchis-Dark-Compact
 	# disable wine auto set default application 
 	set WINEDLLOVERRIDES winemenubuilder.exe=d
 	set -U fish_greeting
@@ -18,6 +17,8 @@ if status is-login
 	set -x XMODIFIERS @im=fcitx
 	set -x SDL_IM_MODULE fcitx
 	set -x GLFW_IM_MODULE ibus
+	## set cuda
+	set -x LD_LIBRARY_PATH /opt/cuda/lib64 $PATH
 
 	## alias
 	alias hx "helix"
