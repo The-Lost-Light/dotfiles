@@ -11,6 +11,7 @@ end
 require("theme").config(config)
 require("behavior").config(config)
 require("multiplexing").config(config)
+require("keymaps").config(config)
 
 -- and finally, return the configuration to wezterm
 return config
