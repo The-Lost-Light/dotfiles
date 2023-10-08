@@ -1,0 +1,56 @@
+theme = "kanagawa"
+
+[editor]
+shell = ["fish", "-c"]
+line-number = "relative"
+cursorline = true
+bufferline = "multiple"
+color-modes = true
+text-width = 100
+
+[editor.statusline]
+left = ["mode", "file-modification-indicator", "diagnostics", "spinner"]
+center = ["file-name"]
+right = ["file-encoding", "file-line-ending", "primary-selection-length", "position-percentage", "file-type"]
+separator = "|"
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+
+[editor.lsp]
+display-messages = true
+display-inlay-hints = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "hidden"
+
+[editor.auto-pairs]
+'(' = ')'
+'[' = ']'
+'{' = '}'
+'"' = '"'
+"'" = "'"
+'`' = '`'
+'<' = '>'
+
+[editor.whitespace.render]
+space = "all"
+tab = "all"
+newline = "none"
+
+[editor.whitespace.characters]
+space = "·"
+nbsp = "⍽"
+tab = "→"
+newline = "⏎"
+tabpad = "·" # Tabs will look like "→···" (depending on tab width)
+
+[editor.indent-guides]
+render = true
+character = "╎" # Some characters that work well: "▏", "┆", "┊", "⸽"
+skip-levels = 1
+
+[editor.soft-wrap]
+enable = true
