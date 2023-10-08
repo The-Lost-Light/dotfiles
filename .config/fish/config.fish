@@ -27,8 +27,11 @@ if status is-login
 	alias fm "joshuto"
 	alias ls "lsd"
 	alias lst "ls --tree"
+	# manage dotfiles
+	alias config "/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 
-	## initial starship
+	## plugin initial
+	# initial starship
 	function starship_transient_prompt_func
 		starship module character
 	end
@@ -40,13 +43,14 @@ if status is-login
 
 	# initial zoxide
 	zoxide init --cmd cd fish | source
+
 	# initial pyenv
 	set -Ux PYENV_ROOT $HOME/.pyenv
 	set -U fish_user_paths $PYENV_ROOT/bin $fish_user_paths
 	pyenv init - | source
 	source (pyenv virtualenv-init - | psub)
 end
+
 if status is-interactive
 	# Commands to run in interactive sessions can go here
-	
 end
