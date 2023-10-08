@@ -1,6 +1,8 @@
 if status is-login
 	# Commands to run in login sessions can go here
 
+	# disable fish shell greeting
+	set -U fish_greeting
 	## set environment
 	set -x VISUAL helix
 	set -x EDITOR helix
@@ -8,17 +10,16 @@ if status is-login
 	set -x TERM wezterm
 	# disable wine auto set default application 
 	set WINEDLLOVERRIDES winemenubuilder.exe=d
-	set -U fish_greeting
-	## set language
+	# set cuda for tensorflow
+	set -x XLA_FLAGS --xla_gpu_cuda_data_dir=/opt/cuda
+	# set language
 	set -x LANG zh_TW.UTF-8
-	## set fcitx5
+	# set fcitx5
 	set -x GTK_IM_MODULE fcitx
 	set -x QT_IM_MODULE fcitx
 	set -x XMODIFIERS @im=fcitx
 	set -x SDL_IM_MODULE fcitx
 	set -x GLFW_IM_MODULE ibus
-	## set cuda
-	set -x LD_LIBRARY_PATH /opt/cuda/lib64 $PATH
 
 	## alias
 	alias hx "helix"

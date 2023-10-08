@@ -5,6 +5,7 @@ SETUVAR --export EDITOR:helix
 SETUVAR ENV_VAR:Hello\x2c\x20world\x21
 SETUVAR --export GTK_THEME:Orchis\x2dDark\x2dCompact
 SETUVAR --export PYENV_ROOT:/home/mono/\x2epyenv
+SETUVAR TEST:test
 SETUVAR --export VISUAL:helix
 SETUVAR --export XCURSOR_THEME:Bibata\x2dRainbow\x2dModern
 SETUVAR __fish_initialized:3400
