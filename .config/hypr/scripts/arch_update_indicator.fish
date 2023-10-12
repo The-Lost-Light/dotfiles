@@ -8,7 +8,8 @@ end
 
 set OFFICIAL (checkupdates | wc -l)
 set AUR (yay -Qua | wc -l)
-if test (math "$OFFICIAL + $AUR") -ne 0
+set COUNT (math "$OFFICIAL + $AUR")
+if test $COUNT -ne 0
     echo -n " $COUNT"
 end
 echo ""

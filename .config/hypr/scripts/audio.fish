@@ -1,6 +1,8 @@
 #!/usr/bin/env fish
 
 set icons ~/.config/hypr/icons
+set SINK @DEFAULT_AUDIO_SINK@
+set SOURCE @DEFAULT_AUDIO_SOURCE@
 
 function get_icons
 	if string match -q "Mute" "$argv" or test "$argv" -eq 0
@@ -15,64 +17,62 @@ function get_icons
 end
 
 function get_volume
-	set flag_mute (amixer get $argv | grep -oP "\[off\]")
-	if string match -q "[off] [off]" "$flag_mute"
+	set volume (wpctl get-volume $argv)
+	set flag_mute (echo $volume | grep -oP "\[MUTED\]")
+	if string match -q "$flag_mute" "[MUTED]"
 		echo "Mute"
 	else
-		set volume (amixer get $argv | grep -oP "\d+%")
-		set left_volume (echo "$volume" | head -n1 | cut -d'%' -f1)
-		set right_volume (echo "$volume" | tail -n1 | cut -d'%' -f1)
-		set average_volume (math "($left_volume + $right_volume) / 2")
-		echo $average_volume
+		set volume (echo $volume | grep -oP "\d.\d+")
+		echo (math "$volume*100")
 	end
 end
 
 function send_notify
-	if string match -q "Master" "$argv[1]"
-		set icon (get_icons $argv[2])
-	else if string match -q "Capture" "$argv[1]"
-		if string match -q "Mute" "$argv[2]"
+	set volume (get_volume $argv)
+	if string match -q "$argv" "$SINK"
+		set icon (get_icons $volume)
+	else if string match -q "$argv" "$SOURCE"
+		if string match -q "$volume" "Mute"
 			set icon "$icons/microphone-mute.png"
 		else
 			set icon "$icons/microphone.png"
 		end
 	end
-	
-	if string match -q "Mute" "$argv[2]"
-		set notify $argv[2]
-	else
-		set notify "Volume: " $argv[2]"%"
+
+	set notify $volume
+	if not string match -q "$volume" "Mute"
+		set notify "Volume: " $notify"%"
 	end
 	notify-send -h string:x-canonical-private-synchronous:sys-notify -u low -i $icon $notify 
 end
 
 function increase_volume
-    amixer --quiet set $argv 5%+
-	send_notify $argv (get_volume $argv)
+    wpctl set-volume $argv 5%+
+	send_notify $argv
 end
 
 function decrease_volume
-    amixer --quiet set $argv 5%-
-	send_notify $argv (get_volume $argv)
+    wpctl set-volume $argv 5%-
+	send_notify $argv
 end
 
 function toggle_volume
-	amixer --quiet set $argv toggle
-	send_notify $argv (get_volume $argv)
+	wpctl set-mute $argv toggle
+	send_notify $argv
 end
 
 argparse t/toggle-volume i/increase-volume d/decrease-volume T/toggle-microphone I/increase-microphone D/decrease-microphone  -- $argv
 or return
 if set -ql _flag_toggle_volume
-	toggle_volume Master
+	toggle_volume $SINK
 else if set -ql _flag_increase_volume
-	increase_volume Master
+	increase_volume $SINK
 else if set -ql _flag_decrease_volume
-	decrease_volume Master
+	decrease_volume $SINK
 else if set -ql _flag_toggle_microphone
-	toggle_volume Capture
+	toggle_volume $SOURCE
 else if set -ql _flag_increase_microphone
-	increase_volume Capture
+	increase_volume $SOURCE
 else if set -ql _flag_decrease_microphone
-	decrease_volume Capture
+	decrease_volume $SOURCE
 end

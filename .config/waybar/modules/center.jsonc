@@ -8,7 +8,7 @@
 	},
 	"custom/lock_screen": {
 		"format": "",
-		"on-click": "sh -c swaylock",
+		"on-click": "sleep 0.5 && sh -c \"swaylock -f --grace 5 --grace-no-mouse --fade-in 1\"",
 		"tooltip": false
 	},
 	"clock": {
