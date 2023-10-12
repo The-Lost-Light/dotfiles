@@ -1,4 +1,4 @@
-#!/bin/fish
+#!/usr/bin/env fish
 sleep 1
 killall xdg-desktop-portal-hyprland
 killall xdg-desktop-portal-wlr

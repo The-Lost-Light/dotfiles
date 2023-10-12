@@ -1,0 +1,30 @@
+{
+	"custom/system_updates": {
+		"format": "{}",
+		"exec": "~/.config/hypr/scripts/arch_update_indicator.fish",
+		"on-click": "~/.config/hypr/scripts/arch_update_indicator.fish --update",
+		"interval": 300,
+		"tooltip": true
+	},
+	"custom/lock_screen": {
+		"format": "",
+		"on-click": "sh -c swaylock",
+		"tooltip": false
+	},
+	"clock": {
+		"format": "{:%H:%M}",
+		"tooltip-format": "{: %A, %e %B %Y}"
+	},
+	"custom/weather": {
+		"tooltip" : true,
+		"format" : "{}",
+		"interval" : 300,
+		"exec" : "~/.config/hypr/scripts/wttr.py",
+		"return-type" : "json"
+	},
+	"custom/power_menu": {
+		"format": "",
+		"on-click": "eww open powermenu",
+		"tooltip": false
+	}
+}
