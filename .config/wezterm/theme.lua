@@ -57,7 +57,8 @@ function module.config(config)
 			harfbuzz_features = {"cv01", "cv02", "cv03", "ss01", "cv11", "ss05", "ss03", "cv25", "cv26", "cv32", "cv28"},
 		},
 		"JetBrains Mono",
-		"Noto Sans CJK TC"
+		"Noto Sans CJK TC",
+		"Noto Sans Symbols"
 	}
 	config.font_size = 18
 end
