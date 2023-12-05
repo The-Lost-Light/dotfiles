@@ -47,13 +47,17 @@ function send_notify
 end
 
 function increase_volume
-    wpctl set-volume -l 1.0 $argv 5%+
-	send_notify $argv
+	if not string match -q "$(get_volume $argv)" "Mute"
+    	wpctl set-volume -l 1.0 $argv 5%+
+		send_notify $argv
+	end
 end
 
 function decrease_volume
-    wpctl set-volume -l 1.0 $argv 5%-
-	send_notify $argv
+	if not string match -q "$(get_volume $argv)" "Mute"
+	    wpctl set-volume -l 1.0 $argv 5%-
+		send_notify $argv
+	end
 end
 
 function toggle_volume

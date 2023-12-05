@@ -7,7 +7,9 @@ function module.config(config)
 	config.switch_to_last_active_tab_when_closing_tab = true
 	config.exit_behavior = "CloseOnCleanExit"
 
-	warn_about_missing_glyphs = false
+	config.warn_about_missing_glyphs = false
+
+	config.enable_wayland = false
 end
 
 return module

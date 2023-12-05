@@ -19,12 +19,11 @@ if status is-login
 	set -x QT_IM_MODULE fcitx
 	set -x XMODIFIERS @im=fcitx
 	set -x SDL_IM_MODULE fcitx
-	set -x GLFW_IM_MODULE ibus
 
 	## alias
 	alias hx "helix"
 	alias shx "sudoedit"
-	alias fm "joshuto"
+	alias fm "yazi"
 	alias ls "lsd"
 	alias lst "ls --tree"
 	# manage dotfiles
