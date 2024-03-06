@@ -4,10 +4,12 @@ if status is-login
 	# disable fish shell greeting
 	set -U fish_greeting
 	## set environment
+	# set wayland
+	# set -x SDL_VIDEODRIVER wayland
+	# set editor
 	set -x VISUAL helix
 	set -x EDITOR helix
 	set -x DIFFPROG helix
-	set -x TERM wezterm
 	# disable wine auto set default application 
 	set WINEDLLOVERRIDES winemenubuilder.exe=d
 	# set cuda for tensorflow
@@ -19,7 +21,10 @@ if status is-login
 	set -x QT_IM_MODULE fcitx
 	set -x XMODIFIERS @im=fcitx
 	set -x SDL_IM_MODULE fcitx
+end
 
+if status is-interactive
+	# Commands to run in interactive sessions can go here
 	## alias
 	alias hx "helix"
 	alias shx "sudoedit"
@@ -48,8 +53,4 @@ if status is-login
 	set -U fish_user_paths $PYENV_ROOT/bin $fish_user_paths
 	pyenv init - | source
 	source (pyenv virtualenv-init - | psub)
-end
-
-if status is-interactive
-	# Commands to run in interactive sessions can go here
 end
