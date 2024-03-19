@@ -6,7 +6,7 @@ function module.config(config)
 	config.hide_tab_bar_if_only_one_tab = true
 	config.tab_bar_at_bottom = true
 	config.tab_max_width = 99
-	config.enable_scroll_bar = true
+	-- config.enable_scroll_bar = true
 
 	config.default_cursor_style = "BlinkingBar"
 	config.cursor_blink_ease_in = "Constant"

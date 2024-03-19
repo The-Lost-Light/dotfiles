@@ -1,6 +1,6 @@
 ;; power buttons
 (defwidget logout []
-    (button :class "power logout" :onclick "hyprctl dispatch exit 0" ""))
+    (button :class "power logout" :onclick "hyprctl dispatch exit" ""))
 (defwidget sleep []
     (button :class "power sleep" :onclick "eww close powermenu; systemctl suspend" "󰤄"))
 (defwidget reboot []
