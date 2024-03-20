@@ -5,7 +5,7 @@ if status is-login
 	set -U fish_greeting
 	## set environment
 	# set wayland
-	# set -x SDL_VIDEODRIVER wayland
+	# set -x ELECTRON_OZONE_PLATFORM_HINT auto 
 	# set editor
 	set -x VISUAL helix
 	set -x EDITOR helix

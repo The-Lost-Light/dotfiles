@@ -7,7 +7,6 @@ SETUVAR --export GTK_THEME:Orchis\x2dDark\x2dCompact
 SETUVAR --export PYENV_ROOT:/home/mono/\x2epyenv
 SETUVAR TEST:test
 SETUVAR --export VISUAL:helix
-SETUVAR --export XCURSOR_THEME:Bibata\x2dRainbow\x2dModern
 SETUVAR __fish_initialized:3400
 SETUVAR fish_color_autosuggestion:707A8C
 SETUVAR fish_color_cancel:\x2d\x2dreverse

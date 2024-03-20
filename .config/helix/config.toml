@@ -54,3 +54,8 @@ skip-levels = 1
 
 [editor.soft-wrap]
 enable = true
+
+[keys.normal]
+X = "extend_line_above"
+A-x = "extend_to_line_bounds"
+A-X = "shrink_to_line_bounds"
