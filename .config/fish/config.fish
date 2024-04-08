@@ -1,30 +1,38 @@
 if status is-login
 	# Commands to run in login sessions can go here
 
-	# disable fish shell greeting
+	# Disable fish shell greeting
 	set -U fish_greeting
-	## set environment
-	# set wayland
+	## Set environment
+	# Set wayland
 	# set -x ELECTRON_OZONE_PLATFORM_HINT auto 
-	# set editor
+	# Set editor
 	set -x VISUAL helix
 	set -x EDITOR helix
 	set -x DIFFPROG helix
-	# disable wine auto set default application 
+	# Disable wine auto set default application 
 	set WINEDLLOVERRIDES winemenubuilder.exe=d
-	# set cuda for tensorflow
+	# Set vaapi
+	set -x NVD_GPU 0
+	set -x NVD_BACKEND direct
+	# set -x MOZ_DISABLE_RDD_SANDBOX 1
+	# set -x MOZ_DRM_DEVICE /dev/dri/renderD128
+	# Set cuda
 	set -x XLA_FLAGS --xla_gpu_cuda_data_dir=/opt/cuda
-	# set language
+	# Set language
 	set -x LANG zh_TW.UTF-8
-	# set fcitx5
+	# Set fcitx5
 	set -x GTK_IM_MODULE fcitx
 	set -x QT_IM_MODULE fcitx
 	set -x XMODIFIERS @im=fcitx
 	set -x SDL_IM_MODULE fcitx
+	# Set sccache
+	set -x RUSTC_WRAPPER sccache
 end
 
 if status is-interactive
 	# Commands to run in interactive sessions can go here
+
 	## alias
 	alias hx "helix"
 	alias shx "sudoedit"
@@ -32,7 +40,7 @@ if status is-interactive
 	alias ls "lsd"
 	alias lst "ls --tree"
 	# manage dotfiles
-	alias config "/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+	alias config "git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 
 	## plugin initial
 	# initial starship

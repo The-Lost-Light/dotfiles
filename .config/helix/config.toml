@@ -59,3 +59,8 @@ enable = true
 X = "extend_line_above"
 A-x = "extend_to_line_bounds"
 A-X = "shrink_to_line_bounds"
+p = "paste_before"
+P = "paste_after"
+[keys.normal.space]
+p = "paste_clipboard_before"
+P = "paste_clipboard_after"
