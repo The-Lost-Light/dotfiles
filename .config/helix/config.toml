@@ -11,15 +11,20 @@ text-width = 100
 [editor.statusline]
 left = ["mode", "file-modification-indicator", "diagnostics", "spinner"]
 center = ["file-name"]
-right = ["file-encoding", "file-line-ending", "primary-selection-length", "position-percentage", "file-type"]
+right = [
+  "file-encoding",
+  "file-line-ending",
+  "primary-selection-length",
+  "position-percentage",
+  "file-type",
+]
 separator = "|"
-mode.normal = "NORMAL"
-mode.insert = "INSERT"
-mode.select = "SELECT"
+mode.normal = " NORMAL"
+mode.insert = " INSERT"
+mode.select = "󰆏 SELECT"
 
 [editor.lsp]
 display-messages = true
-display-inlay-hints = true
 
 [editor.cursor-shape]
 insert = "bar"
@@ -45,7 +50,7 @@ space = "·"
 nbsp = "⍽"
 tab = "→"
 newline = "⏎"
-tabpad = "·" # Tabs will look like "→···" (depending on tab width)
+tabpad = "·"  # Tabs will look like "→···" (depending on tab width)
 
 [editor.indent-guides]
 render = true
@@ -64,3 +69,4 @@ P = "paste_after"
 [keys.normal.space]
 p = "paste_clipboard_before"
 P = "paste_clipboard_after"
+H = ":toggle lsp.display-inlay-hints"

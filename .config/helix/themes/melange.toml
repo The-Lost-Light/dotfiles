@@ -1,0 +1,127 @@
+# port of nvim's melange theme https://github.com/savq/melange-nvim
+# as close as possible
+
+"ui.background" = {bg = "bg" }
+"ui.gutter" = {fg = "bg"}
+"ui.linenr" = { fg = "yellow3" }
+"ui.linenr.selected" = { fg = "yellow2"}
+
+"ui.cursor.match" = { modifiers = [
+    "bold",
+], underline = { style = "line" } }
+"ui.cursor" = {  modifiers = ["reversed"] }
+
+"ui.selection" = { bg = "sel"}
+# "ui.highlight.frameline" = { bg = "#634450" }
+"ui.debug" = { fg = "#634450" }
+"ui.debug.breakpoint" = { fg = "red2" }
+"ui.menu" = { fg = "fg", bg = "float" }
+"ui.menu.selected" = { bg = "sel"}
+
+"ui.text" = { fg = "fg" }
+
+
+
+"ui.virtual.indent-guide" = { fg = "float"}
+"ui.virtual.inlay-hint" = { fg = "ui"}
+
+
+
+"ui.statusline" = { fg = "fg", bg="sel" }
+"ui.popup" = { bg = "float" }
+"ui.window" = { fg = "sel" }
+
+"ui.cursorline.primary" = { bg = "float"}
+
+
+
+"keyword" = { fg = "yellow2" }
+"keyword.function" = { fg = "green1"}
+"keyword.directive" = { fg = "green1"}
+"keyword.control.import" = { fg = "yellow2"}
+
+
+"variable.parameter" = { fg = "fg"}
+"variable.builtin" = { fg = "magenta2"}
+"variable.other.member" = { fg = "fg"}
+"type" = { fg ="cyan2" }
+"type.enum.variant" = { fg = "magenta1" }
+
+
+"string" = { fg = "blue1", modifiers = ["italic"]}
+"constant.character" = { fg = "blue1"}
+"constant.numeric" = { fg = "magenta1"}
+"function" ={ fg ="yellow1" }
+"function.macro" = { fg = "yellow1"}
+"special" = { fg = "green1" }
+punctuation = "red2"
+"punctuation.delimiter" = "red2"
+"punctuation.bracket" = { fg = "yellow3"}
+"punctuation.special" = { fg = "red2" }
+"operator" = { fg = "red1" }
+
+"comment" = { fg = "com" }
+"label" = { fg = "magenta1"} # lifetime rust
+"markup.quote" = { fg = "red2"}
+"namespace" = { fg = "fg" }
+
+
+"diagnostic.hint" = { underline = { color = "com", style = "curl" } }
+"diagnostic.info" = { underline = { color = "blue2", style = "curl" } }
+"diagnostic.warning" = { underline = { color = "yellow1", style = "curl" } }
+"diagnostic.error" = { underline = { color = "red2", style = "curl" } }
+
+"error" = { fg = "red3"}
+"info" = { fg = "blue2"}
+"warning" = { fg = "yellow1"}
+"hint" = { fg = "com"}
+
+
+# from github_dark theme
+"markup.heading" = "#79c0ff"
+"markup.bold" = { modifiers = ["bold"] }
+"markup.italic" = { modifiers = ["italic"] }
+"markup.strikethrough" = { modifiers = ["crossed_out"] }
+"markup.link.url" = { modifiers = ["underlined"] }
+"markup.link.text" = { fg = "#a5d6ff", modifiers = ["underlined"] }
+"markup.raw" = "#79c0ff"
+
+"diff.plus" = "#3fb950"
+"diff.minus" = "#f85149"
+"diff.delta" = "red2"
+
+
+[palette]
+# grays
+bg      = "#292522"
+float   = "#34302C"
+sel     = "#403A36"
+ui      = "#867462"
+com     = "#C1A78E"
+fg      = "#ECE1D7"
+
+# bright-fg-colors
+red1     = "#D47766"
+yellow1  = "#EBC06D"
+green1   = "#85B695"
+cyan1    = "#89B3B6"
+blue1    = "#A3A9CE"
+magenta1 = "#CF9BC2"
+
+# fg-colors
+red2     = "#BD8183"
+yellow2  = "#E49B5D"
+green2   = "#78997A"
+cyan2    = "#7B9695"
+blue2    = "#7F91B2"
+magenta2 = "#B380B0"
+
+# bg-colors
+red3     = "#7D2A2F"
+yellow3  = "#8B7449"
+green3   = "#233524"
+cyan3    = "#253333"
+blue3    = "#273142"
+magenta3 = "#422741"
+
+
