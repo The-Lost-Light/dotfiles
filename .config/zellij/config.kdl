@@ -1,0 +1,9 @@
+ui {
+    pane_frames {
+        rounded_corners true
+        hide_session_name true
+    }
+}
+theme "catppuccin-macchiato"
+
+copy_on_select false
