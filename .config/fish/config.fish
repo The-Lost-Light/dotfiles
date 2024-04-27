@@ -36,7 +36,6 @@ if status is-interactive
     ## alias
     alias hx helix
     alias shx sudoedit
-    alias fm yazi
     alias ls lsd
     alias lst "ls --tree"
     # manage dotfiles
