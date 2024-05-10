@@ -4,7 +4,7 @@
 (defwidget sleep []
     (button :class "power sleep" :onclick "eww close powermenu; systemctl suspend" "󰤄"))
 (defwidget reboot []
-    (button :class "power reboot" :onclick "systemctl reboot" ""))
+    (button :class "power reboot" :onclick "systemctl reboot" "󰜉"))
 (defwidget poweroff []
     (button :class "power poweroff" :onclick "systemctl poweroff" "󰐥"))
 (defwidget cancel []

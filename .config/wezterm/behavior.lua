@@ -7,7 +7,7 @@ function module.config(config)
 	config.switch_to_last_active_tab_when_closing_tab = true
 	config.exit_behavior = "CloseOnCleanExit"
 
-	config.enable_wayland = false
+	-- config.enable_wayland = false
 end
 
 return module
