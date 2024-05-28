@@ -1,17 +1,8 @@
 [[language]]
-name = "gdscript"
-formatter = { command = "gdformat", args = ["-"] }
-auto-format = true
-
-[[language]]
 name = "toml"
 formatter = { command = "taplo", args = ["format", "-"] }
 auto-format = true
 
-[[language]]
-name = "typst"
-formatter = { command = "typstfmt", args = ["--output", "-"] }
-auto-format = true
 
 [[language]]
 name = "html"
@@ -23,6 +14,9 @@ formatter = { command = 'prettier', args = ["--parser", "json"] }
 name = "css"
 formatter = { command = 'prettier', args = ["--parser", "css"] }
 [[language]]
+name = "scss"
+formatter = { command = 'prettier', args = ["--parser", "scss"] }
+[[language]]
 name = "javascript"
 formatter = { command = 'prettier', args = ["--parser", "typescript"] }
 auto-format = true
@@ -30,7 +24,15 @@ auto-format = true
 name = "typescript"
 formatter = { command = 'prettier', args = ["--parser", "typescript"] }
 auto-format = true
+
+
 [[language]]
-name = "tsx"
-formatter = { command = 'prettier', args = ["--parser", "typescript"] }
+name = "gdscript"
+formatter = { command = "gdformat", args = ["-"] }
+auto-format = true
+
+
+[[language]]
+name = "typst"
+formatter = { command = "typstfmt", args = ["--output", "-"] }
 auto-format = true

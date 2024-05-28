@@ -6,9 +6,6 @@ if status is-login
 
     ## Set environment
 
-    # Set language
-    set -x LANG zh_TW.UTF-8
-
     # Set wayland
     set -x ELECTRON_OZONE_PLATFORM_HINT auto
 
@@ -31,7 +28,6 @@ if status is-login
 
     # Set fcitx5
     set -x XMODIFIERS @im=fcitx
-    set -x GLFW_IM_MODULE ibus
 
     # Set sccache
     set -x RUSTC_WRAPPER sccache

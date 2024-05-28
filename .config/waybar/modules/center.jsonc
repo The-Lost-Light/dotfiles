@@ -24,7 +24,7 @@
 	},
 	"custom/power_menu": {
 		"format": "",
-		"on-click": "eww open powermenu",
+		"on-click": "ags -t power_menu",
 		"tooltip": false
 	}
 }
