@@ -6,7 +6,7 @@ import Bar from "./bar/bar";
 import Powermenu from "./power_menu/power_menu";
 
 const scss = App.configDir + "/style/style.scss";
-const css = `/tmp/ags/style.css`;
+const css = "/tmp/ags/style.css";
 Utils.exec(`sassc ${scss} ${css}`);
 
 const createWindows = () =>
@@ -26,7 +26,7 @@ export default App.config({
 	style: css,
 	windows: createWindows(),
 	onConfigParsed: () => {
-		hyprland.connect("monitor-removed", () => recreateWindows());
+		hyprland.connect("monitor-removed", recreateWindows);
 		hyprland.connect("monitor-added", recreateWindows);
 	},
 });

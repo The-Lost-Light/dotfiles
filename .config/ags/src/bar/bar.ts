@@ -1,6 +1,7 @@
 import Workspaces from "./modules/workspaces";
 import ClientTitle from "./modules/title";
 import Clock from "./modules/clock";
+import PowerButton from "./modules/power_button";
 import Notification from "./modules/notifications";
 import Media from "./modules/media";
 import Battery from "./modules/battery";
@@ -18,6 +19,7 @@ const Center = () =>
 		spacing: 8,
 		children: [
 			Clock(),
+			PowerButton(),
 			// Notification(),
 			// Media(),
 		],
