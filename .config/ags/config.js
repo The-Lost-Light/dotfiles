@@ -1,15 +1,15 @@
 const entry = App.configDir + "/src/main.ts";
-const outdir = "/tmp/ags/js";
+const outdir = "/tmp/ags";
 
 try {
-  // prettier-ignore
-  await Utils.execAsync([
-      "bun", "build", entry,
-      "--outdir", outdir,
-      "--external", "resource://*",
-      "--external", "gi://*",
+	// prettier-ignore
+	await Utils.execAsync([
+		"bun", "build", entry,
+		"--outdir", outdir,
+		"--external", "resource://*",
+		"--external", "gi://*",
   ])
-  await import(`file://${outdir}/main.js`);
+	await import(`file://${outdir}/main.js`);
 } catch (error) {
-  console.error(error);
+	console.error(error);
 }

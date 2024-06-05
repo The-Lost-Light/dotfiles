@@ -18,10 +18,12 @@ name = "scss"
 formatter = { command = 'prettier', args = ["--parser", "scss"] }
 [[language]]
 name = "javascript"
+indent = { tab-width = 4, unit = "\t" }
 formatter = { command = 'prettier', args = ["--parser", "typescript"] }
 auto-format = true
 [[language]]
 name = "typescript"
+indent = { tab-width = 4, unit = "\t" }
 formatter = { command = 'prettier', args = ["--parser", "typescript"] }
 auto-format = true
 
