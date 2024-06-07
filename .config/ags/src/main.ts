@@ -10,10 +10,9 @@ const css = "/tmp/ags/style.css";
 Utils.exec(`sassc ${scss} ${css}`);
 
 const createWindows = () =>
-	[
-		...Array.from({ length: hyprland.monitors.length }, (_, id) => Bar(id)),
-		Powermenu(),
-	].map(w => w.on("destroy", (self: Gtk.Window) => App.removeWindow(self)));
+	[...Array.from({ length: hyprland.monitors.length }, (_, id) => Bar(id)), Powermenu()].map(w =>
+		w.on("destroy", (self: Gtk.Window) => App.removeWindow(self)),
+	);
 
 const recreateWindows = () => {
 	for (const win of App.windows) {

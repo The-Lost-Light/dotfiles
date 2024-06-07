@@ -38,7 +38,6 @@ select = "hidden"
 '"' = '"'
 "'" = "'"
 '`' = '`'
-'<' = '>'
 
 [editor.whitespace.render]
 space = "all"

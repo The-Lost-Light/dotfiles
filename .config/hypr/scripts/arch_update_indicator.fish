@@ -10,6 +10,6 @@ set OFFICIAL (checkupdates | wc -l)
 set AUR (paru -Qua | wc -l)
 set COUNT (math "$OFFICIAL + $AUR")
 if test $COUNT -ne 0
-    echo -n " $COUNT"
+    echo -n $COUNT
 end
 echo ""

@@ -6,7 +6,7 @@ import Sleep from "./modules/sleep";
 export default () =>
 	Widget.Window({
 		name: "power_menu",
-		"class-name": "power_menu",
+		class_name: "power_menu",
 		visible: false,
 		anchor: ["right"],
 		child: Widget.Box({

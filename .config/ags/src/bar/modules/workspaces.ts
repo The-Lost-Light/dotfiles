@@ -1,7 +1,6 @@
 const hyprland = await Service.import("hyprland");
 
-const changeWorkspace = (ws: number | string) =>
-	hyprland.messageAsync(`dispatch workspace ${ws}`);
+const changeWorkspace = (ws: number | string) => hyprland.messageAsync(`dispatch workspace ${ws}`);
 
 export default () =>
 	Widget.EventBox({
@@ -12,16 +11,10 @@ export default () =>
 			class_name: "workspaces",
 			children: Array.from({ length: 10 }, (_, id) => id + 1).map(id =>
 				Widget.Button({
-					"class-name": hyprland.active.workspace
+					class_name: hyprland.active.workspace
 						.bind("id")
-						.as(i =>
-							i === id
-								? `workspace-${id} focused`
-								: `workspace-${id} unfocused`,
-						),
-					visible: hyprland
-						.bind("workspaces")
-						.as(ws => ws.some(ws => ws.id === id)),
+						.as(i => (i === id ? `workspace-${id} focused` : `workspace-${id} unfocused`)),
+					visible: hyprland.bind("workspaces").as(ws => ws.some(ws => ws.id === id)),
 					child: Widget.Label(id.toString()),
 					on_clicked: () => changeWorkspace(id),
 				}),
