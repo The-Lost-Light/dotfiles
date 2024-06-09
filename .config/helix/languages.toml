@@ -3,6 +3,9 @@ name = "toml"
 formatter = { command = "taplo", args = ["format", "-"] }
 auto-format = true
 
+[[language]]
+name = "fish"
+indent = { tab-width = 4, unit = "\t" }
 
 [[language]]
 name = "html"

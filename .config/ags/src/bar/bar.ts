@@ -2,7 +2,7 @@ import Launcher from "./modules/launcher";
 import Workspaces from "./modules/workspaces";
 import ClientTitle from "./modules/title";
 
-import Indicator from "./modules/arch_update_indicator";
+import Indicator from "./modules/arch_updates_check";
 import Clock from "./modules/clock";
 import PowerButton from "./modules/power_button";
 import Notification from "./modules/notifications";
