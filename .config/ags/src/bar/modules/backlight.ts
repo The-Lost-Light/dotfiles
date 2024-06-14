@@ -1,5 +1,7 @@
 import Brightness from "../services/brightness";
 
+Brightness.script = "$CONFIG/hypr/scripts/brightness.fish";
+
 const icons = {
 	threshold: [51, 0],
 	51: "brightness-high",
@@ -8,17 +10,17 @@ const icons = {
 
 export default () =>
 	Widget.Box({
-		// visible: ,
+		visible: Brightness.bind("device").as(v => !!v),
 		children: [
 			Widget.Icon({
-				icon: Brightness.bind("screen_value")
-					.as(volume => icons.threshold.find((threshold: number) => threshold <= volume * 100) ?? 0)
+				icon: Brightness.bind("brightness_ratio")
+					.as(volume => icons.threshold.find((threshold: number) => threshold <= volume) ?? 0)
 					.as(key => icons[key]),
 			}),
 			Widget.EventBox({
-				child: Widget.Label({ label: Brightness.bind("screen_value").as(v => `${Math.round(v * 100)}%`) }),
-				on_scroll_up: () => Utils.execAsync(["sh", "-c", "$CONFIG/hypr/scripts/brightness.fish -i"]),
-				on_scroll_down: () => Utils.execAsync(["sh", "-c", "$CONFIG/hypr/scripts/brightness.fish -d"]),
+				child: Widget.Label({ label: Brightness.bind("brightness_ratio").as(v => `${v}%`) }),
+				on_scroll_up: () => Brightness.tweakFlag("-i"),
+				on_scroll_down: () => Brightness.tweakFlag("-d"),
 			}),
 		],
 	});

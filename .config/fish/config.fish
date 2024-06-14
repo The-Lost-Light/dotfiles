@@ -18,7 +18,7 @@ if status is-login
     set WINEDLLOVERRIDES winemenubuilder.exe=d
 
     # Set vaapi
-    set -x LIBVA_DRIVER_NAME nvidia # [radeonsi]
+    set -x LIBVA_DRIVER_NAME nvidia
     # set -x MOZ_DISABLE_RDD_SANDBOX 1
     # set -x MOZ_DRM_DEVICE /dev/dri/renderD128
 

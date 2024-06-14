@@ -3,10 +3,12 @@ class BrightnessService extends Service {
 		Service.register(
 			this,
 			{
-				"screen-changed": ["float"],
+				"screen-changed": ["double"],
 			},
 			{
-				"screen-value": ["float", "rw"],
+				device: ["string", "r"],
+				script: ["string", "w"],
+				"brightness-ratio": ["double", "r"],
 			},
 		);
 	}
@@ -14,34 +16,42 @@ class BrightnessService extends Service {
 	constructor() {
 		super();
 
-		this.#onChange();
+		this.#brightnessChange();
 
-		Utils.monitorFile(`/sys/class/backlight/${this.#interface}/brightness`, () => this.#onChange());
+		if (this.#device)
+			Utils.monitorFile(`/sys/class/backlight/${this.#device}/brightness`, () => this.#brightnessChange());
 	}
 
-	#interface = Utils.exec(["sh", "-c", "ls /sys/class/backlight | head -1"]);
+	#device = Utils.exec(["sh", "-c", "ls /sys/class/backlight | head -1"]);
 
-	#screenValue = 0;
+	#brightness_ratio = 0;
 	#max = Number(Utils.exec("brightnessctl max"));
 
-	get screen_value() {
-		return this.#screenValue;
+	#script_path = "";
+
+	get device() {
+		return this.#device;
 	}
 
-	set screen_value(percent) {
-		if (percent < 0) percent = 0;
-		else if (percent > 1) percent = 1;
-
-		Utils.execAsync(`brightnessctl set -q ${percent * 100}%`);
+	get brightness_ratio() {
+		return this.#brightness_ratio;
 	}
 
-	#onChange() {
-		this.#screenValue = Number(Utils.exec("brightnessctl get")) / this.#max;
+	set script(path: string) {
+		this.#script_path = path;
+	}
 
-		this.emit("changed");
-		this.notify("screen-value");
+	tweakFlag(flag: string) {
+		Utils.execAsync(["sh", "-c", `${this.#script_path} ${flag}`]);
+	}
 
-		this.emit("screen-changed", this.#screenValue);
+	#brightnessChange() {
+		let screen_value = Number(Utils.exec("brightnessctl get"));
+		this.#brightness_ratio = Math.round((screen_value * 100) / this.#max);
+
+		this.changed("brightness-ratio");
+
+		this.emit("screen-changed", this.#brightness_ratio);
 	}
 
 	connect(event = "screen-changed", callback: (_: this, ...args: any[]) => void) {
