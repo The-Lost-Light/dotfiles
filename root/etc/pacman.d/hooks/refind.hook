@@ -1,0 +1,12 @@
+[Trigger]
+Operation = Upgrade
+Type = Package
+Target = linux-lts
+Target = linux-zen
+Target = nvidia-dkms
+
+[Action]
+Description = Touch vmlinuz-linux to become the latest kernel by timestamp.
+When = PostTransaction
+Depends = coreutils
+Exec = /usr/bin/sh -c "/usr/bin/sleep 1 ; /usr/bin/touch /boot/vmlinuz-linux-zen"

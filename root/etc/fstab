@@ -1,0 +1,25 @@
+# Static information about the filesystems.
+# See fstab(5) for details.
+
+# <file system> <dir> <type> <options> <dump> <pass>
+# /dev/nvme0n1p4
+UUID=2d9a4e48-f327-493b-a3a3-a08a3edf0973	/         	btrfs     	rw,relatime,compress=zstd:3,ssd,discard=async,space_cache=v2,subvolid=256,subvol=/@	0 0
+
+# /dev/nvme0n1p4
+UUID=2d9a4e48-f327-493b-a3a3-a08a3edf0973	/home     	btrfs     	rw,relatime,compress=zstd:3,ssd,discard=async,space_cache=v2,subvolid=257,subvol=/@home	0 0
+
+# /dev/nvme0n1p4
+UUID=2d9a4e48-f327-493b-a3a3-a08a3edf0973	/var/log  	btrfs     	rw,noatime,compress=zstd:3,ssd,discard=async,space_cache=v2,subvolid=258,subvol=/@log	0 0
+
+# /dev/nvme0n1p4
+UUID=2d9a4e48-f327-493b-a3a3-a08a3edf0973	/var/cache	btrfs     	rw,noatime,compress=zstd:3,ssd,discard=async,space_cache=v2,subvolid=259,subvol=/@cache	0 0
+
+# /dev/nvme0n1p4
+UUID=2d9a4e48-f327-493b-a3a3-a08a3edf0973	/var/tmp  	btrfs     	rw,noatime,compress=zstd:3,ssd,discard=async,space_cache=v2,subvolid=260,subvol=/@tmp	0 0
+
+# /dev/nvme0n1p1 LABEL=SYSTEM
+UUID=5E43-D77A      	/efi      	vfat      	rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=ascii,shortname=mixed,utf8,errors=remount-ro	0 2
+
+# /efi/EFI/Arch
+/efi/EFI/Arch       	/boot     	none      	rw,fmask=0022,dmask=0022,codepage=437,iocharset=ascii,shortname=mixed,utf8,errors=remount-ro,bind	0 0
+

@@ -1,0 +1,9 @@
+[Trigger]
+Operation = Upgrade
+Type = Package
+Target = spicetify-cli
+
+[Action]
+Description = Update spicetify.
+When = PostTransaction
+Exec = /usr/bin/sudo -u mono /usr/bin/spicetify restore backup apply
