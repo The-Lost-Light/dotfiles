@@ -1,4 +1,4 @@
-class BrightnessService extends Service {
+export default new (class BrightnessService extends Service {
 	static {
 		Service.register(
 			this,
@@ -57,6 +57,4 @@ class BrightnessService extends Service {
 	connect(event = "screen-changed", callback: (_: this, ...args: any[]) => void) {
 		return super.connect(event, callback);
 	}
-}
-
-export default new BrightnessService();
+})();

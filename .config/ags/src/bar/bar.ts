@@ -14,8 +14,6 @@ import Backlight from "./modules/backlight";
 import Volume from "./modules/audio";
 import SystemTray from "./modules/system_tray";
 
-print(Net);
-
 const Left = () =>
 	Widget.Box({
 		spacing: 8,
@@ -38,7 +36,7 @@ const Right = () =>
 	Widget.Box({
 		hpack: "end",
 		spacing: 8,
-		children: [Battery(), Backlight(), Volume(), SystemTray()],
+		children: [Net(), Battery(), Backlight(), Volume(), SystemTray()],
 	});
 
 export default (monitor = 0) =>
