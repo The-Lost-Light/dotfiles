@@ -70,6 +70,8 @@ export default new (class UpdateService extends Service {
 	}
 
 	update() {
-		Utils.execAsync(`kitty fish -c "${this.#aur_helper}; read -P '${this.#prompt}'"`);
+		Utils.execAsync(`kitty fish -c "${this.#aur_helper}; read -P '${this.#prompt}'"`).then(
+			() => (this.#updates.value = 0),
+		);
 	}
 })();

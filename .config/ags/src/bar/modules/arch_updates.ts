@@ -1,7 +1,7 @@
 import update from "../services/arch_updates_check";
 
 update.aur_helper = "paru";
-update.check_interval = 60000;
+update.check_interval = 600000;
 
 export default () =>
 	Widget.Button({
