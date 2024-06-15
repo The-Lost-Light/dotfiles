@@ -13,6 +13,7 @@
 
 <details>
 <summary>pre-commit git hook</summary>
+
 ```sh
 #!/usr/bin/env sh
 
