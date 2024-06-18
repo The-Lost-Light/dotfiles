@@ -9,4 +9,4 @@ Target = nvidia-dkms
 Description = Touch vmlinuz-linux to become the latest kernel by timestamp.
 When = PostTransaction
 Depends = coreutils
-Exec = /usr/bin/sh -c "/usr/bin/sleep 1 ; /usr/bin/touch /boot/vmlinuz-linux-zen"
+Exec = /usr/bin/sh -c "/usr/bin/sleep 2 ; /usr/bin/touch /boot/vmlinuz-linux-zen"

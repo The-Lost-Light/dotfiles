@@ -1,15 +1,17 @@
 # TODO
-- [ ]waybar->ags
-- [ ]swaync->ags
-- [ ]swaylock->hyprlock
-- [ ]swayidle->hypridle
-- [ ]hyprcursor
+- [ ] waybar->ags
+- [ ] swaync->ags
+- [ ] swaylock->hyprlock
+- [ ] swayidle->hypridle
+- [ ] hyprcursor
+- [ ] aconfmgr
 
 # Dependences
 - fish
 - pacman-contrib
 - brightnessctl
 - rsync
+- aconfmgr
 
 <details>
 <summary>pre-commit git hook</summary>

@@ -1,3 +1,5 @@
+const netowrk = await Service.import("network");
+
 export default new (class UpdateService extends Service {
 	static {
 		Service.register(
@@ -14,6 +16,7 @@ export default new (class UpdateService extends Service {
 
 	constructor() {
 		super();
+		// netowrk.connect("")
 		this.#setChecker();
 	}
 
