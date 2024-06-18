@@ -16,7 +16,7 @@ export default new (class NetSpeedTestService extends Service {
 
 	#previous_net = this.#parse();
 	#speed = Variable(["0", "0"]);
-	#signal_id: number | null = null;
+	#signal_id: number | undefined;
 
 	get interface() {
 		return this.#interface;
@@ -72,7 +72,6 @@ export default new (class NetSpeedTestService extends Service {
 				net[name][direction][type[index % 8]] = element;
 			});
 		}
-
 		return net;
 	}
 

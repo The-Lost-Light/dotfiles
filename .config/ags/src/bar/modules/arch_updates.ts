@@ -1,5 +1,6 @@
 import Update from "../services/arch_updates_check";
 
+Update.terminal = "kitty";
 Update.setChecker(300, "paru");
 
 export default () =>

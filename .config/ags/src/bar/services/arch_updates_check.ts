@@ -4,6 +4,7 @@ export default new (class UpdateService extends Service {
 			this,
 			{},
 			{
+				terminal: ["string", "w"],
 				"update-packages": ["int", "r"],
 				packages: ["jsobject", "r"],
 			},
@@ -14,6 +15,7 @@ export default new (class UpdateService extends Service {
 		super();
 	}
 
+	#terminal: string | undefined;
 	#AUR_helper = "paru";
 
 	#updates = Variable(0);
@@ -21,6 +23,10 @@ export default new (class UpdateService extends Service {
 	#prompt = "\x1b[34m\n:: Update Completed!\n\x1b[33m:: Press Enter to exit!\x1b[0m";
 
 	#signal_id: number | null = null;
+
+	set terminal(terminal: string) {
+		this.#terminal = terminal;
+	}
 
 	get update_packages() {
 		return this.#updates.value;
@@ -58,8 +64,9 @@ export default new (class UpdateService extends Service {
 	}
 
 	update() {
-		Utils.execAsync(`kitty fish -c "${this.#AUR_helper}; read -P '${this.#prompt}'"`).then(
-			() => (this.#updates.value = 0),
-		);
+		if (this.#terminal)
+			Utils.execAsync(`${this.#terminal} fish -c "${this.#AUR_helper}; read -P '${this.#prompt}'"`).then(
+				() => (this.#updates.value = 0),
+			);
 	}
 })();
