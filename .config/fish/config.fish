@@ -42,7 +42,7 @@ if status is-interactive
     alias ls lsd
     alias lst "ls --tree"
     # manage dotfiles
-    alias config "git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+    alias config "git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
 
     ## plugin initial
 
