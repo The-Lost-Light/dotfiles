@@ -1,0 +1,8 @@
+[user]
+	email = boyhuanggordon@gmail.com
+	name = mono
+	signingkey = /home/mono/.ssh/id_rsa.pub
+[commit]
+	gpgsign = true
+[gpg]
+	format = ssh

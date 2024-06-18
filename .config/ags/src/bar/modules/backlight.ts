@@ -1,6 +1,6 @@
 import Brightness from "../services/brightness";
 
-Brightness.script = "$CONFIG/hypr/scripts/brightness.fish";
+Brightness.script = "scripts/brightness.fish";
 
 const icons = {
 	threshold: [51, 0],

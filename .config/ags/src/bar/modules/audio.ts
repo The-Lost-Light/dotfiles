@@ -1,4 +1,4 @@
-const audio = await Service.import("audio");
+const Audio = await Service.import("audio");
 
 const icons = {
 	speaker: {
@@ -19,7 +19,7 @@ const icons = {
 };
 
 const icon = (type = "speaker") =>
-	Utils.merge([audio[type].bind("is_muted"), audio[type].bind("volume")], (mute, volume) =>
+	Utils.merge([Audio[type].bind("is_muted"), Audio[type].bind("volume")], (mute, volume) =>
 		!mute ? icons[type].threshold.find((threshold: number) => threshold <= volume * 100) ?? 0 : 0,
 	).as(key => icons[type][key]);
 
@@ -32,12 +32,12 @@ const stream = (type = "speaker") =>
 					icon: icon(type),
 				}),
 				Widget.Label({
-					label: audio[type].bind("volume").as((v: number) => `${Math.round(v * 100)}%`),
-					visible: audio[type].bind("is_muted").as((m: boolean) => !m),
+					label: Audio[type].bind("volume").as((v: number) => `${Math.round(v * 100)}%`),
+					visible: Audio[type].bind("is_muted").as((m: boolean) => !m),
 				}),
 			],
 		}),
-		on_clicked: () => (audio[type].is_muted = !audio[type].is_muted),
+		on_clicked: () => (Audio[type].is_muted = !Audio[type].is_muted),
 		on_scroll_up: () => Utils.execAsync(["sh", "-c", `$CONFIG/hypr/scripts/audio.fish --${type} -i`]),
 		on_scroll_down: () => Utils.execAsync(["sh", "-c", `$CONFIG/hypr/scripts/audio.fish --${type} -d`]),
 	});

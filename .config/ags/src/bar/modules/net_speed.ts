@@ -1,11 +1,8 @@
 import Net from "../services/net_speed";
 
-Net.interface = "wlp2s0";
-Net.interval = 2;
+Net.setChecker(2, "wlp2s0");
 
 export default () =>
 	Widget.Label({
-		label: Utils.merge([Net.bind("speed"), Net.bind("unit")], (speed, unit) => {
-			return `${speed[0]} ${unit[0]}`;
-		}),
+		label: Utils.merge([Net.bind("speed"), Net.bind("unit")], (speed, unit) => `${speed[0]} ${unit[0]}`),
 	});

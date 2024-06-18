@@ -2,9 +2,7 @@ export default new (class BrightnessService extends Service {
 	static {
 		Service.register(
 			this,
-			{
-				"screen-changed": ["double"],
-			},
+			{},
 			{
 				device: ["string", "r"],
 				script: ["string", "w"],
@@ -50,11 +48,5 @@ export default new (class BrightnessService extends Service {
 		this.#brightness_ratio = Math.round((screen_value * 100) / this.#max);
 
 		this.changed("brightness-ratio");
-
-		this.emit("screen-changed", this.#brightness_ratio);
-	}
-
-	connect(event = "screen-changed", callback: (_: this, ...args: any[]) => void) {
-		return super.connect(event, callback);
 	}
 })();

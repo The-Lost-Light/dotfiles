@@ -1,13 +1,13 @@
-const battery = await Service.import("battery");
+const Battery = await Service.import("battery");
 
-const status = Utils.merge([battery.bind("percent"), battery.bind("charging")], (p, c) => `${p}%` + (c ? " " : ""));
+const status = Utils.merge([Battery.bind("percent"), Battery.bind("charging")], (p, c) => `${p}%` + (c ? " " : ""));
 
 export default () =>
 	Widget.Box({
-		visible: battery.bind("available"),
+		visible: Battery.bind("available"),
 		children: [
 			Widget.Icon({
-				icon: battery.bind("icon_name"),
+				icon: Battery.bind("icon_name"),
 			}),
 			Widget.Label({ label: status }),
 		],

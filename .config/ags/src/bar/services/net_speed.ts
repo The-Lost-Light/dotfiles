@@ -1,11 +1,10 @@
 export default new (class NetSpeedTestService extends Service {
 	static {
-		Service.register(this, {}, { interface: ["string", "rw"], speed: ["double", "r"], unit: ["string", "r"] });
+		Service.register(this, {}, { interface: ["string", "r"], speed: ["double", "r"], unit: ["string", "r"] });
 	}
 
 	constructor() {
 		super();
-		this.#setChecker();
 	}
 
 	#interface = "lo";
@@ -22,15 +21,6 @@ export default new (class NetSpeedTestService extends Service {
 	get interface() {
 		return this.#interface;
 	}
-	set interface(device) {
-		this.#interface = device;
-		this.#setChecker();
-	}
-
-	set interval(interval: number) {
-		this.#interval = interval;
-		this.#setChecker();
-	}
 
 	get speed() {
 		return this.#speed.value;
@@ -40,12 +30,14 @@ export default new (class NetSpeedTestService extends Service {
 		return this.#unit;
 	}
 
-	#setChecker() {
+	setChecker(interval = 1, device = "lo") {
+		this.#interface = device;
+
 		if (this.#speed.is_polling) this.#speed.stopPoll();
 		if (this.#signal_id) this.#speed.disconnect(this.#signal_id);
 
 		this.#speed = Variable(["0", "0"], {
-			poll: [this.#interval * 1000, () => this.#get_net()],
+			poll: [interval * 1000, () => this.#get_net()],
 		});
 		this.#signal_id = this.#speed.connect("changed", () => {
 			this.changed("interface");
