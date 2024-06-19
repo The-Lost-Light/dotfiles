@@ -23,6 +23,9 @@ export default () =>
 				Widget.Button({
 					class_name: "new_workspace",
 					child: Widget.Label("+"),
+					visible: Hyprland.bind("workspaces")
+						.as(ws => ws.map(ws => ws.id))
+						.as(wsid => !Array.from({ length: 10 }, (_, id) => id + 1).every(id => wsid.includes(id))),
 					on_clicked: () => Hyprland.messageAsync("dispatch workspace emptym"),
 				}),
 			],
