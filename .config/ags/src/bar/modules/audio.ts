@@ -38,8 +38,9 @@ const stream = (type = "speaker") =>
 			],
 		}),
 		on_clicked: () => (Audio[type].is_muted = !Audio[type].is_muted),
-		on_scroll_up: () => Utils.execAsync(["sh", "-c", `$CONFIG/hypr/scripts/audio.fish --${type} -i`]),
-		on_scroll_down: () => Utils.execAsync(["sh", "-c", `$CONFIG/hypr/scripts/audio.fish --${type} -d`]),
+		on_secondary_click: () => Utils.execAsync("pavucontrol -m"),
+		on_scroll_up: () => Utils.exec(["sh", "-c", `$CONFIG/hypr/scripts/audio.fish --${type} -i`]),
+		on_scroll_down: () => Utils.exec(["sh", "-c", `$CONFIG/hypr/scripts/audio.fish --${type} -d`]),
 	});
 export default () =>
 	Widget.Box({

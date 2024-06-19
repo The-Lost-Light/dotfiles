@@ -9,15 +9,22 @@ export default () =>
 
 		child: Widget.Box({
 			class_name: "workspaces",
-			children: Array.from({ length: 10 }, (_, id) => id + 1).map(id =>
+			children: [
+				...Array.from({ length: 10 }, (_, id) => id + 1).map(id =>
+					Widget.Button({
+						class_name: Hyprland.active.workspace
+							.bind("id")
+							.as(ai => `workspace-${id} ${ai === id ? "focused" : "unfocused"}`),
+						visible: Hyprland.bind("workspaces").as(ws => ws.some(ws => ws.id === id)),
+						child: Widget.Label(id.toString()),
+						on_clicked: () => changeWorkspace(id),
+					}),
+				),
 				Widget.Button({
-					class_name: Hyprland.active.workspace
-						.bind("id")
-						.as(i => (i === id ? `workspace-${id} focused` : `workspace-${id} unfocused`)),
-					visible: Hyprland.bind("workspaces").as(ws => ws.some(ws => ws.id === id)),
-					child: Widget.Label(id.toString()),
-					on_clicked: () => changeWorkspace(id),
+					class_name: "new_workspace",
+					child: Widget.Label("+"),
+					on_clicked: () => Hyprland.messageAsync("dispatch workspace emptym"),
 				}),
-			),
+			],
 		}),
 	});
