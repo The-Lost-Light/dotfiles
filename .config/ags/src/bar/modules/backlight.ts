@@ -1,6 +1,6 @@
 import Brightness from "../services/brightness";
 
-Brightness.script = "scripts/brightness.fish";
+Brightness.script = App.configDir + "/scripts/brightness.fish";
 
 const icons = {
 	threshold: [51, 0],

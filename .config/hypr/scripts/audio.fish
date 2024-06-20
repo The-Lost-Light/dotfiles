@@ -1,6 +1,6 @@
 #!/usr/bin/env fish
 
-set icons ~/.config/hypr/icons
+set icons ~/.config/hypr/assets/icons
 set SINK @DEFAULT_AUDIO_SINK@
 set SOURCE @DEFAULT_AUDIO_SOURCE@
 

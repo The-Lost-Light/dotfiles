@@ -15,7 +15,6 @@ export default new (class BrightnessService extends Service {
 		super();
 
 		this.#brightnessChange();
-
 		if (this.#device)
 			Utils.monitorFile(`/sys/class/backlight/${this.#device}/brightness`, () => this.#brightnessChange());
 	}
@@ -39,14 +38,14 @@ export default new (class BrightnessService extends Service {
 		this.#script_path = path;
 	}
 
-	tweakFlag(flag: string) {
-		Utils.execAsync(["sh", "-c", `${this.#script_path} ${flag}`]);
-	}
-
 	#brightnessChange() {
 		let screen_value = Number(Utils.exec("brightnessctl get"));
 		this.#brightness_ratio = Math.round((screen_value * 100) / this.#max);
 
 		this.changed("brightness-ratio");
+	}
+
+	tweakFlag(flag: string) {
+		Utils.execAsync(["sh", "-c", `${this.#script_path} ${flag}`]);
 	}
 })();

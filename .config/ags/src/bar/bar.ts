@@ -44,7 +44,6 @@ export default (monitor = 0) =>
 		name: `bar-${monitor}`,
 		class_name: "bar",
 		monitor,
-		// visible: false,
 		anchor: ["top", "left", "right"],
 		exclusivity: "exclusive",
 		child: Widget.CenterBox({
