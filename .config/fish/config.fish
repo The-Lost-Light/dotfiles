@@ -43,6 +43,7 @@ if status is-interactive
     alias lst "ls --tree"
     # manage dotfiles
     alias config "git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
+    alias configui "gitui -d $HOME/.dotfiles/ -w $HOME"
 
     ## plugin initial
 
