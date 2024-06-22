@@ -15,8 +15,9 @@ export default () =>
 							.as(ai => `workspace-${id} ${ai === id ? "focused" : "unfocused"}`),
 						visible: Hyprland.bind("workspaces").as(ws => ws.some(ws => ws.id === id)),
 						child: Widget.Label(id.toString()),
-						on_clicked: () => Hyprland.changeWorkspace(id),
-					}),
+						on_clicked: self => (Hyprland.changeWorkspace(id), (self.child.label = id.toString())),
+						on_hover: self => id === Hyprland.active.workspace.id && (self.child.label = ""),
+					}).on("leave-notify-event", self => (self.child.label = id.toString()) && null),
 				),
 				Widget.Button({
 					class_name: "new_workspace",

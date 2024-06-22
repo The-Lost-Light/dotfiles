@@ -1,27 +1,6 @@
-const Audio = await Service.import("audio");
+import Audio from "../services/audio";
 
-const icons = {
-	speaker: {
-		threshold: [101, 67, 34, 1, 0],
-		101: "audio-volume-overamplified-symbolic",
-		67: "audio-volume-high-symbolic",
-		34: "audio-volume-medium-symbolic",
-		1: "audio-volume-low-symbolic",
-		0: "audio-volume-muted-symbolic",
-	},
-	microphone: {
-		threshold: [67, 34, 1, 0],
-		67: "mic-volume-high",
-		34: "mic-volume-medium",
-		1: "mic-volume-low",
-		0: "mic-volume-muted",
-	},
-};
-
-const icon = (type = "speaker") =>
-	Utils.merge([Audio[type].bind("is_muted"), Audio[type].bind("volume")], (mute, volume) =>
-		!mute ? icons[type].threshold.find((threshold: number) => threshold <= volume * 100) ?? 0 : 0,
-	).as(key => icons[type][key]);
+Audio.script = "$CONFIG/hypr/scripts/audio.fish";
 
 const stream = (type = "speaker") =>
 	Widget.Button({
@@ -29,7 +8,7 @@ const stream = (type = "speaker") =>
 		child: Widget.Box({
 			children: [
 				Widget.Icon({
-					icon: icon(type),
+					icon: Audio.bind("icon").as(i => i[type]),
 				}),
 				Widget.Label({
 					label: Audio[type].bind("volume").as((v: number) => `${Math.round(v * 100)}%`),
@@ -39,8 +18,8 @@ const stream = (type = "speaker") =>
 		}),
 		on_clicked: () => (Audio[type].is_muted = !Audio[type].is_muted),
 		on_secondary_click: () => Utils.execAsync("pavucontrol -m"),
-		on_scroll_up: () => Utils.exec(["sh", "-c", `$CONFIG/hypr/scripts/audio.fish --${type} -i`]),
-		on_scroll_down: () => Utils.exec(["sh", "-c", `$CONFIG/hypr/scripts/audio.fish --${type} -d`]),
+		on_scroll_up: () => Audio.tweakFlag(`--${type} -i`),
+		on_scroll_down: () => Audio.tweakFlag(`--${type} -d`),
 	});
 export default () =>
 	Widget.Box({

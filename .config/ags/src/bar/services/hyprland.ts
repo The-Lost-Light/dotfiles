@@ -22,7 +22,9 @@ export default new (class HyprlandExtends extends Hyprland {
 	}
 
 	changeWorkspace(ws: number | string) {
-		this.messageAsync(`dispatch workspace ${ws}`);
+		if (ws === this.active.workspace.id)
+			this.messageAsync(`dispatch swapactiveworkspaces ${this.monitors[0].name} ${this.monitors[1].name}`);
+		else this.messageAsync(`dispatch workspace ${ws}`);
 	}
 
 	createNewWorkspace() {

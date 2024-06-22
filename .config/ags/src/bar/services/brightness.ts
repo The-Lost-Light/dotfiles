@@ -7,6 +7,7 @@ export default new (class BrightnessService extends Service {
 				device: ["string", "r"],
 				script: ["string", "w"],
 				"brightness-ratio": ["double", "r"],
+				icon: ["string", "r"],
 			},
 		);
 	}
@@ -24,6 +25,14 @@ export default new (class BrightnessService extends Service {
 	#brightness_ratio = 0;
 	#max = Number(Utils.exec("brightnessctl max"));
 
+	#icons = {
+		threshold: [51, 0],
+		names: {
+			51: "brightness-high",
+			0: "brightness-low",
+		},
+	};
+
 	#script_path = "";
 
 	get device() {
@@ -38,11 +47,17 @@ export default new (class BrightnessService extends Service {
 		this.#script_path = path;
 	}
 
+	get icon(): string {
+		const key = this.#icons.threshold.find((threshold: number) => threshold <= this.#brightness_ratio) ?? 0;
+		return this.#icons.names[key];
+	}
+
 	#brightnessChange() {
 		let screen_value = Number(Utils.exec("brightnessctl get"));
 		this.#brightness_ratio = Math.round((screen_value * 100) / this.#max);
 
 		this.changed("brightness-ratio");
+		this.changed("icon");
 	}
 
 	tweakFlag(flag: string) {
