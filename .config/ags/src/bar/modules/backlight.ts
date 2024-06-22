@@ -1,4 +1,4 @@
-import Brightness from "../services/brightness";
+import Brightness from "@services/brightness";
 
 Brightness.script = App.configDir + "/scripts/brightness.fish";
 

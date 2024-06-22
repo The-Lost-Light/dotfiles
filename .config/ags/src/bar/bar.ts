@@ -1,18 +1,18 @@
-import Launcher from "./modules/launcher";
-import Workspaces from "./modules/workspaces";
-import ClientTitle from "./modules/title";
+import Launcher from "@bar/modules/launcher";
+import Workspaces from "@bar/modules/workspaces";
+import ClientTitle from "@bar/modules/title";
 
-import Indicator from "./modules/arch_updates";
-import Clock from "./modules/clock";
-import PowerButton from "./modules/power_button";
-import Notification from "./modules/notifications";
-import Media from "./modules/media";
+import Indicator from "@bar/modules/arch_updates";
+import Clock from "@bar/modules/clock";
+import PowerButton from "@bar/modules/power_button";
+// import Notification from "@bar/modules/notifications";
+import Media from "@bar/modules/media";
 
-import Net from "./modules/net_speed";
-import Battery from "./modules/battery";
-import Backlight from "./modules/backlight";
-import Volume from "./modules/audio";
-import SystemTray from "./modules/system_tray";
+import Net from "@bar/modules/net_speed";
+import Battery from "@bar/modules/battery";
+import Backlight from "@bar/modules/backlight";
+import Volume from "@bar/modules/audio";
+import SystemTray from "@bar/modules/system_tray";
 
 const Left = () =>
 	Widget.Box({

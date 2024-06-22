@@ -1,7 +1,7 @@
-import Logout from "./modules/logout";
-import Poweroff from "./modules/poweroff";
-import Reboot from "./modules/reboot";
-import Sleep from "./modules/sleep";
+import Logout from "@power_menu/modules/logout";
+import Poweroff from "@power_menu/modules/poweroff";
+import Reboot from "@power_menu/modules/reboot";
+import Sleep from "@power_menu/modules/sleep";
 
 export default () =>
 	Widget.Window({

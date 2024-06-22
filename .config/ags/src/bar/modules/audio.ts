@@ -1,4 +1,4 @@
-import Audio from "../services/audio";
+import Audio from "@services/audio";
 
 Audio.script = "$CONFIG/hypr/scripts/audio.fish";
 

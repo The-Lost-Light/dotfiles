@@ -7,7 +7,13 @@
 		"checkJs": true,
 		"strict": true,
 		"noImplicitAny": false,
-		"baseUrl": ".",
+		"baseUrl": "src",
+		"paths": {
+			"@services/*": ["services/*"],
+			"@bar/*": ["bar/*"],
+			"@osd/*": ["osd/*"],
+			"@power_menu/*": ["power_menu/*"]
+		},
 		"typeRoots": ["./types"],
 		"skipLibCheck": true
 	}

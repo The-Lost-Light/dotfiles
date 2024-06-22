@@ -1,4 +1,4 @@
-import Hyprland from "../services/hyprland";
+import Hyprland from "@services/hyprland";
 
 export default () =>
 	Widget.Label({

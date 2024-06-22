@@ -1,4 +1,4 @@
-import Net from "../services/net_speed";
+import Net from "@services/net_speed";
 
 Net.setChecker(2, "wlp2s0");
 
