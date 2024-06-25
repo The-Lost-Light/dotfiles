@@ -1,0 +1,28 @@
+@import "palette.scss";
+@import "power_menu.scss";
+
+* {
+	/* font-family: "Monocraft"; */
+	font-weight: bold;
+	/* min-width: 0; */
+	/* padding-top: 0; */
+	padding-bottom: 0;
+}
+
+button {
+	/* font-size: 14px; */
+
+	background-color: transparent;
+
+	&.focused {
+		color: $red;
+	}
+}
+
+button.audio:hover {
+	box-shadow: none;
+}
+
+.workspace {
+	background-color: rgba(30, 30, 46, 0.5);
+}

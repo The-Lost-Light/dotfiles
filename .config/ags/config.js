@@ -14,4 +14,4 @@ try {
 	console.error(error);
 }
 
-export default {};
+export {};

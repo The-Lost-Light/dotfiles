@@ -4,7 +4,7 @@ Audio.script = "$CONFIG/hypr/scripts/audio.fish";
 
 const stream = (type = "speaker") =>
 	Widget.Button({
-		class_name: type,
+		class_name: `audio ${type}`,
 		child: Widget.Box({
 			children: [
 				Widget.Icon({
@@ -23,5 +23,6 @@ const stream = (type = "speaker") =>
 	});
 export default () =>
 	Widget.Box({
+		class_name: "audio",
 		children: [stream("speaker"), stream("microphone")],
 	});

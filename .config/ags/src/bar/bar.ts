@@ -5,8 +5,7 @@ import ClientTitle from "@bar/modules/title";
 import Indicator from "@bar/modules/arch_updates";
 import Clock from "@bar/modules/clock";
 import PowerButton from "@bar/modules/power_button";
-// import Notification from "@bar/modules/notifications";
-import Media from "@bar/modules/media";
+// import Media from "@bar/modules/media";
 
 import Net from "@bar/modules/net_speed";
 import Battery from "@bar/modules/battery";
@@ -27,7 +26,6 @@ const Center = () =>
 			Indicator(),
 			Clock(),
 			PowerButton(),
-			// Notification(),
 			// Media(),
 		],
 	});

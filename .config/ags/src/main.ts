@@ -4,13 +4,13 @@ import Hyprland from "@services/hyprland";
 
 import Bar from "@bar/bar";
 import Powermenu from "@power_menu/power_menu";
+import Notification from "@osd/notifications";
 
-const scss = App.configDir + "/style/style.scss";
+const scss = App.configDir + "/src/style/style.scss";
 const css = "/tmp/ags/style.css";
-Utils.exec(`sassc ${scss} ${css}`);
 
 const createWindows = () =>
-	[...Array.from({ length: Hyprland.monitors.length }, (_, id) => Bar(id)), Powermenu()].map(w =>
+	[...Array.from({ length: Hyprland.monitors.length }, (_, id) => Bar(id)), Powermenu() /* , Notification() */].map(w =>
 		w.on("destroy", (self: Gtk.Window) => App.removeWindow(self)),
 	);
 
@@ -21,11 +21,19 @@ const recreateWindows = () => {
 	App.config({ windows: createWindows() });
 };
 
+const applyCss = () => {
+	Utils.exec(`sassc ${scss} ${css}`, undefined, err => print(err));
+	App.resetCss();
+	App.applyCss(css);
+};
+
 export default App.config({
-	style: css,
 	windows: createWindows(),
 	onConfigParsed: () => {
 		Hyprland.connect("monitor-removed", recreateWindows);
 		Hyprland.connect("monitor-added", recreateWindows);
+
+		applyCss();
+		Utils.monitorFile(`${App.configDir}/src/style`, applyCss);
 	},
 });
