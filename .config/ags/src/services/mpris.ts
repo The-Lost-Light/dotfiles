@@ -18,10 +18,24 @@ export default new (class MprisExtends extends Mpris {
 		});
 	}
 
-	getBus(bus: string) {
-		if (bus === "org.mpris.MediaPlayer2.playerctld")
-			return this.players.find(player => player.identity === this.getPlayer(bus)?.identity && player.bus_name !== bus)
-				?.bus_name;
+	isPlayerctld(bus: string | undefined) {
+		return bus === "org.mpris.MediaPlayer2.playerctld";
+	}
+
+	getBus(bus: string | undefined) {
+		if (this.isPlayerctld(bus))
+			return (
+				this.players.find(player => player.identity === this.getPlayer(bus)?.identity && player.bus_name !== bus)
+					?.bus_name ?? bus
+			);
 		else return bus;
+	}
+
+	isPlayPause(bus: string | undefined) {
+		return (
+			!!this.getPlayer(bus) &&
+			!this.isPlayerctld(this.getBus(bus)) &&
+			this.getPlayer(bus)?.play_back_status !== "Stopped"
+		);
 	}
 })();

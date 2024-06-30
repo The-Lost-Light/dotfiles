@@ -1,4 +1,5 @@
 import Mpris from "@services/mpris";
+import { capitalize } from "utils";
 
 export default () =>
 	Widget.Button({
@@ -8,8 +9,8 @@ export default () =>
 		Mpris,
 		(self, bus) => {
 			const player = Mpris.getPlayer(Mpris.getBus(bus));
-			self.visible = !!player && player?.play_back_status !== "Stopped";
-			self.child.label = `${player?.name} ${player?.play_back_status === "Playing" ? "" : ""}`;
+			self.visible = Mpris.isPlayPause(player?.bus_name);
+			self.child.label = `${capitalize(player?.name)} ${player?.play_back_status === "Playing" ? "" : ""}`;
 			self.on_clicked = () => player?.playPause();
 		},
 		"player-changed",
