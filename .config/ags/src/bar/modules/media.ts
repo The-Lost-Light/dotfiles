@@ -1,4 +1,4 @@
-const Mpris = await Service.import("mpris");
+import Mpris from "@services/mpris";
 
 export default () =>
 	Widget.Button({
@@ -7,10 +7,9 @@ export default () =>
 	}).hook(
 		Mpris,
 		(self, bus) => {
-			const player = Mpris.getPlayer(bus);
+			const player = Mpris.getPlayer(Mpris.getBus(bus));
 			self.visible = !!player && player?.play_back_status !== "Stopped";
-			self.child.label =
-				player?.play_back_status === "Playing" ? `${player?.name} ` : `${player?.name} ` ?? "Nothing is playing!";
+			self.child.label = `${player?.name} ${player?.play_back_status === "Playing" ? "" : ""}`;
 			self.on_clicked = () => player?.playPause();
 		},
 		"player-changed",

@@ -12,8 +12,7 @@
 			"@services/*": ["services/*"],
 			"@widgets/*": ["widgets/*"],
 			"@bar/*": ["bar/*"],
-			"@osd/*": ["osd/*"],
-			"@power_menu/*": ["power_menu/*"]
+			"@osd/*": ["osd/*"]
 		},
 		"typeRoots": ["./types"],
 		"skipLibCheck": true

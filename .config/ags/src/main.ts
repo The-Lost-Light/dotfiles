@@ -3,19 +3,17 @@ import Gtk from "types/@girs/gtk-3.0/gtk-3.0";
 import Hyprland from "@services/hyprland";
 
 import Bar from "@bar/bar";
-import Powermenu from "@power_menu/power_menu";
-import Notification from "@osd/notifications";
+import Powermenu from "@osd/power_menu";
 import Media from "@osd/media";
+import Notification from "@osd/notifications";
 
 const scss = App.configDir + "/src/style/style.scss";
 const css = "/tmp/ags/style.css";
 
 const createWindows = () =>
-	[
-		...Array.from({ length: Hyprland.monitors.length }, (_, id) => Bar(id)),
-		Powermenu() /* , Notification() */,
-		Media(),
-	].map(w => w.on("destroy", (self: Gtk.Window) => App.removeWindow(self)));
+	[...Hyprland.monitors.map(m => Bar(m.id)), Powermenu() /* , Notification() */, Media()].map(w =>
+		w.on("destroy", (self: Gtk.Window) => App.removeWindow(self)),
+	);
 
 const recreateWindows = () => {
 	for (const win of App.windows) {
@@ -24,11 +22,12 @@ const recreateWindows = () => {
 	App.config({ windows: createWindows() });
 };
 
-const applyCss = () => {
-	Utils.exec(`sassc ${scss} ${css}`, undefined, err => print(err));
-	App.resetCss();
-	App.applyCss(css);
-};
+const applyCss = () =>
+	Utils.exec(
+		`sassc ${scss} ${css}`,
+		() => (App.resetCss(), App.applyCss(css)),
+		err => print(err),
+	);
 
 export default App.config({
 	windows: createWindows(),
