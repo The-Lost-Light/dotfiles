@@ -3,14 +3,14 @@ import Image from "@widgets/image";
 
 const list = Notifications.bind("popups").as(p =>
 	p.map(notify => {
-		const icon = Widget.Box([
+		const icon = Widget.Box(
 			(() => {
 				if (notify.image) return Image({ path: notify.image });
 				else if (Utils.lookUpIcon(notify.app_entry)) return Widget.Icon(notify.app_entry);
 				else if (Utils.lookUpIcon(notify.app_icon)) return Widget.Icon(notify.app_icon);
 				else return Widget.Icon("dialog-information-symbolic");
 			})(),
-		]);
+		);
 
 		const title = Widget.Label({
 			label: notify.summary,
@@ -40,7 +40,7 @@ const list = Notifications.bind("popups").as(p =>
 
 		return Widget.EventBox(
 			{ on_primary_click: notify.dismiss },
-			Widget.Box({ vertical: true }, Widget.Box([icon, Widget.Box({ vertical: true }, title, body)]), actions),
+			Widget.Box({ vertical: true }, Widget.Box(icon, Widget.Box({ vertical: true }, title, body)), actions),
 		);
 	}),
 );

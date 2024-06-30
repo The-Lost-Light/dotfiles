@@ -2,7 +2,7 @@ import Hyprland from "@services/hyprland";
 
 export default () =>
 	Widget.EventBox({
-		class_name: "workspaces",
+		class_name: "workspaces test",
 
 		onScrollUp: () => Hyprland.changeWorkspace("+1"),
 		onScrollDown: () => Hyprland.changeWorkspace("-1"),

@@ -1,0 +1,25 @@
+.bar {
+	button {
+		/* font-size: 14px; */
+
+		background-color: transparent;
+
+		&.focused {
+			color: $red;
+		}
+		&.audio:hover {
+			box-shadow: none;
+		}
+	}
+
+	.workspaces,
+	.center,
+	.system_tray {
+		background-color: rgba(30, 30, 46, 0.5);
+		/* background: linear-gradient(to right, #683c00, #58432c, rgba(147, 0, 6, 0.5)); */
+		color: #ffdcb8;
+		border-radius: 1rem;
+		/* margin-top: 0.3rem; */
+		/* margin-bottom: 0.3rem; */
+	}
+}
