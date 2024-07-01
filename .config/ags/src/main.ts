@@ -11,7 +11,7 @@ const scss = App.configDir + "/src/style/style.scss";
 const css = "/tmp/ags/style.css";
 
 const createWindows = () =>
-	[...Hyprland.monitors.map(m => Bar(m.id)), Powermenu() /* , Notification() */, Media()].map(w =>
+	[...Hyprland.monitors.map(m => Bar(m.id)), Powermenu() /*, Notification() , Media()*/].map(w =>
 		w.on("destroy", (self: Gtk.Window) => App.removeWindow(self)),
 	);
 

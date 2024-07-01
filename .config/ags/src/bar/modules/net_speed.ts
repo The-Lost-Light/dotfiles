@@ -1,6 +1,6 @@
 import Net from "@services/net";
 
-Net.setChecker(2, "wlp2s0");
+Net.setChecker({ interval: 2, device: "wlp2s0" });
 
 export default () =>
 	Widget.Label({

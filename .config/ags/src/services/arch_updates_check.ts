@@ -41,7 +41,7 @@ export default new (class UpdateService extends Service {
 			.join("\n");
 	}
 
-	setChecker(interval = 600, AUR_helper = "") {
+	setChecker({ interval = 600, AUR_helper = "" }) {
 		this.#AUR_helper = AUR_helper;
 
 		if (this.#updates.is_polling) this.#updates.stopPoll();

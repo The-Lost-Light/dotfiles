@@ -30,7 +30,7 @@ export default new (class NetSpeedTestService extends Service {
 		return this.#unit;
 	}
 
-	setChecker(interval = 1, device = "lo") {
+	setChecker({ interval = 1, device = "lo" }) {
 		this.#interface = device;
 
 		if (this.#speed.is_polling) this.#speed.stopPoll();

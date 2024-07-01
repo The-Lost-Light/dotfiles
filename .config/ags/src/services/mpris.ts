@@ -7,21 +7,13 @@ export default new (class MprisExtends extends Mpris {
 
 	constructor() {
 		super();
-
-		// Fix Spotify issue that its initial mpris values are empty
-		this.connect("player-added", (_, bus) => {
-			if (bus.includes("spotify")) {
-				this.getPlayer(bus)?.next();
-				this.getPlayer(bus)?.previous();
-				this.getPlayer(bus)?.playPause();
-			}
-		});
 	}
 
 	isPlayerctld(bus: string | undefined) {
 		return bus === "org.mpris.MediaPlayer2.playerctld";
 	}
 
+	// Get real bus from playerctld
 	getBus(bus: string | undefined) {
 		if (this.isPlayerctld(bus))
 			return (
