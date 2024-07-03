@@ -10,6 +10,7 @@
 		"baseUrl": "src",
 		"paths": {
 			"@services/*": ["services/*"],
+			"@lib/*": ["lib/*"],
 			"@widgets/*": ["widgets/*"],
 			"@bar/*": ["bar/*"],
 			"@osd/*": ["osd/*"]
