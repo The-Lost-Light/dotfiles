@@ -43,15 +43,13 @@ export default new (class HyprlandExtends extends Hyprland {
 	}
 
 	#createWindows(windows: (fixed | osd)[], id?: number) {
-		return windows.flatMap(window => {
-			if (window.length)
-				return this.monitors.flatMap(monitor => {
-					if (id === -1 || monitor.id === id)
-						return window(monitor.id).on("destroy", (self: agsWindow) => App.removeWindow(self));
-					else return [];
-				});
-			else return window().on("delete-event", (self: agsWindow) => (self.hide(), true));
-		});
+		return windows.flatMap(window =>
+			window.length
+				? this.monitors
+						.filter(monitor => id === -1 || monitor.id === id)
+						.map(monitor => window(monitor.id).on("destroy", (self: agsWindow) => App.removeWindow(self)))
+				: window().on("delete-event", (self: agsWindow) => (self.hide(), true)),
+		);
 	}
 
 	#recreateWindows(windows: fixed[], id?: number) {
