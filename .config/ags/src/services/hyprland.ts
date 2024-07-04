@@ -20,16 +20,8 @@ export default new (class HyprlandExtends extends Hyprland {
 		this.active.client.connect("changed", () => this.changed("active-init-title"));
 	}
 
-	get active_init_title() {
-		return this.getClient(this.active.client.address)?.initialTitle ?? "";
-	}
-
 	get is_full() {
 		return !Array.from({ length: 10 }, (_, id) => id + 1).every(id => this.workspaces.map(ws => ws.id).includes(id));
-	}
-
-	getMonitorID(name: string) {
-		return this.monitors.find(Monitor => Monitor.name === name)?.id;
 	}
 
 	changeWorkspace(ws: number | string) {
@@ -40,6 +32,10 @@ export default new (class HyprlandExtends extends Hyprland {
 
 	createNewWorkspace() {
 		this.messageAsync("dispatch workspace emptym");
+	}
+
+	#getMonitorID(name: string) {
+		return this.monitors.find(Monitor => Monitor.name === name)?.id;
 	}
 
 	#createWindows(windows: (fixed | osd)[], id?: number) {
@@ -62,8 +58,8 @@ export default new (class HyprlandExtends extends Hyprland {
 
 	initialWindows(windows: (fixed | osd)[]) {
 		const fixedWindows = windows.filter(window => window.length);
-		this.connect("monitor-removed", (_, name) => this.#recreateWindows(fixedWindows, this.getMonitorID(name)));
-		this.connect("monitor-added", (_, name) => this.#recreateWindows(fixedWindows, this.getMonitorID(name)));
+		this.connect("monitor-removed", (_, name) => this.#recreateWindows(fixedWindows, this.#getMonitorID(name)));
+		this.connect("monitor-added", (_, name) => this.#recreateWindows(fixedWindows, this.#getMonitorID(name)));
 
 		return this.#createWindows(windows, -1);
 	}
