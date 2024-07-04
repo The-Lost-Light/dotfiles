@@ -22,5 +22,6 @@ export default () =>
 		const wmclass = Hyprland.active.client.class;
 		const entry = Application.query(wmclass)[0];
 		(self.children[0] as Icon<unknown>).icon = entry?.icon_name ?? "";
-		(self.children[1] as Label<unknown>).label = entry?.name ?? Hyprland.getClient(wmclass);
+		(self.children[1] as Label<unknown>).label = entry?.name ?? Hyprland.getClient(wmclass) ?? "";
+		if ((self.children[1] as Label<unknown>).label === "") self.visible = false;
 	});
