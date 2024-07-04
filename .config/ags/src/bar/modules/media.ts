@@ -1,5 +1,5 @@
 import Mpris from "@services/mpris";
-import { capitalize } from "@lib/utils";
+import capitalize from "@lib/capitalize";
 
 export default () =>
 	Widget.Button({
