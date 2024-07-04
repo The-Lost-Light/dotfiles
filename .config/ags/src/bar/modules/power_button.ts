@@ -1,6 +1,6 @@
-import { autoTimeout } from "@lib/utils";
+import AutoTimeout from "@lib/auto_timeout";
 
-const closeMenu = new autoTimeout();
+const closeMenu = new AutoTimeout();
 
 export default () =>
 	Widget.Button({
