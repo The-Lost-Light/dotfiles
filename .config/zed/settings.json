@@ -1,0 +1,13 @@
+{
+	"autosave": { "after_delay": { "milliseconds": 600000 } },
+	"buffer_font_family": "FiraCode Nerd Font",
+	"current_line_highlight": "gutter",
+	"tabs": { "git_status": true },
+	"always_treat_brackets_as_autoclosed": true,
+	// "indent_guides": { "coloring": "indent_aware" },
+	"hard_tabs": true,
+	"inlay_hints": { "enabled": true },
+	"terminal": { "alternate_scroll": "on" },
+	"theme": "Ayu Mirage",
+	"calls": { "mute_on_join": true }
+}
