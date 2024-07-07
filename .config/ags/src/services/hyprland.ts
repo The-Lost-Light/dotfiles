@@ -1,9 +1,7 @@
-import Gtk from "types/@girs/gtk-3.0/gtk-3.0";
-import Window from "types/widgets/window";
+import { agsWindow } from "types";
 
 import { Hyprland } from "resource:///com/github/Aylur/ags/service/hyprland.js";
 
-type agsWindow = Window<Gtk.Widget, unknown>;
 type fixed = (id?: number) => agsWindow;
 type osd = () => agsWindow;
 

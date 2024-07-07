@@ -8,10 +8,8 @@ try {
 		"--outdir", outdir,
 		"--external", "resource://*",
 		"--external", "gi://*",
-  ])
+	])
 	await import(`file://${outdir}/main.js`);
 } catch (error) {
 	console.error(error);
 }
-
-export {};

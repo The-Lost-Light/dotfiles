@@ -1,4 +1,4 @@
-export default ({ directory, entry }) => {
+export default (directory: string, entry: string) => {
 	const scss = `${App.configDir}/${directory}/${entry}`;
 	const css = "/tmp/ags/style.css";
 

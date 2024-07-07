@@ -1,4 +1,5 @@
 import Hyprland from "@services/hyprland";
+import { on_hover_off } from "@lib/on_hover";
 
 export default () =>
 	Widget.EventBox({
@@ -16,9 +17,10 @@ export default () =>
 							.as(ai => `workspace ${ai === id ? "focused" : "unfocused"}`),
 						visible: Hyprland.bind("workspaces").as(ws => ws.some(ws => ws.id === id)),
 						child: Widget.Label(id.toString()),
-						on_clicked: self => (Hyprland.changeWorkspace(id), (self.child.label = id.toString()), null),
-						on_hover: self => (id === Hyprland.active.workspace.id && (self.child.label = ""), null),
-					}).on("leave-notify-event", self => ((self.child.label = id.toString()), null)),
+						on_clicked: self => (Hyprland.changeWorkspace(id), (self.child.label = id.toString())),
+						on_hover: self => id === Hyprland.active.workspace.id && (self.child.label = ""),
+						setup: self => on_hover_off(self, () => (self.child.label = id.toString())),
+					}),
 				),
 				Widget.Button({
 					class_name: "new_workspace",

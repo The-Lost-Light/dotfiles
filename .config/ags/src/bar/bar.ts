@@ -35,7 +35,7 @@ const Right = () =>
 		children: [Net(), Battery(), Backlight(), Volume(), SystemTray()],
 	});
 
-export default monitor =>
+export default (monitor?: number) =>
 	Widget.Window({
 		name: `bar-${monitor}`,
 		class_name: "bar",
