@@ -13,7 +13,8 @@
 			"@bar/*": ["bar/*"],
 			"@osd/*": ["osd/*"]
 		},
-		"typeRoots": ["./types"],
+		"types": [],
+		"typeRoots": ["types"],
 		"skipLibCheck": true
 	}
 }

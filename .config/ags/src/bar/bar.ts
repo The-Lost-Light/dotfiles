@@ -3,7 +3,7 @@ import Workspaces from "@bar/modules/workspaces";
 import ClientTitle from "@bar/modules/title";
 
 import Indicator from "@bar/modules/arch_updates";
-import Clock from "@bar/modules/clock";
+import Time from "@bar/modules/time";
 import PowerButton from "@bar/modules/power_button";
 import Media from "@bar/modules/media";
 
@@ -24,7 +24,7 @@ const Center = () =>
 	Widget.Box({
 		class_name: "center",
 		spacing: 8,
-		children: [Indicator(), Clock(), PowerButton(), Media()],
+		children: [Indicator(), Time(), PowerButton(), Media()],
 	});
 
 const Right = () =>
