@@ -8,7 +8,7 @@
 	"always_treat_brackets_as_autoclosed": true,
 	"tab_size": 4,
 	"hard_tabs": true,
-	"inlay_hints": { "enabled": true, "show_type_hints": false },
+	"inlay_hints": { "enabled": false, "show_type_hints": false },
 	"soft_wrap": "editor_width",
 	"terminal": { "alternate_scroll": "on" },
 	"theme": "Ayu Mirage",
