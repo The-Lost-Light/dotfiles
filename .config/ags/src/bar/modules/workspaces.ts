@@ -18,7 +18,8 @@ export default () =>
 						visible: Hyprland.bind("workspaces").as(ws => ws.some(ws => ws.id === id)),
 						child: Widget.Label(id.toString()),
 						on_clicked: self => (Hyprland.changeWorkspace(id), (self.child.label = id.toString())),
-						on_hover: self => id === Hyprland.active.workspace.id && (self.child.label = ""),
+						on_hover: self =>
+							Hyprland.monitors.length > 1 && id === Hyprland.active.workspace.id && (self.child.label = ""),
 						setup: self => on_hover_off(self, () => (self.child.label = id.toString())),
 					}),
 				),

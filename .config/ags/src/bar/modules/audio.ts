@@ -21,6 +21,7 @@ const stream = (type = "speaker") =>
 		on_scroll_up: () => Audio.tweakFlag(`--${type} -i`),
 		on_scroll_down: () => Audio.tweakFlag(`--${type} -d`),
 	});
+
 export default () =>
 	Widget.Box({
 		class_name: "audio",
