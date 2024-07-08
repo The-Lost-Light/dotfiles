@@ -24,6 +24,7 @@
 # Issue
 ## Fixing
 https://github.com/Aylur/ags/pull/454
+https://github.com/Aylur/ags/issues/392
 ## Wait for Fixed
 https://github.com/Aylur/ags/pull/397
 https://github.com/Aylur/ags/issues/450
