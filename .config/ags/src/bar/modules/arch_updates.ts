@@ -14,7 +14,7 @@ export default () =>
 				}),
 			],
 		}),
-		visible: Update.bind("update_packages").as(v => !!v),
+		visible: Update.bind("update_packages").as(v => v > 0),
 		tooltip_markup: Update.bind("packages"),
 		on_clicked: () => Update.update(),
 	});

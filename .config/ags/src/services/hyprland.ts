@@ -1,9 +1,9 @@
-import { agsWindow } from "types";
+import { AgsWindow } from "types";
 
 import { Hyprland } from "resource:///com/github/Aylur/ags/service/hyprland.js";
 
-type fixed = (id?: number) => agsWindow;
-type osd = () => agsWindow;
+type fixed = (id?: number) => AgsWindow;
+type osd = () => AgsWindow;
 
 export default new (class HyprlandExtends extends Hyprland {
 	static {
@@ -41,8 +41,8 @@ export default new (class HyprlandExtends extends Hyprland {
 			window.length
 				? this.monitors
 						.filter(monitor => id === -1 || monitor.id === id)
-						.map(monitor => window(monitor.id).on("destroy", (self: agsWindow) => App.removeWindow(self)))
-				: window().on("delete-event", (self: agsWindow) => (self.hide(), true)),
+						.map(monitor => window(monitor.id).on("destroy", (self: AgsWindow) => App.removeWindow(self)))
+				: window().on("delete-event", (self: AgsWindow) => (self.hide(), true)),
 		);
 	}
 

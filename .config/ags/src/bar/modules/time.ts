@@ -1,5 +1,3 @@
-import reveal_on_hover from "@lib/reveal_on_hover";
-
 const date = Variable([], {
 	poll: [1000, 'date "+%H:%M %-m/%-d"', out => out.split(" ")],
 });
@@ -8,11 +6,9 @@ export default () =>
 	Widget.Box({
 		class_name: "time",
 		children: [
-			Widget.EventBox({
+			Widget.Label({
 				class_name: "clock",
-				child: Widget.Label({
-					label: date.bind().as(v => v[0]),
-				}),
+				label: date.bind().as(v => v[0]),
 			}),
 			Widget.Revealer({
 				class_name: "date",
@@ -22,5 +18,4 @@ export default () =>
 				}),
 			}),
 		],
-		setup: self => reveal_on_hover(self.children[0], self.children[1]),
 	});

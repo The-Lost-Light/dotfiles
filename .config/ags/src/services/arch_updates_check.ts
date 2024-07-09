@@ -50,8 +50,7 @@ export default new (class UpdateService extends Service {
 							index = Number(i);
 							break;
 						}
-
-					return `${s[0]} ${old_version.slice(0, index).join("")}<span foreground="${this.#accent_color}">${new_version.slice(index).join("")}</span>`;
+					return `${s[0]}:    ${old_version.slice(0, index).join("")}<span foreground="${this.#accent_color}">${new_version.slice(index).join("")}</span>`;
 				}
 			})
 			.join("\n");
