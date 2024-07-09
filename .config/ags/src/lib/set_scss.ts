@@ -10,5 +10,5 @@ export default (directory: string, entry: string) => {
 		);
 
 	applyCss();
-	Utils.monitorFile(directory, applyCss);
+	Utils.monitorFile(`${App.configDir}/${directory}`, applyCss);
 };

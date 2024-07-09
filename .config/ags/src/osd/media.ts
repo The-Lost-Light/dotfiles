@@ -7,10 +7,19 @@ import { MprisPlayer } from "types/service/mpris";
 const shown = Variable(0);
 const visible = Variable(false).bind();
 
-const cards = (player: MprisPlayer, index: number, length: number) => {
+const realIndex = (player_index: number, playerctld_index: number) =>
+	0 <= playerctld_index && playerctld_index < player_index ? player_index - 1 : player_index;
+const findIndex = (players: MprisPlayer[], bus: string) => {
+	const player_index = players.findIndex(player => player.bus_name === Mpris.getBus(bus));
+	const playerctld_index = players.findIndex(element => Mpris.isPlayerctld(element.bus_name));
+
+	return [realIndex(player_index, playerctld_index), playerctld_index];
+};
+
+const setCard = (player: MprisPlayer, index: number, length: number) => {
 	if (Mpris.isPlayerctld(player.bus_name)) return [];
 
-	const image = fileExists(player.cover_path) ? Image({ path: player.cover_path }) : Widget.Box();
+	const image = fileExists(player.cover_path) ? Image({ path: player.cover_path, height: 188 }) : Widget.Box();
 
 	const title = Widget.Label(player.track_title);
 
@@ -48,10 +57,13 @@ const cards = (player: MprisPlayer, index: number, length: number) => {
 		children: [
 			image,
 			Widget.Box({
+				class_name: "media osd text",
 				vertical: true,
 				children: [
-					Widget.Box({
-						children: [title, left_card, right_card],
+					Widget.CenterBox({
+						startWidget: title,
+						centerWidget: Widget.Separator(),
+						endWidget: Widget.Box({ children: [left_card, right_card] }),
 					}),
 					artist,
 					position,
@@ -61,23 +73,22 @@ const cards = (player: MprisPlayer, index: number, length: number) => {
 	});
 };
 
-const card = () =>
+const setCards = () =>
 	Widget.Stack().hook(
 		Mpris,
 		(self, bus) => {
+			if (bus === undefined) bus = Mpris.getPlayer()?.bus_name;
+
 			const players = Mpris.players;
-			const playerctld_index = players.findIndex(element => Mpris.isPlayerctld(element.bus_name));
-			const length = players.length - Number(playerctld_index >= 0);
+			const [player_index, playerctld_index] = findIndex(players, bus);
+			const length = players.length - (playerctld_index >= 0 ? 1 : 0);
 
-			self.children = players
-				.flatMap((player, index) =>
-					cards(player, 0 <= playerctld_index && playerctld_index < index ? index - 1 : index, length),
-				)
-				.reduce((children, player, index) => ((children[index] = player), children), {});
+			const stack = players
+				.flatMap((player, index) => setCard(player, realIndex(index, playerctld_index), length))
+				.reduce((stack, card, index) => ((stack[index] = card), stack), {});
+			self.children = Object.keys(stack).length > 0 ? stack : { 0: Widget.Box(Widget.Label("NO player! QQ")) };
 
-			// TODO: use bus
-
-			// index.value
+			if (player_index >= 0) shown.value = player_index;
 			self.hook(shown, () => {
 				if (shown.value >= 0 && shown.value < length) self.shown = shown.value.toString();
 			});
@@ -85,4 +96,4 @@ const card = () =>
 		"player-changed",
 	);
 
-export default () => Widget.Window({ name: "media", anchor: ["top"], visible: visible, child: card() });
+export default () => Widget.Window({ name: "media", anchor: ["top"], visible: visible, child: setCards() });

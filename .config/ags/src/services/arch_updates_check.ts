@@ -5,6 +5,7 @@ export default new (class UpdateService extends Service {
 			{},
 			{
 				terminal: ["string", "w"],
+				"accent-color": ["string", "w"],
 				"update-packages": ["int", "r"],
 				packages: ["jsobject", "r"],
 			},
@@ -16,6 +17,7 @@ export default new (class UpdateService extends Service {
 	}
 
 	#terminal: string | undefined;
+	#accent_color = "#ffffff";
 	#AUR_helper = "paru";
 
 	#updates = Variable(0);
@@ -28,6 +30,10 @@ export default new (class UpdateService extends Service {
 		this.#terminal = terminal;
 	}
 
+	set accent_color(color: string) {
+		this.#accent_color = color;
+	}
+
 	get update_packages() {
 		return this.#updates.value;
 	}
@@ -35,8 +41,18 @@ export default new (class UpdateService extends Service {
 	get packages() {
 		return this.#packages
 			.map(c => {
-				const s = c.split(" ");
-				return `${s[0]} ${s[3]}`;
+				if (c.length > 0) {
+					const s = c.split(" ");
+					const [old_version, new_version] = [s[1], s[3]].map(s => s.split(/([:._-])/));
+					let index = 0;
+					for (const i in old_version)
+						if (old_version[i] !== new_version[i]) {
+							index = Number(i);
+							break;
+						}
+
+					return `${s[0]} ${old_version.slice(0, index).join("")}<span foreground="${this.#accent_color}">${new_version.slice(index).join("")}</span>`;
+				}
 			})
 			.join("\n");
 	}
