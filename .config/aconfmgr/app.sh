@@ -4,8 +4,15 @@ AddPackage firefox-developer-edition # Fast, Private & Safe Web Browser (Develop
 AddPackage firefox-developer-edition-i18n-zh-tw # Chinese (Traditional) language pack for Firefox Developer Edition
 
 # File Manager
+AddPackage nemo # Cinnamon file manager (Nautilus fork)
 AddPackage --foreign spacedrive-bin # A file manager from the future.
 AddPackage --foreign ffmpeg6.1 # Complete solution to record, convert and stream audio and video (legacy v6.1)
+
+# Terminal
+AddPackage alacritty # A cross-platform, GPU-accelerated terminal emulator
+AddPackage kitty # A modern, hackable, featureful, OpenGL-based terminal emulator
+AddPackage nushell # A new type of shell
+AddPackage rio # A hardware-accelerated GPU terminal emulator powered by WebGPU
 
 # Communication
 AddPackage discord # All-in-one voice and text chat for gamers
@@ -33,6 +40,10 @@ AddPackage --foreign spotube-bin # Open source Spotify client that doesn't requi
 
 # Video
 AddPackage vlc # Multi-platform MPEG, VCD/DVD, and DivX player
+
+# Screen Record
+AddPackage kooha # Elegantly record your screen
+AddPackage obsidian # A powerful knowledge base that works on top of a local folder of plain text Markdown files
 
 # Mail
 AddPackage thunderbird # Standalone mail and news reader from mozilla.org

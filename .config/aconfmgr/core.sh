@@ -32,7 +32,6 @@ AddPackage pipewire # Low-latency audio/video router and processor
 AddPackage pipewire-alsa # Low-latency audio/video router and processor - ALSA configuration
 AddPackage pipewire-pulse # Low-latency audio/video router and processor - PulseAudio replacement
 
-
 # Bluetooth
 AddPackage blueman # GTK+ Bluetooth Manager
 AddPackage gnome-bluetooth-3.0 # GNOME Bluetooth Subsystem
@@ -68,6 +67,8 @@ AddPackage greetd # Generic greeter daemon
 CopyFile /etc/greetd/config.toml
 CopyFile /etc/greetd/greeter.js
 CopyFile /etc/greetd/hyprland.conf
+CopyFile /etc/greetd/hyprpaper.conf
+CopyFile /etc/greetd/login.png
 
 # Shell
 AddPackage dash # POSIX compliant shell that aims to be as small as possible

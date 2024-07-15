@@ -4,7 +4,6 @@ AddPackage hyprland # a highly customizable dynamic tiling Wayland compositor
 AddPackage hyprlock # hyprland’s GPU-accelerated screen locking utility
 AddPackage hyprwayland-scanner # A Hyprland implementation of wayland-scanner, in and for C++
 AddPackage --foreign hyprpicker # A wlroots-compatible Wayland color picker that does not suck.
-AddPackage --foreign hyprshot # A utility to easily take screenshots in Hyprland using your mouse
 
 AddPackage --foreign aylurs-gtk-shell # Aylurs's Gtk Shell (AGS), An eww inspired gtk widget system.
 AddPackage swaync # A simple GTK based notification daemon for Sway
@@ -37,21 +36,12 @@ AddPackage hyprpaper # a blazing fast wayland wallpaper utility with IPC control
 AddPackage swww # A Solution to your Wayland Wallpaper Woes
 AddPackage --foreign mpvpaper # video wallpaper program for wlroots based wayland compositors
 
-# Terminal
-AddPackage alacritty # A cross-platform, GPU-accelerated terminal emulator
-AddPackage kitty # A modern, hackable, featureful, OpenGL-based terminal emulator
-AddPackage nushell # A new type of shell
-AddPackage rio # A hardware-accelerated GPU terminal emulator powered by WebGPU
-
 # Launcher
 AddPackage --foreign nwg-drawer-bin # Application drawer for sway and other wlroots-based compositors
 
 # Screenshot
+AddPackage --foreign hyprshot # A utility to easily take screenshots in Hyprland using your mouse
 AddPackage swappy # A Wayland native snapshot editing tool
-
-# Screen Record
-AddPackage kooha # Elegantly record your screen
-AddPackage obsidian # A powerful knowledge base that works on top of a local folder of plain text Markdown files
 
 # Xwayland
 AddPackage xwaylandvideobridge # Utility to allow streaming Wayland windows to X applications
