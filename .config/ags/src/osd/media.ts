@@ -5,7 +5,6 @@ import fileExists from "@lib/file_exists";
 import { MprisPlayer } from "types/service/mpris";
 
 const shown = Variable(0);
-const visible = Variable(false).bind();
 
 const realIndex = (player_index: number, playerctld_index: number) =>
 	0 <= playerctld_index && playerctld_index < player_index ? player_index - 1 : player_index;
@@ -96,4 +95,4 @@ const setCards = () =>
 		"player-changed",
 	);
 
-export default () => Widget.Window({ name: "media", anchor: ["top"], visible: visible, child: setCards() });
+export default () => Widget.Window({ name: "media", anchor: ["top"], visible: false, child: setCards() });

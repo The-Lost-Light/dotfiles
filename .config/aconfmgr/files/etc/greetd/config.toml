@@ -1,0 +1,6 @@
+[terminal]
+vt = "current"
+
+[default_session]
+command = "Hyprland --config /etc/greetd/hyprland.conf > /dev/null 2>&1"
+user = "mono"

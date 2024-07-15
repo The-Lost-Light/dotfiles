@@ -17,6 +17,9 @@ if status is-login
     # Disable wine auto set default application
     set WINEDLLOVERRIDES winemenubuilder.exe=d
 
+    # Set the GPU that Vulkan used. (require vulkan-mesa-layers)
+    set -x MESA_VK_DEVICE_SELECT 0x1002:0x1636
+
     # Set vaapi
     set -x LIBVA_DRIVER_NAME nvidia
     # set -x MOZ_DISABLE_RDD_SANDBOX 1

@@ -29,7 +29,7 @@ export default new (class HyprlandExtends extends Hyprland {
 	}
 
 	createNewWorkspace() {
-		this.messageAsync("dispatch workspace emptym");
+		this.messageAsync("dispatch workspace emptyn");
 	}
 
 	#getMonitorID(name: string) {
