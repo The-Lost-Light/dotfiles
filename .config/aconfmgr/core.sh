@@ -26,9 +26,18 @@ AddPackage linux-firmware # Firmware files for Linux
 
 # Audio
 AddPackage easyeffects # Audio Effects for Pipewire applications
+AddPackage pamixer # Pulseaudio command-line mixer like amixer
+AddPackage pavucontrol # PulseAudio Volume Control
 AddPackage pipewire # Low-latency audio/video router and processor
 AddPackage pipewire-alsa # Low-latency audio/video router and processor - ALSA configuration
 AddPackage pipewire-pulse # Low-latency audio/video router and processor - PulseAudio replacement
+
+
+# Bluetooth
+AddPackage blueman # GTK+ Bluetooth Manager
+AddPackage gnome-bluetooth-3.0 # GNOME Bluetooth Subsystem
+AddPackage --foreign bt-dualboot # Sync Bluetooth for dualboot Linux and Windows
+AddPackage --foreign overskride # A simple yet powerful bluetooth client
 
 # Network
 AddPackage network-manager-applet # Applet for managing network connections
@@ -47,9 +56,11 @@ AddPackage ttf-jetbrains-mono-nerd # Patched font JetBrains Mono from nerd fonts
 AddPackage ttf-nerd-fonts-symbols-mono # High number of extra glyphs from popular 'iconic fonts' (monospace)
 AddPackage wqy-zenhei # A Hei Ti Style (sans-serif) Chinese Outline Font.
 AddPackage --foreign otf-monocraft # A programming font based on the typeface used in Minecraft
+AddPackage --foreign ttf-ubraille # Unicode Braillt font
 
 # Power
 AddPackage power-profiles-daemon # Makes power profiles handling available over D-Bus
+AddPackage --foreign ryzenadj-git # RyzenAdj tool for adjusting Ryzen Mobile power states
 CopyFile /etc/systemd/logind.conf
 
 # Greetd
@@ -67,12 +78,14 @@ CopyFile /etc/makepkg.conf
 AddPackage reflector # A Python 3 module and script to retrieve and filter the latest Pacman mirror list.
 AddPackage --foreign paru # Feature packed AUR helper
 AddPackage --foreign yay # Yet another yogurt. Pacman wrapper and AUR helper written in go.
+AddPackage --foreign downgrade # Bash script for downgrading one or more packages to a version in your cache or the A.L.A.
 CopyFile /etc/pacman.conf
 CopyFile /etc/pacman.d/hooks/nvidia.hook
 CopyFile /etc/pacman.d/hooks/spicetify.hook
 CopyFile /etc/xdg/reflector/reflector.conf
 
 # Backup
+AddPackage --foreign aconfmgr-git # A configuration manager for Arch Linux
 AddPackage timeshift # A system restore utility for Linux
 AddPackage --foreign timeshift-autosnap # Timeshift auto-snapshot script which runs before package upgrade using Pacman hook.
 CopyFile /etc/cron.d/timeshift-boot
@@ -83,6 +96,7 @@ CopyFile /etc/timeshift/timeshift.json
 AddPackage fcitx5-configtool # Configuration Tool for Fcitx5
 AddPackage fcitx5-gtk # Fcitx5 gtk im module and glib based dbus client library
 AddPackage fcitx5-mozc # Fcitx5 Module of A Japanese Input Method for Chromium OS, Windows, Mac and Linux (the Open Source Edition of Google Japanese Input)
+AddPackage --foreign fcitx5-mcbopomofo-git # McBopomofo for fcitx5
 
 # System Configure
 CopyFile /etc/adjtime
