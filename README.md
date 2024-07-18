@@ -1,10 +1,10 @@
 # TODO
 - [x] waybar->ags
 - [ ] swaync->ags
-- [ ] swaylock->hyprlock
+- [x] swaylock->hyprlock
 - [ ] swayidle->hypridle
 - [ ] hyprcursor
-- [ ] aconfmgr
+- [x] aconfmgr
 ## ags
 - [ ] mpris osd
 - [ ] notification system
@@ -18,6 +18,7 @@
 - brightnessctl
 - aconfmgr
 ## ags
+- curl
 - pacman-contrib
 - pavucontrol
 

@@ -62,13 +62,15 @@ AddPackage power-profiles-daemon # Makes power profiles handling available over 
 AddPackage --foreign ryzenadj-git # RyzenAdj tool for adjusting Ryzen Mobile power states
 CopyFile /etc/systemd/logind.conf
 
-# Greetd
+# Keyring
+AddPackage gnome-keyring # Stores passwords and encryption keys
 AddPackage greetd # Generic greeter daemon
 CopyFile /etc/greetd/config.toml
 CopyFile /etc/greetd/greeter.js
 CopyFile /etc/greetd/hyprland.conf
 CopyFile /etc/greetd/hyprpaper.conf
 CopyFile /etc/greetd/login.png
+CopyFile /etc/pam.d/greetd
 
 # Shell
 AddPackage dash # POSIX compliant shell that aims to be as small as possible

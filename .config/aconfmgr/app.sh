@@ -24,6 +24,7 @@ AddPackage telegram-desktop # Official Telegram Desktop client
 AddPackage foliate # A simple and modern GTK eBook reader
 
 # Note
+AddPackage obsidian # A powerful knowledge base that works on top of a local folder of plain text Markdown files
 AddPackage rnote # A simple drawing application to create handwritten notes
 AddPackage --foreign appflowy-bin # AppFlowy is an open-source alternative to Notion. You are in charge of your data and customizations.
 
@@ -43,7 +44,6 @@ AddPackage vlc # Multi-platform MPEG, VCD/DVD, and DivX player
 
 # Screen Record
 AddPackage kooha # Elegantly record your screen
-AddPackage obsidian # A powerful knowledge base that works on top of a local folder of plain text Markdown files
 
 # Mail
 AddPackage thunderbird # Standalone mail and news reader from mozilla.org

@@ -105,7 +105,6 @@ CopyFile /efi/EFI/refind/icons/vol_net.png 755
 CopyFile /efi/EFI/refind/icons/vol_optical.png 755
 CreateDir /efi/EFI/refind/keys
 CopyFile /efi/EFI/refind/refind.conf 755
-CopyFile /efi/EFI/refind/refind.conf-sample 755
 CopyFile /efi/EFI/refind/refind_x64.efi 755
 CopyFile /efi/EFI/refind/themes/refind-ambience/background.png 755
 CopyFile /efi/EFI/refind/themes/refind-ambience/icons/func_about.png 755

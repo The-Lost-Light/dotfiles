@@ -7,10 +7,10 @@ AddPackage --foreign hyprpicker # A wlroots-compatible Wayland color picker that
 
 AddPackage --foreign aylurs-gtk-shell # Aylurs's Gtk Shell (AGS), An eww inspired gtk widget system.
 AddPackage swaync # A simple GTK based notification daemon for Sway
-AddPackage --foreign swaylock-effects # A fancier screen locker for Wayland.
 
 # Clipboard
 AddPackage --foreign wl-clip-persist # Keep Wayland clipboard even after programs close
+AddPackage --foreign clipse # A configurable TUI clipboard manager for Unix.
 
 # XDG Desktop
 AddPackage xdg-desktop-portal # Desktop integration portals for sandboxed apps
@@ -42,6 +42,7 @@ AddPackage --foreign nwg-drawer-bin # Application drawer for sway and other wlro
 # Screenshot
 AddPackage --foreign hyprshot # A utility to easily take screenshots in Hyprland using your mouse
 AddPackage swappy # A Wayland native snapshot editing tool
+AddPackage --foreign satty-bin # A screenshot annotation tool inspired by Swappy and Flameshot
 
 # Xwayland
 AddPackage xwaylandvideobridge # Utility to allow streaming Wayland windows to X applications

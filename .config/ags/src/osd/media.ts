@@ -52,19 +52,24 @@ const setCard = (player: MprisPlayer, index: number, length: number) => {
 		on_clicked: () => ++shown.value,
 	});
 
+	const play_paulse = Widget.Button({
+		child: Widget.Label(player?.play_back_status === "Playing" ? "" : ""),
+		on_clicked: () => player.playPause(),
+	});
+
 	return Widget.Box({
+		class_names: ["media", "osd"],
 		children: [
 			image,
 			Widget.Box({
-				class_name: "media osd text",
+				class_names: ["media", "osd", "text"],
 				vertical: true,
 				children: [
-					Widget.CenterBox({
-						startWidget: title,
-						centerWidget: Widget.Separator(),
-						endWidget: Widget.Box({ children: [left_card, right_card] }),
+					Widget.Box({
+						children: [title, left_card, right_card],
 					}),
 					artist,
+					play_paulse,
 					position,
 				],
 			}),

@@ -4,6 +4,7 @@ AddPackage git-delta # Syntax-highlighting pager for git and diff output
 AddPackage gitui # Blazing fast terminal-ui for git written in Rust
 AddPackage onefetch # Git repository summary on your terminal
 AddPackage --foreign gitbutler-bin # Version control client, backed by Git, powered by Tauri/Rust/Svelte
+AddPackage github-cli # The GitHub CLI
 
 # Editor
 AddPackage helix # A post-modern modal text editor
@@ -23,6 +24,7 @@ AddPackage vscode-css-languageserver # CSS/LESS/SCSS language server
 AddPackage vscode-html-languageserver # HTML language server
 
 # Tools
+AddPackage cmake # A cross-platform open-source make system
 AddPackage --foreign devtoys-bin # A Swiss Army knife for developers.
 
 # C/C++
