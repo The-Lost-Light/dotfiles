@@ -2,7 +2,7 @@
 - [x] waybar->ags
 - [ ] swaync->ags
 - [x] swaylock->hyprlock
-- [ ] swayidle->hypridle
+- [x] swayidle->hypridle
 - [ ] hyprcursor
 - [x] aconfmgr
 ## ags
