@@ -1,15 +1,11 @@
 .bar {
 	button {
+		background-color: transparent;
+
 		&.launcher,
 		&.power,
 		.media {
-			font-size: 12px;
-		}
-
-		background-color: transparent;
-
-		&.focused {
-			color: $red;
+			font-size: 14px;
 		}
 
 		&.audio:hover {
@@ -21,10 +17,19 @@
 	.center,
 	.system_tray {
 		background-color: rgba(30, 30, 46, 0.5);
-		/* background: linear-gradient(to right, #683c00, #58432c, rgba(147, 0, 6, 0.5)); */
-		color: #ffdcb8;
 		border-radius: 1rem;
-		/* margin-top: 0.3rem; */
-		/* margin-bottom: 0.3rem; */
+	}
+
+	.workspaces {
+		.focused {
+			color: $red;
+		}
+
+		.focused,
+		.unfocused {
+			min-width: 16px;
+			padding-left: 8px;
+			padding-right: 8px;
+		}
 	}
 }

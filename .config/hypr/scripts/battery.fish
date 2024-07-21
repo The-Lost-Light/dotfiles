@@ -1,7 +1,7 @@
 #!/bin/env fish
 
 set percentage (cat /sys/class/power_supply/BAT0/capacity)
-set icons ["󰂃" "󰁺" "󰁻" "󰁼" "󰁽" "󰁾" "󰁿" "󰂀" "󰂁" "󰁹" ""]
+set icons "󰂃" "󰁺" "󰁻" "󰁼" "󰁽" "󰁾" "󰁿" "󰂀" "󰂁" "󰁹"
 
 if string match -q (cat /sys/class/power_supply/BAT0/status) Charging
     set icon "󰂄"

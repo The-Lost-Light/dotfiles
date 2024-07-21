@@ -13,34 +13,40 @@ IgnorePath "/efi/EFI/Microsoft/*"
 IgnorePath "/efi/EFI/Arch/*.img"
 IgnorePath "/efi/EFI/Arch/vmlinuz-linux*"
 
-# Timeshift
-IgnorePath "/timeshift-btrfs/*"
-
 # ETC
-IgnorePath "/etc/asusd/*"
 IgnorePath "/etc/ca-certificates/*"
 IgnorePath "/etc/fonts/*"
-IgnorePath "/etc/supergfxd.conf"
-IgnorePath "/etc/modprobe.d/supergfxd.conf"
+IgnorePath "/etc/spotify-launcher.conf"
+# Network
 IgnorePath "/etc/NetworkManager/system-connections/*"
+# Pacman
 IgnorePath "/etc/pacman.d/gnupg/*"
 IgnorePath "/etc/pacman.d/mirrorlist"
-IgnorePath "/etc/spotify-launcher.conf"
+# SSH
 IgnorePath "/etc/ssh/*"
 IgnorePath "/etc/ssl/*"
+# Systemd
 IgnorePath "/etc/systemd/system/*"
 IgnorePath "/etc/systemd/user/*"
 IgnorePath "/etc/vconsole.conf"
-# System Auto Generate
+# Tailscale
+IgnorePath "/etc/resolv.conf"
+IgnorePath "/etc/resolv.pre-tailscale-backup.conf"
+# System File
+IgnorePath "/etc/adjtime"
+IgnorePath "/etc/cni/net.d"
 IgnorePath "/etc/group"
 IgnorePath "/etc/group-"
 IgnorePath "/etc/gshadow"
 IgnorePath "/etc/gshadow-"
-IgnorePath "/etc/passwd"
-IgnorePath "/etc/passwd-"
+IgnorePath "/etc/hostname"
+IgnorePath "/etc/locale.conf"
+IgnorePath "/etc/locale.gen"
+IgnorePath "/etc/localtime"
 IgnorePath "/etc/machine-id"
 IgnorePath "/etc/os-release"
-IgnorePath "/etc/cni/net.d"
+IgnorePath "/etc/passwd"
+IgnorePath "/etc/passwd-"
 IgnorePath "/etc/shadow"
 IgnorePath "/etc/shadow-"
 IgnorePath "/etc/shells"
@@ -49,10 +55,13 @@ IgnorePath "/etc/subgid-"
 IgnorePath "/etc/subuid"
 IgnorePath "/etc/subuid-"
 IgnorePath "/etc/sudoers"
-# tailscale
-IgnorePath "/etc/resolv.conf"
-IgnorePath "/etc/resolv.pre-tailscale-backup.conf"
+# G14
+IgnorePath "/etc/asusd/*"
+IgnorePath "/etc/supergfxd.conf"
+IgnorePath "/etc/modprobe.d/supergfxd.conf"
 
+# Timeshift
+IgnorePath "/timeshift-btrfs/*"
 
 # Cache Files
 IgnorePath "*.cache"

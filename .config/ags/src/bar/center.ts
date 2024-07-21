@@ -9,7 +9,7 @@ import { AgsBox } from "types";
 
 const Center = () =>
 	Widget.Button({
-		child: Widget.Box({ children: [Time(), Media()] }),
+		child: Widget.Box([Time(), Media()]),
 		on_clicked: () => App.toggleWindow("media"),
 		setup: self => reveal_on_hover(self, (self.child.children[0] as AgsBox).children[1]),
 	});

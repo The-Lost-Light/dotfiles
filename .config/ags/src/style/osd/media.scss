@@ -1,5 +1,14 @@
 .media.osd {
-	.text {
-		min-width: 500px;
+	.image {
+		min-width: 188px;
+	}
+
+	.left,
+	.right {
+		min-width: 22px;
+	}
+
+	.info {
+		min-width: 400px;
 	}
 }

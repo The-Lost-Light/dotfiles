@@ -3,7 +3,7 @@
 - [ ] swaync->ags
 - [x] swaylock->hyprlock
 - [x] swayidle->hypridle
-- [ ] hyprcursor
+- [x] hyprcursor
 - [x] aconfmgr
 ## ags
 - [ ] mpris osd

@@ -100,10 +100,3 @@ AddPackage fcitx5-configtool # Configuration Tool for Fcitx5
 AddPackage fcitx5-gtk # Fcitx5 gtk im module and glib based dbus client library
 AddPackage fcitx5-mozc # Fcitx5 Module of A Japanese Input Method for Chromium OS, Windows, Mac and Linux (the Open Source Edition of Google Japanese Input)
 AddPackage --foreign fcitx5-mcbopomofo-git # McBopomofo for fcitx5
-
-# System Configure
-CopyFile /etc/adjtime
-CopyFile /etc/hostname
-CopyFile /etc/locale.conf
-CopyFile /etc/locale.gen
-CreateLink /etc/localtime /usr/share/zoneinfo/Asia/Taipei

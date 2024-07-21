@@ -1,10 +1,11 @@
 # Git
 AddPackage git # the fast distributed version control system
 AddPackage git-delta # Syntax-highlighting pager for git and diff output
+AddPackage github-cli # The GitHub CLI
 AddPackage gitui # Blazing fast terminal-ui for git written in Rust
 AddPackage onefetch # Git repository summary on your terminal
+AddPackage --foreign better-commits # A CLI for creating better commits following the conventional commit guidelines.
 AddPackage --foreign gitbutler-bin # Version control client, backed by Git, powered by Tauri/Rust/Svelte
-AddPackage github-cli # The GitHub CLI
 
 # Editor
 AddPackage helix # A post-modern modal text editor
