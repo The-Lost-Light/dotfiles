@@ -1,4 +1,6 @@
-.media.osd {
+.osd.media {
+	/* border-radius: 10px; */
+
 	.image {
 		min-width: 188px;
 	}
@@ -9,6 +11,14 @@
 	}
 
 	.info {
-		min-width: 400px;
+		min-width: 500px;
+	}
+
+	.progress trough block {
+		min-height: 6px;
+		border-radius: 10px;
+		&.filled {
+			/* background-color: dodgerblue; */
+		}
 	}
 }

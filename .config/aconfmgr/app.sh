@@ -36,7 +36,6 @@ AddPackage --foreign onlyoffice-bin # An office suite that combines text, spread
 AddPackage spotify-launcher # Client for spotify's apt repository in Rust for Arch Linux
 AddPackage --foreign spicetify-cli # Command-line tool to customize Spotify client
 AddPackage --foreign spicetify-marketplace-bin # Spicetify app that integrates a marketplace for extensions, themes and snippets
-AddPackage --foreign amberol # Plays music, and nothing else
 AddPackage --foreign spotube-bin # Open source Spotify client that doesn't require Premium nor uses Electron! Available for both desktop & mobile!
 
 # Video

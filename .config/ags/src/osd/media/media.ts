@@ -1,3 +1,5 @@
+import Mpris from "@services/mpris";
+
 import setCards from "@osd/media/cards";
 
 export default () =>
@@ -5,5 +7,7 @@ export default () =>
 		name: "media",
 		anchor: ["top"],
 		visible: false,
-		child: setCards(),
+		child: Widget.Stack({ class_names: ["osd", "media"] })
+			.hook(Mpris, (self, bus) => setCards(self, bus), "player-added")
+			.hook(Mpris, (self, bus) => setCards(self, bus), "player-closed"),
 	});

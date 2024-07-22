@@ -1,0 +1,17 @@
+import { MprisPlayer } from "types";
+
+export const title = (player: MprisPlayer) =>
+	Widget.Label({
+		class_names: ["osd", "media", "title"],
+		truncate: "end",
+		xalign: 0.1,
+		hexpand: true,
+		label: player.bind("track_title"),
+	});
+
+export const artist = (player: MprisPlayer) =>
+	Widget.Label({
+		class_names: ["osd", "media", "artist"],
+		xalign: 0.1,
+		label: player.bind("track_artists").as(artists => artists.join(", ")),
+	});

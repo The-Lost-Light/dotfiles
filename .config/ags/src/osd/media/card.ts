@@ -1,66 +1,31 @@
-import Mpris from "@services/mpris";
-
 import cover from "@osd/media/modules/cover";
-import title from "@osd/media/modules/title";
-import artist from "@osd/media/modules/artist";
-import position from "@osd/media/modules/position";
-import duration from "@osd/media/modules/duration";
-import progress from "@osd/media/modules/progress";
+import { title, artist } from "@osd/media/modules/track";
+import { position, duration, progress } from "@osd/media/modules/progress";
+import { left_card, right_card } from "@osd/media/modules/shown_control";
+import { play_paulse, previous_track, next_track } from "@osd/media/modules/player_control";
 
-import { MprisPlayer } from "types/service/mpris";
+import { MprisPlayer } from "types";
 
-export const shown = Variable(0);
-
-export default (player: MprisPlayer, index: number, length: number) => {
-	if (Mpris.isPlayerctld(player.bus_name)) return [];
-
-	const left_card =
-		index > 0
-			? Widget.Button({
-					class_names: ["media", "osd", "left"],
-					label: "",
-					on_clicked: () => --shown.value,
-				})
-			: Widget.Box({ class_names: ["media", "osd", "left"] });
-	const right_card =
-		index < length - 1
-			? Widget.Button({
-					class_names: ["media", "osd", "right"],
-					label: "",
-					on_clicked: () => ++shown.value,
-				})
-			: Widget.Box({ class_names: ["media", "osd", "right"] });
-
-	const play_paulse = Widget.Button({
-		class_names: ["media", "osd", "play_paulse"],
-		label: player?.play_back_status === "Playing" ? "" : "",
-		on_clicked: () => player.playPause(),
-	});
-	const previous_track = Widget.Button({
-		class_names: ["media", "osd", "previous"],
-		label: "󰒮",
-		on_clicked: () => player.previous(),
-	});
-	const next_track = Widget.Button({
-		class_names: ["media", "osd", "next"],
-		label: "󰒭",
-		on_clicked: () => player.next(),
-	});
-
-	return Widget.Box({
-		class_names: ["media", "osd"],
+export default (player: MprisPlayer, index: number, length: number) =>
+	Widget.Box({
+		class_names: ["osd", "media"],
 		children: [
 			cover(player),
-			Widget.Box({
-				class_names: ["media", "osd", "info"],
+			Widget.CenterBox({
+				class_names: ["osd", "media", "info"],
 				vertical: true,
-				children: [
-					Widget.Box([title(player), left_card, right_card]),
-					artist(player),
-					Widget.CenterBox({ center_widget: Widget.Box([previous_track, play_paulse, next_track]) }),
-					Widget.Box([position(player), progress(player), duration(player)]),
-				],
+				start_widget: Widget.Box({
+					vertical: true,
+					children: [Widget.Box([title(player), left_card(index), right_card(index, length)]), artist(player)],
+				}),
+				center_widget: Widget.CenterBox({
+					center_widget: Widget.Box([previous_track(player), play_paulse(player), next_track(player)]),
+				}),
+				end_widget: Widget.CenterBox({
+					start_widget: position(player),
+					center_widget: progress(player),
+					end_widget: duration(player),
+				}),
 			}),
 		],
 	});
-};
