@@ -2,13 +2,13 @@ import Gtk from "types/@girs/gtk-3.0/gtk-3.0";
 
 import { MprisPlayer } from "types/service/mpris";
 
-import { AgsWidget as AgsWidgets, BaseProps } from "types/widgets/widget";
+import { AgsWidget as AgsWidgets } from "types/widgets/widget";
 import Window from "types/widgets/window";
 import Box from "types/widgets/box";
 import Revealer from "types/widgets/revealer";
 import Stack from "types/widgets/stack";
 
-export { Gtk, BaseProps, MprisPlayer };
+export { Gtk, MprisPlayer };
 export type AgsWidget = AgsWidgets<unknown>;
 export type AgsWindow = Window<Gtk.Widget, unknown>;
 

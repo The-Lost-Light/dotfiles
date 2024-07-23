@@ -1,6 +1,5 @@
 import Mpris from "@services/mpris";
 import minutes from "@lib/minutes";
-
 import { MprisPlayer } from "types";
 
 export const position = (player: MprisPlayer) =>
@@ -30,7 +29,8 @@ export const duration = (player: MprisPlayer) =>
 export const progress = (player: MprisPlayer) =>
 	Widget.LevelBar({
 		"class-names": ["osd", "media", "progress"],
-		widthRequest: 250,
+		widthRequest: 280,
+		hpack: "center",
 		vpack: "center",
 		setup: self =>
 			Utils.idle(() => {

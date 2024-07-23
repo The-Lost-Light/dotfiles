@@ -13,8 +13,8 @@ export default new (class MprisExtends extends Mpris {
 		// Fix Spotify empty mpris value when initial
 		this.connect("player-added", (_, bus) => {
 			if (bus.includes("spotify")) {
-				this.getPlayer(bus)?.next();
-				this.getPlayer(bus)?.previous();
+				this.getPlayer(bus)?.playPause();
+				this.getPlayer(bus)?.playPause();
 			}
 		});
 	}

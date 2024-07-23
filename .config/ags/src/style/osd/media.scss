@@ -1,24 +1,35 @@
-.osd.media {
-	/* border-radius: 10px; */
+#media {
+	border-radius: 10px;
 
-	.image {
-		min-width: 188px;
-	}
-
-	.left,
-	.right {
-		min-width: 22px;
-	}
-
-	.info {
-		min-width: 500px;
-	}
-
-	.progress trough block {
-		min-height: 6px;
+	.osd.media {
 		border-radius: 10px;
-		&.filled {
-			/* background-color: dodgerblue; */
+		padding: 3px;
+
+		.image {
+			border-radius: 10px;
+		}
+
+		.left,
+		.right {
+			min-width: 22px;
+		}
+
+		.info {
+			min-width: 400px;
+			margin: 5px 10px;
+
+			.control.player {
+				margin-bottom: 10px;
+			}
+
+			.progress trough block {
+				margin-bottom: 10px;
+				min-height: 6px;
+				border-radius: 10px;
+				&.filled {
+					/* background-color: dodgerblue; */
+				}
+			}
 		}
 	}
 }
