@@ -1,3 +1,4 @@
+![screenshot](./.dotfiles/assets/screenshot.png)
 # TODO
 - [x] waybar->ags
 - [ ] swaync->ags
@@ -6,9 +7,9 @@
 - [x] hyprcursor
 - [x] aconfmgr
 ## ags
-- [ ] mpris osd
+- [X] mpris OSD
+- [ ] Overvies OSD
 - [ ] notification system
-- [ ] reveal
 - [ ] system information
 - [ ] system tweak(e.g. volume) osd
 
