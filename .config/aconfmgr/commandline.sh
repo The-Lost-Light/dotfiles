@@ -12,6 +12,7 @@ AddPackage starship # The cross-shell prompt for astronauts
 AddPackage baidupcs-go # Terminal utility for Baidu Network Disk
 AddPackage brightnessctl # Lightweight brightness control tool
 AddPackage dex # Program to generate and execute DesktopEntry files of type Application
+AddPackage imagemagick # An image viewing/manipulation program
 AddPackage playerctl # mpris media player controller and lib for spotify, vlc, audacious, bmp, xmms2, and others.
 AddPackage handlr-regex # Powerful alternative to xdg-utils written in Rust
 AddPackage man-pages-zh_tw # Traditional Chinese Linux man pages

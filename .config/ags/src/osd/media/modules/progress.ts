@@ -29,7 +29,7 @@ export const duration = (player: MprisPlayer) =>
 export const progress = (player: MprisPlayer) =>
 	Widget.LevelBar({
 		"class-names": ["osd", "media", "progress"],
-		widthRequest: 280,
+		widthRequest: 300,
 		hpack: "center",
 		vpack: "center",
 		setup: self =>

@@ -9,7 +9,7 @@ AddPackage --foreign aylurs-gtk-shell # Aylurs's Gtk Shell (AGS), An eww inspire
 AddPackage swaync # A simple GTK based notification daemon for Sway
 
 # Clipboard
-AddPackage --foreign wl-clip-persist # Keep Wayland clipboard even after programs close
+AddPackage wl-clip-persist # Keep Wayland clipboard even after programs close
 AddPackage --foreign clipse # A configurable TUI clipboard manager for Unix.
 
 # XDG Desktop

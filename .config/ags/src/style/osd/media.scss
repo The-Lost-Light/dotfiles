@@ -2,24 +2,37 @@
 	border-radius: 10px;
 
 	.osd.media {
-		border-radius: 10px;
-		padding: 3px;
+		padding: 4px 0 4px 4px;
 
 		.image {
 			border-radius: 10px;
 		}
 
-		.left,
-		.right {
-			min-width: 22px;
-		}
-
 		.info {
-			min-width: 400px;
+			min-width: 450px;
 			margin: 5px 10px;
+
+			.title {
+				font-size: 18px;
+			}
+			.artist {
+				font-size: 12px;
+			}
+			.title,
+			.artist {
+				background-color: transparent;
+			}
 
 			.control.player {
 				margin-bottom: 10px;
+
+				.play_paulse {
+					font-size: 24px;
+				}
+				.previous,
+				.next {
+					font-size: 14px;
+				}
 			}
 
 			.progress trough block {

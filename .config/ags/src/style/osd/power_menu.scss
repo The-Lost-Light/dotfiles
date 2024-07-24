@@ -1,8 +1,5 @@
 .power_menu {
-	.logout,
-	.poweroff,
-	.reboot,
-	.sleep {
+	.button {
 		font-family: "FiraCode Nerd Font", Retina, Regular;
 		font-size: 48px;
 		min-width: 96px;
@@ -11,9 +8,9 @@
 		border-radius: 10px;
 		margin: 20px;
 		background-color: #2e3440;
-	}
 
-	.poweroff {
-		color: $red;
+		&.poweroff {
+			color: $red;
+		}
 	}
 }

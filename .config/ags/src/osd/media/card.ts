@@ -23,7 +23,10 @@ export default (player: MprisPlayer, index: number, length: number) =>
 					Widget.CenterBox({
 						class_names: ["osd", "media", "control", "player"],
 						start_widget: position(player),
-						center_widget: Widget.Box([previous_track(player), play_paulse(player), next_track(player)]),
+						center_widget: Widget.Box({
+							spacing: 4,
+							children: [previous_track(player), play_paulse(player), next_track(player)],
+						}),
 						end_widget: duration(player),
 					}),
 					progress(player),

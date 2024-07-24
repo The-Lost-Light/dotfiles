@@ -24,7 +24,6 @@ AddPackage telegram-desktop # Official Telegram Desktop client
 AddPackage foliate # A simple and modern GTK eBook reader
 
 # Note
-AddPackage obsidian # A powerful knowledge base that works on top of a local folder of plain text Markdown files
 AddPackage rnote # A simple drawing application to create handwritten notes
 AddPackage --foreign appflowy-bin # AppFlowy is an open-source alternative to Notion. You are in charge of your data and customizations.
 
@@ -62,14 +61,17 @@ AddPackage blender # A fully integrated 3D graphics creation suite
 AddPackage godot # Advanced cross-platform 2D and 3D game engine
 AddPackage --foreign aseprite # Create animated sprites and pixel art
 
-# Live Streaming
-AddPackage obs-studio # Free, open source software for live streaming and recording
+# System Monitor
+AddPackage --foreign mission-center # Monitor your CPU, Memory, Disk, Network and GPU usage
+
 
 # Share/Sync/Download
 AddPackage syncthing # Open Source Continuous Replication / Cluster Synchronization Thing
 AddPackage --foreign localsend-bin # An open source cross-platform alternative to AirDrop
-AddPackage --foreign megasync-bin # Easy automated syncing between your computers and your MEGA cloud drive
 AddPackage --foreign motrix-bin # A full-featured download manager (binary version)
+
+# Live Streaming
+AddPackage obs-studio # Free, open source software for live streaming and recording
 
 # VPN
 AddPackage tailscale # A mesh VPN that makes it easy to connect your devices, wherever they are.
