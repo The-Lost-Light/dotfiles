@@ -1,6 +1,6 @@
 import Brightness from "@services/brightness";
 
-Brightness.script = App.configDir + "/scripts/brightness.fish";
+Brightness.script = App.configDir + "/scripts/brightness.nu";
 
 export default () =>
 	Widget.EventBox({
@@ -11,6 +11,6 @@ export default () =>
 			Widget.Label({ label: Brightness.bind("brightness_ratio").as(v => `${v}%`) }),
 		]),
 		visible: Brightness.bind("device").as(v => !!v),
-		on_scroll_up: () => Brightness.tweakFlag("-i"),
-		on_scroll_down: () => Brightness.tweakFlag("-d"),
+		on_scroll_up: () => Brightness.tweakFlag("increase"),
+		on_scroll_down: () => Brightness.tweakFlag("decrease"),
 	});

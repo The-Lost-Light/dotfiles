@@ -41,7 +41,6 @@ AddPackage --foreign nwg-drawer-bin # Application drawer for sway and other wlro
 
 # Screenshot
 AddPackage --foreign hyprshot # A utility to easily take screenshots in Hyprland using your mouse
-AddPackage swappy # A Wayland native snapshot editing tool
 AddPackage --foreign satty-bin # A screenshot annotation tool inspired by Swappy and Flameshot
 
 # Xwayland

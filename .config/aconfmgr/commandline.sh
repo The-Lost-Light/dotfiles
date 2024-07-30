@@ -12,17 +12,18 @@ AddPackage starship # The cross-shell prompt for astronauts
 AddPackage baidupcs-go # Terminal utility for Baidu Network Disk
 AddPackage brightnessctl # Lightweight brightness control tool
 AddPackage dex # Program to generate and execute DesktopEntry files of type Application
-AddPackage imagemagick # An image viewing/manipulation program
-AddPackage playerctl # mpris media player controller and lib for spotify, vlc, audacious, bmp, xmms2, and others.
 AddPackage handlr-regex # Powerful alternative to xdg-utils written in Rust
+AddPackage imagemagick # An image viewing/manipulation program
+AddPackage lostfiles # Find orphaned files not owned by any Arch packages
 AddPackage man-pages-zh_tw # Traditional Chinese Linux man pages
-AddPackage tealdeer # A fast tldr client in Rust
 AddPackage p7zip # Command-line file archiver with high compression ratio
+AddPackage playerctl # mpris media player controller and lib for spotify, vlc, audacious, bmp, xmms2, and others.
+AddPackage tealdeer # A fast tldr client in Rust
 AddPackage trash-cli # Command line trashcan (recycle bin) interface
 AddPackage wev # A tool for debugging wayland events on a Wayland window, analagous to the X11 tool xev
 AddPackage yt-dlp # A youtube-dl fork with additional features and fixes
 AddPackage --foreign catnap-git # A minimalistic and fast system fetch written in Nim.
-AddPackage lostfiles # Find orphaned files not owned by any Arch packages
+AddPackage --foreign terminaltexteffects-git # Visual effects engine applied to text in the terminal.
 AddPackage --foreign tty-share # Shares terminal session with no setup on remote end (browser)
 
 # TUI

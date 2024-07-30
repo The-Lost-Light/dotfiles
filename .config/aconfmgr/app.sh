@@ -11,8 +11,6 @@ AddPackage --foreign ffmpeg6.1 # Complete solution to record, convert and stream
 # Terminal
 AddPackage alacritty # A cross-platform, GPU-accelerated terminal emulator
 AddPackage kitty # A modern, hackable, featureful, OpenGL-based terminal emulator
-AddPackage nushell # A new type of shell
-AddPackage rio # A hardware-accelerated GPU terminal emulator powered by WebGPU
 
 # Communication
 AddPackage discord # All-in-one voice and text chat for gamers
@@ -72,6 +70,7 @@ AddPackage --foreign motrix-bin # A full-featured download manager (binary versi
 
 # Live Streaming
 AddPackage obs-studio # Free, open source software for live streaming and recording
+AddPackage --foreign keyviz-bin # A free and open-source tool to visualize your keystrokes keyboard in real-time (Official GNU/Linux build, binary)
 
 # VPN
 AddPackage tailscale # A mesh VPN that makes it easy to connect your devices, wherever they are.

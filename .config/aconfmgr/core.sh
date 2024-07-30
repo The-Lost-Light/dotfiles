@@ -1,6 +1,5 @@
 # Boot
 AddPackage amd-ucode # Microcode update image for AMD CPUs
-AddPackage acpi_call-dkms # A linux kernel module that enables calls to ACPI methods through /proc/acpi/call - module sources
 AddPackage linux-zen # The Linux ZEN kernel and modules
 AddPackage linux-zen-headers # Headers and scripts for building modules for the Linux ZEN kernel
 CopyFile /etc/booster.yaml
@@ -75,6 +74,7 @@ CopyFile /etc/pam.d/greetd
 # Shell
 AddPackage dash # POSIX compliant shell that aims to be as small as possible
 AddPackage fish # Smart and user friendly shell intended mostly for interactive use
+AddPackage nushell # A new type of shell
 
 # Pacman
 CopyFile /etc/makepkg.conf

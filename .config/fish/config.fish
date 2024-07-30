@@ -1,11 +1,7 @@
 if status is-login
     # Commands to run in login sessions can go here
 
-    # Disable fish shell greeting
-    set -U fish_greeting
-
     ## Set environment
-
     # Set wayland
     set -x ELECTRON_OZONE_PLATFORM_HINT auto
 

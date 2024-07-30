@@ -6,27 +6,37 @@
 - [x] swayidle->hypridle
 - [x] hyprcursor
 - [x] aconfmgr
+- [ ] migrate scripts from fish to nu
 ## ags
 - [X] mpris OSD
+- [ ] arch update use tte to add animation
 - [ ] Overvies OSD
 - [ ] notification system
 - [ ] system information
 - [ ] system tweak(e.g. volume) osd
 
 # Dependences
-- fish
-- ags
+## shell
+- dash: for system sh
+- fish: for interactive
+- nushell: for scripts
+## system
 - brightnessctl
-- aconfmgr
+- pipewire
+## maintain
+- aconfmgr: arch linux system backup
 ## ags
+ags
 - curl
 - pacman-contrib
 - pavucontrol
 
 # Issue
-## Fixing
+qt theme not apply
+## ags
+### Fixing
 https://github.com/Aylur/ags/pull/454
 https://github.com/Aylur/ags/issues/392
-## Wait for Fixed
+### Wait for Fixed
 https://github.com/Aylur/ags/pull/397
 https://github.com/Aylur/ags/issues/450
