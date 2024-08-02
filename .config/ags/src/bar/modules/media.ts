@@ -1,5 +1,4 @@
 import Mpris from "@services/mpris";
-import capitalize from "@lib/capitalize";
 
 export default () =>
 	Widget.Label({
@@ -11,7 +10,7 @@ export default () =>
 
 			const player = Mpris.getPlayer(Mpris.getBus(bus));
 			self.visible = Mpris.isPlayPause(player?.bus_name);
-			self.label = player?.play_back_status === "Playing" ? " 󰎇" : " 󰎊";
+			self.label = Mpris.players.some(player => player.play_back_status === "Playing") ? " 󰎇" : " 󰎊";
 		},
 		"player-changed",
 	);

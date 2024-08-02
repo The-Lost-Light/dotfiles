@@ -22,7 +22,6 @@ export default () =>
 					}),
 				),
 				Widget.Button({
-					class_name: "new_workspace",
 					child: Widget.Label("+"),
 					visible: Hyprland.bind("is_full"),
 					on_clicked: () => Hyprland.createNewWorkspace(),

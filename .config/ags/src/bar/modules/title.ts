@@ -3,7 +3,6 @@ import Applications from "@services/applications";
 
 export default () =>
 	Widget.Box({
-		class_name: "client-title",
 		spacing: 8,
 	}).hook(Hyprland.active.client, self => {
 		const entry = Applications.getEntry(Hyprland.active.client.class);

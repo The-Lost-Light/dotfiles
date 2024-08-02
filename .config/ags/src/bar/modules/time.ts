@@ -4,14 +4,12 @@ const date = Variable([], {
 
 export default () =>
 	Widget.Box({
-		class_name: "time",
 		children: [
 			Widget.Label({
 				class_name: "clock",
 				label: date.bind().as(v => v[0]),
 			}),
 			Widget.Revealer({
-				class_name: "date",
 				transition: "slide_right",
 				child: Widget.Label({
 					label: date.bind().as(v => ` ${v[1]}`),

@@ -1,10 +1,9 @@
 import Audio from "@services/audio";
 
-Audio.script = "$CONFIG/hypr/scripts/audio.fish";
+Audio.script = "$CONFIG/hypr/scripts/audio.nu";
 
 const stream = (type = "speaker") =>
 	Widget.Button({
-		class_name: `audio ${type}`,
 		child: Widget.Box({
 			children: [
 				Widget.Icon({
@@ -16,10 +15,10 @@ const stream = (type = "speaker") =>
 				}),
 			],
 		}),
-		on_clicked: () => (Audio[type].is_muted = !Audio[type].is_muted),
+		on_clicked: () => Audio.tweakFlag(`${type} toggle`),
 		on_secondary_click: () => Utils.execAsync("pavucontrol -m"),
-		on_scroll_up: () => Audio.tweakFlag(`--${type} -i`),
-		on_scroll_down: () => Audio.tweakFlag(`--${type} -d`),
+		on_scroll_up: () => Audio.tweakFlag(`${type} increase`),
+		on_scroll_down: () => Audio.tweakFlag(`${type} decrease`),
 	});
 
 export default () =>

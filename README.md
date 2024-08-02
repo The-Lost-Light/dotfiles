@@ -6,7 +6,7 @@
 - [x] swayidle->hypridle
 - [x] hyprcursor
 - [x] aconfmgr
-- [ ] migrate scripts from fish to nu
+- [x] migrate scripts from fish to nu
 ## ags
 - [X] mpris OSD
 - [ ] arch update use tte to add animation

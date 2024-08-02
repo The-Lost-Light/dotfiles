@@ -1,4 +1,7 @@
 {
+	"features": {
+		"inline_completion_provider": "none"
+	},
 	"base_keymap": "VSCode",
 	"autosave": { "after_delay": { "milliseconds": 600000 } },
 	"buffer_font_family": "FiraCode Nerd Font",
@@ -10,7 +13,7 @@
 	"hard_tabs": true,
 	"inlay_hints": { "enabled": false, "show_type_hints": false },
 	"soft_wrap": "editor_width",
-	"terminal": { "alternate_scroll": "on" },
+	"terminal": { "dock": "bottom", "alternate_scroll": "on" },
 	"theme": "Ayu Mirage",
 	"calls": { "mute_on_join": true },
 

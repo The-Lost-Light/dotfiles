@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+
+configs=$(git --git-dir=$HOME/.dotfiles --work-tree=$HOME -C $CONFIG ls-tree --name-only HEAD $CONFIG/)
+
+printf "%s\n" $configs | while read -r config; do
+	git --git-dir=$HOME/.dotfiles --work-tree=$HOME add $CONFIG/$config
+done
