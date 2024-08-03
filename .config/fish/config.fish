@@ -1,52 +1,38 @@
 if status is-login
-    # Commands to run in login sessions can go here
-
-    ## Set environment
-    # Set wayland
+    # wayland
     set -x ELECTRON_OZONE_PLATFORM_HINT auto
 
-    # Set editor
-    set -x VISUAL helix
-    set -x EDITOR helix
-    set -x DIFFPROG helix
+    # VA-API
+    set -x LIBVA_DRIVER_NAME radeonsi
 
-    # Disable wine auto set default application
-    set WINEDLLOVERRIDES winemenubuilder.exe=d
-
-    # Set the GPU that Vulkan used. (require vulkan-mesa-layers)
+    # Vulkan
     set -x MESA_VK_DEVICE_SELECT 0x1002:0x1636
 
-    # Set vaapi
-    set -x LIBVA_DRIVER_NAME nvidia
-    # set -x MOZ_DISABLE_RDD_SANDBOX 1
-    # set -x MOZ_DRM_DEVICE /dev/dri/renderD128
-
-    # Set cuda
+    # CUDA
     set -x NVD_GPU 0
     set -x XLA_FLAGS --xla_gpu_cuda_data_dir=/opt/cuda
 
-    # Set fcitx5
+    # Fcitx5
     set -x XMODIFIERS @im=fcitx
 
-    # Set sccache
+    # Sccache
     set -x RUSTC_WRAPPER sccache
+
+    # Editor
+    set -x VISUAL helix
+    set -x EDITOR helix
+    set -x DIFFPROG helix
 end
 
 if status is-interactive
-    # Commands to run in interactive sessions can go here
-
-    ## alias
+    # alias
     alias hx helix
-    alias shx sudoedit
     alias ls lsd
     alias lst "ls --tree"
     # manage dotfiles
     alias config "git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
-    alias configui "gitui -d $HOME/.dotfiles/ -w $HOME"
 
-    ## plugin initial
-
-    # initial starship
+    # Initial Starship
     function starship_transient_prompt_func
         starship module character
     end
@@ -58,12 +44,12 @@ if status is-interactive
         enable_transience
     end
 
-    # initial zoxide
+    # Initial Zoxide
     zoxide init --cmd cd fish | source
 
-    # initial pyenv
+    # Initial Pyenv
     set -Ux PYENV_ROOT $HOME/.pyenv
-    set -U fish_user_paths $PYENV_ROOT/bin $fish_user_paths
+    fish_add_path $PYENV_ROOT/bin
     pyenv init - | source
-    source (pyenv virtualenv-init - | psub)
+    pyenv virtualenv-init - | source
 end

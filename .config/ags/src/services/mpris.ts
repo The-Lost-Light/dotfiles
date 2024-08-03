@@ -38,12 +38,4 @@ export default new (class MprisExtends extends Mpris {
 			);
 		else return bus;
 	}
-
-	isPlayPause(bus: string | undefined) {
-		return (
-			!!this.getPlayer(bus) &&
-			!this.isPlayerctld(this.getBus(bus)) &&
-			this.getPlayer(bus)?.play_back_status !== "Stopped"
-		);
-	}
 })();

@@ -9,7 +9,7 @@ export default () =>
 			if (bus === undefined) bus = Mpris.getPlayer()?.bus_name;
 
 			const player = Mpris.getPlayer(Mpris.getBus(bus));
-			self.visible = Mpris.isPlayPause(player?.bus_name);
+			self.visible = Mpris.players.some(player => player.play_back_status !== "Stopped");
 			self.label = Mpris.players.some(player => player.play_back_status === "Playing") ? " 󰎇" : " 󰎊";
 		},
 		"player-changed",
