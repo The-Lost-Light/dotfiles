@@ -10,13 +10,13 @@ import { AgsBox } from "types";
 
 const Center = () =>
 	Widget.Button({
-		child: Widget.Box([Time(), Media()]),
+		child: Widget.Box([Weather(), Time(), Media()]),
 		on_clicked: () => App.toggleWindow("media"),
-		setup: self => reveal_on_hover(self, (self.child.children[0] as AgsBox).children[1]),
+		setup: self => reveal_on_hover(self, (self.child.children[1] as AgsBox).children[1]),
 	});
 
 export default () =>
 	Widget.Box({
 		class_name: "center",
-		children: [Indicator(), Weather(), Center(), PowerButton()],
+		children: [Indicator(), Center(), PowerButton()],
 	});

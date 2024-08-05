@@ -131,7 +131,7 @@ export default new (class WeatherService extends Service {
 				else return [Number(time[0]), Number(time[1])];
 			});
 
-		let minutes = time.value.hour * 60 + time.value.minute;
+		let minutes = Number(time.value.hour) * 60 + Number(time.value.minute);
 		if (sun[0][0] * 60 + sun[0][1] <= minutes && minutes <= sun[1][0] * 60 + sun[1][1]) {
 			this.#symbol = WEATHER_SYMBOL_WI_DAY[code];
 		} else {

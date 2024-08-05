@@ -2,6 +2,7 @@ import time from "@lib/time";
 
 export default () =>
 	Widget.Box({
+		class_name: "time",
 		children: [
 			Widget.Label({
 				class_name: "clock",

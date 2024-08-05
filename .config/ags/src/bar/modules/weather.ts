@@ -1,3 +1,3 @@
 import Weather from "@services/weather";
 
-export default () => Widget.Label({ label: Weather.bind("symbol") });
+export default () => Widget.Label({ className: "weather", label: Weather.bind("symbol") });
