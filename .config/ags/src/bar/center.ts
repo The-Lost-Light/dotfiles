@@ -1,4 +1,5 @@
 import Indicator from "@bar/modules/arch_updates";
+import Weather from "@bar/modules/weather";
 import Time from "@bar/modules/time";
 import Media from "@bar/modules/media";
 import PowerButton from "@bar/modules/power_button";
@@ -17,5 +18,5 @@ const Center = () =>
 export default () =>
 	Widget.Box({
 		class_name: "center",
-		children: [Indicator(), Center(), PowerButton()],
+		children: [Indicator(), Weather(), Center(), PowerButton()],
 	});

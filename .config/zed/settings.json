@@ -16,7 +16,6 @@
 	"terminal": { "dock": "bottom", "alternate_scroll": "on" },
 	"theme": "Ayu Mirage",
 	"calls": { "mute_on_join": true },
-
 	"languages": {
 		"JavaScript": {
 			"format_on_save": {
