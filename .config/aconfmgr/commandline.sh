@@ -23,16 +23,11 @@ AddPackage trash-cli # Command line trashcan (recycle bin) interface
 AddPackage wev # A tool for debugging wayland events on a Wayland window, analagous to the X11 tool xev
 AddPackage yt-dlp # A youtube-dl fork with additional features and fixes
 AddPackage --foreign catnap-git # A minimalistic and fast system fetch written in Nim.
+AddPackage --foreign cmd-wrapped-bin # Find out what the past year looks like in command line!
 AddPackage --foreign terminaltexteffects-git # Visual effects engine applied to text in the terminal.
 AddPackage --foreign tty-share # Shares terminal session with no setup on remote end (browser)
 
 # TUI
-AddPackage btop # A monitor of system resources, bpytop ported to C++
 AddPackage glow # Command-line markdown renderer
-AddPackage zellij # A terminal multiplexer
 AddPackage --foreign cavalier # Audio visualizer based on CAVA
 AddPackage --foreign cavasik # Audio visualizer based on CAVA
-# File Manager
-AddPackage yazi # Blazing fast terminal file manager written in Rust, based on async I/O
-AddPackage ffmpegthumbnailer # Lightweight video thumbnailer that can be used by file managers
-AddPackage unarchiver # unar and lsar: Objective-C tools for uncompressing archive files

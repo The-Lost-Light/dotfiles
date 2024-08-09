@@ -24,9 +24,8 @@ AddPackage typescript-svelte-plugin # TypeScript plugin for Svelte intellisense
 AddPackage vscode-css-languageserver # CSS/LESS/SCSS language server
 AddPackage vscode-html-languageserver # HTML language server
 
-# Tools
+# Make
 AddPackage cmake # A cross-platform open-source make system
-AddPackage --foreign devtoys-bin # A Swiss Army knife for developers.
 
 # C/C++
 AddPackage ccache # Compiler cache that speeds up recompilation by caching previous compilations

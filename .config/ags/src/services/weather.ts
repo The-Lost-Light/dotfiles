@@ -109,18 +109,15 @@ export default new (class WeatherService extends Service {
 
 	constructor() {
 		super();
-
-		Utils.interval(1000000, () =>
-			Utils.fetch("https://wttr.in/?format=j1")
-				.then(data => data.json())
-				.then(data => (this.#data = data))
-				.then(data => this.#setSymbol(data))
-				.finally(() => this.changed("symbol")),
-		);
 	}
 
-	#data = {};
+	#signal_id: number | undefined;
+	#data = Variable({});
 	#symbol = "";
+
+	get symbol() {
+		return this.#symbol;
+	}
 
 	#setSymbol(data: wttr) {
 		let code = WWO_CODE[data.current_condition[0].weatherCode];
@@ -139,7 +136,23 @@ export default new (class WeatherService extends Service {
 		}
 	}
 
-	get symbol() {
-		return this.#symbol;
+	setChecker({ interval = 600, language = "" }) {
+		if (this.#data.is_polling) this.#data.stopPoll();
+		if (this.#signal_id) this.#data.disconnect(this.#signal_id);
+		this.#data = Variable(
+			{},
+			{
+				poll: [
+					interval * 1000,
+					() =>
+						Utils.fetch(`https://wttr.in/?format=j1${language !== "" ? "&lang" + language : ""}`)
+							.then(data => data.json())
+							.then(data => (this.#setSymbol(data), data)),
+				],
+			},
+		);
+		this.#signal_id = this.#data.connect("changed", () => {
+			this.changed("symbol");
+		});
 	}
 })();

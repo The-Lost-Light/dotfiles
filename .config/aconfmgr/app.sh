@@ -4,13 +4,16 @@ AddPackage firefox-developer-edition # Fast, Private & Safe Web Browser (Develop
 AddPackage firefox-developer-edition-i18n-zh-tw # Chinese (Traditional) language pack for Firefox Developer Edition
 
 # File Manager
-AddPackage nemo # Cinnamon file manager (Nautilus fork)
+AddPackage yazi # Blazing fast terminal file manager written in Rust, based on async I/O
+AddPackage ffmpegthumbnailer # Lightweight video thumbnailer that can be used by file managers
+AddPackage perl-image-exiftool # Reader and rewriter of EXIF information that supports raw files
+AddPackage unarchiver # unar and lsar: Objective-C tools for uncompressing archive files
 AddPackage --foreign spacedrive-bin # A file manager from the future.
-AddPackage --foreign ffmpeg6.1 # Complete solution to record, convert and stream audio and video (legacy v6.1)
 
 # Terminal
 AddPackage alacritty # A cross-platform, GPU-accelerated terminal emulator
 AddPackage kitty # A modern, hackable, featureful, OpenGL-based terminal emulator
+AddPackage zellij # A terminal multiplexer
 
 # Communication
 AddPackage discord # All-in-one voice and text chat for gamers
@@ -60,6 +63,7 @@ AddPackage godot # Advanced cross-platform 2D and 3D game engine
 AddPackage --foreign aseprite # Create animated sprites and pixel art
 
 # System Monitor
+AddPackage btop # A monitor of system resources, bpytop ported to C++
 AddPackage --foreign mission-center # Monitor your CPU, Memory, Disk, Network and GPU usage
 
 
