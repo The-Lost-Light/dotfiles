@@ -11,7 +11,15 @@ import { AgsBox } from "types";
 const Center = () =>
 	Widget.Button({
 		child: Widget.Box([Weather(), Time(), Media()]),
-		on_clicked: () => App.toggleWindow("media"),
+		on_clicked: () => {
+			if (App.getWindow("overview")?.visible) {
+				App.closeWindow("overview");
+			} else if (App.getWindow("media")?.visible) {
+				App.closeWindow("media");
+			} else {
+				App.openWindow("overview");
+			}
+		},
 		setup: self => reveal_on_hover(self, (self.child.children[1] as AgsBox).children[1]),
 	});
 

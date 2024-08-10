@@ -29,6 +29,7 @@ AddPackage nwg-look # GTK3 settings editor adapted to work on wlroots-based comp
 AddPackage --foreign bibata-cursor-theme-bin # Material Based Cursor Theme
 AddPackage --foreign orchis-theme # A Material Design theme for GNOME/GTK based desktop environments.
 AddPackage --foreign qt5-styleplugins # Additional style plugins for Qt5
+AddPackage --foreign matugen-bin # A material you color generation tool with templates
 AddPackage --foreign tela-icon-theme # A flat colorful design icon theme.
 
 # Wallpaper

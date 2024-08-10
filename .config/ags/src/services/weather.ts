@@ -120,7 +120,8 @@ export default new (class WeatherService extends Service {
 	}
 
 	#setSymbol(data: wttr) {
-		let code = WWO_CODE[data.current_condition[0].weatherCode];
+		let hourly = Math.floor(Number(time.value.hour) / 3);
+		let code = WWO_CODE[data.weather[0].hourly[hourly].weatherCode];
 		let sun = [data.weather[0].astronomy[0].sunrise, data.weather[0].astronomy[0].sunset]
 			.map(time => time.split(/[: ]/))
 			.map(time => {

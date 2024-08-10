@@ -1,6 +1,12 @@
 IgnorePath "/usr/*"
 IgnorePath "/var/*"
 IgnorePath "/opt/*"
+# Timeshift
+IgnorePath "/timeshift-btrfs/*"
+# Nix
+IgnorePath "/nix/*"
+# Cache Files
+IgnorePath "*.cache"
 
 # ESP
 IgnorePath "/boot/*"
@@ -55,13 +61,3 @@ IgnorePath "/etc/subgid-"
 IgnorePath "/etc/subuid"
 IgnorePath "/etc/subuid-"
 IgnorePath "/etc/sudoers"
-# G14
-IgnorePath "/etc/asusd/*"
-IgnorePath "/etc/supergfxd.conf"
-IgnorePath "/etc/modprobe.d/supergfxd.conf"
-
-# Timeshift
-IgnorePath "/timeshift-btrfs/*"
-
-# Cache Files
-IgnorePath "*.cache"

@@ -20,7 +20,8 @@ export default new (class MprisExtends extends Mpris {
 	}
 
 	// Fix Spotify
-	getLength(player: MprisPlayer) {
+	getLength(player: MprisPlayer | null) {
+		if (player === null) return -1;
 		if (player.length === 0) return Number(Utils.exec("playerctl metadata mpris:length")) / 1000000;
 		else return player.length;
 	}

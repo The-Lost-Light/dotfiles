@@ -4,7 +4,7 @@ export default (directory: string, entry: string) => {
 
 	const applyCss = () =>
 		Utils.exec(
-			`sassc ${scss} ${css}`,
+			`sass ${scss} ${css}`,
 			() => (App.resetCss(), App.applyCss(css)),
 			err => print(err),
 		);
