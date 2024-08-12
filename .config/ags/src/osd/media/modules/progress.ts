@@ -7,7 +7,7 @@ export const position = (player: MprisPlayer) =>
 		setup: self =>
 			Utils.idle(() => {
 				if (!self.is_destroyed)
-					if (player.position >= 0) {
+					if (player.position >= 0 && player.length > 0) {
 						const update = () => (self.label = minutes(Math.max(0, player.position)));
 
 						self.hook(player, update);
@@ -19,10 +19,10 @@ export const position = (player: MprisPlayer) =>
 
 export const duration = (player: MprisPlayer) =>
 	Widget.Label({
-		label: minutes(Math.max(0, Mpris.getLength(player))),
+		label: minutes(player.length),
 		setup: self =>
 			Utils.idle(() => {
-				if (!self.is_destroyed && Mpris.getLength(player) === -1) self.visible = false;
+				if (!self.is_destroyed && !(player.length > 0)) self.visible = false;
 			}),
 	});
 
@@ -35,8 +35,8 @@ export const progress = (player: MprisPlayer) =>
 		setup: self =>
 			Utils.idle(() => {
 				if (!self.is_destroyed)
-					if (0 <= player.position && player.position <= Mpris.getLength(player)) {
-						self.max_value = Mpris.getLength(player);
+					if (0 <= player.position && player.position < player.length) {
+						self.max_value = player.length;
 						const update = () => (self.value = Math.max(0, player.position));
 
 						self.hook(player, update);

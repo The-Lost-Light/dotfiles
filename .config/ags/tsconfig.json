@@ -10,6 +10,7 @@
 			"@services/*": ["services/*"],
 			"@lib/*": ["lib/*"],
 			"@bar/*": ["bar/*"],
+			"@notifications/*": ["notifications/*"],
 			"@osd/*": ["osd/*"]
 		},
 		"types": [],

@@ -1,17 +1,18 @@
 import { position, duration, progress } from "@osd/overview/modules/progress";
 import Mpris from "@services/mpris";
 import image from "@lib/image";
+import { MprisPlayer } from "types";
 
-const cover = (bus: string) =>
+const cover = (player: MprisPlayer) =>
 	Widget.Box({
 		class_names: ["osd", "media", "image"],
-		css: image({ path: Mpris.getPlayer(bus)?.cover_path, height: 94 }),
+		css: image({ path: player.cover_path, height: 94 }),
 	});
 
-const title = (bus: string) =>
+const title = (player: MprisPlayer) =>
 	Widget.Label({
 		truncate: "end",
-		label: Mpris.getPlayer(bus)?.track_title,
+		label: player.track_title,
 	});
 
 const media = () =>
@@ -21,16 +22,23 @@ const media = () =>
 		Mpris,
 		(self, bus) => {
 			if (bus === undefined) bus = Mpris.getPlayer()?.bus_name;
-			self.children = [
-				cover(bus),
-				Widget.Box({
-					vertical: true,
-					children: [
-						title(bus),
-						Widget.CenterBox({ start_widget: position(bus), center_widget: progress(bus), end_widget: duration(bus) }),
-					],
-				}),
-			];
+			let player = Mpris.getPlayer(bus);
+			if (player)
+				self.children = [
+					cover(player),
+					Widget.Box({
+						vertical: true,
+						children: [
+							title(player),
+							Widget.CenterBox({
+								start_widget: position(player),
+								center_widget: progress(player),
+								end_widget: duration(player),
+							}),
+						],
+					}),
+				];
+			else self.children = [];
 		},
 		"player-changed",
 	);

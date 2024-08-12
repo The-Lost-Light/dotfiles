@@ -1,7 +1,5 @@
 import { Mpris } from "resource:///com/github/Aylur/ags/service/mpris.js";
 
-import { MprisPlayer } from "types";
-
 export default new (class MprisExtends extends Mpris {
 	static {
 		Service.register(this, {}, {});
@@ -9,21 +7,6 @@ export default new (class MprisExtends extends Mpris {
 
 	constructor() {
 		super();
-
-		// Fix Spotify empty mpris value when initial
-		this.connect("player-added", (_, bus) => {
-			if (bus.includes("spotify")) {
-				this.getPlayer(bus)?.playPause();
-				this.getPlayer(bus)?.playPause();
-			}
-		});
-	}
-
-	// Fix Spotify
-	getLength(player: MprisPlayer | null) {
-		if (player === null) return -1;
-		if (player.length === 0) return Number(Utils.exec("playerctl metadata mpris:length")) / 1000000;
-		else return player.length;
 	}
 
 	isPlayerctld(bus: string | undefined) {
