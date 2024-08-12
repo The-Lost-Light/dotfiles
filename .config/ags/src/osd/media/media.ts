@@ -1,6 +1,5 @@
 import Mpris from "@services/mpris";
-
-import setCards from "@osd/media/cards";
+import setCards from "@osd/media/modules/cards";
 
 export default () =>
 	Widget.Window({

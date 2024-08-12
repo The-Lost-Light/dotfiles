@@ -9,6 +9,7 @@
 		"paths": {
 			"@services/*": ["services/*"],
 			"@lib/*": ["lib/*"],
+			"@widgets/*": ["widgets/*"],
 			"@bar/*": ["bar/*"],
 			"@notifications/*": ["notifications/*"],
 			"@osd/*": ["osd/*"]

@@ -1,6 +1,6 @@
 import Mpris from "@services/mpris";
+import setCard from "@osd/media/modules/card";
 import { shown } from "@osd/media/modules/cards_control";
-import setCard from "@osd/media/card";
 import { MprisPlayer, AgsStack } from "types";
 
 const realIndex = (player_index: number, playerctld_index: number) =>

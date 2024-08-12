@@ -1,5 +1,5 @@
 import Hyprland from "@services/hyprland";
-import { on_hover_off } from "@lib/on_hover";
+import hover from "@lib/hover";
 
 export default () =>
 	Widget.EventBox({
@@ -18,7 +18,7 @@ export default () =>
 						label: id.toString(),
 						on_clicked: self => (Hyprland.changeWorkspace(id), (self.label = id.toString())),
 						on_hover: self => Hyprland.monitors.length > 1 && id === Hyprland.active.workspace.id && (self.label = "󰯍"),
-						setup: self => on_hover_off(self, () => (self.label = id.toString())),
+						setup: self => hover.off(self, () => (self.label = id.toString())),
 					}),
 				),
 				Widget.Button({

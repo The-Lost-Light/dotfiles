@@ -1,50 +1,33 @@
-import { position, duration, progress } from "@osd/overview/modules/progress";
+import media from "@widgets/media";
 import Mpris from "@services/mpris";
-import image from "@lib/image";
-import { MprisPlayer } from "types";
-
-const cover = (player: MprisPlayer) =>
-	Widget.Box({
-		class_names: ["osd", "media", "image"],
-		css: image({ path: player.cover_path, height: 94 }),
-	});
-
-const title = (player: MprisPlayer) =>
-	Widget.Label({
-		truncate: "end",
-		label: player.track_title,
-	});
-
-const media = () =>
-	Widget.Box({
-		class_names: ["osd", "media"],
-	}).hook(
-		Mpris,
-		(self, bus) => {
-			if (bus === undefined) bus = Mpris.getPlayer()?.bus_name;
-			let player = Mpris.getPlayer(bus);
-			if (player)
-				self.children = [
-					cover(player),
-					Widget.Box({
-						vertical: true,
-						children: [
-							title(player),
-							Widget.CenterBox({
-								start_widget: position(player),
-								center_widget: progress(player),
-								end_widget: duration(player),
-							}),
-						],
-					}),
-				];
-			else self.children = [];
-		},
-		"player-changed",
-	);
 
 export default () =>
 	Widget.Button({
-		child: media(),
+		child: Widget.Box({
+			class_names: ["osd", "media"],
+		}).hook(
+			Mpris,
+			(self, bus) => {
+				if (bus === undefined) bus = Mpris.getPlayer()?.bus_name;
+				let player = Mpris.getPlayer(Mpris.getBus(bus));
+				if (player)
+					self.children = [
+						media.cover({ player, height: 94 }),
+						Widget.Box({
+							vertical: true,
+							children: [
+								media.title({ player }),
+								Widget.CenterBox({
+									start_widget: media.position({ player }),
+									center_widget: media.progress({ player, width: 200, "class-names": ["osd", "media", "progress"] }),
+									end_widget: media.duration({ player }),
+								}),
+							],
+						}),
+					];
+				else self.children = [];
+			},
+			"player-changed",
+		),
 		on_clicked: () => (App.closeWindow("overview"), App.openWindow("media")),
 	});
