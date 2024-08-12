@@ -47,13 +47,12 @@ AddPackage noto-fonts # Google Noto TTF fonts
 AddPackage noto-fonts-cjk # Google Noto CJK fonts
 AddPackage noto-fonts-emoji # Google Noto emoji fonts
 AddPackage noto-fonts-extra # Google Noto TTF fonts - additional variants
-AddPackage otf-monaspace-nerd # Patched font Monaspace (Monaspice) from nerd fonts library
 AddPackage ttf-firacode-nerd # Patched font Fira (Fura) Code from nerd fonts library
 AddPackage ttf-iosevka-nerd # Patched font Iosevka from nerd fonts library
 AddPackage ttf-jetbrains-mono-nerd # Patched font JetBrains Mono from nerd fonts library
 AddPackage ttf-nerd-fonts-symbols-mono # High number of extra glyphs from popular 'iconic fonts' (monospace)
 AddPackage wqy-zenhei # A Hei Ti Style (sans-serif) Chinese Outline Font.
-AddPackage --foreign otf-monocraft # A programming font based on the typeface used in Minecraft
+AddPackage --foreign ttf-monocraft # A programming font based on the typeface used in Minecraft
 AddPackage --foreign ttf-ubraille # Unicode Braillt font
 
 # Power
@@ -65,11 +64,7 @@ CopyFile /etc/systemd/logind.conf
 AddPackage gnome-keyring # Stores passwords and encryption keys
 AddPackage greetd # Generic greeter daemon
 CopyFile /etc/greetd/config.toml
-CopyFile /etc/greetd/greeter.js
-CopyFile /etc/greetd/hyprland.conf
-CopyFile /etc/greetd/hyprpaper.conf
-CopyFile /etc/greetd/login.png
-CopyFile /etc/pam.d/greetd
+CopyFile /etc/pam.d/greetd # For gnome-keyring
 
 # Shell
 AddPackage dash # POSIX compliant shell that aims to be as small as possible
