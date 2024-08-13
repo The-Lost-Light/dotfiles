@@ -1,3 +1,5 @@
+import { Variable } from "types/variable";
+
 import Gtk from "types/@girs/gtk-3.0/gtk-3.0";
 
 import { MprisPlayer } from "types/service/mpris";
@@ -8,7 +10,7 @@ import Box from "types/widgets/box";
 import Revealer from "types/widgets/revealer";
 import Stack from "types/widgets/stack";
 
-export { Gtk, MprisPlayer };
+export { Variable, Gtk, MprisPlayer };
 export type AgsWidget = AgsWidgets<unknown>;
 export type AgsWindow = Window<Gtk.Widget, unknown>;
 

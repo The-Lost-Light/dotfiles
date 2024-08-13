@@ -1,5 +1,5 @@
-import media from "@widgets/media";
 import Mpris from "@services/mpris";
+import media from "@widgets/media";
 
 export default () =>
 	Widget.Button({
@@ -12,14 +12,14 @@ export default () =>
 				let player = Mpris.getPlayer(Mpris.getBus(bus));
 				if (player)
 					self.children = [
-						media.cover({ player, height: 94 }),
+						media.cover({ player, height: 94, class_name: "cover" }),
 						Widget.Box({
 							vertical: true,
 							children: [
 								media.title({ player }),
 								Widget.CenterBox({
 									start_widget: media.position({ player }),
-									center_widget: media.progress({ player, width: 200, "class-names": ["osd", "media", "progress"] }),
+									center_widget: media.progress({ player, width: 200, class_name: "progress" }),
 									end_widget: media.duration({ player }),
 								}),
 							],
@@ -29,5 +29,8 @@ export default () =>
 			},
 			"player-changed",
 		),
-		on_clicked: () => (App.closeWindow("overview"), App.openWindow("media")),
+		on_clicked: () => {
+			App.closeWindow("overview");
+			App.openWindow("media");
+		},
 	});

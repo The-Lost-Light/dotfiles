@@ -1,5 +1,5 @@
 import image from "@widgets/image";
-import minutes from "@lib/minutes";
+import time from "@lib/time";
 import { MprisPlayer } from "types";
 
 const cover = ({ player, height, ...rest }: { player: MprisPlayer; height: number; [key: string]: any }) =>
@@ -35,7 +35,7 @@ const position = ({ player, ...rest }: { player: MprisPlayer; [key: string]: any
 							self.visible = true;
 							if (poll === false) {
 								poll = true;
-								self.poll(1000, () => (self.label = minutes(player.position)));
+								self.poll(1000, () => (self.label = time.format(player.position)));
 							}
 						} else self.visible = false;
 					};
@@ -49,7 +49,7 @@ const duration = ({ player, ...rest }: { player: MprisPlayer; [key: string]: any
 	Widget.Label({
 		...rest,
 		visible: player.bind("length").as(length => length > 0),
-		label: player.bind("length").as(length => minutes(length)),
+		label: player.bind("length").as(length => time.format(length)),
 	});
 
 const progress = ({ player, width, ...rest }: { player: MprisPlayer; width: number; [key: string]: any }) =>

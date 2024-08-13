@@ -9,7 +9,7 @@ export default () =>
 			children: [
 				Widget.Calendar({ showWeekNumbers: true }),
 				Widget.Separator({ vertical: true }),
-				Widget.Box({ vertical: true, children: [Media(), Widget.Box({ vexpand: true })] }),
+				Widget.Box({ vertical: true, children: [Media()] }),
 			],
 		}),
 	});

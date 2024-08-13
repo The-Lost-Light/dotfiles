@@ -1,4 +1,6 @@
-export default Variable(
+import { Variable as VariableType } from "types";
+
+const time = Variable(
 	{ hour: "", minute: "", month: "", day: "" },
 	{
 		poll: [
@@ -11,3 +13,19 @@ export default Variable(
 		],
 	},
 );
+
+type TimeExtend = VariableType<{
+	hour: string;
+	minute: string;
+	month: string;
+	day: string;
+}> & { format: (time: number) => string };
+time["format"] = function (time: number) {
+	const left = Math.floor(time / 60);
+	const right = Math.floor(time % 60);
+
+	if (right >= 10) return `${left}:${right}`;
+	else return `${left}:0${right}`;
+};
+
+export default time as TimeExtend;

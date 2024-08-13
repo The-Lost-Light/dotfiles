@@ -4,7 +4,7 @@
 	.osd.media {
 		padding: 4px 0 4px 4px;
 
-		.image {
+		.cover {
 			border-radius: 10px;
 		}
 
@@ -23,7 +23,7 @@
 				background-color: transparent;
 			}
 
-			.control.player {
+			.control {
 				margin-bottom: 10px;
 
 				.play_paulse {
@@ -39,9 +39,6 @@
 				margin-bottom: 10px;
 				min-height: 6px;
 				border-radius: 10px;
-				&.filled {
-					/* background-color: dodgerblue; */
-				}
 			}
 		}
 	}

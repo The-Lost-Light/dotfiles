@@ -2,7 +2,11 @@
 	border-radius: 10px;
 
 	.osd.media {
-		.image {
+		.cover {
+			border-radius: 10px;
+		}
+
+		.progress trough block {
 			border-radius: 10px;
 		}
 	}

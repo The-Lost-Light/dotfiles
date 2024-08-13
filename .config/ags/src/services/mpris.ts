@@ -15,11 +15,9 @@ export default new (class MprisExtends extends Mpris {
 
 	// Get real bus from playerctld
 	getBus(bus: string | undefined) {
-		if (this.isPlayerctld(bus))
-			return (
-				this.players.find(player => player.identity === this.getPlayer(bus)?.identity && player.bus_name !== bus)
-					?.bus_name ?? bus
-			);
-		else return bus;
+		if (this.isPlayerctld(bus)) {
+			const identity = this.getPlayer(bus)?.identity;
+			return this.players.find(player => player.identity === identity && player.bus_name !== bus)?.bus_name ?? bus;
+		} else return bus;
 	}
 })();

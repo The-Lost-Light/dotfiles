@@ -1,6 +1,6 @@
 const power_button = (class_name: string, icon: string, command: string) =>
 	Widget.Button({
-		class_names: ["power_menu", "button", class_name],
+		class_name: class_name,
 		child: Widget.Label(icon),
 		onClicked: () => Utils.exec(command),
 	});
