@@ -1,31 +1,22 @@
 import Mpris from "@services/mpris";
 import card from "@osd/media/modules/card";
-import { MprisPlayer, AgsStack } from "types";
-
-const realIndex = (player_index: number, playerctld_index: number) =>
-	0 <= playerctld_index && playerctld_index < player_index ? player_index - 1 : player_index;
-
-const findIndex = (players: MprisPlayer[], bus: string) => {
-	const player_index = players.findIndex(
-		player => player.bus_name === Mpris.getBus(bus) && !Mpris.isPlayerctld(player.bus_name),
-	);
-	const playerctld_index = players.findIndex(player => Mpris.isPlayerctld(player.bus_name));
-
-	return [realIndex(player_index, playerctld_index), playerctld_index];
-};
+import { AgsStack } from "types";
 
 export default (self: AgsStack, bus: string | undefined) => {
-	if (bus === undefined) bus = Mpris.getPlayer()?.bus_name ?? "";
+	if (!bus) bus = Mpris.getPlayer()?.bus_name ?? "";
 
 	const players = Mpris.players;
-	const [player_index, playerctld_index] = findIndex(players, bus);
+	const player_index = Mpris.realIndex(Mpris.playerIndex(bus));
+	const playerctld_index = Mpris.playerctldIndex();
 	const length = players.length - (playerctld_index >= 0 ? 1 : 0);
 
 	const stack = { "-1": Widget.Box() };
 	players
-		.flatMap((player, index) =>
-			!Mpris.isPlayerctld(player.bus_name) ? card.set(player, realIndex(index, playerctld_index), length) : [],
-		)
+		.flatMap((player, index) => {
+			if (!Mpris.isPlayerctld(player.bus_name))
+				return card.set(player, Mpris.realIndex(index, playerctld_index), length);
+			else return [];
+		})
 		.forEach((card, index) => (stack[index] = card));
 	self.children = stack;
 

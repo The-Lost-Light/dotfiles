@@ -13,11 +13,23 @@ export default new (class MprisExtends extends Mpris {
 		return bus === "org.mpris.MediaPlayer2.playerctld";
 	}
 
-	// Get real bus from playerctld
-	getBus(bus: string | undefined) {
-		if (this.isPlayerctld(bus)) {
-			const identity = this.getPlayer(bus)?.identity;
-			return this.players.find(player => player.identity === identity && player.bus_name !== bus)?.bus_name ?? bus;
-		} else return bus;
+	playerctldIndex() {
+		return this.players.findIndex(player => this.isPlayerctld(player.bus_name));
+	}
+
+	playerIndex(bus: string) {
+		const identity = this.getPlayer(bus)?.identity;
+		if (!this.isPlayerctld(bus)) return this.players.findIndex(player => player.identity === identity);
+		else return this.players.findIndex(player => player.identity === identity && !this.isPlayerctld(player.bus_name));
+	}
+
+	realIndex(player_index: number, playerctld_index?: number) {
+		if (playerctld_index === undefined) playerctld_index = this.playerctldIndex();
+		return 0 <= playerctld_index && playerctld_index < player_index ? player_index - 1 : player_index;
+	}
+
+	getBus(bus: string) {
+		const index = this.playerIndex(bus);
+		return index >= 0 ? this.players[index].bus_name : bus;
 	}
 })();
