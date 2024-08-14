@@ -8,7 +8,6 @@ export default (self: AgsStack, bus: string | undefined) => {
 	const players = Mpris.getPlayers();
 	const index = Mpris.getIndex(Mpris.getPlayer(bus));
 	const length = players.length;
-	// print(length);
 
 	const stack = { "-1": Widget.Box() };
 	players.map((player, index) => card.set(player, index, length)).forEach((card, index) => (stack[index] = card));
