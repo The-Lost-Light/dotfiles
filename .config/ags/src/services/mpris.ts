@@ -1,4 +1,5 @@
 import { Mpris } from "resource:///com/github/Aylur/ags/service/mpris.js";
+import { MprisPlayer } from "types";
 
 export default new (class MprisExtends extends Mpris {
 	static {
@@ -9,27 +10,21 @@ export default new (class MprisExtends extends Mpris {
 		super();
 	}
 
-	isPlayerctld(bus: string | undefined) {
-		return bus === "org.mpris.MediaPlayer2.playerctld";
+	#isPlayerctld(player: MprisPlayer) {
+		return player.bus_name === "org.mpris.MediaPlayer2.playerctld";
 	}
 
-	playerctldIndex() {
-		return this.players.findIndex(player => this.isPlayerctld(player.bus_name));
+	getPlayers() {
+		return this.players.flatMap(player => (!this.#isPlayerctld(player) ? player : []));
 	}
 
-	playerIndex(bus: string) {
-		const identity = this.getPlayer(bus)?.identity;
-		if (!this.isPlayerctld(bus)) return this.players.findIndex(player => player.identity === identity);
-		else return this.players.findIndex(player => player.identity === identity && !this.isPlayerctld(player.bus_name));
+	getIndex(target_player: MprisPlayer | null) {
+		return this.getPlayers().findIndex(player => player.identity === target_player?.identity);
 	}
 
-	realIndex(player_index: number, playerctld_index?: number) {
-		if (playerctld_index === undefined) playerctld_index = this.playerctldIndex();
-		return 0 <= playerctld_index && playerctld_index < player_index ? player_index - 1 : player_index;
-	}
-
-	getBus(bus: string) {
-		const index = this.playerIndex(bus);
-		return index >= 0 ? this.players[index].bus_name : bus;
+	getRealPlayer(bus: string) {
+		const target_player = this.getPlayer(bus);
+		if (target_player) return this.getPlayers().find(player => player.identity === target_player.identity);
+		else return undefined;
 	}
 })();

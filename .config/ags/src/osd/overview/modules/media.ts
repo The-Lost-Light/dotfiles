@@ -16,7 +16,8 @@ export default () =>
 		Mpris,
 		(self, bus) => {
 			if (!bus) bus = Mpris.getPlayer()?.bus_name ?? "";
-			let player = Mpris.getPlayer(Mpris.getBus(bus));
+
+			let player = Mpris.getRealPlayer(bus);
 			if (player && player.identity) {
 				self.child.children = [
 					media.cover({ player, height: 94, class_name: "cover" }),
@@ -32,7 +33,7 @@ export default () =>
 						],
 					}),
 				];
-				current_track = Mpris.realIndex(Mpris.playerIndex(player.bus_name));
+				current_track = Mpris.getIndex(player);
 				self.visible = true;
 			} else {
 				self.visible = false;
