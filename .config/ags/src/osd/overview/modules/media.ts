@@ -17,23 +17,28 @@ export default () =>
 		(self, bus) => {
 			if (!bus) bus = Mpris.getPlayer()?.bus_name ?? "";
 
-			let player = Mpris.getRealPlayer(bus);
+			const players = Mpris.getPlayers();
+			let player = Mpris.getRealPlayer(bus, players);
 			if (player && player.identity) {
 				self.child.children = [
 					media.cover({ player, height: 94, class_name: "cover" }),
 					Widget.Box({
+						vexpand: false,
 						vertical: true,
 						children: [
-							media.title({ player }),
+							Widget.Box([
+								media.title({ player, truncate: "none", vexpand: true, vpack: "start" }),
+								media.icon({ player, class_name: "icon", vpack: "start" }),
+							]),
 							Widget.CenterBox({
 								start_widget: media.position({ player }),
 								center_widget: media.progress({ player, width: 200, class_name: "progress" }),
-								end_widget: media.duration({ player }),
+								end_widget: media.length({ player }),
 							}),
 						],
 					}),
 				];
-				current_track = Mpris.getIndex(player);
+				current_track = Mpris.getIndex(player, players);
 				self.visible = true;
 			} else {
 				self.visible = false;

@@ -9,14 +9,14 @@
 		}
 
 		.info {
-			min-width: 450px;
+			min-width: 500px;
 			margin: 5px 10px;
 
 			.title {
-				font-size: 18px;
+				font-size: 17px;
 			}
 			.artist {
-				font-size: 12px;
+				font-size: 11px;
 			}
 			.title,
 			.artist {
@@ -24,8 +24,6 @@
 			}
 
 			.control {
-				margin-bottom: 10px;
-
 				.play_paulse {
 					font-size: 24px;
 				}
@@ -36,9 +34,13 @@
 			}
 
 			.progress trough block {
-				margin-bottom: 10px;
+				margin: 8px 0px;
 				min-height: 6px;
 				border-radius: 10px;
+			}
+
+			.icon {
+				margin: 0 8px 8px 8px;
 			}
 		}
 	}

@@ -1,3 +1,4 @@
+import Applications from "@services/applications";
 import image from "@widgets/image";
 import time from "@lib/time";
 import { MprisPlayer } from "types";
@@ -7,25 +8,27 @@ const cover = ({ player, height, ...rest }: { player: MprisPlayer; height: numbe
 		...rest,
 	}).hook(player, self => (self.css = image({ path: player.cover_path, height })));
 
+const icon = ({ player, ...rest }: { player: MprisPlayer; [key: string]: any }) =>
+	Widget.Icon({ icon: player.bind("entry").as(entry => Applications.query(entry)[0].icon_name ?? ""), ...rest });
+
 const title = ({ player, ...rest }: { player: MprisPlayer; [key: string]: any }) =>
 	Widget.Label({
-		...rest,
 		truncate: "end",
 		hpack: "start",
 		hexpand: true,
 		label: player.bind("track_title"),
+		...rest,
 	});
 
 const artist = ({ player, ...rest }: { player: MprisPlayer; [key: string]: any }) =>
 	Widget.Label({
-		...rest,
 		hpack: "start",
 		label: player.bind("track_artists").as(artists => artists.join(", ")),
+		...rest,
 	});
 
 const position = ({ player, ...rest }: { player: MprisPlayer; [key: string]: any }) =>
 	Widget.Label({
-		...rest,
 		setup: self =>
 			Utils.idle(() => {
 				if (!self.is_destroyed) {
@@ -43,18 +46,21 @@ const position = ({ player, ...rest }: { player: MprisPlayer; [key: string]: any
 					self.hook(player, check, "position");
 				}
 			}),
+		...rest,
 	});
 
-const duration = ({ player, ...rest }: { player: MprisPlayer; [key: string]: any }) =>
+const length = ({ player, ...rest }: { player: MprisPlayer; [key: string]: any }) =>
 	Widget.Label({
-		...rest,
-		visible: player.bind("length").as(length => length > 0),
+		visible: Utils.merge(
+			[player.bind("position"), player.bind("length")],
+			(position, length) => player.position >= 0 && player.length > 0,
+		),
 		label: player.bind("length").as(length => time.format(length)),
+		...rest,
 	});
 
 const progress = ({ player, width, ...rest }: { player: MprisPlayer; width: number; [key: string]: any }) =>
 	Widget.LevelBar({
-		...rest,
 		widthRequest: width,
 		hpack: "center",
 		setup: self =>
@@ -75,6 +81,7 @@ const progress = ({ player, width, ...rest }: { player: MprisPlayer; width: numb
 					self.hook(player, check, "position");
 				}
 			}),
+		...rest,
 	});
 
-export default { cover, title, artist, position, duration, progress };
+export default { cover, icon, title, artist, position, length, progress };

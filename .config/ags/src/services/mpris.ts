@@ -18,13 +18,15 @@ export default new (class MprisExtends extends Mpris {
 		return this.players.flatMap(player => (!this.#isPlayerctld(player) ? player : []));
 	}
 
-	getIndex(target_player: MprisPlayer | null) {
-		return this.getPlayers().findIndex(player => player.identity === target_player?.identity);
+	getIndex(target_player: MprisPlayer | null, players?: MprisPlayer[]) {
+		if (!players) players = this.getPlayers();
+		return players.findIndex(player => player.identity === target_player?.identity);
 	}
 
-	getRealPlayer(bus: string) {
+	getRealPlayer(bus: string, players?: MprisPlayer[]) {
+		if (!players) players = this.getPlayers();
 		const target_player = this.getPlayer(bus);
-		if (target_player) return this.getPlayers().find(player => player.identity === target_player.identity);
+		if (target_player) return players.find(player => player.identity === target_player.identity);
 		else return undefined;
 	}
 })();

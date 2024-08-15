@@ -6,7 +6,7 @@ export default (self: AgsStack, bus: string | undefined) => {
 	if (!bus) bus = Mpris.getPlayer()?.bus_name ?? "";
 
 	const players = Mpris.getPlayers();
-	const index = Mpris.getIndex(Mpris.getPlayer(bus));
+	const index = Mpris.getIndex(Mpris.getPlayer(bus), players);
 	const length = players.length;
 
 	const stack = { "-1": Widget.Box() };
