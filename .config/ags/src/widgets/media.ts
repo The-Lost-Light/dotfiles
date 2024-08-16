@@ -53,7 +53,7 @@ const length = ({ player, ...rest }: { player: MprisPlayer; [key: string]: any }
 	Widget.Label({
 		visible: Utils.merge(
 			[player.bind("position"), player.bind("length")],
-			(position, length) => player.position >= 0 && player.length > 0,
+			(position, length) => position >= 0 && length > 0,
 		),
 		label: player.bind("length").as(length => time.format(length)),
 		...rest,

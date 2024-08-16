@@ -16,7 +16,7 @@ const stream = (type = "speaker") =>
 			],
 		}),
 		on_clicked: () => Audio.tweakFlag(`${type} toggle`),
-		on_secondary_click: () => Utils.execAsync("pavucontrol -m"),
+		on_secondary_click: () => Utils.execAsync("pwvucontrol"),
 		on_scroll_up: () => Audio.tweakFlag(`${type} increase`),
 		on_scroll_down: () => Audio.tweakFlag(`${type} decrease`),
 	});

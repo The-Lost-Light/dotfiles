@@ -26,10 +26,10 @@ AddPackage linux-firmware # Firmware files for Linux
 # Audio
 AddPackage easyeffects # Audio Effects for Pipewire applications
 AddPackage pamixer # Pulseaudio command-line mixer like amixer
-AddPackage pavucontrol # PulseAudio Volume Control
 AddPackage pipewire # Low-latency audio/video router and processor
 AddPackage pipewire-alsa # Low-latency audio/video router and processor - ALSA configuration
 AddPackage pipewire-pulse # Low-latency audio/video router and processor - PulseAudio replacement
+AddPackage --foreign pwvucontrol # Pipewire volume control for GNOME
 
 # Bluetooth
 AddPackage blueman # GTK+ Bluetooth Manager
@@ -52,7 +52,7 @@ AddPackage ttf-iosevka-nerd # Patched font Iosevka from nerd fonts library
 AddPackage ttf-jetbrains-mono-nerd # Patched font JetBrains Mono from nerd fonts library
 AddPackage ttf-nerd-fonts-symbols-mono # High number of extra glyphs from popular 'iconic fonts' (monospace)
 AddPackage wqy-zenhei # A Hei Ti Style (sans-serif) Chinese Outline Font.
-AddPackage --foreign ttf-monocraft # A programming font based on the typeface used in Minecraft
+AddPackage --foreign ttc-monocraft # A programming font based on the typeface used in Minecraft
 AddPackage --foreign ttf-ubraille # Unicode Braillt font
 
 # Power

@@ -11,6 +11,7 @@ AddPackage starship # The cross-shell prompt for astronauts
 # CLI
 AddPackage baidupcs-go # Terminal utility for Baidu Network Disk
 AddPackage brightnessctl # Lightweight brightness control tool
+AddPackage cloc # Count lines of code
 AddPackage dex # Program to generate and execute DesktopEntry files of type Application
 AddPackage handlr-regex # Powerful alternative to xdg-utils written in Rust
 AddPackage imagemagick # An image viewing/manipulation program
