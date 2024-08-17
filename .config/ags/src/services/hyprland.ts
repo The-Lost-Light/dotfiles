@@ -7,19 +7,17 @@ type osd = () => AgsWindow;
 
 export default new (class HyprlandExtends extends Hyprland {
 	static {
-		Service.register(this, {}, { "active-init-title": ["string", "r"], "is-full": ["boolean", "r"] });
+		Service.register(this, {}, { "active-init-title": ["string", "r"] });
 	}
 
 	constructor() {
 		super();
 
-		this.connect("workspace-added", () => this.changed("is-full"));
-		this.connect("workspace-removed", () => this.changed("is-full"));
 		this.active.client.connect("changed", () => this.changed("active-init-title"));
 	}
 
-	get is_full() {
-		return !Array.from({ length: 10 }, (_, id) => id + 1).every(id => this.workspaces.map(ws => ws.id).includes(id));
+	is_full(length: number) {
+		return Array.from({ length }, (_, id) => id + 1).every(id => this.workspaces.map(ws => ws.id).includes(id));
 	}
 
 	changeWorkspace(ws: number | string) {
@@ -28,19 +26,15 @@ export default new (class HyprlandExtends extends Hyprland {
 		else this.messageAsync(`dispatch workspace ${ws}`);
 	}
 
-	createNewWorkspace() {
-		this.messageAsync("dispatch workspace emptyn");
-	}
-
 	#getMonitorID(name: string) {
 		return this.monitors.find(Monitor => Monitor.name === name)?.id;
 	}
 
-	#createWindows(windows: (fixed | osd)[], id?: number) {
+	#createWindows(windows: (fixed | osd)[], id?: number | string) {
 		return windows.flatMap(window =>
 			window.length
 				? this.monitors
-						.filter(monitor => id === -1 || monitor.id === id)
+						.filter(monitor => id === "all" || monitor.id === id)
 						.map(monitor => window(monitor.id).on("destroy", (self: AgsWindow) => App.removeWindow(self)))
 				: window().on("delete-event", (self: AgsWindow) => (self.hide(), true)),
 		);
@@ -59,6 +53,6 @@ export default new (class HyprlandExtends extends Hyprland {
 		this.connect("monitor-removed", (_, name) => this.#recreateWindows(fixedWindows, this.#getMonitorID(name)));
 		this.connect("monitor-added", (_, name) => this.#recreateWindows(fixedWindows, this.#getMonitorID(name)));
 
-		return this.#createWindows(windows, -1);
+		return this.#createWindows(windows, "all");
 	}
 })();

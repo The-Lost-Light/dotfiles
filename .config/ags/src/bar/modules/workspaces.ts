@@ -1,6 +1,8 @@
 import Hyprland from "@services/hyprland";
 import hover from "@lib/hover";
 
+const length = 10;
+
 export default () =>
 	Widget.EventBox({
 		class_name: "workspaces",
@@ -9,12 +11,12 @@ export default () =>
 
 		child: Widget.Box({
 			children: [
-				...Array.from({ length: 10 }, (_, id) => id + 1).map(id =>
+				...Array.from({ length }, (_, id) => id + 1).map(id =>
 					Widget.Button({
 						class_name: Hyprland.active.workspace
 							.bind("id")
-							.as(ai => `workspace ${ai === id ? "focused" : "unfocused"}`),
-						visible: Hyprland.bind("workspaces").as(ws => ws.some(ws => ws.id === id)),
+							.as(active_id => `workspace ${active_id === id ? "focused" : "unfocused"}`),
+						visible: Hyprland.bind("workspaces").as(workspace => workspace.some(workspace => workspace.id === id)),
 						label: id.toString(),
 						on_clicked: self => (Hyprland.changeWorkspace(id), (self.label = id.toString())),
 						on_hover: self => Hyprland.monitors.length > 1 && id === Hyprland.active.workspace.id && (self.label = "󰯍"),
@@ -23,9 +25,10 @@ export default () =>
 				),
 				Widget.Button({
 					child: Widget.Label("+"),
-					visible: Hyprland.bind("is_full"),
-					on_clicked: () => Hyprland.createNewWorkspace(),
-				}),
+					on_clicked: () => Hyprland.changeWorkspace("empty"),
+				})
+					.hook(Hyprland, self => (self.visible = !Hyprland.is_full(length)), "workspace-added")
+					.hook(Hyprland, self => (self.visible = !Hyprland.is_full(length)), "workspace-removed"),
 			],
 		}),
 	});
