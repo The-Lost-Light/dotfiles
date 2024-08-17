@@ -10,7 +10,7 @@ import Box from "types/widgets/box";
 import Revealer from "types/widgets/revealer";
 import Stack from "types/widgets/stack";
 
-export { Variable, Gtk, MprisPlayer };
+export { Variable as variable, Gtk, MprisPlayer };
 export type AgsWidget = AgsWidgets<unknown>;
 export type AgsWindow = Window<Gtk.Widget, unknown>;
 

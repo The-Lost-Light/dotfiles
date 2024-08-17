@@ -1,7 +1,7 @@
 import time from "@lib/time";
-import { wttr } from "types";
+import { variable, wttr } from "types";
 
-let WWO_CODE = {
+const WWO_CODE = {
 	113: "Sunny",
 	116: "PartlyCloudy",
 	119: "Cloudy",
@@ -52,7 +52,7 @@ let WWO_CODE = {
 	395: "HeavySnowShowers",
 };
 
-let WEATHER_SYMBOL_WI_DAY = {
+const WEATHER_SYMBOL_WI_DAY = {
 	Unknown: "?",
 	Cloudy: "",
 	Fog: "",
@@ -74,7 +74,7 @@ let WEATHER_SYMBOL_WI_DAY = {
 	VeryCloudy: "",
 };
 
-let WEATHER_SYMBOL_WI_NIGHT = {
+const WEATHER_SYMBOL_WI_NIGHT = {
 	Unknown: "?",
 	Cloudy: "",
 	Fog: "",
@@ -98,13 +98,7 @@ let WEATHER_SYMBOL_WI_NIGHT = {
 
 export default new (class WeatherService extends Service {
 	static {
-		Service.register(
-			this,
-			{},
-			{
-				symbol: ["string", "r"],
-			},
-		);
+		Service.register(this, {}, { symbol: ["string", "r"] });
 	}
 
 	constructor() {
@@ -112,48 +106,46 @@ export default new (class WeatherService extends Service {
 	}
 
 	#signal_id: number | undefined;
-	#data = Variable({});
+	#data: variable<wttr> | undefined;
 	#symbol = "";
 
 	get symbol() {
 		return this.#symbol;
 	}
 
-	#setSymbol(data: wttr) {
-		let hourly = Math.floor(Number(time.value.hour) / 3);
-		let code = WWO_CODE[data.weather[0].hourly[hourly].weatherCode];
-		let sun = [data.weather[0].astronomy[0].sunrise, data.weather[0].astronomy[0].sunset]
-			.map(time => time.split(/[: ]/))
-			.map(time => {
-				if (time[2] === "PM") return [Number(time[0]) + 12, Number(time[1])];
-				else return [Number(time[0]), Number(time[1])];
-			});
+	#setSymbol() {
+		if (this.#data) {
+			const data = this.#data?.value;
+			const hourly = Math.floor(Number(time.value.hour) / 3);
+			const code = WWO_CODE[data.weather[0].hourly[hourly].weatherCode];
 
-		let minutes = Number(time.value.hour) * 60 + Number(time.value.minute);
-		if (sun[0][0] * 60 + sun[0][1] <= minutes && minutes <= sun[1][0] * 60 + sun[1][1]) {
-			this.#symbol = WEATHER_SYMBOL_WI_DAY[code];
-		} else {
-			this.#symbol = WEATHER_SYMBOL_WI_NIGHT[code];
+			const current = Number(time.value.hour) * 60 + Number(time.value.minute);
+			const [sunrise, sunset] = [data.weather[0].astronomy[0].sunrise, data.weather[0].astronomy[0].sunset]
+				.map(time => time.split(/[: ]/))
+				.map(time => (Number(time[0]) + (time[2] === "PM" ? 12 : 0)) * 60 + Number(time[1]));
+			if (sunrise <= current && current <= sunset) this.#symbol = WEATHER_SYMBOL_WI_DAY[code];
+			else this.#symbol = WEATHER_SYMBOL_WI_NIGHT[code];
+
+			this.changed("symbol");
 		}
 	}
 
 	setChecker({ interval = 600, language = "" }) {
-		if (this.#data.is_polling) this.#data.stopPoll();
-		if (this.#signal_id) this.#data.disconnect(this.#signal_id);
+		if (this.#data?.is_polling) this.#data.stopPoll();
+		if (this.#signal_id) this.#data?.disconnect(this.#signal_id);
 		this.#data = Variable(
 			{},
 			{
 				poll: [
 					interval * 1000,
 					() =>
-						Utils.fetch(`https://wttr.in/?format=j1${language !== "" ? "&lang" + language : ""}`)
-							.then(data => data.json())
-							.then(data => (this.#setSymbol(data), data)),
+						Utils.fetch(`https://wttr.in/?format=j1${language !== "" ? "&lang=" + language : ""}`).then(data =>
+							data.json(),
+						),
 				],
 			},
 		);
-		this.#signal_id = this.#data.connect("changed", () => {
-			this.changed("symbol");
-		});
+
+		this.#signal_id = this.#data.connect("changed", () => this.#setSymbol());
 	}
 })();

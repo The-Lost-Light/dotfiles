@@ -1,4 +1,4 @@
-import { Variable as VariableType } from "types";
+import { variable } from "types";
 
 const time = Variable(
 	{ hour: "", minute: "", month: "", day: "" },
@@ -14,7 +14,7 @@ const time = Variable(
 	},
 );
 
-type TimeExtend = VariableType<{
+type TimeExtend = variable<{
 	hour: string;
 	minute: string;
 	month: string;
