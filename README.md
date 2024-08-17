@@ -21,13 +21,14 @@
 - fish: for interactive
 - nushell: for scripts
 ## system
+- curl
 - brightnessctl
 - pipewire
+  - pwvucontrol
 ## maintain
 - aconfmgr: arch linux system backup
 ## ags
 ags
-- curl
 - pacman-contrib
 - pavucontrol
 

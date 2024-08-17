@@ -8,3 +8,19 @@
 	format = ssh
 [credential]
 	helper = /usr/lib/git-core/git-credential-libsecret
+
+# Delta
+[core]
+    pager = delta
+[interactive]
+    diffFilter = delta --color-only
+[merge]
+    conflictstyle = diff3
+[diff]
+    colorMoved = default
+[include]
+	path = ~/.config/git/theme
+[delta]
+	features = mellow-barbet
+    navigate = true
+	side-by-side = true
