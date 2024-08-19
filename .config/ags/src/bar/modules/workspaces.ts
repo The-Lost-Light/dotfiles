@@ -25,7 +25,7 @@ export default () =>
 				),
 				Widget.Button({
 					child: Widget.Label("+"),
-					on_clicked: () => Hyprland.changeWorkspace("empty"),
+					on_clicked: () => Hyprland.changeWorkspace("emptym"),
 				})
 					.hook(Hyprland, self => (self.visible = !Hyprland.is_full(length)), "workspace-added")
 					.hook(Hyprland, self => (self.visible = !Hyprland.is_full(length)), "workspace-removed"),

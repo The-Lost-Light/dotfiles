@@ -4,6 +4,7 @@ import setCards from "@osd/media/modules/cards";
 export default () =>
 	Widget.Window({
 		name: "media",
+		class_name: "media",
 		anchor: ["top"],
 		visible: false,
 		child: Widget.Stack({

@@ -6,7 +6,7 @@ const shown = Variable(0);
 
 const left_card = (index: number) =>
 	Widget.Button({
-		class_names: ["osd", "media", "left"],
+		class_name: "left",
 		label: " ",
 		on_clicked: () => --shown.value,
 		setup: self =>
@@ -27,7 +27,7 @@ const right_card = (index: number, length: number) =>
 
 const set = (player: MprisPlayer, index: number, length: number) =>
 	Widget.Box({
-		class_names: ["osd", "media"],
+		class_name: "media",
 		children: [
 			media.cover({ player, height: 188, class_name: "cover" }),
 			Widget.Box({

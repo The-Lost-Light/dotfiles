@@ -20,6 +20,10 @@
 			margin-right: 4px;
 		}
 
+		&.power:hover {
+			background-color: $red;
+		}
+
 		&.audio:hover {
 			box-shadow: none;
 		}

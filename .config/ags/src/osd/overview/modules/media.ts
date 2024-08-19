@@ -6,7 +6,7 @@ let current_track = -1;
 
 export default () =>
 	Widget.Button({
-		child: Widget.Box({ class_names: ["osd", "media"] }),
+		child: Widget.Box({ class_name: "media" }),
 		on_clicked: () => {
 			App.closeWindow("overview");
 			if (current_track >= 0) card.shown.value = current_track;
