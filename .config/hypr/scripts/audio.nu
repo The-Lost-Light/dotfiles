@@ -27,7 +27,7 @@ def volume [device: string, tweak: string] {
 	}
 
 	let status = wpctl get-volume $target | split row ' '
-	let muted = ($status | any  {|s| $s == "[MUTED]"})
+	let muted = $status | any  {|s| $s == "[MUTED]"}
 
 	match $tweak {
 		increase => { if not $muted { wpctl set-volume -l 1.0 $target 5%+ } }
@@ -37,7 +37,7 @@ def volume [device: string, tweak: string] {
 	}
 
 	let status = wpctl get-volume $target | split row ' '
-	let muted = ($status | any  {|s| $s == "[MUTED]"})
+	let muted = $status | any  {|s| $s == "[MUTED]"}
 	notify $device (($status.1 | into float) * 100 | math floor) --muted=$muted
 }
 

@@ -27,6 +27,9 @@
   - pwvucontrol
 ## maintain
 - aconfmgr: arch linux system backup
+## Hypr
+- Hyprland
+  - Hyprspace
 ## ags
 ags
 - pacman-contrib
@@ -41,3 +44,4 @@ https://github.com/Aylur/ags/issues/392
 ### Wait for Fixed
 https://github.com/Aylur/ags/pull/397
 https://github.com/Aylur/ags/issues/450
+Hyproverview close with wrong padding when layer hide
