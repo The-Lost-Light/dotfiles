@@ -3,7 +3,7 @@ import { AgsWindow } from "types";
 import { Hyprland } from "resource:///com/github/Aylur/ags/service/hyprland.js";
 
 type fixed = (id?: number) => AgsWindow;
-type osd = () => AgsWindow;
+type floating = () => AgsWindow;
 
 export default new (class HyprlandExtends extends Hyprland {
 	static {
@@ -30,7 +30,7 @@ export default new (class HyprlandExtends extends Hyprland {
 		return this.monitors.find(Monitor => Monitor.name === name)?.id;
 	}
 
-	#createWindows(windows: (fixed | osd)[], id?: number | string) {
+	#createWindows(windows: (fixed | floating)[], id?: number | string) {
 		return windows.flatMap(window =>
 			window.length
 				? this.monitors
@@ -48,7 +48,7 @@ export default new (class HyprlandExtends extends Hyprland {
 		App.config({ windows: this.#createWindows(windows, id) });
 	}
 
-	initialWindows(windows: (fixed | osd)[]) {
+	initialWindows(windows: (fixed | floating)[]) {
 		const fixedWindows = windows.filter(window => window.length);
 		this.connect("monitor-removed", (_, name) => this.#recreateWindows(fixedWindows, this.#getMonitorID(name)));
 		this.connect("monitor-added", (_, name) => this.#recreateWindows(fixedWindows, this.#getMonitorID(name)));

@@ -1,4 +1,4 @@
 prettier:
-  printWidth: 120
-  useTabs: true
-  arrowParens: avoid
+    printWidth: 120
+    useTabs: true
+    arrowParens: avoid

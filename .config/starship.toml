@@ -1,4 +1,4 @@
-format="  $hostname$directory$git_branch$character"
+format = "  $hostname$directory$git_branch$character"
 right_format = "$cmd_duration"
 
 # Prompt symbols 

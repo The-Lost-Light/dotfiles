@@ -17,6 +17,8 @@ if status is-login
 
     # Fcitx5
     set -x XMODIFIERS @im=fcitx
+    set -x QT_IM_MODULES "wayland;fcitx;ibus"
+    set -x QT_IM_MODULE fcitx
 
     # Sccache
     set -x RUSTC_WRAPPER sccache

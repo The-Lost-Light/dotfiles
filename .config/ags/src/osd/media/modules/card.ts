@@ -56,7 +56,7 @@ const set = (player: MprisPlayer, index: number, length: number) =>
 									}),
 									end_widget: media.length({ player }),
 								}),
-								media.progress({ player, width: 300, class_name: "progress" }),
+								media.progress({ player, width: 320, class_name: "progress" }),
 							],
 						}),
 						media.icon({ player, size: 20, class_name: "icon" }),
