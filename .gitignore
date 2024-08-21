@@ -1,0 +1,8 @@
+.ignore
+*.tmp*
+*.log*
+*.bak*
+backup
+test*
+# systemd package service
+*.wants
