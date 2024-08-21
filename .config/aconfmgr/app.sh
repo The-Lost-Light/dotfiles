@@ -1,5 +1,4 @@
 # Browser
-AddPackage chromium # A web browser built for speed, simplicity, and security
 AddPackage firefox-developer-edition # Fast, Private & Safe Web Browser (Developer Edition)
 AddPackage firefox-developer-edition-i18n-zh-tw # Chinese (Traditional) language pack for Firefox Developer Edition
 

@@ -23,8 +23,10 @@ AddPackage typescript-svelte-plugin # TypeScript plugin for Svelte intellisense
 AddPackage vscode-css-languageserver # CSS/LESS/SCSS language server
 AddPackage vscode-html-languageserver # HTML language server
 
-# Package
+# Tool
 AddPackage cmake # A cross-platform open-source make system
+AddPackage cpio # A tool to copy files into or out of a cpio or tar archive
+AddPackage meson # High productivity build system
 AddPackage nix # A purely functional package manager
 
 # C/C++

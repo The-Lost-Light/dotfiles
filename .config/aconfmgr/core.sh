@@ -57,7 +57,7 @@ AddPackage --foreign ttf-ubraille # Unicode Braillt font
 
 # Power
 AddPackage power-profiles-daemon # Makes power profiles handling available over D-Bus
-AddPackage --foreign ryzenadj-git # RyzenAdj tool for adjusting Ryzen Mobile power states
+AddPackage --foreign ryzenadj # RyzenAdj tool for adjusting Ryzen Mobile power states
 CopyFile /etc/systemd/logind.conf
 
 # Keyring
