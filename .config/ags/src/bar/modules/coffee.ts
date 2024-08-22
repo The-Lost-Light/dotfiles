@@ -1,10 +1,8 @@
-const test = Utils.execAsync("sleep infinity");
+import Inhibit from "@services/inhibit";
 
 export default () =>
-	Widget.ToggleButton({
-		child: Widget.Label("󰒲"),
-		onToggled: ({ active, child }) => {
-			child.label = active ? "󰒳" : "󰒲";
-			// TODO: systemd-inhibit
-		},
+	Widget.Button({
+		class_name: "inhibit",
+		label: Inhibit.bind("is_inhibit").as(active => (active ? "󰒳" : "󰒲")),
+		on_clicked: () => Inhibit.toggle(),
 	});

@@ -20,6 +20,10 @@
 			margin-right: 4px;
 		}
 
+		&.inhibit {
+			padding: 0;
+		}
+
 		&.power:hover {
 			background-color: $red;
 		}
@@ -39,7 +43,6 @@
 	.workspaces {
 		.focused {
 			color: $red;
-			/* font-size: 12px; */
 		}
 
 		.focused,
