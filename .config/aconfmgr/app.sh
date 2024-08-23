@@ -1,6 +1,7 @@
 # Browser
 AddPackage firefox-developer-edition # Fast, Private & Safe Web Browser (Developer Edition)
 AddPackage firefox-developer-edition-i18n-zh-tw # Chinese (Traditional) language pack for Firefox Developer Edition
+AddPackage --foreign zen-browser-bin # Standalone web browser - Static binaries from upstream
 
 # File Manager
 AddPackage yazi # Blazing fast terminal file manager written in Rust, based on async I/O
@@ -17,7 +18,6 @@ AddPackage zellij # A terminal multiplexer
 # Communication
 AddPackage discord # All-in-one voice and text chat for gamers
 AddPackage --foreign vesktop-bin # A cross platform electron-based desktop app aiming to give you a snappier Discord experience with Vencord pre-installed
-AddPackage signal-desktop # Signal Private Messenger for Linux
 AddPackage telegram-desktop # Official Telegram Desktop client
 
 # Reader
@@ -38,6 +38,7 @@ AddPackage --foreign spicetify-marketplace-bin # Spicetify app that integrates a
 AddPackage --foreign spotube-bin # Open source Spotify client that doesn't require Premium nor uses Electron! Available for both desktop & mobile!
 
 # Video
+AddPackage mpv # a free, open source, and cross-platform media player
 AddPackage vlc # Multi-platform MPEG, VCD/DVD, and DivX player
 
 # Screen Record
@@ -73,7 +74,7 @@ AddPackage --foreign motrix-bin # A full-featured download manager (binary versi
 
 # Live Streaming
 AddPackage obs-studio # Free, open source software for live streaming and recording
-AddPackage --foreign keyviz-bin # A free and open-source tool to visualize your keystrokes keyboard in real-time (Official GNU/Linux build, binary)
+AddPackage --foreign droidcam # A tool to turn your phone/tablet into a wireless/usb webcam
 
 # VPN
 AddPackage tailscale # A mesh VPN that makes it easy to connect your devices, wherever they are.
@@ -87,4 +88,3 @@ AddPackage --foreign waydroid # A container-based approach to boot a full Androi
 # Devices
 AddPackage baobab # A graphical directory tree analyzer
 AddPackage piper # GTK application to configure gaming mice
-AddPackage --foreign droidcam # A tool to turn your phone/tablet into a wireless/usb webcam

@@ -10,9 +10,8 @@ AddPackage vulkan-mesa-layers # Mesa's Vulkan layers
 AddPackage cuda # NVIDIA's GPU programming toolkit
 AddPackage cudnn # NVIDIA CUDA Deep Neural Network library
 AddPackage libva-nvidia-driver # VA-API implementation that uses NVDEC as a backend
-AddPackage nvidia-dkms # NVIDIA drivers - module sources
+AddPackage nvidia-open-dkms # NVIDIA open kernel modules
 AddPackage nvidia-prime # NVIDIA Prime Render Offload configuration and utilities
-AddPackage nvidia-settings # Tool for configuring the NVIDIA graphics driver
 AddPackage nvtop # GPUs process monitoring for AMD, Intel and NVIDIA
 
 # AMD
