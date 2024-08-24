@@ -1,7 +1,7 @@
 # Browser
 AddPackage firefox-developer-edition # Fast, Private & Safe Web Browser (Developer Edition)
 AddPackage firefox-developer-edition-i18n-zh-tw # Chinese (Traditional) language pack for Firefox Developer Edition
-AddPackage --foreign zen-browser-bin # Standalone web browser - Static binaries from upstream
+AddPackage --foreign zen-browser-avx2-bin # Standalone web browser - Static binaries from upstream
 
 # File Manager
 AddPackage yazi # Blazing fast terminal file manager written in Rust, based on async I/O
@@ -24,6 +24,7 @@ AddPackage telegram-desktop # Official Telegram Desktop client
 AddPackage foliate # A simple and modern GTK eBook reader
 
 # Note
+AddPackage glow # Command-line markdown renderer
 AddPackage rnote # A simple drawing application to create handwritten notes
 AddPackage --foreign appflowy-bin # AppFlowy is an open-source alternative to Notion. You are in charge of your data and customizations.
 
@@ -51,7 +52,7 @@ AddPackage thunderbird-i18n-zh-tw # Chinese (Traditional) language pack for Thun
 # Game
 AddPackage steam # Valve's digital software delivery system
 AddPackage --foreign proton-ge-custom-bin # A fancy custom distribution of Valves Proton with various patches
-AddPackage --foreign prismlauncher # Minecraft launcher with ability to manage multiple instances.
+AddPackage prismlauncher # Minecraft launcher with ability to manage multiple instances
 AddPackage --foreign glfw-wayland-minecraft-cursorfix # A free, open source, portable framework for graphical application development (wayland, patched for Minecraft)
 AddPackage mangohud # A Vulkan overlay layer for monitoring FPS, temperatures, CPU/GPU load and more.
 AddPackage gamemode # A daemon/lib combo that allows games to request a set of optimisations be temporarily applied to the host OS
@@ -65,7 +66,7 @@ AddPackage --foreign aseprite # Create animated sprites and pixel art
 # System Monitor
 AddPackage btop # A monitor of system resources, bpytop ported to C++
 AddPackage --foreign mission-center # Monitor your CPU, Memory, Disk, Network and GPU usage
-
+AddPackage --foreign cavalier # Audio visualizer based on CAVA
 
 # Share/Sync/Download
 AddPackage syncthing # Open Source Continuous Replication / Cluster Synchronization Thing
@@ -88,3 +89,23 @@ AddPackage --foreign waydroid # A container-based approach to boot a full Androi
 # Devices
 AddPackage baobab # A graphical directory tree analyzer
 AddPackage piper # GTK application to configure gaming mice
+
+# CLI tools
+AddPackage baidupcs-go # Terminal utility for Baidu Network Disk
+AddPackage brightnessctl # Lightweight brightness control tool
+AddPackage cloc # Count lines of code
+AddPackage dex # Program to generate and execute DesktopEntry files of type Application
+AddPackage handlr-regex # Powerful alternative to xdg-utils written in Rust
+AddPackage imagemagick # An image viewing/manipulation program
+AddPackage lostfiles # Find orphaned files not owned by any Arch packages
+AddPackage man-pages-zh_tw # Traditional Chinese Linux man pages
+AddPackage p7zip # Command-line file archiver with high compression ratio
+AddPackage playerctl # mpris media player controller and lib for spotify, vlc, audacious, bmp, xmms2, and others.
+AddPackage tealdeer # A fast tldr client in Rust
+AddPackage trash-cli # Command line trashcan (recycle bin) interface
+AddPackage wev # A tool for debugging wayland events on a Wayland window, analagous to the X11 tool xev
+AddPackage yt-dlp # A youtube-dl fork with additional features and fixes
+AddPackage --foreign catnap-git # A minimalistic and fast system fetch written in Nim.
+AddPackage --foreign cmd-wrapped-bin # Find out what the past year looks like in command line!
+AddPackage --foreign terminaltexteffects-git # Visual effects engine applied to text in the terminal.
+AddPackage --foreign tty-share # Shares terminal session with no setup on remote end (browser)

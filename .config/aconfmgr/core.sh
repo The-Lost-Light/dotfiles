@@ -70,6 +70,15 @@ CopyFile /etc/pam.d/greetd # For gnome-keyring
 AddPackage dash # POSIX compliant shell that aims to be as small as possible
 AddPackage fish # Smart and user friendly shell intended mostly for interactive use
 AddPackage nushell # A new type of shell
+# Shell tools
+AddPackage bat # Cat clone with syntax highlighting and git integration
+AddPackage fd # Simple, fast and user-friendly alternative to find
+AddPackage fzf # Command-line fuzzy finder
+AddPackage lsd # Modern ls with a lot of pretty colors and awesome icons
+AddPackage repgrep # An interactive command line replacer for ripgrep
+AddPackage ripgrep-all # rga: ripgrep, but also search in PDFs, E-Books, Office documents, zip, tar.gz, etc.
+AddPackage starship # The cross-shell prompt for astronauts
+AddPackage zoxide # A smarter cd command for your terminal
 
 # Pacman
 CopyFile /etc/makepkg.conf

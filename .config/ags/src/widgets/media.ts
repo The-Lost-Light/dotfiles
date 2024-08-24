@@ -9,7 +9,7 @@ const cover = ({ player, height, ...rest }: { player: MprisPlayer; height: numbe
 	}).hook(player, self => (self.css = image({ path: player.cover_path, height })));
 
 const icon = ({ player, ...rest }: { player: MprisPlayer; [key: string]: any }) =>
-	Widget.Icon({ icon: player.bind("entry").as(entry => Applications.query(entry)[0].icon_name ?? ""), ...rest });
+	Widget.Icon({ icon: player.bind("entry").as(entry => Applications.getEntry(entry)?.icon_name ?? ""), ...rest });
 
 const title = ({ player, ...rest }: { player: MprisPlayer; [key: string]: any }) =>
 	Widget.Label({
