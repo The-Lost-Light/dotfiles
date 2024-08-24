@@ -2,9 +2,9 @@
 AddPackage hypridle # hyprland’s idle daemon
 AddPackage hyprland # a highly customizable dynamic tiling Wayland compositor
 AddPackage hyprlock # hyprland’s GPU-accelerated screen locking utility
-AddPackage hyprwayland-scanner # A Hyprland implementation of wayland-scanner, in and for C++
 AddPackage --foreign hyprpicker # A wlroots-compatible Wayland color picker that does not suck.
 
+# Widget
 AddPackage --foreign aylurs-gtk-shell # Aylurs's Gtk Shell (AGS), An eww inspired gtk widget system.
 AddPackage swaync # A simple GTK based notification daemon for Sway
 

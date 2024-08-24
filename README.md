@@ -9,39 +9,42 @@
 - [x] migrate scripts from fish to nu
 ## ags
 - [X] mpris OSD
-- [ ] arch update use tte to add animation
 - [ ] Overvies OSD
 - [ ] notification system
-- [ ] system information
 - [ ] system tweak(e.g. volume) osd
+- [ ] system information
+- [ ] arch update use tte to add animation
+
+# Themes
+|Type  |Package        |
+|------|---------------|
+|Widget|Orchis theme   |
+|Icon  |Tela Icon Theme|
+|Cursor|Bibata Cursor  |
+
+# Fonts
+|Type           |Package           |
+|---------------|------------------|
+|Chinese        |Noto Sans CJK (TC)|
+|Monospaced Font|FiraCode Nerd Font|
 
 # Dependences
-## shell
-- dash: for system sh
-- fish: for interactive
-- nushell: for scripts
-## system
-- curl
-- brightnessctl
-- pipewire
-  - pwvucontrol
-## maintain
-- aconfmgr: arch linux system backup
-## Hypr
-- Hyprland
-  - Hyprspace
-## ags
-ags
-- pacman-contrib
-- pavucontrol
+Refer to .config/aconfmgr
+|Type           |Package|Remark           |
+|--------------|--------|-----------------|
+|Window manager|hyprland|Plugin: Hyprspace|
+|Widget        |ags     |
+|Lockscreen    |hyprlock|
+|Idle          |hypridle|
+|Boot manager  |refind  |
+|Maintain      |aconfmgr|
 
 # Issue
-qt theme not apply
-## ags
-### Fixing
+## Fixing
 https://github.com/Aylur/ags/pull/454
 https://github.com/Aylur/ags/issues/392
-### Wait for Fixed
+https://github.com/Aylur/ags/pull/496
+## Wait for Fixed
 https://github.com/Aylur/ags/pull/397
 https://github.com/Aylur/ags/issues/450
 Hyproverview close with wrong padding when layer hide
