@@ -1,5 +1,7 @@
 AddPackage refind # An EFI boot manager
 
+IgnorePath "/efi/EFI/refind/vars/*"
+
 CopyFile /efi/EFI/Arch/refind_linux.conf 755
 CopyFile /efi/EFI/refind/BOOT.CSV 755
 CopyFile /efi/EFI/refind/drivers_x64/btrfs_x64.efi 755
@@ -148,4 +150,3 @@ CopyFile /efi/EFI/refind/themes/refind-ambience/icons/tool_mok_tool.png 755
 CopyFile /efi/EFI/refind/themes/refind-ambience/selection_big.png 755
 CopyFile /efi/EFI/refind/themes/refind-ambience/selection_small.png 755
 CopyFile /efi/EFI/refind/themes/refind-ambience/theme.conf 755
-CopyFile /efi/EFI/refind/vars/PreviousBoot 755
