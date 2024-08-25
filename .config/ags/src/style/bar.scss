@@ -41,15 +41,18 @@
 	}
 
 	.workspaces {
-		.focused {
-			color: $red;
-		}
-
-		.focused,
-		.unfocused {
+		button {
 			min-width: 16px;
 			padding-left: 8px;
 			padding-right: 8px;
+
+			&.focused {
+				color: $red;
+			}
+
+			&.unmonitored {
+				opacity: 0.5;
+			}
 		}
 	}
 }
