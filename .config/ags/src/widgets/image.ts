@@ -1,9 +1,9 @@
 const GdkPixbuf = imports.gi.GdkPixbuf;
 
-import fileExists from "@lib/file_exists";
+import files from "@lib/files";
 
 export default ({ path, width = -1, height = -1 }) => {
-	if (!fileExists(path)) return "";
+	if (!files.isExist(path)) return "";
 
 	const pixbuf = GdkPixbuf.Pixbuf.new_from_file(path);
 	return `

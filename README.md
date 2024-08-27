@@ -1,16 +1,10 @@
 ![screenshot](./.dotfiles/assets/screenshot.png)
 # TODO
-- [x] waybar->ags
-- [ ] swaync->ags
-- [x] swaylock->hyprlock
-- [x] swayidle->hypridle
-- [x] hyprcursor
-- [x] aconfmgr
-- [x] migrate scripts from fish to nu
 ## ags
-- [X] mpris OSD
+- [ ] corner mask
+- [ ] config.json with async
 - [ ] Overvies OSD
-- [ ] notification system
+- [ ] notification system to replace swaync
 - [ ] system tweak(e.g. volume) osd
 - [ ] system information
 - [ ] arch update use tte to add animation
