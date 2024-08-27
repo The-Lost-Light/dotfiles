@@ -5,8 +5,9 @@ AddPackage hyprlock # hyprland’s GPU-accelerated screen locking utility
 AddPackage --foreign hyprpicker # A wlroots-compatible Wayland color picker that does not suck.
 
 # Widget
-AddPackage --foreign aylurs-gtk-shell # Aylurs's Gtk Shell (AGS), An eww inspired gtk widget system.
 AddPackage swaync # A simple GTK based notification daemon for Sway
+AddPackage --foreign aylurs-gtk-shell # Aylurs's Gtk Shell (AGS), An eww inspired gtk widget system.
+AddPackage --foreign kando-bin # A pie menu for the desktop. It will be highly customizable and will allow you to create your own menus and actions.
 
 # Clipboard
 AddPackage wl-clip-persist # Keep Wayland clipboard even after programs close

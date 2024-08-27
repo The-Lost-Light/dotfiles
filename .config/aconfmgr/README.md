@@ -3,10 +3,8 @@
 - fish: for interactive
 - nushell: for scripts
 # System
-## UEFI boot manager 
+## UEFI boot manager
 - refind
-## Net
-- curl
 ## Brightness
 - brightnessctl
 ## Audio
@@ -26,4 +24,3 @@
 # Ags
 - ags
 - pacman-contrib: system upgrade check
-

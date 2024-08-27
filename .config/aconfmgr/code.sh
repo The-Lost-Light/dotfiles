@@ -44,7 +44,7 @@ AddPackage jre8-openjdk # OpenJDK Java 8 full runtime environment
 AddPackage --foreign bun-bin # All-in-one JavaScript runtime built for speed, with bundler, transpiler, test runner, and package manager. Includes bunx, shell completions and support for baseline CPUs
 
 # Python
-AddPackage --foreign pyenv-virtualenv # pyenv plugin to manage virtualenv (a.k.a. python-virtualenv)
+AddPackage uv # An extremely fast Python package installer and resolver written in Rust
 
 # Rust
 AddPackage rustup # The Rust toolchain installer

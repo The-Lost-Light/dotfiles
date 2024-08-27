@@ -34,6 +34,7 @@ AddPackage --foreign onlyoffice-bin # An office suite that combines text, spread
 
 # Music
 AddPackage spotify-launcher # Client for spotify's apt repository in Rust for Arch Linux
+AddPackage --foreign mousai # Simple application for identifying songs
 AddPackage --foreign spicetify-cli # Command-line tool to customize Spotify client
 AddPackage --foreign spicetify-marketplace-bin # Spicetify app that integrates a marketplace for extensions, themes and snippets
 AddPackage --foreign spotube-bin # Open source Spotify client that doesn't require Premium nor uses Electron! Available for both desktop & mobile!
@@ -91,6 +92,7 @@ AddPackage baobab # A graphical directory tree analyzer
 AddPackage piper # GTK application to configure gaming mice
 
 # CLI tools
+AddPackage aria2 # Download utility that supports HTTP(S), FTP, BitTorrent, and Metalink
 AddPackage baidupcs-go # Terminal utility for Baidu Network Disk
 AddPackage brightnessctl # Lightweight brightness control tool
 AddPackage cloc # Count lines of code

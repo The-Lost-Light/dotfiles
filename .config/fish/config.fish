@@ -52,9 +52,6 @@ if status is-interactive
     # Initial Zoxide
     zoxide init --cmd cd fish | source
 
-    # Initial Pyenv
-    set -Ux PYENV_ROOT $HOME/.pyenv
-    fish_add_path $PYENV_ROOT/bin
-    pyenv init - | source
-    pyenv virtualenv-init - | source
+    # Initial UV
+    uv generate-shell-completion fish | source
 end

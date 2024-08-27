@@ -1,7 +1,7 @@
 import Hyprland from "@services/hyprland";
 import hover from "@lib/hover";
 
-const workspaces = () => [
+const workspaces = (monitor?: number) => [
 	...Hyprland.workspaces
 		.flatMap(workspace => (workspace.id >= 0 ? workspace.id : []))
 		.sort((i, j) => i - j)
@@ -18,12 +18,8 @@ const workspaces = () => [
 				},
 				setup: self => hover.off(self, () => (self.label = id.toString())),
 			}).hook(Hyprland.active, self => {
-				const is_focused = id === Hyprland.getClient(Hyprland.active.client.address)?.workspace.id;
-				const is_monitored = Hyprland.workspaces.some(
-					workspace => workspace.id === id && workspace.monitorID === Hyprland.active.monitor.id,
-				);
-				self.toggleClassName("focused", is_focused);
-				self.toggleClassName("unmonitored", !is_monitored);
+				self.toggleClassName("focused", id === Hyprland.getClient(Hyprland.active.client.address)?.workspace.id);
+				self.toggleClassName("unmonitored", Hyprland.getWorkspace(id)?.monitorID !== monitor);
 			}),
 		),
 	Widget.Button({
@@ -36,13 +32,13 @@ const workspaces = () => [
 	}),
 ];
 
-export default () =>
+export default (monitor?: number) =>
 	Widget.EventBox({
 		class_name: "workspaces",
 		onScrollUp: () => Hyprland.changeWorkspace("m-1"),
 		onScrollDown: () => Hyprland.changeWorkspace("m+1"),
 
 		child: Widget.Box()
-			.hook(Hyprland, self => (self.children = workspaces()), "workspace-added")
-			.hook(Hyprland, self => (self.children = workspaces()), "workspace-removed"),
+			.hook(Hyprland, self => (self.children = workspaces(monitor)), "workspace-added")
+			.hook(Hyprland, self => (self.children = workspaces(monitor)), "workspace-removed"),
 	});
