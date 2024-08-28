@@ -1,14 +1,11 @@
+import config from "@lib/config";
+
 export default new (class BrightnessService extends Service {
 	static {
 		Service.register(
 			this,
 			{},
-			{
-				device: ["string", "r"],
-				script: ["string", "w"],
-				"brightness-ratio": ["double", "r"],
-				icon: ["string", "r"],
-			},
+			{ device: ["string", "r"], script: ["string", "w"], "brightness-ratio": ["double", "r"], icon: ["string", "r"] },
 		);
 	}
 
@@ -33,7 +30,7 @@ export default new (class BrightnessService extends Service {
 		},
 	};
 
-	#script_path = "";
+	#script_path = config.scripts + config.brightness.script;
 
 	get device() {
 		return this.#device;

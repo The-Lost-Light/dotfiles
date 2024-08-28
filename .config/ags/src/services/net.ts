@@ -1,3 +1,5 @@
+import config from "@lib/config";
+
 export default new (class NetSpeedTestService extends Service {
 	static {
 		Service.register(this, {}, { interface: ["string", "r"], speed: ["double", "r"], unit: ["string", "r"] });
@@ -5,6 +7,8 @@ export default new (class NetSpeedTestService extends Service {
 
 	constructor() {
 		super();
+
+		this.setChecker({});
 	}
 
 	#interface = "lo";
@@ -30,7 +34,7 @@ export default new (class NetSpeedTestService extends Service {
 		return this.#unit;
 	}
 
-	setChecker({ interval = 1, device = "lo" }) {
+	setChecker({ interval = config.net.interval, device = config.net.device }) {
 		this.#interface = device;
 
 		if (this.#speed.is_polling) this.#speed.stopPoll();

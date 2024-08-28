@@ -1,4 +1,5 @@
 import { Audio } from "resource:///com/github/Aylur/ags/service/audio.js";
+import config from "@lib/config";
 
 export default new (class AudioExtends extends Audio {
 	static {
@@ -41,7 +42,7 @@ export default new (class AudioExtends extends Audio {
 		},
 	};
 
-	#script_path = "";
+	#script_path = config.scripts + config.audio.script;
 
 	set script(path: string) {
 		this.#script_path = path;
@@ -51,7 +52,7 @@ export default new (class AudioExtends extends Audio {
 		const icon = { speaker: "", microphone: "" };
 		for (const type of Object.keys(icon)) {
 			const key = !this[type].is_muted
-				? this.#icons[type].threshold.find((threshold: number) => threshold <= this[type].volume * 100) ?? 0
+				? (this.#icons[type].threshold.find((threshold: number) => threshold <= this[type].volume * 100) ?? 0)
 				: 0;
 			icon[type] = this.#icons[type].names[key];
 		}

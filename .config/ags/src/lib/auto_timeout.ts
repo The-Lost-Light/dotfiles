@@ -7,7 +7,7 @@ export default class {
 
 	#id: number | undefined;
 
-	restart(delay: number, callback: () => void) {
+	set({ delay, callback }: { delay: number; callback: () => void }) {
 		this.cancel();
 		this.#id = Utils.timeout(delay * 1000, () => {
 			this.#id = undefined;

@@ -1,12 +1,14 @@
-const initial = (await import("@lib/initial")).default;
-await initial.setConfig();
+import { setCustom, setScss } from "@lib/config";
+await setCustom();
 
-const Hyprland = (await import("@services/hyprland")).default;
-const Bar = (await import("@bar/bar")).default;
-const Corner = (await import("corner")).default;
-const Osd = (await import("@osd/osd")).default;
+const [Hyprland, Bar, Corner, Osd] = await Promise.all([
+	import("@services/hyprland").then(module => module.default),
+	import("@bar/bar").then(module => module.default),
+	import("corner").then(module => module.default),
+	import("@osd/osd").then(module => module.default),
+]);
 
 export default App.config({
 	windows: Hyprland.initialWindows([Bar, Corner, ...Osd]),
-	onConfigParsed: () => initial.setScss("src/style", "style.scss"),
+	onConfigParsed: () => setScss("src/style", "style.scss"),
 });

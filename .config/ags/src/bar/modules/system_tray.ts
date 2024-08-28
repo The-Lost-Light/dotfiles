@@ -1,9 +1,7 @@
 import Systemtray from "resource:///com/github/Aylur/ags/service/systemtray.js";
 
-export default () => {
-	// const Systemtray = await Service.import("systemtray");
-
-	return Widget.Box({
+export default () =>
+	Widget.Box({
 		class_name: "system_tray",
 		children: Systemtray.bind("items").as(items =>
 			items.map(item =>
@@ -17,4 +15,3 @@ export default () => {
 			),
 		),
 	});
-};

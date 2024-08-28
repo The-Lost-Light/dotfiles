@@ -1,9 +1,12 @@
+import config from "@lib/config";
+
 export default new (class UpdateService extends Service {
 	static {
 		Service.register(
 			this,
 			{},
 			{
+				shell: ["string", "w"],
 				terminal: ["string", "w"],
 				"accent-color": ["string", "w"],
 				"update-packages": ["int", "r"],
@@ -14,10 +17,13 @@ export default new (class UpdateService extends Service {
 
 	constructor() {
 		super();
+
+		this.setChecker({});
 	}
 
-	#terminal: string | undefined;
-	#accent_color = "#ffffff";
+	#shell = config.shell;
+	#terminal = config.terminal;
+	#accent_color = config.arch_updates.new_version_color;
 	#AUR_helper = "paru";
 
 	#updates = Variable(0);
@@ -25,6 +31,10 @@ export default new (class UpdateService extends Service {
 	#prompt = "\x1b[34m\n:: Update Completed!\n\x1b[33m:: Press Enter to exit!\x1b[0m";
 
 	#signal_id: number | null = null;
+
+	set shell(shell: string) {
+		this.#shell = shell;
+	}
 
 	set terminal(terminal: string) {
 		this.#terminal = terminal;
@@ -56,7 +66,7 @@ export default new (class UpdateService extends Service {
 			.join("\n");
 	}
 
-	setChecker({ interval = 600, AUR_helper = "" }) {
+	setChecker({ interval = config.arch_updates.interval, AUR_helper = config.arch_updates.AUR_helper }) {
 		this.#AUR_helper = AUR_helper;
 
 		if (this.#updates.is_polling) this.#updates.stopPoll();
@@ -80,7 +90,7 @@ export default new (class UpdateService extends Service {
 
 	update() {
 		if (this.#terminal)
-			Utils.execAsync(`${this.#terminal} fish -c "${this.#AUR_helper}; read -P '${this.#prompt}'"`).then(
+			Utils.execAsync(`${this.#terminal} ${this.#shell} -c "${this.#AUR_helper}; read -P '${this.#prompt}'"`).then(
 				() => (this.#updates.value = 0),
 			);
 	}

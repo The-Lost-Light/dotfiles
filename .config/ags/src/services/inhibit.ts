@@ -1,12 +1,6 @@
 export default new (class Inhibit extends Service {
 	static {
-		Service.register(
-			this,
-			{},
-			{
-				"is-inhibit": ["boolean", "r"],
-			},
-		);
+		Service.register(this, {}, { "is-inhibit": ["boolean", "r"] });
 	}
 
 	constructor() {

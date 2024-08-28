@@ -1,7 +1,5 @@
 import Brightness from "@services/brightness";
 
-Brightness.script = App.configDir + "/scripts/brightness.nu";
-
 export default () =>
 	Widget.EventBox({
 		child: Widget.Box([

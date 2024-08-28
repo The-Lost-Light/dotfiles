@@ -1,9 +1,7 @@
 import Battery from "resource:///com/github/Aylur/ags/service/battery.js";
 
-export default () => {
-	// const Battery = await Service.import("battery");
-
-	return Widget.Box({
+export default () =>
+	Widget.Box({
 		visible: Battery.bind("available"),
 		children: [
 			Widget.Icon({
@@ -14,4 +12,3 @@ export default () => {
 			}),
 		],
 	});
-};

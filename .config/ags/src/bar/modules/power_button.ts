@@ -6,5 +6,8 @@ export default () =>
 	Widget.Button({
 		class_name: "power",
 		label: "",
-		on_clicked: () => (App.openWindow("power_menu"), closeMenu.restart(4, () => App.closeWindow("power_menu"))),
+		on_clicked: () => {
+			App.openWindow("power_menu");
+			closeMenu.set({ delay: 4, callback: () => App.closeWindow("power_menu") });
+		},
 	});

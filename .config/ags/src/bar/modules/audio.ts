@@ -1,7 +1,5 @@
 import Audio from "@services/audio";
 
-Audio.script = "$CONFIG/hypr/scripts/audio.nu";
-
 const stream = (type = "speaker") =>
 	Widget.Button({
 		child: Widget.Box({

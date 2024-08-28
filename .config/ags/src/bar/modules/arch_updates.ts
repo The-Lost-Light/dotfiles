@@ -1,9 +1,5 @@
 import Update from "@services/arch_updates_check";
 
-Update.terminal = "kitty";
-Update.accent_color = "#9ec49f";
-Update.setChecker({ interval: 300, AUR_helper: "paru" });
-
 export default () =>
 	Widget.Button({
 		child: Widget.Box({
