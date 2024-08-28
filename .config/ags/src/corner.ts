@@ -6,7 +6,7 @@ export default (monitor?: number) =>
 		anchor: ["top", "bottom", "right", "left"],
 		click_through: true,
 		child: Widget.Box({
-			class_name: "shadow",
+			class_name: "hole",
 			child: Widget.Box({
 				class_name: "filler",
 				expand: true,
