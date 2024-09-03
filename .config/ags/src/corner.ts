@@ -6,10 +6,14 @@ export default (monitor?: number) =>
 		anchor: ["top", "bottom", "right", "left"],
 		click_through: true,
 		child: Widget.Box({
-			class_name: "hole",
+			class_name: "shadow",
 			child: Widget.Box({
-				class_name: "filler",
+				class_name: "border",
 				expand: true,
+				child: Widget.Box({
+					class_name: "padding",
+					expand: true,
+				}),
 			}),
 		}),
 	});

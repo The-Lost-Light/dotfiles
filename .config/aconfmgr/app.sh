@@ -101,6 +101,7 @@ AddPackage handlr-regex # Powerful alternative to xdg-utils written in Rust
 AddPackage imagemagick # An image viewing/manipulation program
 AddPackage lostfiles # Find orphaned files not owned by any Arch packages
 AddPackage man-pages-zh_tw # Traditional Chinese Linux man pages
+AddPackage megatools # CLI for MEGA
 AddPackage p7zip # Command-line file archiver with high compression ratio
 AddPackage playerctl # mpris media player controller and lib for spotify, vlc, audacious, bmp, xmms2, and others.
 AddPackage tealdeer # A fast tldr client in Rust

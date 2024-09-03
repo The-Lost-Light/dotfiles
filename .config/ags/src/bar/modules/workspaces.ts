@@ -18,7 +18,7 @@ const workspaces = (monitor?: number) => [
 				},
 				setup: self => hover.off(self, () => (self.label = id.toString())),
 			}).hook(Hyprland.active, self => {
-				self.toggleClassName("focused", id === Hyprland.getClient(Hyprland.active.client.address)?.workspace.id);
+				self.toggleClassName("focused", id === Hyprland.active.workspace.id);
 				self.toggleClassName("unmonitored", Hyprland.getWorkspace(id)?.monitorID !== monitor);
 			}),
 		),
