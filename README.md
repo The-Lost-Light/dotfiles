@@ -1,5 +1,10 @@
+> [!WARNING]
+> Because I am preparing for the exam, and the ags would have breaking change one day.
+> So my dotfiles there will be no major changes in the near future.
+
 ![screenshot](./.dotfiles/assets/screenshot.png)
 # TODO
+- [ ] migrate from wttr to open-meteo
 ## ags
 - [ ] corner mask
 - [ ] config.json with async
