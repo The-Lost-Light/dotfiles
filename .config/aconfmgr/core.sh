@@ -94,6 +94,7 @@ CopyFile /etc/xdg/reflector/reflector.conf
 # Backup
 AddPackage --foreign aconfmgr-git # A configuration manager for Arch Linux
 AddPackage timeshift # A system restore utility for Linux
+AddPackage xorg-xhost # Server access control program for X
 AddPackage --foreign timeshift-autosnap # Timeshift auto-snapshot script which runs before package upgrade using Pacman hook.
 CopyFile /etc/cron.d/timeshift-boot
 CopyFile /etc/cron.d/timeshift-hourly

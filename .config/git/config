@@ -11,16 +11,16 @@
 
 # Delta
 [core]
-    pager = delta
+	pager = delta --pager 'less -F --mouse'
 [interactive]
-    diffFilter = delta --color-only
+	diffFilter = delta --color-only
 [merge]
-    conflictstyle = diff3
+	conflictstyle = diff3
 [diff]
-    colorMoved = default
+	colorMoved = default
 [include]
 	path = ~/.config/git/theme
 [delta]
 	features = mellow-barbet
-    navigate = true
+	navigate = true
 	side-by-side = true

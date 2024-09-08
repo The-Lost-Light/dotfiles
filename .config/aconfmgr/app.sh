@@ -4,6 +4,7 @@ AddPackage firefox-developer-edition-i18n-zh-tw # Chinese (Traditional) language
 AddPackage --foreign zen-browser-avx2-bin # Standalone web browser - Static binaries from upstream
 
 # File Manager
+AddPackage nemo # Cinnamon file manager (Nautilus fork)
 AddPackage yazi # Blazing fast terminal file manager written in Rust, based on async I/O
 AddPackage ffmpegthumbnailer # Lightweight video thumbnailer that can be used by file managers
 AddPackage perl-image-exiftool # Reader and rewriter of EXIF information that supports raw files
@@ -11,7 +12,6 @@ AddPackage unarchiver # unar and lsar: Objective-C tools for uncompressing archi
 AddPackage --foreign spacedrive-bin # A file manager from the future.
 
 # Terminal
-AddPackage alacritty # A cross-platform, GPU-accelerated terminal emulator
 AddPackage kitty # A modern, hackable, featureful, OpenGL-based terminal emulator
 AddPackage zellij # A terminal multiplexer
 
