@@ -30,8 +30,8 @@ def volume [device: string, tweak: string] {
 	let muted = $status | any  {|s| $s == "[MUTED]"}
 
 	match $tweak {
-		increase => { if not $muted { wpctl set-volume -l 1.0 $target 5%+ } }
-		decrease => { if not $muted { wpctl set-volume -l 1.0 $target 5%- } }
+		increase => { if not $muted { wpctl set-volume --limit 1 $target 5%+ } }
+		decrease => { if not $muted { wpctl set-volume $target 5%- } }
 		toggle => { wpctl set-mute $target toggle }
 		_ => (exit 1)
 	}
