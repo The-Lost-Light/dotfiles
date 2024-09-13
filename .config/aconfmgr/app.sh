@@ -55,9 +55,10 @@ AddPackage steam # Valve's digital software delivery system
 AddPackage --foreign proton-ge-custom-bin # A fancy custom distribution of Valves Proton with various patches
 AddPackage prismlauncher # Minecraft launcher with ability to manage multiple instances
 AddPackage --foreign glfw-wayland-minecraft-cursorfix # A free, open source, portable framework for graphical application development (wayland, patched for Minecraft)
-AddPackage mangohud # A Vulkan overlay layer for monitoring FPS, temperatures, CPU/GPU load and more.
 AddPackage gamemode # A daemon/lib combo that allows games to request a set of optimisations be temporarily applied to the host OS
 AddPackage gamescope # SteamOS session compositing window manager
+AddPackage mangohud # A Vulkan overlay layer for monitoring FPS, temperatures, CPU/GPU load and more.
+AddPackage goverlay # A GUI to help manage Vulkan/OpenGL overlays
 
 # Productivity
 AddPackage blender # A fully integrated 3D graphics creation suite
