@@ -83,7 +83,6 @@ AddPackage zoxide # A smarter cd command for your terminal
 # Pacman
 CopyFile /etc/makepkg.conf
 AddPackage reflector # A Python 3 module and script to retrieve and filter the latest Pacman mirror list.
-AddPackage --foreign paru # Feature packed AUR helper
 AddPackage --foreign yay # Yet another yogurt. Pacman wrapper and AUR helper written in go.
 AddPackage --foreign downgrade # Bash script for downgrading one or more packages to a version in your cache or the A.L.A.
 CopyFile /etc/pacman.conf

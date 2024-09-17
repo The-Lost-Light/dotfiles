@@ -1,7 +1,7 @@
 {
 	"shell": "fish",
 	"terminal": "kitty",
-	"arch_updates": { "interval": 600, "AUR_helper": "paru" },
+	"arch_updates": { "interval": 600, "AUR_helper": "yay" },
 	"audio": { "script": "audio.nu" },
 	"brightness": { "script": "brightness.nu" },
 	"net": { "interval": 2, "device": "wlp2s0" }

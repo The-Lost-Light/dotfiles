@@ -11,7 +11,6 @@
 - pipewire
   - pwvucontrol
 ## AUR
-- paru
 - yay
 ## Sync/Maintain
 - aconfmgr: arch linux system backup
