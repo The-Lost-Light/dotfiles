@@ -14,12 +14,6 @@ const time = Variable(
 	},
 );
 
-type TimeExtend = variable<{
-	hour: string;
-	minute: string;
-	month: string;
-	day: string;
-}> & { format: (time: number) => string };
 time["format"] = function (time: number) {
 	const left = Math.floor(time / 60);
 	const right = Math.floor(time % 60);
@@ -27,5 +21,12 @@ time["format"] = function (time: number) {
 	if (right >= 10) return `${left}:${right}`;
 	else return `${left}:0${right}`;
 };
+
+type TimeExtend = variable<{
+	hour: string;
+	minute: string;
+	month: string;
+	day: string;
+}> & { format: (time: number) => string };
 
 export default time as TimeExtend;

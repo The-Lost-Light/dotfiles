@@ -3,9 +3,7 @@ import Weather from "@bar/modules/weather";
 import Time from "@bar/modules/time";
 import Media from "@bar/modules/media";
 import PowerButton from "@bar/modules/power_button";
-
-import reveal_on_hover from "@lib/reveal_on_hover";
-
+import hover from "@lib/hover";
 import { AgsBox } from "types";
 
 const Center = () =>
@@ -20,7 +18,7 @@ const Center = () =>
 				App.openWindow("overview");
 			}
 		},
-		setup: self => reveal_on_hover(self, (self.child.children[1] as AgsBox).children[1]),
+		setup: self => hover.reveal(self, (self.child.children[1] as AgsBox).children[1]),
 	});
 
 export default () =>

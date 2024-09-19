@@ -24,7 +24,7 @@ export default new (class UpdateService extends Service {
 	#shell = config.shell;
 	#terminal = config.terminal;
 	#accent_color = config.arch_updates.new_version_color;
-	#AUR_helper = "";
+	#AUR_helper = config.arch_updates.AUR_helper;
 
 	#updates = Variable(0);
 	#packages = [""];
