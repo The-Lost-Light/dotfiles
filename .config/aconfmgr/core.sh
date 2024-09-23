@@ -34,7 +34,7 @@ AddPackage --foreign pwvucontrol # Pipewire volume control for GNOME
 # Bluetooth
 AddPackage blueman # GTK+ Bluetooth Manager
 AddPackage gnome-bluetooth-3.0 # GNOME Bluetooth Subsystem
-AddPackage --foreign overskride # A simple yet powerful bluetooth client
+AddPackage --foreign overskride-bin # A simple yet powerful bluetooth client (binary release)
 
 # Network
 AddPackage network-manager-applet # Applet for managing network connections
