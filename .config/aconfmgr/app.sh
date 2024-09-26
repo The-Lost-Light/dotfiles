@@ -32,6 +32,9 @@ AddPackage --foreign appflowy-bin # AppFlowy is an open-source alternative to No
 AddPackage libreoffice-fresh # LibreOffice branch which contains new features and program enhancements
 AddPackage --foreign onlyoffice-bin # An office suite that combines text, spreadsheet and presentation editors
 
+# Tools
+AddPackage --foreign numi-bin # Beautiful calculator app for macOS, Linux & Windows
+
 # Music
 AddPackage spotify-launcher # Client for spotify's apt repository in Rust for Arch Linux
 AddPackage --foreign mousai # Simple application for identifying songs
