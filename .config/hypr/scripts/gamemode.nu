@@ -10,6 +10,7 @@ def "main start" [] {
 	keyword general:gaps_out 0;
 	keyword general:border_size 1;
 	keyword decoration:rounding 0;
+	keyword input:kb_options caps:none;
 	keyword unbind CTRL, left;
 	keyword unbind CTRL, right;
 	keyword unbind CTRL, up;
