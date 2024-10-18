@@ -17,7 +17,6 @@ AddPackage zed # A high-performance, multiplayer code editor from the creators o
 AddPackage taplo-cli # TOML toolkit written in Rust
 AddPackage prettier # An opinionated code formatter
 AddPackage svelte-language-server # Language server for Svelte
-AddPackage tree-sitter-cli # CLI tool for developing, testing, and using Tree-sitter parsers
 AddPackage typescript-language-server # Language Server Protocol (LSP) implementation for TypeScript using tsserver
 AddPackage typescript-svelte-plugin # TypeScript plugin for Svelte intellisense
 AddPackage vscode-css-languageserver # CSS/LESS/SCSS language server

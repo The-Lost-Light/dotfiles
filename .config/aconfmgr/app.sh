@@ -1,6 +1,5 @@
 # Browser
-AddPackage firefox-developer-edition # Fast, Private & Safe Web Browser (Developer Edition)
-AddPackage firefox-developer-edition-i18n-zh-tw # Chinese (Traditional) language pack for Firefox Developer Edition
+AddPackage chromium # A web browser built for speed, simplicity, and security
 AddPackage --foreign zen-browser-avx2-bin # Standalone web browser - Static binaries from upstream
 
 # File Manager
@@ -36,11 +35,12 @@ AddPackage --foreign onlyoffice-bin # An office suite that combines text, spread
 AddPackage --foreign numi-bin # Beautiful calculator app for macOS, Linux & Windows
 
 # Music
+AddPackage mousai # Simple application to identify songs
 AddPackage spotify-launcher # Client for spotify's apt repository in Rust for Arch Linux
-AddPackage --foreign mousai # Simple application for identifying songs
 AddPackage --foreign spicetify-cli # Command-line tool to customize Spotify client
 AddPackage --foreign spicetify-marketplace-bin # Spicetify app that integrates a marketplace for extensions, themes and snippets
 AddPackage --foreign spotube-bin # Open source Spotify client that doesn't require Premium nor uses Electron! Available for both desktop & mobile!
+AddPackage --foreign lowfi # An extremely simple lofi player.
 
 # Video
 AddPackage mpv # a free, open source, and cross-platform media player
@@ -54,14 +54,15 @@ AddPackage thunderbird # Standalone mail and news reader from mozilla.org
 AddPackage thunderbird-i18n-zh-tw # Chinese (Traditional) language pack for Thunderbird
 
 # Game
-AddPackage steam # Valve's digital software delivery system
-AddPackage --foreign proton-ge-custom-bin # A fancy custom distribution of Valves Proton with various patches
-AddPackage prismlauncher # Minecraft launcher with ability to manage multiple instances
-AddPackage --foreign glfw-wayland-minecraft-cursorfix # A free, open source, portable framework for graphical application development (wayland, patched for Minecraft)
 AddPackage gamemode # A daemon/lib combo that allows games to request a set of optimisations be temporarily applied to the host OS
 AddPackage gamescope # SteamOS session compositing window manager
 AddPackage mangohud # A Vulkan overlay layer for monitoring FPS, temperatures, CPU/GPU load and more.
 AddPackage goverlay # A GUI to help manage Vulkan/OpenGL overlays
+AddPackage steam # Valve's digital software delivery system
+AddPackage --foreign adwsteamgtk # A simple Gtk wrapper for Adwaita-for-Steam
+AddPackage --foreign proton-ge-custom-bin # A fancy custom distribution of Valves Proton with various patches
+AddPackage prismlauncher # Minecraft launcher with ability to manage multiple instances
+AddPackage --foreign glfw-wayland-minecraft-cursorfix # A free, open source, portable framework for graphical application development (wayland, patched for Minecraft)
 
 # Productivity
 AddPackage blender # A fully integrated 3D graphics creation suite

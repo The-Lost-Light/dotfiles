@@ -3,7 +3,6 @@ AddPackage amd-ucode # Microcode update image for AMD CPUs
 AddPackage linux-zen # The Linux ZEN kernel and modules
 AddPackage linux-zen-headers # Headers and scripts for building modules for the Linux ZEN kernel
 CopyFile /etc/booster.yaml
-CopyFile /etc/modprobe.d/nvidia.conf
 CopyFile /etc/modules-load.d/droidcam.conf
 
 # Base
@@ -85,7 +84,6 @@ AddPackage reflector # A Python 3 module and script to retrieve and filter the l
 AddPackage --foreign yay # Yet another yogurt. Pacman wrapper and AUR helper written in go.
 AddPackage --foreign downgrade # Bash script for downgrading one or more packages to a version in your cache or the A.L.A.
 CopyFile /etc/pacman.conf
-CopyFile /etc/pacman.d/hooks/nvidia.hook
 CopyFile /etc/pacman.d/hooks/spicetify.hook
 CopyFile /etc/xdg/reflector/reflector.conf
 

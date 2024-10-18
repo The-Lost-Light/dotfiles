@@ -14,6 +14,7 @@ AddPackage libva-nvidia-driver # VA-API implementation that uses NVDEC as a back
 AddPackage nvidia-open-dkms # NVIDIA open kernel modules
 AddPackage nvidia-prime # NVIDIA Prime Render Offload configuration and utilities
 AddPackage nvtop # GPUs process monitoring for AMD, Intel and NVIDIA
+CopyFile /etc/pacman.d/hooks/nvidia.hook
 
 # AMD
 AddPackage radeontop # View GPU utilization for total activity percent and individual blocks

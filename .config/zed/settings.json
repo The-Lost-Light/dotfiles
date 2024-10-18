@@ -13,7 +13,7 @@
 	"hard_tabs": true,
 	"inlay_hints": { "enabled": false, "show_type_hints": false },
 	"soft_wrap": "editor_width",
-	"terminal": { "dock": "bottom", "alternate_scroll": "on" },
+	"terminal": { "alternate_scroll": "on", "cursor_shape": "bar" },
 	"theme": "Ayu Mirage",
 	"calls": { "mute_on_join": true },
 	"languages": {
