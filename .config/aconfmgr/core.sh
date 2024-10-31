@@ -24,10 +24,10 @@ AddPackage linux-firmware # Firmware files for Linux
 
 # Audio
 AddPackage easyeffects # Audio Effects for Pipewire applications
-AddPackage pamixer # Pulseaudio command-line mixer like amixer
 AddPackage pipewire # Low-latency audio/video router and processor
 AddPackage pipewire-alsa # Low-latency audio/video router and processor - ALSA configuration
 AddPackage pipewire-pulse # Low-latency audio/video router and processor - PulseAudio replacement
+AddPackage --foreign sonusmix # Next-gen Pipewire audio routing tool
 AddPackage --foreign pwvucontrol # Pipewire volume control for GNOME
 
 # Bluetooth

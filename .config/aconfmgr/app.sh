@@ -31,15 +31,14 @@ AddPackage --foreign appflowy-bin # AppFlowy is an open-source alternative to No
 AddPackage libreoffice-fresh # LibreOffice branch which contains new features and program enhancements
 AddPackage --foreign onlyoffice-bin # An office suite that combines text, spreadsheet and presentation editors
 
-# Tools
-AddPackage --foreign numi-bin # Beautiful calculator app for macOS, Linux & Windows
+# Picture
+AddPackage oculante # A minimalistic image viewer with analysis and editing tools
 
 # Music
 AddPackage mousai # Simple application to identify songs
 AddPackage spotify-launcher # Client for spotify's apt repository in Rust for Arch Linux
 AddPackage --foreign spicetify-cli # Command-line tool to customize Spotify client
 AddPackage --foreign spicetify-marketplace-bin # Spicetify app that integrates a marketplace for extensions, themes and snippets
-AddPackage --foreign spotube-bin # Open source Spotify client that doesn't require Premium nor uses Electron! Available for both desktop & mobile!
 AddPackage --foreign lowfi # An extremely simple lofi player.
 
 # Video
@@ -48,6 +47,9 @@ AddPackage vlc # Multi-platform MPEG, VCD/DVD, and DivX player
 
 # Screen Record
 AddPackage kooha # Elegantly record your screen
+
+# Tools
+AddPackage gnome-calculator # GNOME Scientific calculator
 
 # Mail
 AddPackage thunderbird # Standalone mail and news reader from mozilla.org
