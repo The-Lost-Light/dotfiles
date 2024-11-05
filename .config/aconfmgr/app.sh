@@ -1,5 +1,4 @@
 # Browser
-AddPackage chromium # A web browser built for speed, simplicity, and security
 AddPackage --foreign zen-browser-avx2-bin # Standalone web browser - Static binaries from upstream
 
 # File Manager
@@ -23,12 +22,10 @@ AddPackage telegram-desktop # Official Telegram Desktop client
 AddPackage foliate # A simple and modern GTK eBook reader
 
 # Note
-AddPackage glow # Command-line markdown renderer
 AddPackage rnote # A simple drawing application to create handwritten notes
 AddPackage --foreign appflowy-bin # AppFlowy is an open-source alternative to Notion. You are in charge of your data and customizations.
 
 # Office
-AddPackage libreoffice-fresh # LibreOffice branch which contains new features and program enhancements
 AddPackage --foreign onlyoffice-bin # An office suite that combines text, spreadsheet and presentation editors
 
 # Picture
@@ -36,6 +33,7 @@ AddPackage oculante # A minimalistic image viewer with analysis and editing tool
 
 # Music
 AddPackage mousai # Simple application to identify songs
+AddPackage musescore # Create, play and print beautiful sheet music
 AddPackage spotify-launcher # Client for spotify's apt repository in Rust for Arch Linux
 AddPackage --foreign spicetify-cli # Command-line tool to customize Spotify client
 AddPackage --foreign spicetify-marketplace-bin # Spicetify app that integrates a marketplace for extensions, themes and snippets
@@ -74,25 +72,24 @@ AddPackage --foreign aseprite # Create animated sprites and pixel art
 # System Monitor
 AddPackage btop # A monitor of system resources, bpytop ported to C++
 AddPackage --foreign mission-center # Monitor your CPU, Memory, Disk, Network and GPU usage
-AddPackage --foreign cavalier # Audio visualizer based on CAVA
 
 # Share/Sync/Download
 AddPackage syncthing # Open Source Continuous Replication / Cluster Synchronization Thing
 AddPackage --foreign localsend-bin # An open source cross-platform alternative to AirDrop
 AddPackage --foreign motrix-bin # A full-featured download manager (binary version)
 
-# Live Streaming
+# Record
 AddPackage obs-studio # Free, open source software for live streaming and recording
-AddPackage --foreign droidcam # A tool to turn your phone/tablet into a wireless/usb webcam
 
 # VPN
 AddPackage tailscale # A mesh VPN that makes it easy to connect your devices, wherever they are.
 
 # Android
 AddPackage android-file-transfer # Android MTP client with minimalistic UI
+AddPackage --foreign droidcam # A tool to turn your phone/tablet into a wireless/usb webcam
+CopyFile /etc/modules-load.d/droidcam.conf
 AddPackage gvfs-mtp # Virtual filesystem implementation for GIO - MTP backend (Android, media player)
 AddPackage scrcpy # Display and control your Android device
-AddPackage --foreign waydroid # A container-based approach to boot a full Android system on a regular Linux system
 
 # Devices
 AddPackage baobab # A graphical directory tree analyzer

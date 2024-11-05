@@ -3,7 +3,6 @@ AddPackage amd-ucode # Microcode update image for AMD CPUs
 AddPackage linux-zen # The Linux ZEN kernel and modules
 AddPackage linux-zen-headers # Headers and scripts for building modules for the Linux ZEN kernel
 CopyFile /etc/booster.yaml
-CopyFile /etc/modules-load.d/droidcam.conf
 
 # Base
 AddPackage base # Minimal package set to define a basic Arch Linux installation
@@ -99,5 +98,4 @@ CopyFile /etc/timeshift/timeshift.json
 # Fcitx5
 AddPackage fcitx5-configtool # Configuration Tool for Fcitx5
 AddPackage fcitx5-gtk # Fcitx5 gtk im module and glib based dbus client library
-AddPackage fcitx5-mozc # Fcitx5 Module of A Japanese Input Method for Chromium OS, Windows, Mac and Linux (the Open Source Edition of Google Japanese Input)
 AddPackage --foreign fcitx5-mcbopomofo-git # McBopomofo for fcitx5

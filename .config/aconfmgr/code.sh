@@ -26,7 +26,6 @@ AddPackage vscode-html-languageserver # HTML language server
 AddPackage cmake # A cross-platform open-source make system
 AddPackage cpio # A tool to copy files into or out of a cpio or tar archive
 AddPackage meson # High productivity build system
-AddPackage nix # A purely functional package manager
 
 # C/C++
 AddPackage ccache # Compiler cache that speeds up recompilation by caching previous compilations
@@ -35,9 +34,9 @@ AddPackage ccache # Compiler cache that speeds up recompilation by caching previ
 AddPackage dart-sass # Sass makes CSS fun again
 
 # Java
-AddPackage jre-openjdk # OpenJDK Java 22 full runtime environment
-AddPackage jre17-openjdk # OpenJDK Java 17 full runtime environment
+AddPackage jre-openjdk # OpenJDK Java full runtime environment
 AddPackage jre8-openjdk # OpenJDK Java 8 full runtime environment
+AddPackage jre17-openjdk # OpenJDK Java 17 full runtime environment
 
 # Javacript
 AddPackage --foreign bun-bin # All-in-one JavaScript runtime built for speed, with bundler, transpiler, test runner, and package manager. Includes bunx, shell completions and support for baseline CPUs

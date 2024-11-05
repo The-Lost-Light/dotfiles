@@ -29,18 +29,16 @@ AddPackage qt5ct # Qt5 Configuration Utility
 AddPackage qt6ct # Qt 6 Configuration Utility
 AddPackage kvantum # SVG-based theme engine for Qt6 (including config tool and extra themes)
 AddPackage kvantum-qt5 # SVG-based theme engine for Qt5
-AddPackage nwg-look # GTK3 settings editor adapted to work on wlroots-based compositors
-AddPackage --foreign bibata-cursor-theme-bin # Material Based Cursor Theme
 AddPackage --foreign kvantum-theme-orchis-git # Orchis theme for Kvantum
-AddPackage --foreign orchis-theme # A Material Design theme for GNOME/GTK based desktop environments.
+AddPackage nwg-look # GTK3 settings editor adapted to work on wlroots-based compositors
+AddPackage orchis-theme # A Material Design theme for GNOME/GTK based desktop environments
+AddPackage --foreign bibata-cursor-theme-bin # Material Based Cursor Theme
 AddPackage --foreign matugen-bin # A material you color generation tool with templates
 AddPackage --foreign tela-icon-theme # A flat colorful design icon theme.
 
 # Wallpaper
 AddPackage hyprpaper # a blazing fast wayland wallpaper utility with IPC controls
 AddPackage swww # A Solution to your Wayland Wallpaper Woes
-AddPackage --foreign linux-wallpaperengine-git # use steam's wallpaperengine on linux
-AddPackage --foreign mpvpaper # video wallpaper program for wlroots based wayland compositors
 
 # Launcher
 AddPackage nwg-drawer # Application drawer for sway and other wlroots-based compositors
