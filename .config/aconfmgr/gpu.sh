@@ -1,9 +1,8 @@
 # Hardware Video Acceleration
 AddPackage libva # Video Acceleration (VA) API for Linux
-AddPackage libva-mesa-driver # Open-source VA-API drivers
 AddPackage libva-utils # Intel VA-API Media Applications and Scripts for libva
+AddPackage mesa # Open-source OpenGL drivers
 AddPackage mesa-utils # Essential Mesa utilities
-AddPackage mesa-vdpau # Open-source VDPAU drivers
 AddPackage vdpauinfo # Command line utility for querying the capabilities of a VDPAU device
 AddPackage vulkan-mesa-layers # Mesa's Vulkan layers
 

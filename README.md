@@ -1,11 +1,13 @@
 > [!WARNING]
 > Because I am preparing for the exam, and the ags would have breaking change one day.
 > So my dotfiles there will be no major changes in the near future.
+> Current using my own [ags](https://github.com/The-Lost-Light/ags/tree/search-by-wm-class)
 
 ![screenshot](.dotfiles/assets/screenshot.png)
 # TODO
+- [ ] migrate ags to v2 and astal
 - [ ] migrate from wttr to open-meteo
-## ags
+## astal
 - [ ] corner mask
 - [ ] config.json with async
 - [ ] Overvies OSD
@@ -27,8 +29,7 @@
 |Chinese        |Noto Sans CJK (TC)|
 |Monospaced Font|FiraCode Nerd Font|
 
-# Dependences
-Refer to .config/aconfmgr
+# [Dependences](.config/aconfmgr/README.md)
 |Type           |Package|Remark           |
 |--------------|--------|-----------------|
 |Window manager|hyprland|Plugin: Hyprspace|
@@ -39,11 +40,4 @@ Refer to .config/aconfmgr
 |Maintain      |aconfmgr|
 
 # Issue
-## Fixing
-https://github.com/Aylur/ags/pull/454
-https://github.com/Aylur/ags/issues/392
-https://github.com/Aylur/ags/pull/496
-## Wait for Fixed
-https://github.com/Aylur/ags/pull/397
-https://github.com/Aylur/ags/issues/450
-Hyproverview close with wrong padding when layer hide
+[Hyproverview close with wrong padding when layer hide](https://github.com/KZDKM/Hyprspace/issues/78)
