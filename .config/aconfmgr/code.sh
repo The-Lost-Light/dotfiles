@@ -30,9 +30,6 @@ AddPackage meson # High productivity build system
 # C/C++
 AddPackage ccache # Compiler cache that speeds up recompilation by caching previous compilations
 
-# CSS
-AddPackage dart-sass # Sass makes CSS fun again
-
 # Java
 AddPackage jre-openjdk # OpenJDK Java full runtime environment
 AddPackage jre8-openjdk # OpenJDK Java 8 full runtime environment

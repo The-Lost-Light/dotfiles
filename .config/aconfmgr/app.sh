@@ -40,8 +40,8 @@ AddPackage --foreign spicetify-marketplace-bin # Spicetify app that integrates a
 AddPackage --foreign lowfi # An extremely simple lofi player.
 
 # Video
+AddPackage celluloid # Simple GTK+ frontend for mpv
 AddPackage mpv # a free, open source, and cross-platform media player
-AddPackage vlc # Multi-platform MPEG, VCD/DVD, and DivX player
 
 # Screen Record
 AddPackage kooha # Elegantly record your screen
@@ -55,14 +55,15 @@ AddPackage thunderbird-i18n-zh-tw # Chinese (Traditional) language pack for Thun
 
 # Game
 AddPackage gamemode # A daemon/lib combo that allows games to request a set of optimisations be temporarily applied to the host OS
+AddPackage lib32-gamemode # A daemon/lib combo that allows games to request a set of optimisations be temporarily applied to the host OS
 AddPackage gamescope # SteamOS session compositing window manager
 AddPackage mangohud # A Vulkan overlay layer for monitoring FPS, temperatures, CPU/GPU load and more.
 AddPackage goverlay # A GUI to help manage Vulkan/OpenGL overlays
+AddPackage prismlauncher # Minecraft launcher with ability to manage multiple instances
+AddPackage --foreign glfw-wayland-minecraft-cursorfix # A free, open source, portable framework for graphical application development (wayland, patched for Minecraft)
 AddPackage steam # Valve's digital software delivery system
 AddPackage --foreign adwsteamgtk # A simple Gtk wrapper for Adwaita-for-Steam
 AddPackage --foreign proton-ge-custom-bin # A fancy custom distribution of Valves Proton with various patches
-AddPackage prismlauncher # Minecraft launcher with ability to manage multiple instances
-AddPackage --foreign glfw-wayland-minecraft-cursorfix # A free, open source, portable framework for graphical application development (wayland, patched for Minecraft)
 
 # Productivity
 AddPackage blender # A fully integrated 3D graphics creation suite
@@ -87,7 +88,6 @@ AddPackage tailscale # A mesh VPN that makes it easy to connect your devices, wh
 # Android
 AddPackage android-file-transfer # Android MTP client with minimalistic UI
 AddPackage --foreign droidcam # A tool to turn your phone/tablet into a wireless/usb webcam
-CopyFile /etc/modules-load.d/droidcam.conf
 AddPackage gvfs-mtp # Virtual filesystem implementation for GIO - MTP backend (Android, media player)
 AddPackage scrcpy # Display and control your Android device
 

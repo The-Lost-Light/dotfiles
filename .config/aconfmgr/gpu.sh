@@ -16,5 +16,4 @@ AddPackage nvtop # GPUs process monitoring for AMD, Intel and NVIDIA
 CopyFile /etc/pacman.d/hooks/nvidia.hook
 
 # AMD
-AddPackage radeontop # View GPU utilization for total activity percent and individual blocks
 AddPackage vulkan-radeon # Open-source Vulkan driver for AMD GPUs
