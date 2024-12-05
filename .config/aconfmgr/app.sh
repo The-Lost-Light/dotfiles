@@ -1,5 +1,6 @@
 # Browser
-AddPackage --foreign zen-browser-avx2-bin # Standalone web browser - Static binaries from upstream
+AddPackage chromium # A web browser built for speed, simplicity, and security
+AddPackage zen-browser-avx2-bin # Performance oriented Firefox-based web browser - Utilizes AVX2 for better performance
 
 # File Manager
 AddPackage nemo # Cinnamon file manager (Nautilus fork)
@@ -15,7 +16,6 @@ AddPackage zellij # A terminal multiplexer
 
 # Communication
 AddPackage discord # All-in-one voice and text chat for gamers
-AddPackage --foreign vesktop-bin # A cross platform electron-based desktop app aiming to give you a snappier Discord experience with Vencord pre-installed
 AddPackage telegram-desktop # Official Telegram Desktop client
 
 # Reader
@@ -26,7 +26,7 @@ AddPackage rnote # A simple drawing application to create handwritten notes
 AddPackage --foreign appflowy-bin # AppFlowy is an open-source alternative to Notion. You are in charge of your data and customizations.
 
 # Office
-AddPackage --foreign onlyoffice-bin # An office suite that combines text, spreadsheet and presentation editors
+AddPackage onlyoffice-bin # An office suite that combines text, spreadsheet and presentation editors
 
 # Picture
 AddPackage oculante # A minimalistic image viewer with analysis and editing tools
@@ -62,8 +62,8 @@ AddPackage goverlay # A GUI to help manage Vulkan/OpenGL overlays
 AddPackage prismlauncher # Minecraft launcher with ability to manage multiple instances
 AddPackage --foreign glfw-wayland-minecraft-cursorfix # A free, open source, portable framework for graphical application development (wayland, patched for Minecraft)
 AddPackage steam # Valve's digital software delivery system
+AddPackage proton-ge-custom-bin # A fancy custom distribution of Valves Proton with various patches
 AddPackage --foreign adwsteamgtk # A simple Gtk wrapper for Adwaita-for-Steam
-AddPackage --foreign proton-ge-custom-bin # A fancy custom distribution of Valves Proton with various patches
 
 # Productivity
 AddPackage blender # A fully integrated 3D graphics creation suite
@@ -72,7 +72,7 @@ AddPackage --foreign aseprite # Create animated sprites and pixel art
 
 # System Monitor
 AddPackage btop # A monitor of system resources, bpytop ported to C++
-AddPackage --foreign mission-center # Monitor your CPU, Memory, Disk, Network and GPU usage
+AddPackage mission-center # Monitor your CPU, Memory, Disk, Network and GPU usage
 
 # Share/Sync/Download
 AddPackage syncthing # Open Source Continuous Replication / Cluster Synchronization Thing

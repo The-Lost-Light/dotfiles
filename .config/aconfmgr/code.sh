@@ -36,7 +36,7 @@ AddPackage jre8-openjdk # OpenJDK Java 8 full runtime environment
 AddPackage jre17-openjdk # OpenJDK Java 17 full runtime environment
 
 # Javacript
-AddPackage --foreign bun-bin # All-in-one JavaScript runtime built for speed, with bundler, transpiler, test runner, and package manager. Includes bunx, shell completions and support for baseline CPUs
+AddPackage bun-bin # All-in-one JavaScript runtime built for speed, with bundler, transpiler, test runner, and package manager. Includes bunx, shell completions and support for baseline CPUs
 
 # Python
 AddPackage uv # An extremely fast Python package installer and resolver written in Rust

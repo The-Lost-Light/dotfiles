@@ -4,5 +4,3 @@
 *.bak*
 backup
 test*
-# systemd package service
-*.wants

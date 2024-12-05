@@ -78,13 +78,18 @@ AddPackage starship # The cross-shell prompt for astronauts
 AddPackage zoxide # A smarter cd command for your terminal
 
 # Pacman
-CopyFile /etc/makepkg.conf
+AddPackage downgrade # Bash script for downgrading one or more packages to a version in your cache or the A.L.A.
 AddPackage reflector # A Python 3 module and script to retrieve and filter the latest Pacman mirror list.
-AddPackage --foreign yay # Yet another yogurt. Pacman wrapper and AUR helper written in go.
-AddPackage --foreign downgrade # Bash script for downgrading one or more packages to a version in your cache or the A.L.A.
+AddPackage yay # Yet another yogurt. Pacman wrapper and AUR helper written in go.
+CopyFile /etc/makepkg.conf
 CopyFile /etc/pacman.conf
 CopyFile /etc/pacman.d/hooks/spicetify.hook
 CopyFile /etc/xdg/reflector/reflector.conf
+# CachyOS
+AddPackage cachyos-keyring # CachyOS keyring
+AddPackage cachyos-mirrorlist # cachyos mirrorlist
+AddPackage cachyos-v3-mirrorlist # cachyos-v3-mirrorlist
+AddPackage cachyos-v4-mirrorlist # cachyos-v3-mirrorlist
 
 # Backup
 AddPackage --foreign aconfmgr-git # A configuration manager for Arch Linux
@@ -101,7 +106,7 @@ AddPackage fcitx5-gtk # Fcitx5 gtk im module and glib based dbus client library
 AddPackage --foreign fcitx5-mcbopomofo-git # McBopomofo for fcitx5
 
 # Wine
-AddPackage wine # A compatibility layer for running Windows programs
+AddPackage wine-staging # A compatibility layer for running Windows programs - Staging branch
 AddPackage wine-gecko # Wine's built-in replacement for Microsoft's Internet Explorer
 AddPackage wine-mono # Wine's built-in replacement for Microsoft's .NET Framework
 AddPackage winetricks # Script to install various redistributable runtime libraries in Wine.
