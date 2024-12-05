@@ -1,4 +1,4 @@
-# Hyprland
+# Hypr
 AddPackage hypridle # hyprland’s idle daemon
 AddPackage hyprland # a highly customizable dynamic tiling Wayland compositor
 AddPackage hyprlock # hyprland’s GPU-accelerated screen locking utility
@@ -8,10 +8,6 @@ AddPackage hyprpicker # A wlroots-compatible Wayland color picker that does not 
 AddPackage swaync # A simple GTK based notification daemon for Sway
 AddPackage --foreign aylurs-gtk-shell # Aylurs's Gtk Shell (AGS), An eww inspired gtk widget system.
 
-# Clipboard
-AddPackage wl-clip-persist # Keep Wayland clipboard even after programs close
-AddPackage --foreign clipse # A configurable TUI clipboard manager for Unix.
-
 # XDG Desktop
 AddPackage xdg-desktop-portal # Desktop integration portals for sandboxed apps
 AddPackage xdg-desktop-portal-gtk # A backend implementation for xdg-desktop-portal using GTK
@@ -19,6 +15,15 @@ AddPackage xdg-desktop-portal-hyprland # xdg-desktop-portal backend for hyprland
 
 # Polkit
 AddPackage polkit-gnome # Legacy polkit authentication agent for GNOME
+
+# IME
+AddPackage fcitx5-configtool # Configuration Tool for Fcitx5
+AddPackage fcitx5-gtk # Fcitx5 gtk im module and glib based dbus client library
+AddPackage --foreign fcitx5-mcbopomofo-git # McBopomofo for fcitx5
+
+# Clipboard
+AddPackage wl-clip-persist # Keep Wayland clipboard even after programs close
+AddPackage --foreign clipse # A configurable TUI clipboard manager for Unix.
 
 # QT
 AddPackage qt5-wayland # Provides APIs for Wayland

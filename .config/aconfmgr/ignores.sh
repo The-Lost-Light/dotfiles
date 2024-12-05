@@ -27,7 +27,7 @@ IgnorePath "/etc/spotify-launcher.conf"
 IgnorePath "/etc/NetworkManager/system-connections/*"
 # Pacman
 IgnorePath "/etc/pacman.d/gnupg/*"
-IgnorePath "/etc/pacman.d/mirrorlist"
+IgnorePath "/etc/pacman.d/*mirrorlist*"
 # SSH
 IgnorePath "/etc/ssh/*"
 IgnorePath "/etc/ssl/*"

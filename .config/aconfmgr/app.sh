@@ -62,7 +62,8 @@ AddPackage goverlay # A GUI to help manage Vulkan/OpenGL overlays
 AddPackage prismlauncher # Minecraft launcher with ability to manage multiple instances
 AddPackage --foreign glfw-wayland-minecraft-cursorfix # A free, open source, portable framework for graphical application development (wayland, patched for Minecraft)
 AddPackage steam # Valve's digital software delivery system
-AddPackage proton-ge-custom-bin # A fancy custom distribution of Valves Proton with various patches
+AddPackage proton-cachyos # Compatibility tool for Steam Play based on Wine and additional components, experimental branch with extra CachyOS flavour
+AddPackage proton-ge-custom # Compatibility tool for Steam Play based on Wine and additional components, GloriousEggroll's custom build
 AddPackage --foreign adwsteamgtk # A simple Gtk wrapper for Adwaita-for-Steam
 
 # Productivity

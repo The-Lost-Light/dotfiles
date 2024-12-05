@@ -1,7 +1,7 @@
 # Boot
 AddPackage amd-ucode # Microcode update image for AMD CPUs
-AddPackage linux-zen # The Linux ZEN kernel and modules
-AddPackage linux-zen-headers # Headers and scripts for building modules for the Linux ZEN kernel
+AddPackage linux-cachyos # The Linux BORE + LTO + Cachy Sauce Kernel by CachyOS with other patches and improvements. kernel and modules
+AddPackage linux-cachyos-headers # Headers and scripts for building modules for the Linux BORE + LTO + Cachy Sauce Kernel by CachyOS with other patches and improvements. kernel
 CopyFile /etc/booster.yaml
 
 # Base
@@ -12,11 +12,6 @@ AddPackage base-devel # Basic tools to build Arch Linux packages
 AddPackage btrfs-progs # Btrfs filesystem utilities
 CopyFile /etc/fstab
 
-# Zram
-AddPackage zram-generator # Systemd unit generator for zram devices
-CopyFile /etc/sysctl.d/99-vm-zram-parameters.conf
-CopyFile /etc/systemd/zram-generator.conf
-
 # Firmware
 AddPackage fwupd # Simple daemon to allow session software to update firmware
 AddPackage linux-firmware # Firmware files for Linux
@@ -26,42 +21,34 @@ AddPackage easyeffects # Audio Effects for Pipewire applications
 AddPackage pipewire # Low-latency audio/video router and processor
 AddPackage pipewire-alsa # Low-latency audio/video router and processor - ALSA configuration
 AddPackage pipewire-pulse # Low-latency audio/video router and processor - PulseAudio replacement
+AddPackage realtime-privileges # Realtime privileges for users
 AddPackage --foreign sonusmix # Next-gen Pipewire audio routing tool
 AddPackage --foreign pwvucontrol # Pipewire volume control for GNOME
-
-# Bluetooth
-AddPackage blueman # GTK+ Bluetooth Manager
-AddPackage gnome-bluetooth-3.0 # GNOME Bluetooth Subsystem
-AddPackage --foreign overskride-bin # A simple yet powerful bluetooth client (binary release)
 
 # Network
 AddPackage network-manager-applet # Applet for managing network connections
 AddPackage networkmanager # Network connection manager and user applications
 CopyFile /etc/NetworkManager/conf.d/wifi-powersave.conf
 
-# Font
-AddPackage noto-fonts # Google Noto TTF fonts
-AddPackage noto-fonts-cjk # Google Noto CJK fonts
-AddPackage noto-fonts-emoji # Google Noto emoji fonts
-AddPackage noto-fonts-extra # Google Noto TTF fonts - additional variants
-AddPackage ttf-firacode-nerd # Patched font Fira (Fura) Code from nerd fonts library
-AddPackage ttf-iosevka-nerd # Patched font Iosevka from nerd fonts library
-AddPackage ttf-jetbrains-mono-nerd # Patched font JetBrains Mono from nerd fonts library
-AddPackage ttf-nerd-fonts-symbols-mono # High number of extra glyphs from popular 'iconic fonts' (monospace)
-AddPackage wqy-zenhei # A Hei Ti Style (sans-serif) Chinese Outline Font.
-AddPackage --foreign ttc-monocraft # A programming font based on the typeface used in Minecraft
-AddPackage --foreign ttf-ubraille # Unicode Braillt font
+# Bluetooth
+AddPackage blueman # GTK+ Bluetooth Manager
+AddPackage gnome-bluetooth-3.0 # GNOME Bluetooth Subsystem
+AddPackage --foreign overskride-bin # A simple yet powerful bluetooth client (binary release)
 
-# Power
-AddPackage power-profiles-daemon # Makes power profiles handling available over D-Bus
-AddPackage --foreign ryzenadj # RyzenAdj tool for adjusting Ryzen Mobile power states
-CopyFile /etc/systemd/logind.conf
-
-# Keyring
-AddPackage gnome-keyring # Stores passwords and encryption keys
-AddPackage greetd # Generic greeter daemon
-CopyFile /etc/greetd/config.toml
-CopyFile /etc/pam.d/greetd # For gnome-keyring
+# Pacman
+AddPackage downgrade # Bash script for downgrading one or more packages to a version in your cache or the A.L.A.
+AddPackage reflector # A Python 3 module and script to retrieve and filter the latest Pacman mirror list.
+AddPackage yay # Yet another yogurt. Pacman wrapper and AUR helper written in go.
+CopyFile /etc/makepkg.conf
+CopyFile /etc/pacman.conf
+CopyFile /etc/pacman.d/hooks/spicetify.hook
+CopyFile /etc/xdg/reflector/reflector.conf
+# CachyOS
+AddPackage cachyos-keyring # CachyOS keyring
+AddPackage cachyos-mirrorlist # cachyos mirrorlist
+AddPackage cachyos-v3-mirrorlist # cachyos-v3-mirrorlist
+AddPackage cachyos-v4-mirrorlist # cachyos-v3-mirrorlist
+AddPackage cachyos-rate-mirrors # CachyOS - Rate mirrors service
 
 # Shell
 AddPackage dash # POSIX compliant shell that aims to be as small as possible
@@ -77,19 +64,20 @@ AddPackage ripgrep-all # rga: ripgrep, but also search in PDFs, E-Books, Office 
 AddPackage starship # The cross-shell prompt for astronauts
 AddPackage zoxide # A smarter cd command for your terminal
 
-# Pacman
-AddPackage downgrade # Bash script for downgrading one or more packages to a version in your cache or the A.L.A.
-AddPackage reflector # A Python 3 module and script to retrieve and filter the latest Pacman mirror list.
-AddPackage yay # Yet another yogurt. Pacman wrapper and AUR helper written in go.
-CopyFile /etc/makepkg.conf
-CopyFile /etc/pacman.conf
-CopyFile /etc/pacman.d/hooks/spicetify.hook
-CopyFile /etc/xdg/reflector/reflector.conf
-# CachyOS
-AddPackage cachyos-keyring # CachyOS keyring
-AddPackage cachyos-mirrorlist # cachyos mirrorlist
-AddPackage cachyos-v3-mirrorlist # cachyos-v3-mirrorlist
-AddPackage cachyos-v4-mirrorlist # cachyos-v3-mirrorlist
+# Settings
+AddPackage cachyos-settings # CachyOS - Settings
+# Power
+AddPackage power-profiles-daemon # Makes power profiles handling available over D-Bus
+AddPackage --foreign ryzenadj # RyzenAdj tool for adjusting Ryzen Mobile power states
+CopyFile /etc/systemd/logind.conf
+# Zram
+CopyFile /etc/sysctl.d/99-vm-zram-parameters.conf
+
+# Keyring
+AddPackage gnome-keyring # Stores passwords and encryption keys
+AddPackage greetd # Generic greeter daemon
+CopyFile /etc/greetd/config.toml
+CopyFile /etc/pam.d/greetd # For gnome-keyring
 
 # Backup
 AddPackage --foreign aconfmgr-git # A configuration manager for Arch Linux
@@ -100,10 +88,18 @@ CopyFile /etc/cron.d/timeshift-boot
 CopyFile /etc/cron.d/timeshift-hourly
 CopyFile /etc/timeshift/timeshift.json
 
-# IME
-AddPackage fcitx5-configtool # Configuration Tool for Fcitx5
-AddPackage fcitx5-gtk # Fcitx5 gtk im module and glib based dbus client library
-AddPackage --foreign fcitx5-mcbopomofo-git # McBopomofo for fcitx5
+# Font
+AddPackage noto-fonts # Google Noto TTF fonts
+AddPackage noto-fonts-cjk # Google Noto CJK fonts
+AddPackage noto-fonts-emoji # Google Noto emoji fonts
+AddPackage noto-fonts-extra # Google Noto TTF fonts - additional variants
+AddPackage ttf-firacode-nerd # Patched font Fira (Fura) Code from nerd fonts library
+AddPackage ttf-iosevka-nerd # Patched font Iosevka from nerd fonts library
+AddPackage ttf-jetbrains-mono-nerd # Patched font JetBrains Mono from nerd fonts library
+AddPackage ttf-nerd-fonts-symbols-mono # High number of extra glyphs from popular 'iconic fonts' (monospace)
+AddPackage wqy-zenhei # A Hei Ti Style (sans-serif) Chinese Outline Font.
+AddPackage --foreign ttc-monocraft # A programming font based on the typeface used in Minecraft
+AddPackage --foreign ttf-ubraille # Unicode Braillt font
 
 # Wine
 AddPackage wine-staging # A compatibility layer for running Windows programs - Staging branch

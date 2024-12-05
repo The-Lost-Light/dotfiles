@@ -14,12 +14,12 @@
 - yay
 ## Sync/Maintain
 - aconfmgr: arch linux system backup
-# Hypr
+## Hypr
 - hypridle
 - hyprland
   - Hyprspace
 - hyprlock
 - hyprpicker
-# Ags
+## Ags
 - ags
 - pacman-contrib: system upgrade check
