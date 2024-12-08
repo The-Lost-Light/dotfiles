@@ -53,7 +53,7 @@ export default new (class UpdateService extends Service {
 			.map(c => {
 				if (c.length > 0) {
 					const s = c.split(" ");
-					const [old_version, new_version] = [s[1], s[3]].map(s => s.split(/([:._-])/));
+					const [old_version, new_version] = [s[1], s[3]].map(s => s.split(/([:.\-_+])/));
 					let index = 0;
 					for (const i in old_version)
 						if (old_version[i] !== new_version[i]) {
