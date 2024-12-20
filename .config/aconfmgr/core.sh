@@ -36,6 +36,7 @@ AddPackage gnome-bluetooth-3.0 # GNOME Bluetooth Subsystem
 AddPackage --foreign overskride-bin # A simple yet powerful bluetooth client (binary release)
 
 # Pacman
+AddPackage --foreign checkpac # Simple and fast package check and lookup utility for Arch Linux with AUR support
 AddPackage downgrade # Bash script for downgrading one or more packages to a version in your cache or the A.L.A.
 AddPackage reflector # A Python 3 module and script to retrieve and filter the latest Pacman mirror list.
 AddPackage yay # Yet another yogurt. Pacman wrapper and AUR helper written in go.

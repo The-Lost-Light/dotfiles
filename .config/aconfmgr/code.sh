@@ -6,6 +6,7 @@ AddPackage gitui # Blazing fast terminal-ui for git written in Rust
 AddPackage onefetch # Git repository summary on your terminal
 AddPackage --foreign better-commits # A CLI for creating better commits following the conventional commit guidelines.
 AddPackage --foreign gitbutler-bin # Version control client, backed by Git, powered by Tauri/Rust/Svelte
+AddPackage jujutsu # Git-compatible VCS that is both simple and powerful
 
 # Editor
 AddPackage helix # A post-modern modal text editor
