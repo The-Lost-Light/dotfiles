@@ -98,6 +98,7 @@ AddPackage baobab # A graphical directory tree analyzer
 AddPackage piper # GTK application to configure gaming mice
 
 # CLI tools
+AddPackage 7zip # File archiver for extremely high compression
 AddPackage aria2 # Download utility that supports HTTP(S), FTP, BitTorrent, and Metalink
 AddPackage baidupcs-go # Terminal utility for Baidu Network Disk
 AddPackage brightnessctl # Lightweight brightness control tool
@@ -108,7 +109,6 @@ AddPackage imagemagick # An image viewing/manipulation program
 AddPackage lostfiles # Find orphaned files not owned by any Arch packages
 AddPackage man-pages-zh_tw # Traditional Chinese Linux man pages
 AddPackage megatools # CLI for MEGA
-AddPackage p7zip # Command-line file archiver with high compression ratio
 AddPackage playerctl # mpris media player controller and lib for spotify, vlc, audacious, bmp, xmms2, and others.
 AddPackage tealdeer # A fast tldr client in Rust
 AddPackage trash-cli # Command line trashcan (recycle bin) interface

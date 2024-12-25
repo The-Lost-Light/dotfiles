@@ -2,9 +2,6 @@ if status is-login
     # SSH
     set -x SSH_AUTH_SOCK $XDG_RUNTIME_DIR/ssh-agent.socket
 
-    # wayland
-    set -x ELECTRON_OZONE_PLATFORM_HINT auto
-
     # VA-API
     set -x LIBVA_DRIVER_NAME radeonsi
 
