@@ -1,6 +1,4 @@
 > [!WARNING]
-> Because I am preparing for the exam, and the ags would have breaking change one day.
-> So my dotfiles there will be no major changes in the near future.
 > Current using my own [ags](https://github.com/The-Lost-Light/ags/tree/search-by-wm-class)
 
 ![screenshot](.dotfiles/assets/screenshot.png)

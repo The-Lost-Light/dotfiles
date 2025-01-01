@@ -1,6 +1,6 @@
 # Browser
 AddPackage chromium # A web browser built for speed, simplicity, and security
-AddPackage zen-browser-avx2-bin # Performance oriented Firefox-based web browser - Utilizes AVX2 for better performance
+AddPackage zen-browser-bin # Performance oriented Firefox-based web browser
 
 # File Manager
 AddPackage nemo # Cinnamon file manager (Nautilus fork)

@@ -1,7 +1,12 @@
 {
-	"features": {
-		"inline_completion_provider": "none"
+	"assistant": {
+		"default_model": {
+			"provider": "copilot_chat",
+			"model": "gpt-4o"
+		},
+		"version": "2"
 	},
+	"features": { "inline_completion_provider": "none" },
 	"base_keymap": "VSCode",
 	"autosave": { "after_delay": { "milliseconds": 600000 } },
 	"buffer_font_family": "FiraCode Nerd Font",

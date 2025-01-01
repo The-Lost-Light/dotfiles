@@ -103,6 +103,7 @@ AddPackage --foreign ttc-monocraft # A programming font based on the typeface us
 AddPackage --foreign ttf-ubraille # Unicode Braillt font
 
 # Wine
+AddPackage bottles # Easily manage wine and proton prefix
 AddPackage wine-staging # A compatibility layer for running Windows programs - Staging branch
 AddPackage wine-gecko # Wine's built-in replacement for Microsoft's Internet Explorer
 AddPackage wine-mono # Wine's built-in replacement for Microsoft's .NET Framework
