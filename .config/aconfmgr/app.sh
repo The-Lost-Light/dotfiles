@@ -16,7 +16,6 @@ AddPackage zellij # A terminal multiplexer
 
 # Communication
 AddPackage discord # All-in-one voice and text chat for gamers
-AddPackage vesktop-bin # A cross platform electron-based desktop app aiming to give you a snappier Discord experience with Vencord pre-installed.(Prebuilt version.Use system-wide electron)
 AddPackage telegram-desktop # Official Telegram Desktop client
 
 # Reader

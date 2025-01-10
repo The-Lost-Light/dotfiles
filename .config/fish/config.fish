@@ -41,7 +41,7 @@ if status is-interactive
     function starship_transient_rprompt_func
         starship module cmd_duration
     end
-    if not string match -q "$TERM" alacritty
+    if not string match -q "$TERM" linux or alacritty
         starship init fish | source
         enable_transience
     end
