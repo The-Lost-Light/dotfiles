@@ -17,6 +17,7 @@ AddPackage fwupd # Simple daemon to allow session software to update firmware
 AddPackage linux-firmware # Firmware files for Linux
 
 # Audio
+AddPackage alsa-utils # Advanced Linux Sound Architecture - Utilities
 AddPackage easyeffects # Audio Effects for Pipewire applications
 AddPackage pipewire # Low-latency audio/video router and processor
 AddPackage pipewire-alsa # Low-latency audio/video router and processor - ALSA configuration

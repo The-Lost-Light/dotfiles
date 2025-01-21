@@ -2,8 +2,9 @@ if status is-login
     # SSH
     set -x SSH_AUTH_SOCK $XDG_RUNTIME_DIR/ssh-agent.socket
 
-    # VA-API
+    # Hardware Video Acceleration
     set -x LIBVA_DRIVER_NAME radeonsi
+    set -x VDPAU_DRIVER radeonsi
 
     # Vulkan
     set -x MESA_VK_DEVICE_SELECT 0x1002:0x1636
@@ -41,7 +42,7 @@ if status is-interactive
     function starship_transient_rprompt_func
         starship module cmd_duration
     end
-    if not string match -q "$TERM" linux or alacritty
+    if string match -q "$TERM" xterm-kitty
         starship init fish | source
         enable_transience
     end

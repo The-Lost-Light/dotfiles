@@ -21,12 +21,12 @@ AddPackage telegram-desktop # Official Telegram Desktop client
 # Reader
 AddPackage foliate # A simple and modern GTK eBook reader
 
-# Note
+# Productivity
+AddPackage libreoffice-fresh # LibreOffice branch which contains new features and program enhancements
+AddPackage onlyoffice-bin # An office suite that combines text, spreadsheet and presentation editors
 AddPackage rnote # A simple drawing application to create handwritten notes
 AddPackage --foreign appflowy-bin # AppFlowy is an open-source alternative to Notion. You are in charge of your data and customizations.
-
-# Office
-AddPackage onlyoffice-bin # An office suite that combines text, spreadsheet and presentation editors
+AddPackage --foreign project-graph # A simple tool to create topology diagrams.
 
 # Picture
 AddPackage oculante # A minimalistic image viewer with analysis and editing tools
@@ -65,11 +65,6 @@ AddPackage steam # Valve's digital software delivery system
 AddPackage proton-cachyos # Compatibility tool for Steam Play based on Wine and additional components, experimental branch with extra CachyOS flavour
 AddPackage proton-ge-custom # Compatibility tool for Steam Play based on Wine and additional components, GloriousEggroll's custom build
 AddPackage --foreign adwsteamgtk # A simple Gtk wrapper for Adwaita-for-Steam
-
-# Productivity
-AddPackage blender # A fully integrated 3D graphics creation suite
-AddPackage godot # Advanced cross-platform 2D and 3D game engine
-AddPackage --foreign aseprite # Create animated sprites and pixel art
 
 # System Monitor
 AddPackage btop # A monitor of system resources, bpytop ported to C++

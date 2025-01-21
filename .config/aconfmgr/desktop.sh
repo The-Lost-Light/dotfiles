@@ -50,7 +50,7 @@ AddPackage nwg-drawer # Application drawer for sway and other wlroots-based comp
 
 # Screenshot
 AddPackage satty # Modern screenshot annotation tool, inspired by Swappy and Flameshot
-AddPackage --foreign hyprshot # A utility to easily take screenshots in Hyprland using your mouse
+AddPackage --foreign hyprshot # A utility to easily take screenshots in Hyprland
 
 # Xwayland
 AddPackage xwaylandvideobridge # Utility to allow streaming Wayland windows to X applications
