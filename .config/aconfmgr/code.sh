@@ -15,9 +15,7 @@ AddPackage neovide # No Nonsense Neovim Client in Rust
 AddPackage zed # A high-performance, multiplayer code editor from the creators of Atom and Tree-sitter
 
 # Game
-AddPackage blender # A fully integrated 3D graphics creation suite
 AddPackage godot # Advanced cross-platform 2D and 3D game engine
-AddPackage --foreign aseprite # Create animated sprites and pixel art
 AddPackage --foreign unityhub # The Unity Hub is a standalone application that streamlines the way you find, download, and manage your Unity Projects and installations.
 
 # LSP

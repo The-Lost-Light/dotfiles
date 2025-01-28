@@ -21,12 +21,17 @@ AddPackage telegram-desktop # Official Telegram Desktop client
 # Reader
 AddPackage foliate # A simple and modern GTK eBook reader
 
-# Productivity
+# Documents
 AddPackage libreoffice-fresh # LibreOffice branch which contains new features and program enhancements
 AddPackage onlyoffice-bin # An office suite that combines text, spreadsheet and presentation editors
 AddPackage rnote # A simple drawing application to create handwritten notes
 AddPackage --foreign appflowy-bin # AppFlowy is an open-source alternative to Notion. You are in charge of your data and customizations.
-AddPackage --foreign project-graph # A simple tool to create topology diagrams.
+AddPackage --foreign project-graph-bin # A simple tool to create topology diagrams.
+
+# Art
+AddPackage blender # A fully integrated 3D graphics creation suite
+AddPackage --foreign aseprite # Create animated sprites and pixel art
+AddPackage --foreign pixelorama-bin # A free & open-source 2D sprite editor, made with the Godot Engine
 
 # Picture
 AddPackage oculante # A minimalistic image viewer with analysis and editing tools
