@@ -2,11 +2,12 @@
 AddPackage git # the fast distributed version control system
 AddPackage git-delta # Syntax-highlighting pager for git and diff output
 AddPackage github-cli # The GitHub CLI
-AddPackage gitui # Blazing fast terminal-ui for git written in Rust
+AddPackage jujutsu # Git-compatible VCS that is both simple and powerful
+AddPackage lazygit # Simple terminal UI for git commands
 AddPackage onefetch # Git repository summary on your terminal
 AddPackage --foreign better-commits # A CLI for creating better commits following the conventional commit guidelines.
 AddPackage --foreign gitbutler-bin # Version control client, backed by Git, powered by Tauri/Rust/Svelte
-AddPackage jujutsu # Git-compatible VCS that is both simple and powerful
+AddPackage --foreign gitnuro-bin # A FOSS Git multiplatform client for newbies and pros
 
 # Editor
 AddPackage helix # A post-modern modal text editor
@@ -36,7 +37,7 @@ AddPackage meson # High productivity build system
 AddPackage ccache # Compiler cache that speeds up recompilation by caching previous compilations
 
 # Java
-AddPackage jre-openjdk # OpenJDK Java full runtime environment
+AddPackage jdk-openjdk # OpenJDK Java 23 development kit
 AddPackage jre8-openjdk # OpenJDK Java 8 full runtime environment
 AddPackage jre17-openjdk # OpenJDK Java 17 full runtime environment
 

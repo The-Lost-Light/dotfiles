@@ -1,13 +1,20 @@
 [user]
+	name = Mono
 	email = boyhuanggordon@gmail.com
-	name = mono
-	signingkey = /home/mono/.ssh/id_rsa.pub
+	signingkey = /home/mono/.ssh/id_ed25519.pub
+[core]
+	sshCommand = ssh -i ~/.ssh/id_ed25519
+[includeIf "gitdir:~/Work/"]
+	path = ~/Work/.gitconfig
 [commit]
 	gpgsign = true
 [gpg]
 	format = ssh
 [credential]
 	helper = /usr/lib/git-core/git-credential-libsecret
+
+[rerere]
+	enabled = true
 
 # Delta
 [core]

@@ -14,6 +14,9 @@ AddPackage --foreign spacedrive-bin # A file manager from the future.
 AddPackage kitty # A modern, hackable, featureful, OpenGL-based terminal emulator
 AddPackage zellij # A terminal multiplexer
 
+#RSS
+AddPackage --foreign follow-bin # 🧡 Next generation information browser.This software is all about allowing you to follow your favorite websites, blogs, social media accounts, podcasts and notifications in one place. (Prebuilt version.Use system-wide electron)
+
 # Communication
 AddPackage discord # All-in-one voice and text chat for gamers
 AddPackage telegram-desktop # Official Telegram Desktop client
