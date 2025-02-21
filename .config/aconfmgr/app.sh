@@ -1,9 +1,9 @@
 # Browser
 AddPackage chromium # A web browser built for speed, simplicity, and security
-AddPackage zen-browser-bin # Performance oriented Firefox-based web browser
+AddPackage firefox-developer-edition # Fast, Private & Safe Web Browser (Developer Edition)
+AddPackage firefox-developer-edition-i18n-zh-tw # Chinese (Traditional) language pack for Firefox Developer Edition
 
 # File Manager
-AddPackage nemo # Cinnamon file manager (Nautilus fork)
 AddPackage yazi # Blazing fast terminal file manager written in Rust, based on async I/O
 AddPackage ffmpegthumbnailer # Lightweight video thumbnailer that can be used by file managers
 AddPackage perl-image-exiftool # Reader and rewriter of EXIF information that supports raw files
@@ -43,9 +43,10 @@ AddPackage oculante # A minimalistic image viewer with analysis and editing tool
 AddPackage mousai # Simple application to identify songs
 AddPackage musescore # Create, play and print beautiful sheet music
 AddPackage spotify-launcher # Client for spotify's apt repository in Rust for Arch Linux
+AddPackage --foreign gapless # Play your music elegantly (AKA: G4Music)
+AddPackage --foreign lowfi # An extremely simple lofi player.
 AddPackage --foreign spicetify-cli # Command-line tool to customize Spotify client
 AddPackage --foreign spicetify-marketplace-bin # Spicetify app that integrates a marketplace for extensions, themes and snippets
-AddPackage --foreign lowfi # An extremely simple lofi player.
 
 # Video
 AddPackage celluloid # Simple GTK+ frontend for mpv
@@ -118,5 +119,5 @@ AddPackage wev # A tool for debugging wayland events on a Wayland window, analag
 AddPackage yt-dlp # A youtube-dl fork with additional features and fixes
 AddPackage --foreign catnap-git # A minimalistic and fast system fetch written in Nim.
 AddPackage --foreign cmd-wrapped-bin # Find out what the past year looks like in command line!
-AddPackage --foreign terminaltexteffects-git # Visual effects engine applied to text in the terminal.
+AddPackage --foreign python-terminaltexteffects # Visual effects engine applied to text in the terminal.
 AddPackage --foreign tty-share # Shares terminal session with no setup on remote end (browser)

@@ -53,4 +53,4 @@ AddPackage satty # Modern screenshot annotation tool, inspired by Swappy and Fla
 AddPackage --foreign hyprshot # A utility to easily take screenshots in Hyprland
 
 # Xwayland
-AddPackage xwaylandvideobridge # Utility to allow streaming Wayland windows to X applications
+AddPackage --foreign xwaylandvideobridge # Utility to allow streaming Wayland windows to X applications

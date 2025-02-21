@@ -1,12 +1,12 @@
 {
 	"assistant": {
 		"default_model": {
-			"provider": "copilot_chat",
-			"model": "gpt-4o"
+			"provider": "zed.dev",
+			"model": "claude-3-5-sonnet-latest"
 		},
 		"version": "2"
 	},
-	"features": { "inline_completion_provider": "none" },
+	"features": { "edit_prediction_provider": "zed" },
 	"base_keymap": "VSCode",
 	"autosave": { "after_delay": { "milliseconds": 600000 } },
 	"buffer_font_family": "FiraCode Nerd Font",
