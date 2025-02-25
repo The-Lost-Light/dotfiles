@@ -4,6 +4,7 @@ theme = "kanagawa"
 shell = ["fish", "-c"]
 line-number = "relative"
 cursorline = true
+auto-format = false
 bufferline = "multiple"
 color-modes = true
 text-width = 100
