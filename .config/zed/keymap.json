@@ -1,0 +1,20 @@
+[
+	{
+		"context": "Editor",
+		"bindings": {
+			"shift-enter": "editor::NewlineAbove",
+			"alt-left": [
+				"editor::MoveToBeginningOfLine",
+				{ "stop_at_soft_wraps": true, "stop_at_indent": true }
+			],
+			"alt-right": ["editor::MoveToEndOfLine", { "stop_at_soft_wraps": true }]
+		}
+	},
+	{
+		"context": "Terminal",
+		"bindings": {
+			"ctrl-c": "terminal::Copy",
+			"ctrl-shift-c": ["terminal::SendKeystroke", "ctrl-c"]
+		}
+	}
+]

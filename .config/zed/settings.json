@@ -1,42 +1,23 @@
 {
+	"autosave": "on_focus_change",
+	"buffer_font_family": "FiraCode Nerd Font",
+	"buffer_font_size": 18,
+	"tabs": { "git_status": true, "show_close_button": "hidden" },
+	"code_actions_on_format": { "source.organizeImports": true },
+	"git": { "inline_blame": { "show_commit_summary": true } },
+	"indent_guides": { "active_line_width": 2 },
+	"hard_tabs": true,
+	"use_smartcase_search": true,
+	"soft_wrap": "editor_width",
+	"terminal": { "cursor_shape": "bar" },
+	"theme": "Ayu Mirage",
 	"assistant": {
 		"default_model": {
 			"provider": "zed.dev",
-			"model": "claude-3-5-sonnet-latest"
+			"model": "claude-3-7-sonnet-latest"
 		},
 		"version": "2"
 	},
-	"features": { "edit_prediction_provider": "zed" },
-	"base_keymap": "VSCode",
-	"autosave": { "after_delay": { "milliseconds": 600000 } },
-	"buffer_font_family": "FiraCode Nerd Font",
-	"buffer_font_size": 18,
-	"current_line_highlight": "gutter",
-	"tabs": { "git_status": true },
-	"always_treat_brackets_as_autoclosed": true,
-	"tab_size": 4,
-	"hard_tabs": true,
-	"inlay_hints": { "enabled": false, "show_type_hints": false },
-	"soft_wrap": "editor_width",
-	"terminal": { "alternate_scroll": "on", "cursor_shape": "bar" },
-	"theme": "Ayu Mirage",
 	"calls": { "mute_on_join": true },
-	"languages": {
-		"JavaScript": {
-			"format_on_save": {
-				"external": {
-					"command": "prettier",
-					"arguments": ["--stdin-filepath", "{buffer_path}"]
-				}
-			}
-		},
-		"TypeScript": {
-			"format_on_save": {
-				"external": {
-					"command": "prettier",
-					"arguments": ["--stdin-filepath", "{buffer_path}"]
-				}
-			}
-		}
-	}
+	"features": { "edit_prediction_provider": "zed" }
 }

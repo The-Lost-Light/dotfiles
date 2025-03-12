@@ -3,16 +3,7 @@
 
 ![screenshot](.dotfiles/assets/screenshot.png)
 # TODO
-- [ ] migrate ags to v2 and astal
-- [ ] migrate from wttr to open-meteo
-## astal
-- [ ] corner mask
-- [ ] config.json with async
-- [ ] Overvies OSD
-- [ ] notification system to replace swaync
-- [ ] system tweak(e.g. volume) osd
-- [ ] system information
-- [ ] arch update use tte to add animation
+- [ ] migrate ags to v3 with astal
 
 # Themes
 |Type  |Package        |
