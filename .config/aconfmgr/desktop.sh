@@ -3,6 +3,7 @@ AddPackage hypridle # hyprland’s idle daemon
 AddPackage hyprland # a highly customizable dynamic tiling Wayland compositor
 AddPackage hyprlock # hyprland’s GPU-accelerated screen locking utility
 AddPackage hyprpicker # A wlroots-compatible Wayland color picker that does not suck
+AddPackage hyprsunset # An application to enable a blue-light filter on Hyprland
 
 # Widget
 AddPackage swaync # A simple GTK based notification daemon for Sway
