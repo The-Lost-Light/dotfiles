@@ -6,9 +6,11 @@ AddPackage firefox-developer-edition-i18n-zh-tw # Chinese (Traditional) language
 # File Manager
 AddPackage yazi # Blazing fast terminal file manager written in Rust, based on async I/O
 AddPackage ffmpegthumbnailer # Lightweight video thumbnailer that can be used by file managers
+AddPackage nemo # Cinnamon file manager (Nautilus fork)
+AddPackage cinnamon-translations # Translations for Cinnamon and Nemo
 AddPackage perl-image-exiftool # Reader and rewriter of EXIF information that supports raw files
+AddPackage termscp # A feature rich terminal UI file transfer and explorer
 AddPackage unarchiver # unar and lsar: Objective-C tools for uncompressing archive files
-AddPackage --foreign spacedrive-bin # A file manager from the future.
 
 # Terminal
 AddPackage kitty # A modern, hackable, featureful, OpenGL-based terminal emulator
@@ -16,6 +18,7 @@ AddPackage zellij # A terminal multiplexer
 
 # Communication
 AddPackage discord # All-in-one voice and text chat for gamers
+AddPackage signal-desktop # Signal Private Messenger for Linux
 AddPackage telegram-desktop # Official Telegram Desktop client
 
 # Reader
@@ -26,7 +29,6 @@ AddPackage libreoffice-fresh # LibreOffice branch which contains new features an
 AddPackage onlyoffice-bin # An office suite that combines text, spreadsheet and presentation editors
 AddPackage rnote # A simple drawing application to create handwritten notes
 AddPackage --foreign appflowy-bin # AppFlowy is an open-source alternative to Notion. You are in charge of your data and customizations.
-AddPackage --foreign project-graph-bin # A simple tool to create topology diagrams.
 
 # Art
 AddPackage blender # A fully integrated 3D graphics creation suite
@@ -108,7 +110,6 @@ AddPackage handlr-regex # Powerful alternative to xdg-utils written in Rust
 AddPackage imagemagick # An image viewing/manipulation program
 AddPackage lostfiles # Find orphaned files not owned by any Arch packages
 AddPackage man-pages-zh_tw # Traditional Chinese Linux man pages
-AddPackage megatools # CLI for MEGA
 AddPackage playerctl # mpris media player controller and lib for spotify, vlc, audacious, bmp, xmms2, and others.
 AddPackage tealdeer # A fast tldr client in Rust
 AddPackage trash-cli # Command line trashcan (recycle bin) interface
@@ -116,5 +117,6 @@ AddPackage wev # A tool for debugging wayland events on a Wayland window, analag
 AddPackage yt-dlp # A youtube-dl fork with additional features and fixes
 AddPackage --foreign catnap-git # A minimalistic and fast system fetch written in Nim.
 AddPackage --foreign cmd-wrapped-bin # Find out what the past year looks like in command line!
+AddPackage --foreign megatools # CLI for MEGA
 AddPackage --foreign python-terminaltexteffects # Visual effects engine applied to text in the terminal.
 AddPackage --foreign tty-share # Shares terminal session with no setup on remote end (browser)
