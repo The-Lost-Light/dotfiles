@@ -1,5 +1,4 @@
 # Browser
-AddPackage chromium # A web browser built for speed, simplicity, and security
 AddPackage firefox-developer-edition # Fast, Private & Safe Web Browser (Developer Edition)
 AddPackage firefox-developer-edition-i18n-zh-tw # Chinese (Traditional) language pack for Firefox Developer Edition
 
@@ -25,14 +24,18 @@ AddPackage telegram-desktop # Official Telegram Desktop client
 AddPackage foliate # A simple and modern GTK eBook reader
 
 # Documents
-AddPackage libreoffice-fresh # LibreOffice branch which contains new features and program enhancements
+AddPackage iotas # Simple note taking with Markdown support and optional Nextcloud Notes sync
 AddPackage onlyoffice-bin # An office suite that combines text, spreadsheet and presentation editors
-AddPackage rnote # A simple drawing application to create handwritten notes
 AddPackage --foreign appflowy-bin # AppFlowy is an open-source alternative to Notion. You are in charge of your data and customizations.
+
+# Translate
+AddPackage dialect # Translation app for GNOME based on Google Translate and other online services
 
 # Art
 AddPackage blender # A fully integrated 3D graphics creation suite
 AddPackage --foreign aseprite # Create animated sprites and pixel art
+AddPackage --foreign dot-matrix # The glyph playground of creativity from simple lines
+AddPackage --foreign pinta # Drawing/editing program modeled after Paint.NET. It's goal is to provide a simplified alternative to GIMP for casual users
 AddPackage --foreign pixelorama-bin # A free & open-source 2D sprite editor, made with the Godot Engine
 
 # Picture
@@ -64,15 +67,16 @@ AddPackage thunderbird-i18n-zh-tw # Chinese (Traditional) language pack for Thun
 # Game
 AddPackage gamemode # A daemon/lib combo that allows games to request a set of optimisations be temporarily applied to the host OS
 AddPackage lib32-gamemode # A daemon/lib combo that allows games to request a set of optimisations be temporarily applied to the host OS
-AddPackage gamescope # SteamOS session compositing window manager
 AddPackage mangohud # A Vulkan overlay layer for monitoring FPS, temperatures, CPU/GPU load and more.
-AddPackage goverlay # A GUI to help manage Vulkan/OpenGL overlays
+AddPackage mangojuice # A convenient alternative to GOverlay for configuring MangoHud
 AddPackage prismlauncher # Minecraft launcher with ability to manage multiple instances
 AddPackage --foreign glfw-wayland-minecraft-cursorfix # A free, open source, portable framework for graphical application development (wayland, patched for Minecraft)
 AddPackage steam # Valve's digital software delivery system
+AddPackage gamescope # SteamOS session compositing window manager
 AddPackage proton-cachyos # Compatibility tool for Steam Play based on Wine and additional components, experimental branch with extra CachyOS flavour
 AddPackage proton-ge-custom # Compatibility tool for Steam Play based on Wine and additional components, GloriousEggroll's custom build
 AddPackage --foreign adwsteamgtk # A simple Gtk wrapper for Adwaita-for-Steam
+AddPackage waydroid # A container-based approach to boot a full Android system on a regular Linux system
 
 # System Monitor
 AddPackage btop # A monitor of system resources, bpytop ported to C++
@@ -90,8 +94,6 @@ AddPackage obs-studio # Free, open source software for live streaming and record
 AddPackage tailscale # A mesh VPN that makes it easy to connect your devices, wherever they are.
 
 # Android
-AddPackage android-file-transfer # Android MTP client with minimalistic UI
-AddPackage --foreign droidcam # A tool to turn your phone/tablet into a wireless/usb webcam
 AddPackage gvfs-mtp # Virtual filesystem implementation for GIO - MTP backend (Android, media player)
 AddPackage scrcpy # Display and control your Android device
 

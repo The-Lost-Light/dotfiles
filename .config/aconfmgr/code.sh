@@ -11,8 +11,6 @@ AddPackage --foreign gitnuro-bin # A FOSS Git multiplatform client for newbies a
 
 # Editor
 AddPackage helix # A post-modern modal text editor
-AddPackage neovim # Fork of Vim aiming to improve user experience, plugins, and GUIs
-AddPackage neovide # No Nonsense Neovim Client in Rust
 AddPackage zed # A high-performance, multiplayer code editor from the creators of Atom and Tree-sitter
 
 # Game
@@ -41,18 +39,17 @@ AddPackage jdk-openjdk # OpenJDK Java 23 development kit
 AddPackage jre8-openjdk # OpenJDK Java 8 full runtime environment
 AddPackage jre17-openjdk # OpenJDK Java 17 full runtime environment
 
-# Javacript
-AddPackage bun-bin # All-in-one JavaScript runtime built for speed, with bundler, transpiler, test runner, and package manager. Includes bunx, shell completions and support for baseline CPUs
-
 # Python
 AddPackage uv # An extremely fast Python package installer and resolver written in Rust
+AddPackage --foreign marimo # A reactive Python notebook that's reproducible, git-friendly, and deployable as scripts or apps
 
 # Rust
 AddPackage rustup # The Rust toolchain installer
 AddPackage sccache # Shared compilation cache
 
-# Verilog
-AddPackage iverilog # Icarus Verilog compiler and simulation tool
+# Web
+AddPackage bun-bin # All-in-one JavaScript runtime built for speed, with bundler, transpiler, test runner, and package manager. Includes bunx, shell completions and support for baseline CPUs
+AddPackage caddy # Fast web server with automatic HTTPS
 
 # typst
 AddPackage typst # A markup-based typesetting system for the sciences
