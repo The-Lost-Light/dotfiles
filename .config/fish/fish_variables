@@ -8,6 +8,7 @@ SETUVAR --export PYENV_ROOT:/home/mono/\x2epyenv
 SETUVAR --export TERMINAL:kitty
 SETUVAR TEST:test
 SETUVAR --export VISUAL:helix
+SETUVAR --export ZED_WINDOW_DECORATIONS:server
 SETUVAR __fish_initialized:3800
 SETUVAR fish_color_autosuggestion:969896
 SETUVAR fish_color_cancel:\x2dr

@@ -1,15 +1,11 @@
 # Browser
 AddPackage firefox-developer-edition # Fast, Private & Safe Web Browser (Developer Edition)
 AddPackage firefox-developer-edition-i18n-zh-tw # Chinese (Traditional) language pack for Firefox Developer Edition
+AddPackage chromium # A web browser built for speed, simplicity, and security
 
 # File Manager
 AddPackage yazi # Blazing fast terminal file manager written in Rust, based on async I/O
-AddPackage ffmpegthumbnailer # Lightweight video thumbnailer that can be used by file managers
-AddPackage nemo # Cinnamon file manager (Nautilus fork)
-AddPackage cinnamon-translations # Translations for Cinnamon and Nemo
-AddPackage perl-image-exiftool # Reader and rewriter of EXIF information that supports raw files
 AddPackage termscp # A feature rich terminal UI file transfer and explorer
-AddPackage unarchiver # unar and lsar: Objective-C tools for uncompressing archive files
 
 # Terminal
 AddPackage kitty # A modern, hackable, featureful, OpenGL-based terminal emulator
@@ -77,6 +73,7 @@ AddPackage proton-cachyos # Compatibility tool for Steam Play based on Wine and 
 AddPackage proton-ge-custom # Compatibility tool for Steam Play based on Wine and additional components, GloriousEggroll's custom build
 AddPackage --foreign adwsteamgtk # A simple Gtk wrapper for Adwaita-for-Steam
 AddPackage waydroid # A container-based approach to boot a full Android system on a regular Linux system
+AddPackage xpadneo-dkms # Advanced Linux Driver for Xbox One Wireless Gamepad
 
 # System Monitor
 AddPackage btop # A monitor of system resources, bpytop ported to C++
@@ -101,7 +98,7 @@ AddPackage scrcpy # Display and control your Android device
 AddPackage baobab # A graphical directory tree analyzer
 AddPackage piper # GTK application to configure gaming mice
 
-# CLI tools
+# Terminal tools
 AddPackage 7zip # File archiver for extremely high compression
 AddPackage aria2 # Download utility that supports HTTP(S), FTP, BitTorrent, and Metalink
 AddPackage baidupcs-go # Terminal utility for Baidu Network Disk
@@ -119,6 +116,7 @@ AddPackage wev # A tool for debugging wayland events on a Wayland window, analag
 AddPackage yt-dlp # A youtube-dl fork with additional features and fixes
 AddPackage --foreign catnap-git # A minimalistic and fast system fetch written in Nim.
 AddPackage --foreign cmd-wrapped-bin # Find out what the past year looks like in command line!
+AddPackage --foreign isd # TUI for systemd
 AddPackage --foreign megatools # CLI for MEGA
 AddPackage --foreign python-terminaltexteffects # Visual effects engine applied to text in the terminal.
 AddPackage --foreign tty-share # Shares terminal session with no setup on remote end (browser)

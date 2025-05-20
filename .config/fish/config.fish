@@ -1,4 +1,9 @@
 if status is-login
+    # Desktop
+    set -x LANG zh_TW.UTF-8
+	set -x DISPLAY :0 # xwayland-satellite
+	set -x ELECTRON_OZONE_PLATFORM_HINT auto
+	set -x ZED_WINDOW_DECORATIONS server
     # SSH
     set -x SSH_AUTH_SOCK $XDG_RUNTIME_DIR/ssh-agent.socket
 

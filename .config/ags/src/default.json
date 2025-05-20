@@ -1,9 +1,0 @@
-{
-	"scripts": "",
-	"shell": "",
-	"terminal": "",
-	"arch_updates": { "interval": 600, "AUR_helper": "", "new_version_color": "#9ec49f" },
-	"audio": { "script": "" },
-	"brightness": { "script": "" },
-	"net": { "interval": 1, "device": "lo" }
-}
