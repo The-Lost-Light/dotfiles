@@ -3,11 +3,8 @@ AddPackage git # the fast distributed version control system
 AddPackage git-delta # Syntax-highlighting pager for git and diff output
 AddPackage github-cli # The GitHub CLI
 AddPackage jujutsu # Git-compatible VCS that is both simple and powerful
-AddPackage lazygit # Simple terminal UI for git commands
 AddPackage onefetch # Git repository summary on your terminal
 AddPackage --foreign better-commits # A CLI for creating better commits following the conventional commit guidelines.
-AddPackage --foreign gitbutler-bin # Version control client, backed by Git, powered by Tauri/Rust/Svelte
-AddPackage --foreign gitnuro-bin # A FOSS Git multiplatform client for newbies and pros
 
 # Editor
 AddPackage helix # A post-modern modal text editor
@@ -18,13 +15,7 @@ AddPackage godot # Advanced cross-platform 2D and 3D game engine
 AddPackage --foreign unityhub # The Unity Hub is a standalone application that streamlines the way you find, download, and manage your Unity Projects and installations.
 
 # LSP
-AddPackage taplo-cli # TOML toolkit written in Rust
 AddPackage prettier # An opinionated code formatter
-AddPackage svelte-language-server # Language server for Svelte
-AddPackage typescript-language-server # Language Server Protocol (LSP) implementation for TypeScript using tsserver
-AddPackage typescript-svelte-plugin # TypeScript plugin for Svelte intellisense
-AddPackage vscode-css-languageserver # CSS/LESS/SCSS language server
-AddPackage vscode-html-languageserver # HTML language server
 
 # Tool
 AddPackage cmake # A cross-platform open-source make system

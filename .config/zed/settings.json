@@ -1,8 +1,17 @@
 {
+	"show_edit_predictions": false,
+	"edit_predictions": {
+		"mode": "eager",
+		"copilot": {
+			"proxy": null,
+			"proxy_no_verify": null
+		},
+		"enabled_in_text_threads": false
+	},
 	"autosave": "on_focus_change",
 	"buffer_font_family": "FiraCode Nerd Font",
 	"buffer_font_size": 18,
-	"tabs": { "git_status": true, "show_close_button": "hidden" },
+	"tabs": { "git_status": true },
 	"code_actions_on_format": { "source.organizeImports": true },
 	"git": { "inline_blame": { "show_commit_summary": true } },
 	"indent_guides": { "active_line_width": 2 },
@@ -10,8 +19,9 @@
 	"use_smartcase_search": true,
 	"soft_wrap": "editor_width",
 	"terminal": { "cursor_shape": "bar" },
+	"minimap": { "show": "auto" },
 	"theme": "Ayu Mirage",
-	"assistant": {
+	"agent": {
 		"default_model": {
 			"provider": "zed.dev",
 			"model": "claude-3-7-sonnet-latest"
@@ -19,5 +29,15 @@
 		"version": "2"
 	},
 	"calls": { "mute_on_join": true },
-	"features": { "edit_prediction_provider": "zed" }
+	"features": { "edit_prediction_provider": "zed" },
+
+	"lsp": {
+		"typescript-language-server": {
+			"initialization_options": {
+				"vtsls": {
+					"autoUseWorkspaceTsdk": true
+				}
+			}
+		}
+	}
 }

@@ -1,5 +1,5 @@
 > [!WARNING]
-> Current using my own [ags](https://github.com/The-Lost-Light/ags/tree/search-by-wm-class)
+> Currently migrating to niri, please check hyprland branch
 
 ![screenshot](.dotfiles/assets/screenshot.png)
 # TODO
@@ -19,14 +19,9 @@
 |Monospaced Font|FiraCode Nerd Font|
 
 # [Dependences](.config/aconfmgr/README.md)
-|Type           |Package|Remark           |
-|--------------|--------|-----------------|
-|Window manager|hyprland|Plugin: Hyprspace|
-|Widget        |ags     |
-|Lockscreen    |hyprlock|
-|Idle          |hypridle|
+|Type          |Package |
+|--------------|--------|
+|Window manager|niri    |
 |Boot manager  |refind  |
 |Maintain      |aconfmgr|
 
-# Issue
-[Hyproverview close with wrong padding when layer hide](https://github.com/KZDKM/Hyprspace/issues/78)
