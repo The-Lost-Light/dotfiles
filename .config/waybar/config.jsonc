@@ -1,0 +1,28 @@
+{
+	"layer": "top",
+	"spacing": 8,
+	"modules-left": ["custom/launcher", "custom/overview", "niri/window"],
+	"modules-center": ["clock"],
+	"modules-right": ["battery", "tray"],
+	"custom/launcher": {
+		"format": "󰣇 ",
+		"on-click": "nwg-drawer",
+		"tooltip": false,
+	},
+	"custom/overview": {
+		"format": " ",
+		"on-click": "niri msg action toggle-overview",
+		"tooltip": false,
+	},
+	"niri/window": { "format": "{app_id}" },
+	"clock": {
+		"tooltip": true,
+		"format": "{:%H.%M}",
+		"tooltip-format": "{:%Y-%m-%d}",
+	},
+	"battery": {
+		"format": "{capacity}% {icon}",
+		"format-icons": ["", "", "", "", ""],
+	},
+	"tray": { "spacing": 4 },
+}
