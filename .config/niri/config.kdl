@@ -178,7 +178,7 @@ window-rule {
 }
 
 window-rule  {
-	match app-id=r#"firefox-developer-edition$"# title="^子母畫面$" //Picture-in-Picture
+	match app-id=r#"firefox-developer-edition$"# title=r#"^子母畫面$"# //Picture-in-Picture
 	open-floating true
 }
 

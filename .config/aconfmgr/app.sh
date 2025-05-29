@@ -20,12 +20,8 @@ AddPackage telegram-desktop # Official Telegram Desktop client
 AddPackage foliate # A simple and modern GTK eBook reader
 
 # Documents
-AddPackage iotas # Simple note taking with Markdown support and optional Nextcloud Notes sync
 AddPackage onlyoffice-bin # An office suite that combines text, spreadsheet and presentation editors
 AddPackage --foreign appflowy-bin # AppFlowy is an open-source alternative to Notion. You are in charge of your data and customizations.
-
-# Translate
-AddPackage dialect # Translation app for GNOME based on Google Translate and other online services
 
 # Art
 AddPackage blender # A fully integrated 3D graphics creation suite
@@ -33,7 +29,8 @@ AddPackage --foreign aseprite # Create animated sprites and pixel art
 AddPackage --foreign pinta # Drawing/editing program modeled after Paint.NET. It's goal is to provide a simplified alternative to GIMP for casual users
 AddPackage --foreign pixelorama-bin # A free & open-source 2D sprite editor, made with the Godot Engine
 
-# Picture
+# Image
+AddPackage imagemagick # An image viewing/manipulation program
 AddPackage oculante # A minimalistic image viewer with analysis and editing tools
 
 # Music
@@ -79,8 +76,11 @@ AddPackage btop # A monitor of system resources, bpytop ported to C++
 AddPackage mission-center # Monitor your CPU, Memory, Disk, Network and GPU usage
 
 # Share/Sync/Download
+AddPackage baidupcs-go # Terminal utility for Baidu Network Disk
 AddPackage syncthing # Open Source Continuous Replication / Cluster Synchronization Thing
+AddPackage yt-dlp # A youtube-dl fork with additional features and fixes
 AddPackage --foreign localsend-bin # An open source cross-platform alternative to AirDrop
+AddPackage --foreign megatools # CLI for MEGA
 AddPackage --foreign motrix-bin # A full-featured download manager (binary version)
 
 # Record
@@ -98,24 +98,12 @@ AddPackage baobab # A graphical directory tree analyzer
 AddPackage piper # GTK application to configure gaming mice
 
 # Terminal tools
-AddPackage 7zip # File archiver for extremely high compression
-AddPackage aria2 # Download utility that supports HTTP(S), FTP, BitTorrent, and Metalink
-AddPackage baidupcs-go # Terminal utility for Baidu Network Disk
 AddPackage brightnessctl # Lightweight brightness control tool
-AddPackage cloc # Count lines of code
-AddPackage dex # Program to generate and execute DesktopEntry files of type Application
-AddPackage handlr-regex # Powerful alternative to xdg-utils written in Rust
-AddPackage imagemagick # An image viewing/manipulation program
-AddPackage lostfiles # Find orphaned files not owned by any Arch packages
 AddPackage man-pages-zh_tw # Traditional Chinese Linux man pages
 AddPackage playerctl # mpris media player controller and lib for spotify, vlc, audacious, bmp, xmms2, and others.
 AddPackage tealdeer # A fast tldr client in Rust
-AddPackage trash-cli # Command line trashcan (recycle bin) interface
 AddPackage wev # A tool for debugging wayland events on a Wayland window, analagous to the X11 tool xev
-AddPackage yt-dlp # A youtube-dl fork with additional features and fixes
 AddPackage --foreign catnap-git # A minimalistic and fast system fetch written in Nim.
-AddPackage --foreign cmd-wrapped-bin # Find out what the past year looks like in command line!
 AddPackage --foreign isd # TUI for systemd
-AddPackage --foreign megatools # CLI for MEGA
 AddPackage --foreign python-terminaltexteffects # Visual effects engine applied to text in the terminal.
 AddPackage --foreign tty-share # Shares terminal session with no setup on remote end (browser)

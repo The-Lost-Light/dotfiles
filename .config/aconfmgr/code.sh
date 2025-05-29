@@ -18,6 +18,7 @@ AddPackage --foreign unityhub # The Unity Hub is a standalone application that s
 AddPackage prettier # An opinionated code formatter
 
 # Tool
+AddPackage cloc # Count lines of code
 AddPackage cmake # A cross-platform open-source make system
 AddPackage cpio # A tool to copy files into or out of a cpio or tar archive
 AddPackage meson # High productivity build system

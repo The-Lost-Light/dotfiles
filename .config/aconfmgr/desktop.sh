@@ -10,6 +10,8 @@ AddPackage waybar # Highly customizable Wayland bar for Sway and Wlroots based c
 AddPackage --foreign aylurs-gtk-shell # Aylurs's Gtk Shell (AGS), An eww inspired gtk widget system.
 
 # XDG Desktop
+AddPackage dex # Program to generate and execute DesktopEntry files of type Application
+AddPackage handlr-regex # Powerful alternative to xdg-utils written in Rust
 AddPackage xdg-desktop-portal-gnome # Backend implementation for xdg-desktop-portal for the GNOME desktop environment
 
 # Polkit

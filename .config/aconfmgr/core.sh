@@ -9,7 +9,9 @@ AddPackage base # Minimal package set to define a basic Arch Linux installation
 AddPackage base-devel # Basic tools to build Arch Linux packages
 
 # File System
+AddPackage 7zip # File archiver for extremely high compression
 AddPackage btrfs-progs # Btrfs filesystem utilities
+AddPackage trash-cli # Command line trashcan (recycle bin) interface
 CopyFile /etc/fstab
 
 # Firmware
@@ -38,6 +40,7 @@ AddPackage --foreign overskride-bin # A simple yet powerful bluetooth client (bi
 
 # Pacman
 AddPackage downgrade # Bash script for downgrading one or more packages to a version in your cache or the A.L.A.
+AddPackage lostfiles # Find orphaned files not owned by any Arch packages
 AddPackage rebuild-detector # Detects which packages need to be rebuilt
 AddPackage yay # Yet another yogurt. Pacman wrapper and AUR helper written in go.
 CopyFile /etc/makepkg.conf

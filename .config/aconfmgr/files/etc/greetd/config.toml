@@ -2,5 +2,5 @@
 vt = "next"
 
 [default_session]
-command = "tuigreet -c niri-session"
+command = "tuigreet -c niri-session -tr"
 user = "greeter"
