@@ -1,5 +1,5 @@
 {
-	"show_edit_predictions": false,
+	"show_edit_predictions": true,
 	"edit_predictions": {
 		"mode": "eager",
 		"copilot": {
@@ -10,6 +10,20 @@
 	},
 	"autosave": "on_focus_change",
 	"buffer_font_family": "FiraCode Nerd Font",
+	"buffer_font_features": {
+		"cv01": true,
+		"cv02": true,
+		"cv03": true,
+		"ss01": true,
+		"cv11": true,
+		"ss05": true,
+		"ss03": true,
+		"cv29": true,
+		"cv25": true,
+		"cv26": true,
+		"cv32": true,
+		"cv28": true
+	},
 	"buffer_font_size": 18,
 	"tabs": { "git_status": true },
 	"code_actions_on_format": { "source.organizeImports": true },

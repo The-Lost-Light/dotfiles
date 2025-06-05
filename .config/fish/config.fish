@@ -3,6 +3,7 @@ if status is-login
     set -x LANG zh_TW.UTF-8
 	set -x DISPLAY :0 # xwayland-satellite
 	set -x ELECTRON_OZONE_PLATFORM_HINT auto
+    set -x STEAM_FORCE_DESKTOPUI_SCALING 1.25
 	set -x ZED_WINDOW_DECORATIONS server
     # SSH
     set -x SSH_AUTH_SOCK $XDG_RUNTIME_DIR/ssh-agent.socket

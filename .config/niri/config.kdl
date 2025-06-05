@@ -172,20 +172,18 @@ window-rule  {
 	open-maximized true
 }
 
-window-rule {
-    match is-active=false
-    opacity 0.9
-}
-
 window-rule  {
 	match app-id=r#"firefox-developer-edition$"# title=r#"^子母畫面$"# //Picture-in-Picture
 	open-floating true
 }
 
 window-rule {
-    match app-id="steam" title=r#"^notificationtoasts_\d+_desktop$"#
-    default-floating-position x=16 y=16 relative-to="bottom-right"
+    match app-id="steam" is-floating=true
     open-focused false
+}
+window-rule {
+    match app-id="steam" title=r#"^notificationtoasts_\d+_desktop$"#
+    default-floating-position x=0 y=0 relative-to="bottom-right"
 }
 
 gestures  {
