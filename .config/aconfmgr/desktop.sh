@@ -45,10 +45,10 @@ AddPackage --foreign tela-icon-theme # A flat colorful design icon theme.
 # Wallpaper
 AddPackage swaybg # Wallpaper tool for Wayland compositors
 AddPackage swww # A Solution to your Wayland Wallpaper Woes
+AddPackage --foreign linux-wallpaperengine-git # use steam's wallpaperengine on linux
 
 # Launcher
 AddPackage nwg-drawer # Application drawer for sway and other wlroots-based compositors
 
 # Xwayland
-AddPackage xwayland-satellite # Xwayland outside your Wayland
-AddPackage xorg-xlsclients # List client applications running on a display
+AddPackage --foreign xwayland-satellite-git # Xwayland outside your Wayland - git version
