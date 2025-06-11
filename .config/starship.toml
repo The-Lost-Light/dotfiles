@@ -22,8 +22,6 @@ format = "[]($style)[[](bg:#f5c2e7 fg:#a84c8d bold)$branch](bg:#f5c2e7 fg:
 style = "fg:#f5c2e7"
 
 [cmd_duration]
-min_time = 10
-# duration & style 
+min_time = 1000
 format = "[]($style)[[󰄉 ](bg:#f5c2e7 fg:#a84c8d)$duration](bg:#f5c2e7 fg:#a84c8d)[ ]($style)"
-disabled = false
 style = "fg:#f5c2e7"

@@ -45,9 +45,6 @@ if status is-interactive
     function starship_transient_prompt_func
         starship module character
     end
-    function starship_transient_rprompt_func
-        starship module cmd_duration
-    end
     if string match -q "$TERM" xterm-kitty
         starship init fish | source
         enable_transience
@@ -61,4 +58,5 @@ if status is-interactive
 
     # Initial UV
     uv generate-shell-completion fish | source
+    uvx --generate-shell-completion fish | source
 end
