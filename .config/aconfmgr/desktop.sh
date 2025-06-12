@@ -51,4 +51,4 @@ AddPackage --foreign linux-wallpaperengine-git # use steam's wallpaperengine on 
 AddPackage nwg-drawer # Application drawer for sway and other wlroots-based compositors
 
 # Xwayland
-AddPackage --foreign xwayland-satellite-git # Xwayland outside your Wayland - git version
+AddPackage xwayland-satellite # Xwayland outside your Wayland

@@ -1,7 +1,6 @@
 # Git
 AddPackage git # the fast distributed version control system
 AddPackage git-delta # Syntax-highlighting pager for git and diff output
-AddPackage github-cli # The GitHub CLI
 AddPackage jujutsu # Git-compatible VCS that is both simple and powerful
 AddPackage onefetch # Git repository summary on your terminal
 AddPackage --foreign better-commits # A CLI for creating better commits following the conventional commit guidelines.
