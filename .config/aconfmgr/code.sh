@@ -28,7 +28,7 @@ CopyFile /etc/nix/nix.conf
 AddPackage ccache # Compiler cache that speeds up recompilation by caching previous compilations
 
 # Java
-AddPackage jdk-openjdk # OpenJDK Java 23 development kit
+AddPackage jdk-openjdk # OpenJDK Java development kit
 AddPackage jre8-openjdk # OpenJDK Java 8 full runtime environment
 AddPackage jre17-openjdk # OpenJDK Java 17 full runtime environment
 

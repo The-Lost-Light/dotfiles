@@ -16,6 +16,8 @@ CopyFile /etc/fstab
 
 # Firmware
 AddPackage fwupd # Simple daemon to allow session software to update firmware
+CopyFile /etc/fwupd/remotes.d/lvfs-testing.conf
+CopyFile /etc/fwupd/remotes.d/lvfs.conf
 AddPackage linux-firmware # Firmware files for Linux
 
 # Audio

@@ -7,7 +7,7 @@ AddPackage greetd-tuigreet # A console UI greeter for greetd
 # Widget
 AddPackage swaync # A simple GTK based notification daemon for Sway
 AddPackage waybar # Highly customizable Wayland bar for Sway and Wlroots based compositors
-AddPackage --foreign aylurs-gtk-shell # Aylurs's Gtk Shell (AGS), An eww inspired gtk widget system.
+AddPackage quickshell # Flexible toolkit for making desktop shells with QtQuick
 
 # XDG Desktop
 AddPackage dex # Program to generate and execute DesktopEntry files of type Application
@@ -52,3 +52,4 @@ AddPackage nwg-drawer # Application drawer for sway and other wlroots-based comp
 
 # Xwayland
 AddPackage xwayland-satellite # Xwayland outside your Wayland
+AddPackage xorg-xeyes # Follow the mouse/SHAPE extension X demo

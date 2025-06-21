@@ -19,6 +19,7 @@ input  {
 
 
 output "eDP-1"  {
+	off
 	scale 1.25
 	variable-refresh-rate
 }
@@ -117,8 +118,8 @@ layout  {
 	tab-indicator  {
 		hide-when-single-tab
 		place-within-column
-		gaps-between-tabs 10
-		corner-radius 10
+		gaps-between-tabs 8
+		corner-radius 8
 	}
 	preset-window-heights  {
 		proportion 0.5
@@ -175,6 +176,7 @@ window-rule  {
 window-rule  {
 	match app-id=r#"firefox-developer-edition$"# title=r#"^子母畫面$"# //Picture-in-Picture
 	open-floating true
+	default-floating-position x=0 y=0 relative-to="bottom-right"
 }
 
 window-rule {

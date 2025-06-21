@@ -41,3 +41,8 @@ auto-format = true
 name = "typst"
 formatter = { command = "typstfmt", args = ["--output", "-"] }
 auto-format = true
+
+
+[language-server.qmlls]
+args = ["-E"]
+command = "qmlls6"

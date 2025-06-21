@@ -1,7 +1,7 @@
 {
 	"show_edit_predictions": true,
 	"edit_predictions": {
-		"mode": "eager",
+		"mode": "subtle",
 		"copilot": {
 			"proxy": null,
 			"proxy_no_verify": null
