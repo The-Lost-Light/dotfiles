@@ -5,13 +5,10 @@ import Quickshell
 
 Variants {
 	id: root
-
-	property list<Item> left
-	property list<Item> center
-	property list<Item> right
-
-	model: Quickshell.screens;
-
+	property Component left
+	property Component center
+	property Component right
+	model: Quickshell.screens
 
 	PanelWindow {
 		required property ShellScreen modelData
@@ -27,29 +24,41 @@ Variants {
 
 		Rectangle {
 			anchors.left: parent.left
+			anchors.verticalCenter: parent.verticalCenter
+			implicitWidth: left_row.implicitWidth
+			implicitHeight: left_row.implicitHeight
 			color: "#1e1e2e"
 
-			Row {
+			Loader {
+				id: left_row
 				anchors.left: parent.left
-				data: root.left
+				sourceComponent: root.left
 			}
 		}
+
 		Rectangle {
 			anchors.centerIn: parent
+			implicitWidth: center_row.implicitWidth
+			implicitHeight: center_row.implicitHeight
 			color: "#1e1e2e"
 
-			Row {
-				anchors.centerIn: parent
-				data: root.center
+			Loader {
+				id: center_row
+				sourceComponent: root.center
 			}
 		}
+
 		Rectangle {
 			anchors.right: parent.right
+			anchors.verticalCenter: parent.verticalCenter
+			implicitWidth: right_row.implicitWidth
+			implicitHeight: right_row.implicitHeight
 			color: "#1e1e2e"
 
-			Row {
+			Loader {
+				id: right_row
 				anchors.right: parent.right
-				data: root.right
+				sourceComponent: root.right
 			}
 		}
 	}

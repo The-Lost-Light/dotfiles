@@ -1,7 +1,16 @@
+import QtQuick
 import "components"
 
 BarWidget {
-	left: [Time {}]
-	center: [Time {}]
-	right: [Tray {}]
+	left: Row {
+		Time {}
+	}
+
+	center: Row {
+		Time {}
+	}
+
+	right: Row {
+		Time {}
+	}
 }

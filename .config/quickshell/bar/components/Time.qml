@@ -1,6 +1,5 @@
 import QtQuick
-import "../services"
-// import quickshell.bar.services 1.0
+import "root:bar/services"
 
 Text {
 	color: "#fff"
