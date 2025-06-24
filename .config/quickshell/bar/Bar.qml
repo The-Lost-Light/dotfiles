@@ -2,15 +2,24 @@ import QtQuick
 import "components"
 
 BarWidget {
-	left: Row {
+	center: Row {
+		spacing: 2
+
 		Time {}
+		PowerButton {}
 	}
 
-	center: Row {
-		Time {}
+	left: Row {
+		spacing: 2
+
+		Launcher {}
+		Overview {}
 	}
 
 	right: Row {
-		Time {}
+		spacing: 2
+
+		Battery {}
+		Tray {}
 	}
 }

@@ -6,7 +6,6 @@ AddPackage greetd-tuigreet # A console UI greeter for greetd
 
 # Widget
 AddPackage swaync # A simple GTK based notification daemon for Sway
-AddPackage waybar # Highly customizable Wayland bar for Sway and Wlroots based compositors
 AddPackage quickshell # Flexible toolkit for making desktop shells with QtQuick
 
 # XDG Desktop

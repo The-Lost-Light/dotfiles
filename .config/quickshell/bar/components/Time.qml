@@ -1,7 +1,9 @@
 import QtQuick
-import "root:bar/services"
+import "root:services"
 
 Text {
-	color: "#fff"
+	anchors.verticalCenter: parent.verticalCenter
+	color: "white"
+	font.pixelSize: 16
 	text: TimeService.time
 }

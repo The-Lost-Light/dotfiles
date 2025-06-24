@@ -1,32 +1,37 @@
 import QtQuick
+import QtQuick.Controls
+import Quickshell.Io
 
-Rectangle {
-	required property Button modelData;
+Button {
+	id: button
+	required property PowerButton modelData
+	required property QtObject menu
 
-	implicitWidth: 96
-	implicitHeight: 96
-	radius: 16
-	color: {
-		if (mouse_area.pressed) return "#242933"
-		else if (mouse_area.containsMouse) return "#292e39"
-		else return "#2e3440"
+	text: modelData.text
+	font {
+		bold: true
+		family: "Symbols Nerd Font"
+		pixelSize: 48
 	}
+	onClicked: process.running = true
 
-	Text {
-		anchors.centerIn: parent
-		color: "#fff"
-		font {
-			bold: true
-			family: "Symbols Nerd Font"
-			pixelSize: 48
+	background: Rectangle {
+		color: {
+			if (button.pressed)
+				return "#242933";
+			else if (button.hovered)
+				return "#292e39";
+			else
+				return "#2e3440";
 		}
-		text: parent.modelData.text
+		implicitHeight: 96
+		implicitWidth: 96
+		radius: 16
 	}
 
-	MouseArea {
-		id: mouse_area
-		anchors.fill: parent
-		hoverEnabled: true
-		onClicked: parent.modelData.exec()
+	Process {
+		id: process
+		command: modelData.command.split(/\s+/)
+		onRunningChanged: if (!running) menu.active = false
 	}
 }

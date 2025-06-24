@@ -5,45 +5,54 @@ import Quickshell
 
 Variants {
 	id: root
-	property Component left
+
 	property Component center
+	property Component left
 	property Component right
+
 	model: Quickshell.screens
 
 	PanelWindow {
 		required property ShellScreen modelData
 
-		anchors {
-			top: true
-			left: true
-			right: true
-		}
 		color: "transparent"
+		contentItem.palette.buttonText: "white"
 		implicitHeight: 30
 		screen: modelData
+
+		anchors {
+			left: true
+			right: true
+			top: true
+		}
 
 		Rectangle {
 			anchors.left: parent.left
 			anchors.verticalCenter: parent.verticalCenter
-			implicitWidth: left_row.implicitWidth
-			implicitHeight: left_row.implicitHeight
 			color: "#1e1e2e"
+			implicitHeight: left_row.implicitHeight
+			implicitWidth: left_row.implicitWidth + 16
+			radius: 16
 
 			Loader {
 				id: left_row
-				anchors.left: parent.left
+
+				anchors.centerIn: parent
 				sourceComponent: root.left
 			}
 		}
 
 		Rectangle {
 			anchors.centerIn: parent
-			implicitWidth: center_row.implicitWidth
-			implicitHeight: center_row.implicitHeight
 			color: "#1e1e2e"
+			implicitHeight: center_row.implicitHeight
+			implicitWidth: center_row.implicitWidth + 16
+			radius: 16
 
 			Loader {
 				id: center_row
+
+				anchors.centerIn: parent
 				sourceComponent: root.center
 			}
 		}
@@ -51,13 +60,15 @@ Variants {
 		Rectangle {
 			anchors.right: parent.right
 			anchors.verticalCenter: parent.verticalCenter
-			implicitWidth: right_row.implicitWidth
-			implicitHeight: right_row.implicitHeight
 			color: "#1e1e2e"
+			implicitHeight: right_row.implicitHeight
+			implicitWidth: right_row.implicitWidth + 16
+			radius: 16
 
 			Loader {
 				id: right_row
-				anchors.right: parent.right
+
+				anchors.centerIn: parent
 				sourceComponent: root.right
 			}
 		}

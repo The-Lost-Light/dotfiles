@@ -1,9 +1,11 @@
 > [!WARNING]
-> Currently migrating to niri, please check hyprland branch
+> Currently migrating to niri and quickshell, for screenshot please check hyprland branch
 
 ![screenshot](.dotfiles/assets/screenshot.png)
 # TODO
-- [ ] migrate ags to v3 with astal
+- [ ] migrate to quickshell
+  - [ ] greetd
+  - [ ] brightness and volumn
 
 # Themes
 |Type  |Package        |
@@ -19,9 +21,10 @@
 |Monospaced Font|FiraCode Nerd Font|
 
 # [Dependences](.config/aconfmgr/README.md)
-|Type          |Package |
-|--------------|--------|
-|Window manager|niri    |
-|Boot manager  |refind  |
-|Maintain      |aconfmgr|
+|Type          |Package   |
+|--------------|----------|
+|Window manager|niri      |
+|Shell         |quickshell|
+|Boot manager  |refind    |
+|Maintain      |aconfmgr  |
 

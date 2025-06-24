@@ -1,5 +1,4 @@
 pragma Singleton
-
 import QtQuick
 import Quickshell
 
@@ -8,6 +7,7 @@ Singleton {
 
 	SystemClock {
 		id: clock
+
 		precision: SystemClock.Minutes
 	}
 }
