@@ -14,7 +14,6 @@ Button {
 
 	Process {
 		id: process
-
 		command: ["nwg-drawer", "-fm", "yazi", "-nofs", "-ovl", "-term", "kitty"]
 	}
 }

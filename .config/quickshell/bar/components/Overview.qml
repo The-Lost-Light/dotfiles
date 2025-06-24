@@ -6,15 +6,14 @@ Button {
 	font.pixelSize: 16
 	text: " "
 
+	onClicked: process.running = true
+
 	background: Rectangle {
 		color: "transparent"
 	}
 
-	onClicked: process.running = true
-
 	Process {
 		id: process
-
 		command: ["niri", "msg", "action", "toggle-overview"]
 	}
 }

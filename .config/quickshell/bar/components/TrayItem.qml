@@ -3,45 +3,42 @@ import Quickshell
 import Quickshell.Services.SystemTray
 import Quickshell.Widgets
 
-MouseArea {
-	id: root
 
+IconImage {
+	id: icon
 	required property SystemTrayItem modelData
-
-	acceptedButtons: Qt.LeftButton | Qt.RightButton
-	implicitHeight: icon.implicitHeight
-	implicitWidth: icon.implicitWidth
-
-	onClicked: event => {
-		if (event.button === Qt.LeftButton)
-			modelData.activate();
-		else if (modelData.hasMenu)
-			menu.open();
+	asynchronous: true
+	implicitSize: 18
+	mipmap: true
+	source: {
+		let icon = modelData.icon;
+		if (icon.includes("?path=")) {
+			const [name, path] = icon.split("?path=");
+			icon = `file://${path}/${name.slice(name.lastIndexOf("/") + 1)}`;
+		}
+		return icon;
 	}
 
-	IconImage {
-		id: icon
+	MouseArea {
+		id: root
 
-		asynchronous: true
-		implicitSize: 18
-		mipmap: true
-		source: {
-			let icon = root.modelData.icon;
-			if (icon.includes("?path=")) {
-				const [name, path] = icon.split("?path=");
-				icon = `file://${path}/${name.slice(name.lastIndexOf("/") + 1)}`;
-			}
-			return icon;
+		acceptedButtons: Qt.LeftButton | Qt.RightButton
+		anchors.fill: parent
+
+		onClicked: event => {
+			if (!icon.modelData.onlyMenu && event.button === Qt.LeftButton)
+				icon.modelData.activate();
+			else if (icon.modelData.hasMenu)
+				menu.open();
 		}
 	}
 
 	QsMenuAnchor {
 		id: menu
-
 		anchor {
-			item: root
-			rect.y: root.y + 16
+			item: icon
+			rect.y: icon.y + 16
 		}
-		menu: root.modelData.menu
+		menu: icon.modelData.menu
 	}
 }

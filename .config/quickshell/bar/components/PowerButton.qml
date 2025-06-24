@@ -15,8 +15,6 @@ Button {
 
 	LazyLoader {
 		id: power_menu
-		PowerMenu {
-			menu: power_menu
-		}
+		PowerMenu {	menu: power_menu }
 	}
 }
