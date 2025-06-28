@@ -1,8 +1,13 @@
 # Niri
 AddPackage niri # A scrollable-tiling Wayland compositor
 
-# Display Manager
-AddPackage greetd-tuigreet # A console UI greeter for greetd
+# Greeter
+AddPackage gnome-keyring # Stores passwords and encryption keys
+AddPackage greetd # Generic greeter daemon
+CopyFile /etc/greetd/config.toml
+CopyFile /etc/greetd/niri.kdl
+CopyFile /etc/greetd/quickshell.qml
+CopyFile /etc/pam.d/greetd # For gnome-keyring
 
 # Widget
 AddPackage swaync # A simple GTK based notification daemon for Sway

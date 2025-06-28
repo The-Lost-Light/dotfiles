@@ -3,9 +3,18 @@
 
 ![screenshot](.dotfiles/assets/screenshot.png)
 # TODO
-- [ ] migrate to quickshell
-  - [ ] greetd
-  - [ ] brightness and volumn
+- [ ] Quickshell
+	- [ ] bar
+		- [x] launcher/overview button
+		- [ ] client name
+		- [ ] arch update indicator
+		- [x] time
+		- [ ] date
+		- [ ] brightness/volumn
+		- [x] battery
+		- [x] system tray
+	- [x] powermenu
+	- [x] greeter
 
 # Themes
 |Type  |Package        |
@@ -23,8 +32,7 @@
 # [Dependences](.config/aconfmgr/README.md)
 |Type          |Package   |
 |--------------|----------|
-|Window manager|niri      |
-|Shell         |quickshell|
-|Boot manager  |refind    |
-|Maintain      |aconfmgr  |
-
+|Window manager|Niri      |
+|Shell         |Quickshell|
+|Boot manager  |Refind    |
+|Maintain      |Aconfmgr  |

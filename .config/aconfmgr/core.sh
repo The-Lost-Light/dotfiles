@@ -78,12 +78,6 @@ CopyFile /etc/systemd/logind.conf
 # Zram
 CopyFile /etc/sysctl.d/99-vm-zram-parameters.conf
 
-# Keyring
-AddPackage gnome-keyring # Stores passwords and encryption keys
-AddPackage greetd # Generic greeter daemon
-CopyFile /etc/greetd/config.toml
-CopyFile /etc/pam.d/greetd # For gnome-keyring
-
 # Backup
 AddPackage --foreign aconfmgr-git # A configuration manager for Arch Linux
 AddPackage timeshift # A system restore utility for Linux

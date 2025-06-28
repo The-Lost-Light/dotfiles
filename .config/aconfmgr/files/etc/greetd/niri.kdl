@@ -1,0 +1,27 @@
+spawn-at-startup "quickshell" "--path" "/etc/greetd/quickshell.qml"
+
+output "eDP-1"  {
+	scale 1.25
+	variable-refresh-rate
+}
+output "HDMI-A-1"  {
+	mode "2560x1440"
+	scale 1.25
+	variable-refresh-rate
+	focus-at-startup
+}
+
+cursor  {
+	hide-when-typing
+	hide-after-inactive-ms 5000
+}
+
+hotkey-overlay  {
+	skip-at-startup
+}
+
+gestures  {
+	hot-corners  {
+		off
+	}
+}
