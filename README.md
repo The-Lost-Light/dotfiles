@@ -8,8 +8,7 @@
 		- [x] launcher/overview button
 		- [ ] client name
 		- [ ] arch update indicator
-		- [x] time
-		- [ ] date
+		- [x] time/date
 		- [ ] brightness/volumn
 		- [x] battery
 		- [x] system tray
