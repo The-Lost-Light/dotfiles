@@ -26,7 +26,6 @@ AddPackage --foreign appflowy-bin # AppFlowy is an open-source alternative to No
 # Art
 AddPackage blender # A fully integrated 3D graphics creation suite
 AddPackage --foreign aseprite # Create animated sprites and pixel art
-AddPackage --foreign pinta # Drawing/editing program modeled after Paint.NET. It's goal is to provide a simplified alternative to GIMP for casual users
 AddPackage --foreign pixelorama-bin # A free & open-source 2D sprite editor, made with the Godot Engine
 
 # Image

@@ -25,6 +25,7 @@ AddPackage polkit-gnome # Legacy polkit authentication agent for GNOME
 AddPackage fcitx5-configtool # Configuration Tool for Fcitx5
 AddPackage fcitx5-gtk # Fcitx5 gtk im module and glib based dbus client library
 AddPackage --foreign fcitx5-mcbopomofo-git # McBopomofo for fcitx5
+AddPackage --foreign fcitx5-theme-ayaya # pink style fcitx5 theme
 
 # Clipboard
 AddPackage wl-clipboard # Command-line copy/paste utilities for Wayland

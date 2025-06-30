@@ -2,11 +2,15 @@
 AddPackage amd-ucode # Microcode update image for AMD CPUs
 AddPackage linux-cachyos # The Linux BORE + LTO + Cachy Sauce Kernel by CachyOS with other patches and improvements. kernel and modules
 AddPackage linux-cachyos-headers # Headers and scripts for building modules for the Linux BORE + LTO + Cachy Sauce Kernel by CachyOS with other patches and improvements. kernel
+AddPackage booster # Fast and secure initramfs generator
 CopyFile /etc/booster.yaml
 
 # Base
 AddPackage base # Minimal package set to define a basic Arch Linux installation
 AddPackage base-devel # Basic tools to build Arch Linux packages
+CopyFile /etc/adjtime
+CopyFile /etc/locale.conf
+CreateLink /etc/localtime ../usr/share/zoneinfo/Asia/Taipei
 
 # File System
 AddPackage 7zip # File archiver for extremely high compression
@@ -28,7 +32,6 @@ AddPackage pipewire-alsa # Low-latency audio/video router and processor - ALSA c
 AddPackage pipewire-pulse # Low-latency audio/video router and processor - PulseAudio replacement
 AddPackage realtime-privileges # Realtime privileges for users
 AddPackage --foreign sonusmix # Next-gen Pipewire audio routing tool
-AddPackage --foreign pwvucontrol # Pipewire volume control for GNOME
 
 # Network
 AddPackage network-manager-applet # Applet for managing network connections
@@ -56,9 +59,9 @@ AddPackage cachyos-v4-mirrorlist # CachyOS repository mirrorlist
 AddPackage cachyos-rate-mirrors # CachyOS - Rate mirrors service
 
 # Shell
-AddPackage dash # POSIX compliant shell that aims to be as small as possible
 AddPackage fish # Smart and user friendly shell intended mostly for interactive use
 AddPackage nushell # A new type of shell
+AddPackage --foreign dashbinsh # Relink /bin/sh to dash
 # Shell tools
 AddPackage bat # Cat clone with syntax highlighting and git integration
 AddPackage fd # Simple, fast and user-friendly alternative to find
