@@ -10,14 +10,15 @@ def brightness [tweak?: string, --keyboard (-k)] {
 	let flags = if $keyboard { [--device *::kbd_backlight] } | default []
 
 	let operator =  (if $keyboard { "1" } else { "51" }) + (match $tweak {
+		get => (brightnessctl get ...$flags; exit)
 		increase => '+'
 		decrease => '-'
-		get => (brightnessctl get ...$flags; exit)
 	})
 	brightnessctl set $operator -q ...$flags
 
 	let value = brightnessctl get ...$flags | into int
 	notify (if $keyboard { $value * 85 } else { $value })
+	echo $value
 }
 
 def main [--keyboard (-k)] { brightness get --keyboard=$keyboard }

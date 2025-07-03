@@ -9,7 +9,7 @@
 		- [ ] client name
 		- [ ] arch update indicator
 		- [x] time/date
-		- [ ] brightness/volumn
+		- [x] brightness/volumn
 		- [x] battery
 		- [x] system tray
 	- [x] powermenu
