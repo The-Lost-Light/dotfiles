@@ -7,7 +7,7 @@
 	- [ ] bar
 		- [x] launcher/overview button
 		- [ ] client name
-		- [ ] arch update indicator
+		- [x] arch update indicator
 		- [x] time/date
 		- [x] brightness/volumn
 		- [x] battery
