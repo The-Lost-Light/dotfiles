@@ -20,7 +20,7 @@ def notify [device: string, volume: int, --muted] {
 	notify-send -h string:x-canonical-private-synchronous:sys-notify --urgency low --icon ($icon | path expand) ...$message
 }
 
-def volume [device: string, tweak: string] {
+def volume [device: string, tweak?: string] {
 	let target = match $device {
 		speaker => "@DEFAULT_AUDIO_SINK@"
 		microphone => "@DEFAULT_AUDIO_SOURCE@"
@@ -30,6 +30,7 @@ def volume [device: string, tweak: string] {
 	let muted = $status | any  {|s| $s == "[MUTED]"}
 
 	match $tweak {
+		null => (print $status.1; exit)
 		increase => { if not $muted { wpctl set-volume --limit 1 $target 5%+ } }
 		decrease => { if not $muted { wpctl set-volume $target 5%- } }
 		toggle => { wpctl set-mute $target toggle }
@@ -42,5 +43,5 @@ def volume [device: string, tweak: string] {
 }
 
 def main [] {}
-def "main speaker" [tweak: string] { volume "speaker" $tweak }
-def "main microphone" [tweak: string] {	volume "microphone" $tweak }
+def "main speaker" [tweak?: string] { volume "speaker" $tweak }
+def "main microphone" [tweak?: string] {	volume "microphone" $tweak }

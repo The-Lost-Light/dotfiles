@@ -18,7 +18,7 @@ def brightness [tweak?: string, --keyboard (-k)] {
 
 	let value = brightnessctl get ...$flags | into int
 	notify (if $keyboard { $value * 85 } else { $value })
-	echo $value
+	print $value
 }
 
 def main [--keyboard (-k)] { brightness get --keyboard=$keyboard }

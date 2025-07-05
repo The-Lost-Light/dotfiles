@@ -15,7 +15,7 @@ Row {
 		text: {
 			if (Pipewire.defaultAudioSource) {
 				let audio = Pipewire.defaultAudioSource?.audio
-				audio.muted ? "Mute" : '󰍮' + (audio.volume * 100).toFixed(0) + '%'
+				'󰍮' + (audio.muted ? "Mute" : (audio.volume * 100).toFixed(0) + '%')
 			} else {
 				"Not found source!"
 			}
@@ -43,7 +43,7 @@ Row {
 		text: {
 			if (Pipewire.defaultAudioSink) {
 				let audio = Pipewire.defaultAudioSink?.audio
-				audio.muted ? "Mute" : '󰕾 ' + (audio.volume * 100).toFixed(0) + '%'
+				'󰕾' + (audio.muted ? "Mute" : (audio.volume * 100).toFixed(0) + '%')
 			} else {
 				"Not found sink!"
 			}
