@@ -5,13 +5,9 @@
 # TODO
 - [ ] Quickshell
 	- [ ] bar
-		- [x] launcher/overview button
 		- [ ] client name
-		- [x] arch update indicator
-		- [x] time/date
-		- [x] brightness/volumn
-		- [x] battery
-		- [x] system tray
+		- [ ] Media display
+		- [ ] Settings center
 	- [x] powermenu
 	- [x] greeter
 

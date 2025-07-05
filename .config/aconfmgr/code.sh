@@ -27,6 +27,9 @@ CopyFile /etc/nix/nix.conf
 # C/C++
 AddPackage ccache # Compiler cache that speeds up recompilation by caching previous compilations
 
+# Flutter
+AddPackage --foreign flutter-bin # Cross platform widget toolkit for Dart (monolithic)
+
 # Java
 AddPackage jdk-openjdk # OpenJDK Java development kit
 AddPackage jre8-openjdk # OpenJDK Java 8 full runtime environment

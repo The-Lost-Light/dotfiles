@@ -1,5 +1,4 @@
 import QtQuick
-import Quickshell
 
 Menu {
 	required property QtObject menu

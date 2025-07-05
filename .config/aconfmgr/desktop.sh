@@ -5,6 +5,7 @@ AddPackage niri # A scrollable-tiling Wayland compositor
 AddPackage gnome-keyring # Stores passwords and encryption keys
 AddPackage greetd # Generic greeter daemon
 CopyFile /etc/greetd/config.toml
+CopyFile /etc/greetd/login.png
 CopyFile /etc/greetd/niri.kdl
 CopyFile /etc/greetd/quickshell.qml
 CopyFile /etc/pam.d/greetd # For gnome-keyring
@@ -35,21 +36,22 @@ AddPackage wl-clip-persist # Keep Wayland clipboard even after programs close
 AddPackage qt5-wayland # Provides APIs for Wayland
 AddPackage qt6-wayland # Provides APIs for Wayland
 
-# Theme
+# Theme engine
 AddPackage qt5ct # Qt5 Configuration Utility
 AddPackage qt6ct # Qt 6 Configuration Utility
 AddPackage kvantum # SVG-based theme engine for Qt6 (including config tool and extra themes)
 AddPackage kvantum-qt5 # SVG-based theme engine for Qt5
-AddPackage --foreign kvantum-theme-orchis-git # Orchis theme for Kvantum
 AddPackage nwg-look # GTK3 settings editor adapted to work on wlroots-based compositors
+# Theme
 AddPackage orchis-theme # A Material Design theme for GNOME/GTK based desktop environments
 AddPackage --foreign bibata-cursor-theme-bin # Material Based Cursor Theme
-AddPackage --foreign matugen-bin # A material you color generation tool with templates
+AddPackage --foreign kvantum-theme-orchis-git # Orchis theme for Kvantum
 AddPackage --foreign tela-icon-theme # A flat colorful design icon theme.
 
 # Wallpaper
 AddPackage swaybg # Wallpaper tool for Wayland compositors
 AddPackage swww # A Solution to your Wayland Wallpaper Woes
+AddPackage --foreign gowall # A tool to convert a Wallpaper's color scheme - palette
 AddPackage --foreign linux-wallpaperengine-git # use steam's wallpaperengine on linux
 
 # Launcher

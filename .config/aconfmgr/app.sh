@@ -78,9 +78,10 @@ AddPackage mission-center # Monitor your CPU, Memory, Disk, Network and GPU usag
 AddPackage baidupcs-go # Terminal utility for Baidu Network Disk
 AddPackage syncthing # Open Source Continuous Replication / Cluster Synchronization Thing
 AddPackage yt-dlp # A youtube-dl fork with additional features and fixes
+AddPackage --foreign abdownloadmanager-bin # A Download Manager that speeds up your downloads
 AddPackage --foreign localsend-bin # An open source cross-platform alternative to AirDrop
+AddPackage --foreign lux-dl # Fast and simple video download library and CLI tool written in Go
 AddPackage --foreign megatools # CLI for MEGA
-AddPackage --foreign motrix-bin # A full-featured download manager (binary version)
 
 # Record
 AddPackage obs-studio # Free, open source software for live streaming and recording

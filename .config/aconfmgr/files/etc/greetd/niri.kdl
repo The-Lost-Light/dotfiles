@@ -1,4 +1,4 @@
-spawn-at-startup "quickshell" "--path" "/etc/greetd/quickshell.qml"
+spawn-at-startup "sh" "-c" "quickshell --path /etc/greetd/quickshell.qml; niri msg action quit --skip-confirmation"
 
 output "eDP-1"  {
 	scale 1.25

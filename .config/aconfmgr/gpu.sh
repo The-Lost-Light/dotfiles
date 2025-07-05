@@ -1,7 +1,3 @@
-# Tool
-AddPackage lact # Linux GPU Configuration Tool
-CopyFile /etc/lact/config.yaml
-
 # Hardware Video Acceleration
 AddPackage libva # Video Acceleration (VA) API for Linux
 AddPackage libva-utils # Intel VA-API Media Applications and Scripts for libva
