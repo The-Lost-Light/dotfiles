@@ -4,7 +4,6 @@ import "root:services"
 
 Button {
 	id: root
-
 	anchors.verticalCenter: parent.verticalCenter
 	visible: ArchService.updates > 0
 	font.pixelSize: 16
@@ -14,5 +13,4 @@ Button {
 	background: Rectangle {
 		color: "transparent"
 	}
-
 }

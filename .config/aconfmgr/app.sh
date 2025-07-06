@@ -18,8 +18,10 @@ AddPackage telegram-desktop # Official Telegram Desktop client
 
 # Reader
 AddPackage foliate # A simple and modern GTK eBook reader
+AddPackage papers # Document viewer for PDF and other document formats aimed at the GNOME desktop
 
 # Documents
+AddPackage iotas # Simple note taking with Markdown support and optional Nextcloud Notes sync
 AddPackage onlyoffice-bin # An office suite that combines text, spreadsheet and presentation editors
 AddPackage --foreign appflowy-bin # AppFlowy is an open-source alternative to Notion. You are in charge of your data and customizations.
 
@@ -33,6 +35,7 @@ AddPackage imagemagick # An image viewing/manipulation program
 AddPackage oculante # A minimalistic image viewer with analysis and editing tools
 
 # Music
+AddPackage decibels # Audio player for GNOME
 AddPackage mousai # Simple application to identify songs
 AddPackage musescore # Create, play and print beautiful sheet music
 AddPackage spotify-launcher # Client for spotify's apt repository in Rust for Arch Linux

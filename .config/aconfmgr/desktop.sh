@@ -11,8 +11,8 @@ CopyFile /etc/greetd/quickshell.qml
 CopyFile /etc/pam.d/greetd # For gnome-keyring
 
 # Widget
-AddPackage swaync # A simple GTK based notification daemon for Sway
 AddPackage quickshell # Flexible toolkit for making desktop shells with QtQuick
+AddPackage swaync # A simple GTK based notification daemon for Sway
 
 # XDG Desktop
 AddPackage dex # Program to generate and execute DesktopEntry files of type Application
@@ -27,6 +27,7 @@ AddPackage fcitx5-configtool # Configuration Tool for Fcitx5
 AddPackage fcitx5-gtk # Fcitx5 gtk im module and glib based dbus client library
 AddPackage --foreign fcitx5-mcbopomofo-git # McBopomofo for fcitx5
 AddPackage --foreign fcitx5-theme-ayaya # pink style fcitx5 theme
+AddPackage gnome-characters # A character map application
 
 # Clipboard
 AddPackage wl-clipboard # Command-line copy/paste utilities for Wayland
@@ -43,9 +44,9 @@ AddPackage kvantum # SVG-based theme engine for Qt6 (including config tool and e
 AddPackage kvantum-qt5 # SVG-based theme engine for Qt5
 AddPackage nwg-look # GTK3 settings editor adapted to work on wlroots-based compositors
 # Theme
-AddPackage orchis-theme # A Material Design theme for GNOME/GTK based desktop environments
+AddPackage adw-gtk-theme # Unofficial GTK 3 port of the libadwaita theme
 AddPackage --foreign bibata-cursor-theme-bin # Material Based Cursor Theme
-AddPackage --foreign kvantum-theme-orchis-git # Orchis theme for Kvantum
+AddPackage --foreign plasma6-themes-colloid-git # colloid theme for KDE Plasma
 AddPackage --foreign tela-icon-theme # A flat colorful design icon theme.
 
 # Wallpaper
