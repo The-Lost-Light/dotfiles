@@ -9,7 +9,6 @@
 - brightnessctl
 ## Audio
 - pipewire
-  - pwvucontrol
 ## AUR
 - yay
 ## Sync/Maintain

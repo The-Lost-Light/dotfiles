@@ -1,18 +1,18 @@
 import QtQuick
 import QtQuick.Controls
 import Quickshell.Io
+import "root:services"
 
 Button {
 	id: button
 	required property PowerButton modelData
-	required property QtObject menu
 
-	text: modelData.text
 	font {
 		bold: true
 		family: "Symbols Nerd Font"
 		pixelSize: 48
 	}
+	text: modelData.text
 	onClicked: process.running = true
 
 	background: Rectangle {
@@ -31,7 +31,7 @@ Button {
 
 	Process {
 		id: process
-		command: modelData.command.split(/\s+/)
-		onRunningChanged: if (!running) menu.active = false
+		command: button.modelData.command.split(/\s+/)
+		onRunningChanged: if (!running) EventBus.requestPowerMenuClose()
 	}
 }

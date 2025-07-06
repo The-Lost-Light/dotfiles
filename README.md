@@ -4,19 +4,21 @@
 ![screenshot](.dotfiles/assets/screenshot.png)
 # TODO
 - [ ] Quickshell
-	- [ ] bar
+	- [x] bar
 		- [ ] client name
 		- [ ] Media display
+		- [ ] Net speed
 		- [ ] Settings center
 	- [x] powermenu
 	- [x] greeter
 
 # Themes
-|Type  |Package        |
-|------|---------------|
-|Widget|Orchis theme   |
-|Icon  |Tela Icon Theme|
-|Cursor|Bibata Cursor  |
+|Type  |Package          |
+|------|-----------------|
+|GTK   |Adwaita(adw-gtk3)|
+|QT    |Colloid          |
+|Icon  |Tela Icon Theme  |
+|Cursor|Bibata Cursor    |
 
 # Fonts
 |Type           |Package           |

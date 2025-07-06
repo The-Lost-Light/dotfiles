@@ -14,17 +14,16 @@ Variants {
 
 	PanelWindow {
 		required property ShellScreen modelData
-
-		color: "transparent"
-		contentItem.palette.buttonText: "white"
-		implicitHeight: 30
-		screen: modelData
-
 		anchors {
 			left: true
 			right: true
 			top: true
 		}
+		color: "transparent"
+		implicitHeight: 30
+		screen: modelData
+
+		contentItem.palette.buttonText: "white"
 
 		Rectangle {
 			anchors.left: parent.left
@@ -36,7 +35,6 @@ Variants {
 
 			Loader {
 				id: left_row
-
 				anchors.centerIn: parent
 				sourceComponent: root.left
 			}
@@ -51,7 +49,6 @@ Variants {
 
 			Loader {
 				id: center_row
-
 				anchors.centerIn: parent
 				sourceComponent: root.center
 			}
@@ -67,7 +64,6 @@ Variants {
 
 			Loader {
 				id: right_row
-
 				anchors.centerIn: parent
 				sourceComponent: root.right
 			}

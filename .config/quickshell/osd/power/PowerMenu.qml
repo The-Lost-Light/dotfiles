@@ -1,9 +1,6 @@
 import QtQuick
 
 Menu {
-	required property QtObject menu
-	menu_: menu
-
 	PowerButton {
 		command: "notify-send undefined"
 		text: ""

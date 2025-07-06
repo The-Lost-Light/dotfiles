@@ -8,6 +8,7 @@ BarWidget {
 		Launcher {}
 		Overview {}
 	}
+
 	center: Row {
 		spacing: 8
 
@@ -15,6 +16,7 @@ BarWidget {
 		Time {}
 		PowerButton {}
 	}
+
 	right: Row {
 		spacing: 8
 

@@ -1,6 +1,7 @@
 import QtQuick
 import QtQuick.Controls
 import Quickshell
+import "root:services"
 import "root:osd/power"
 
 Button {
@@ -15,6 +16,14 @@ Button {
 
 	LazyLoader {
 		id: power_menu
-		PowerMenu {	menu: power_menu }
+		PowerMenu {}
+	}
+
+	Connections {
+		target: EventBus
+
+		function onRequestPowerMenuClose() {
+			power_menu.activeAsync = false
+		}
 	}
 }
