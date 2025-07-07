@@ -1,22 +1,25 @@
 import QtQuick
-import QtQuick.Controls
 import Quickshell
 import "root:services"
+import "widgets"
 import "root:osd/power"
 
-Button {
-	font.pixelSize: 16
+BarButton {
 	text: "⏻ "
-
-	background: Rectangle {
-		color: "transparent"
+	onClicked: {
+		power_menu.activeAsync = true
+		timer.restart()
 	}
-
-	onClicked: power_menu.activeAsync = !power_menu.activeAsync
 
 	LazyLoader {
 		id: power_menu
 		PowerMenu {}
+	}
+
+	Timer {
+		id: timer
+		interval: 3000
+		onTriggered: power_menu.activeAsync = false
 	}
 
 	Connections {

@@ -1,28 +1,14 @@
 import QtQuick
 import "root:services"
+import "widgets"
 
-Row {
-	id: root
-	signal request()
-
-	Text {
-		id: brightness
-		color: "white"
-		font {
-			family: "Symbols Nerd Font"
-			pixelSize: 16
-		}
-		text: BrightnessService.percent
-
-		MouseArea {
-			anchors.fill: parent
-			onWheel: event => {
-				if (event.angleDelta.y > 0) {
-					BrightnessService.script("increase")
-				} else if (event.angleDelta.y < 0) {
-					BrightnessService.script("decrease")
-				}
-			}
+BarMouseLabel {
+	text: BrightnessService.percent
+	onWheel: event => {
+		if (event.angleDelta.y > 0) {
+			BrightnessService.script("increase")
+		} else if (event.angleDelta.y < 0) {
+			BrightnessService.script("decrease")
 		}
 	}
 }

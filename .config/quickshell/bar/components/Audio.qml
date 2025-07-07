@@ -1,77 +1,64 @@
+pragma ComponentBehavior: Bound
 import QtQuick
 import Quickshell.Io
 import Quickshell.Services.Pipewire
+import "widgets"
 
 Row {
-	id: root
 	spacing: 4
 
-	Text {
-		color: "white"
-		font {
-			family: "Symbols Nerd Font"
-			pixelSize: 16
-		}
-		text: {
-			if (Pipewire.defaultAudioSource) {
-				let audio = Pipewire.defaultAudioSource?.audio
-				'󰍮' + (audio.muted ? "Mute" : (audio.volume * 100).toFixed(0) + '%')
-			} else {
-				"Not found source!"
-			}
-		}
+	ListModel {
+		id: audio_model
 
-		MouseArea {
-			anchors.fill: parent
-			onClicked: root.script("microphone toggle")
-			onWheel: event => {
-				if (event.angleDelta.y > 0) {
-					root.script("microphone increase")
-				} else if (event.angleDelta.y < 0) {
-					root.script("microphone decrease")
-				}
-			}
+		ListElement {
+			icon: "󰍮"
+			device: "microphone"
+		}
+		ListElement {
+			icon: "󰕾"
+			device: "speaker"
 		}
 	}
 
-	Text {
-		color: "white"
-		font {
-			family: "Symbols Nerd Font"
-			pixelSize: 16
-		}
-		text: {
-			if (Pipewire.defaultAudioSink) {
-				let audio = Pipewire.defaultAudioSink?.audio
-				'󰕾' + (audio.muted ? "Mute" : (audio.volume * 100).toFixed(0) + '%')
-			} else {
-				"Not found sink!"
-			}
-		}
+	Repeater {
+		model: audio_model
 
-		MouseArea {
-			anchors.fill: parent
-			onClicked: root.script("speaker toggle")
+		BarMouseLabel {
+			required property var modelData
+			text: {
+				let device =
+					modelData.device === "speaker" ? Pipewire.defaultAudioSink :
+					modelData.device === "microphone" ? Pipewire.defaultAudioSource :
+					null
+
+				if (device) {
+					let audio = device?.audio
+					modelData.icon + (audio.muted ? "Mute" : (audio.volume * 100).toFixed(0) + '%')
+				} else {
+					`Not found ${modelData.device}!`
+				}
+			}
+			onClicked: process.script(`${modelData.device} toggle`)
 			onWheel: event => {
 				if (event.angleDelta.y > 0) {
-					root.script("speaker increase")
+					process.script(`${modelData.device} increase`)
 				} else if (event.angleDelta.y < 0) {
-					root.script("speaker decrease")
+				process.script(`${modelData.device} decrease`)
 				}
 			}
 		}
-	}
-
-	Process {
-		id: process
 	}
 
 	PwObjectTracker {
 		objects: [Pipewire.defaultAudioSink, Pipewire.defaultAudioSource]
 	}
 
-	function script(command) {
-		process.command = ["sh", "-c", "~/.config/niri/scripts/audio.nu " + command]
-		process.running = true
+	Process {
+		id: process
+
+		function script(parameter) {
+			command = ["sh", "-c", "~/.config/niri/scripts/audio.nu " + parameter]
+			running = true
+		}
 	}
 }

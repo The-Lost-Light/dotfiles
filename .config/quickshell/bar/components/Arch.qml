@@ -1,16 +1,9 @@
 import QtQuick
-import QtQuick.Controls
 import "root:services"
+import "widgets"
 
-Button {
-	id: root
-	anchors.verticalCenter: parent.verticalCenter
+BarButton {
 	visible: ArchService.updates > 0
-	font.pixelSize: 16
 	text: `  ${ArchService.updates}`
 	onClicked: ArchService.update()
-
-	background: Rectangle {
-		color: "transparent"
-	}
 }

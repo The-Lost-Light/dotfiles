@@ -1,16 +1,10 @@
 import QtQuick
-import QtQuick.Controls
 import Quickshell.Io
+import "widgets"
 
-Button {
-	font.pixelSize: 16
+BarButton {
 	text: " "
-
 	onClicked: process.running = true
-
-	background: Rectangle {
-		color: "transparent"
-	}
 
 	Process {
 		id: process

@@ -1,12 +1,6 @@
-import QtQuick
 import Quickshell.Services.UPower
+import "widgets"
 
-Text {
-	color: "white"
+BarLabel {
 	text: `${UPower.displayDevice.percentage * 100}%  `
-
-	font {
-		family: "Symbols Nerd Font"
-		pixelSize: 16
-	}
 }

@@ -1,22 +1,16 @@
 import QtQuick
 import QtQuick.Controls
 import "root:services"
+import "widgets"
 
-Text {
+BarMouseLabel {
 	id: root
 	anchors.verticalCenter: parent.verticalCenter
-	color: "white"
-	font.pixelSize: 16
+	hoverEnabled: true
 	text: TimeService.time
 
-	MouseArea {
-		id: mouse_area
-		anchors.fill: parent
-		hoverEnabled: true
-	}
-
 	ToolTip {
-		visible: mouse_area.containsMouse
+		visible: root.containsMouse
 		delay: 300
 		text: TimeService.date
 		background: Rectangle {
@@ -24,6 +18,5 @@ Text {
 			height: root.height
 			radius: 8
 		}
-		palette.toolTipText: "white"
 	}
 }

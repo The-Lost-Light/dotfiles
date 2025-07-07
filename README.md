@@ -11,6 +11,7 @@
 		- [ ] Settings center
 	- [x] powermenu
 	- [x] greeter
+	- [ ] notifications
 
 # Themes
 |Type  |Package          |
