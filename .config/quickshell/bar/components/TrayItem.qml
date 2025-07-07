@@ -20,14 +20,13 @@ IconImage {
 
 	MouseArea {
 		id: root
-
 		acceptedButtons: Qt.LeftButton | Qt.RightButton
 		anchors.fill: parent
 
 		onClicked: event => {
 			if (!icon.modelData.onlyMenu && event.button === Qt.LeftButton)
 				icon.modelData.activate();
-			else if (icon.modelData.hasMenu)
+			else if (icon.modelData.hasMenu && event.button === Qt.RightButton)
 				menu.open();
 		}
 	}

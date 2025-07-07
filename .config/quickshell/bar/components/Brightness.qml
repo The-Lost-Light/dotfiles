@@ -1,8 +1,9 @@
 import QtQuick
-import Quickshell.Io
+import "root:services"
 
 Row {
 	id: root
+	signal request()
 
 	Text {
 		id: brightness
@@ -11,32 +12,17 @@ Row {
 			family: "Symbols Nerd Font"
 			pixelSize: 16
 		}
-		text: "Not found brightness!"
+		text: BrightnessService.percent
 
 		MouseArea {
 			anchors.fill: parent
 			onWheel: event => {
 				if (event.angleDelta.y > 0) {
-					root.script("increase")
+					BrightnessService.script("increase")
 				} else if (event.angleDelta.y < 0) {
-					root.script("decrease")
+					BrightnessService.script("decrease")
 				}
 			}
 		}
-	}
-
-
-	Process {
-		id: process
-		command: ["sh", "-c", "~/.config/niri/scripts/brightness.nu"]
-		running: true
-		stdout: StdioCollector {
-			onStreamFinished: brightness.text = `󰃟${text * 20 / 51}%`
-		}
-	}
-
-	function script(command) {
-		process.command = ["sh", "-c", "~/.config/niri/scripts/brightness.nu " + command]
-		process.running = true
 	}
 }
