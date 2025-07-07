@@ -5,7 +5,6 @@ import Quickshell
 PanelWindow {
 	id: root
 	default required property list<PowerButton> buttons
-
 	anchors.right: true
 	color: "transparent"
 	implicitHeight: column.implicitHeight
@@ -15,10 +14,6 @@ PanelWindow {
 	Column {
 		id: column
 		spacing: 16
-
-		Repeater {
-			model: root.buttons
-			PowerButtonWidget {}
-		}
+		children: root.buttons
 	}
 }

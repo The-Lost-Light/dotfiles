@@ -5,7 +5,6 @@ import "widgets"
 
 BarMouseLabel {
 	id: root
-	anchors.verticalCenter: parent.verticalCenter
 	hoverEnabled: true
 	text: TimeService.time
 

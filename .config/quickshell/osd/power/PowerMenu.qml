@@ -12,6 +12,7 @@ Menu {
 	}
 
 	PowerButton {
+		color: "#dd6777"
 		command: "systemctl poweroff"
 		text: "⏻"
 	}
