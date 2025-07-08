@@ -1,5 +1,5 @@
 > [!WARNING]
-> Currently migrating to niri and quickshell, for screenshot please check hyprland branch
+> Currently migrating to niri and quickshell, welcome to check the Hyprland branch
 
 ![screenshot](.dotfiles/assets/screenshot.png)
 # TODO

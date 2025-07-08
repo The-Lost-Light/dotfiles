@@ -5,48 +5,43 @@ import Quickshell.Services.Pipewire
 import "widgets"
 
 Row {
+	anchors.verticalCenter: parent.verticalCenter
 	spacing: 4
 
-	ListModel {
-		id: audio_model
+	component Audio: BarMouseLabel {
+		required property string name
+		required property string icon
+		text: {
+			let device =
+				name === "speaker" ? Pipewire.defaultAudioSink :
+				name === "microphone" ? Pipewire.defaultAudioSource :
+				null
 
-		ListElement {
-			icon: "󰍮"
-			device: "microphone"
+			if (device) {
+				let audio = device?.audio
+				icon + (audio.muted ? "Mute" : (audio.volume * 100).toFixed(0) + '%')
+			} else {
+				`Not found ${name}!`
+			}
 		}
-		ListElement {
-			icon: "󰕾"
-			device: "speaker"
+		onClicked: process.script(`${name} toggle`)
+		onWheel: event => {
+			if (event.angleDelta.y > 0) {
+				process.script(`${name} increase`)
+			} else if (event.angleDelta.y < 0) {
+				process.script(`${name} decrease`)
+			}
 		}
 	}
 
-	Repeater {
-		model: audio_model
+	Audio {
+		name: "microphone"
+		icon: "󰍮"
+	}
 
-		BarMouseLabel {
-			required property var modelData
-			text: {
-				let device =
-					modelData.device === "speaker" ? Pipewire.defaultAudioSink :
-					modelData.device === "microphone" ? Pipewire.defaultAudioSource :
-					null
-
-				if (device) {
-					let audio = device?.audio
-					modelData.icon + (audio.muted ? "Mute" : (audio.volume * 100).toFixed(0) + '%')
-				} else {
-					`Not found ${modelData.device}!`
-				}
-			}
-			onClicked: process.script(`${modelData.device} toggle`)
-			onWheel: event => {
-				if (event.angleDelta.y > 0) {
-					process.script(`${modelData.device} increase`)
-				} else if (event.angleDelta.y < 0) {
-				process.script(`${modelData.device} decrease`)
-				}
-			}
-		}
+	Audio {
+		name: "speaker"
+		icon: "󰕾"
 	}
 
 	PwObjectTracker {

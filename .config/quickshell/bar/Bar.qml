@@ -3,14 +3,14 @@ import "components"
 
 BarWidget {
 	left: Row {
-		spacing: 8
+		spacing: 4
 
 		Launcher {}
 		Overview {}
 	}
 
 	center: Row {
-		spacing: 8
+		spacing: 4
 
 		Arch {}
 		Time {}
@@ -18,7 +18,7 @@ BarWidget {
 	}
 
 	right: Row {
-		spacing: 8
+		spacing: 4
 
 		Monitor {}
 		Battery {}

@@ -4,6 +4,6 @@ import "widgets"
 
 BarButton {
 	visible: ArchService.updates > 0
-	text: `  ${ArchService.updates}`
+	text: ` ${ArchService.updates}`
 	onClicked: ArchService.update()
 }

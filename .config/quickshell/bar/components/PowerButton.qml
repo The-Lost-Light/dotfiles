@@ -5,28 +5,29 @@ import "widgets"
 import "root:osd/power"
 
 BarButton {
-	text: "⏻ "
+	text: "⏻"
+
 	onClicked: {
-		power_menu.activeAsync = true
+		powerMenu.activeAsync = true
 		timer.restart()
 	}
 
 	LazyLoader {
-		id: power_menu
+		id: powerMenu
 		PowerMenu {}
 	}
 
 	Timer {
 		id: timer
 		interval: 3000
-		onTriggered: power_menu.activeAsync = false
+		onTriggered: powerMenu.activeAsync = false
 	}
 
 	Connections {
 		target: EventBus
 
 		function onRequestPowerMenuClose() {
-			power_menu.activeAsync = false
+			powerMenu.activeAsync = false
 		}
 	}
 }

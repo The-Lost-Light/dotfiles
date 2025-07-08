@@ -1,5 +1,5 @@
-import QtQuick
-import QtQuick.Controls
+import Quickshell
+import Quickshell.Widgets
 import "root:services"
 import "widgets"
 
@@ -8,14 +8,28 @@ BarMouseLabel {
 	hoverEnabled: true
 	text: TimeService.time
 
-	ToolTip {
+	PopupWindow {
+		anchor {
+			item: root
+			rect {
+				x: (root.width - width) / 2
+				y: root.height + 8
+			}
+		}
+		color: "transparent"
+		implicitWidth: toolTip.implicitWidth
+		implicitHeight: toolTip.implicitHeight
 		visible: root.containsMouse
-		delay: 300
-		text: TimeService.date
-		background: Rectangle {
+
+		WrapperRectangle {
+			id: toolTip
 			color: "#1e1e2e"
-			height: root.height
+			margin: 8
 			radius: 8
+
+			BarLabel {
+				text: TimeService.date
+			}
 		}
 	}
 }

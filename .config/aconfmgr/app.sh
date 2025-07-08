@@ -102,6 +102,7 @@ AddPackage piper # GTK application to configure gaming mice
 
 # Terminal tools
 AddPackage brightnessctl # Lightweight brightness control tool
+AddPackage gping # Ping, but with a graph
 AddPackage man-pages-zh_tw # Traditional Chinese Linux man pages
 AddPackage playerctl # mpris media player controller and lib for spotify, vlc, audacious, bmp, xmms2, and others.
 AddPackage tealdeer # A fast tldr client in Rust

@@ -18,11 +18,14 @@ Variants {
 			top: true
 		}
 		color: "transparent"
-		implicitHeight: 30
+		implicitHeight: 40
 		screen: modelData
 
 		BarSection {
-			anchors.left: parent.left
+			anchors{
+				left: parent.left
+				leftMargin: 8
+			}
 			sourceComponent: root.left
 		}
 
@@ -32,7 +35,10 @@ Variants {
 		}
 
 		BarSection {
-			anchors.right: parent.right
+			anchors {
+				right: parent.right
+				rightMargin: 8
+			}
 			sourceComponent: root.right
 		}
 	}

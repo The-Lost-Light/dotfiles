@@ -1,29 +1,27 @@
-input  {
-	keyboard  {
-		xkb  {
+input {
+	keyboard {
+		xkb {
 			options "caps:ctrl_modifier"
 		}
 	}
-
-	touchpad  {
+	touchpad {
 		natural-scroll
 		tap
 		dwt
 		drag true
 		disabled-on-external-mouse
 	}
-
 	warp-mouse-to-focus mode="center-xy"
 	focus-follows-mouse max-scroll-amount="33%"
 }
 
 
-output "eDP-1"  {
+output "eDP-1" {
 	off
 	scale 1.25
 	variable-refresh-rate
 }
-output "HDMI-A-1"  {
+output "HDMI-A-1" {
 	mode "2560x1440"
 	scale 1.25
 	variable-refresh-rate
@@ -31,55 +29,55 @@ output "HDMI-A-1"  {
 }
 
 
-binds  {
+binds {
 	/* Global */
-	Mod+Tab               { toggle-overview; }
-	Mod+Q                 { close-window; }
-	Mod+Slash             { show-hotkey-overlay; }
+	Mod+Tab              { toggle-overview; }
+	Mod+Q                { close-window; }
+	Mod+Slash            { show-hotkey-overlay; }
 	// Focus
-	Mod+Left              { focus-column-left; }
-	Mod+Right             { focus-column-right; }
-	Mod+Up                { focus-window-or-workspace-up; }
-	Mod+Down              { focus-window-or-workspace-down; }
-	Mod+WheelScrollUp     { focus-column-left; }
-	Mod+WheelScrollDown   { focus-column-right; }
-	Mod+MouseForward      { focus-window-or-workspace-up; }
-	Mod+MouseBack         { focus-window-or-workspace-down; }
-	Mod+Shift+Left        { focus-monitor-left; }
-	Mod+Shift+Right       { focus-monitor-right; }
-	Mod+C                 { center-column; }
+	Mod+Left             { focus-column-left; }
+	Mod+Right            { focus-column-right; }
+	Mod+Up               { focus-window-or-workspace-up; }
+	Mod+Down             { focus-window-or-workspace-down; }
+	Mod+WheelScrollUp    { focus-column-left; }
+	Mod+WheelScrollDown  { focus-column-right; }
+	Mod+MouseForward     { focus-window-or-workspace-up; }
+	Mod+MouseBack        { focus-window-or-workspace-down; }
+	Mod+Shift+Left       { focus-monitor-left; }
+	Mod+Shift+Right      { focus-monitor-right; }
+	Mod+C                { center-column; }
 	// Move
-	Mod+Ctrl+Left         { move-column-left; }
-	Mod+Ctrl+Right        { move-column-right; }
-	Mod+Ctrl+Up           { move-window-up-or-to-workspace-up; }
-	Mod+Ctrl+Down         { move-window-down-or-to-workspace-down; }
-	Mod+Shift+Ctrl+Left   { move-column-to-monitor-left; }
-	Mod+Shift+Ctrl+Right  { move-column-to-monitor-right; }
-	Mod+BracketLeft       { consume-or-expel-window-left; }
-	Mod+BracketRight      { consume-or-expel-window-right; }
-	Mod+S                 { toggle-column-tabbed-display; }
+	Mod+Ctrl+Left        { move-column-left; }
+	Mod+Ctrl+Right       { move-column-right; }
+	Mod+Ctrl+Up          { move-window-up-or-to-workspace-up; }
+	Mod+Ctrl+Down        { move-window-down-or-to-workspace-down; }
+	Mod+Shift+Ctrl+Left  { move-column-to-monitor-left; }
+	Mod+Shift+Ctrl+Right { move-column-to-monitor-right; }
+	Mod+BracketLeft      { consume-or-expel-window-left; }
+	Mod+BracketRight     { consume-or-expel-window-right; }
+	Mod+S                { toggle-column-tabbed-display; }
 	// Resize
-	Mod+R                 { switch-preset-column-width; }
-	Mod+Shift+R           { switch-preset-window-height; }
-	Mod+G                 { maximize-column; }
-	Mod+Shift+G           { fullscreen-window; }
-	Mod+Ctrl+G            { expand-column-to-available-width; }
-	Mod+Ctrl+R            { reset-window-height; }
-	Mod+Minus             { set-column-width "-10%"; }
-	Mod+Equal             { set-column-width "+10%"; }
-	Mod+Shift+Minus       { set-window-height "-10%"; }
-	Mod+Shift+Equal       { set-window-height "+10%"; }
-	Mod+F                 { switch-focus-between-floating-and-tiling; }
-	Mod+Shift+F           { toggle-window-floating; }
+	Mod+R                { switch-preset-column-width; }
+	Mod+Shift+R          { switch-preset-window-height; }
+	Mod+G                { maximize-column; }
+	Mod+Shift+G          { fullscreen-window; }
+	Mod+Ctrl+G           { expand-column-to-available-width; }
+	Mod+Ctrl+R           { reset-window-height; }
+	Mod+Minus            { set-column-width "-10%"; }
+	Mod+Equal            { set-column-width "+10%"; }
+	Mod+Shift+Minus      { set-window-height "-10%"; }
+	Mod+Shift+Equal      { set-window-height "+10%"; }
+	Mod+F                { switch-focus-between-floating-and-tiling; }
+	Mod+Shift+F          { toggle-window-floating; }
 	// Screenshot
-	Print                 { screenshot; }
-	Mod+Print             { screenshot-window; }
-	Alt+Print             { screenshot-screen; }
+	Print                { screenshot; }
+	Mod+Print            { screenshot-window; }
+	Alt+Print            { screenshot-screen; }
 
 	/* Applications */
-	Mod+Space             { spawn "kitty"; }
-	Mod+A                 { spawn "nwg-drawer"; }
-	Mod+E                 { spawn "kitty" "yazi"; }
+	Mod+Space            { spawn "kitty"; }
+	Mod+A                { spawn "nwg-drawer"; }
+	Mod+E                { spawn "kitty" "yazi"; }
 
 	/* System */
 	// Change volume
@@ -99,39 +97,37 @@ binds  {
 	XF86AudioNext         allow-when-locked=true { spawn "playerctl" "--player" "playerctld" "next"; }
 	XF86AudioPrev         allow-when-locked=true { spawn "playerctl" "--player" "playerctld" "previous"; }
 	// G14
-	XF86Launch1           { spawn "rog-control-center"; }
-	XF86Launch4           { spawn "asusctl" "profile" "-n"; }
+	XF86Launch1          { spawn "rog-control-center"; }
+	XF86Launch4          { spawn "asusctl" "profile" "-n"; }
 }
 
 
-layer-rule {
-    match namespace="^wallpaper$"
-    place-within-backdrop true
-}
-
-
-layout  {
+layout {
 	gaps 16
+	struts {
+		top -12
+		bottom -4
+	}
 	always-center-single-column
 	empty-workspace-above-first
 	default-column-display "tabbed"
-	tab-indicator  {
+	tab-indicator {
 		hide-when-single-tab
 		place-within-column
 		gaps-between-tabs 8
 		corner-radius 8
 	}
-	preset-window-heights  {
+	preset-window-heights {
 		proportion 0.5
 		proportion 1.0
 	}
-	focus-ring  {
+	focus-ring {
 		width 2
 		active-color "#f5c2e7cc"
 		inactive-color "#00000000"
 		urgent-color "#9b0000"
 	}
-	shadow  {
+	shadow {
 		on
 		softness 20
 		spread 8
@@ -149,32 +145,42 @@ environment {
 	DISPLAY ":0"
 }
 
-
-cursor  {
+cursor {
 	hide-when-typing
 	hide-after-inactive-ms 5000
 }
 
 
-clipboard  {
+clipboard {
 	disable-primary
 }
 
 
-hotkey-overlay  {
+hotkey-overlay {
 	skip-at-startup
 }
 
 
-window-rule  {
+layer-rule {
+    match namespace="^wallpaper$"
+    place-within-backdrop true
+}
+
+
+window-rule {
 	geometry-corner-radius 16
 	clip-to-geometry true
 	draw-border-with-background false
 	open-maximized true
 }
 
-window-rule  {
-	match app-id=r#"firefox-developer-edition$"# title=r#"^子母畫面$"# //Picture-in-Picture
+window-rule {
+	match app-id="org.gnome.Nautilus" title="Open Folder"
+	open-floating true
+}
+
+window-rule {
+	match app-id="firefox-developer-edition$" title="子母畫面" //Picture-in-Picture
 	open-floating true
 	default-floating-position x=0 y=0 relative-to="bottom-right"
 }
@@ -185,14 +191,14 @@ window-rule {
     open-focused false
 }
 
-gestures  {
-	dnd-edge-view-scroll  {
+gestures {
+	dnd-edge-view-scroll {
 		max-speed 2000
 	}
-	dnd-edge-workspace-switch  {
+	dnd-edge-workspace-switch {
 		max-speed 2000
 	}
-	hot-corners  {
+	hot-corners {
 		off
 	}
 }
