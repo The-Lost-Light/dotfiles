@@ -2,8 +2,15 @@ import QtQuick
 import "root:services"
 import "widgets"
 
-BarButton {
+BarMouseLabel {
+	id: root
+	hoverEnabled: true
 	visible: ArchService.updates > 0
-	text: ` ${ArchService.updates}`
+	text: `${ArchService.updates}`
 	onClicked: ArchService.update()
+
+	BarToolTip {
+		item: root
+		text: ArchService.packages.join("<br>")
+	}
 }

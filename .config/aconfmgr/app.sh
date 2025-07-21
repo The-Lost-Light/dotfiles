@@ -13,6 +13,7 @@ AddPackage zellij # A terminal multiplexer
 
 # Communication
 AddPackage discord # All-in-one voice and text chat for gamers
+AddPackage fractal # Matrix group messaging app
 AddPackage signal-desktop # Signal Private Messenger for Linux
 AddPackage telegram-desktop # Official Telegram Desktop client
 
@@ -24,6 +25,7 @@ AddPackage papers # Document viewer for PDF and other document formats aimed at 
 AddPackage iotas # Simple note taking with Markdown support and optional Nextcloud Notes sync
 AddPackage onlyoffice-bin # An office suite that combines text, spreadsheet and presentation editors
 AddPackage --foreign appflowy-bin # AppFlowy is an open-source alternative to Notion. You are in charge of your data and customizations.
+AddPackage --foreign planify # Task manager with Todoist and Nextcloud support
 
 # Art
 AddPackage blender # A fully integrated 3D graphics creation suite
@@ -103,11 +105,11 @@ AddPackage piper # GTK application to configure gaming mice
 # Terminal tools
 AddPackage brightnessctl # Lightweight brightness control tool
 AddPackage gping # Ping, but with a graph
+AddPackage isd # TUI for systemd
 AddPackage man-pages-zh_tw # Traditional Chinese Linux man pages
 AddPackage playerctl # mpris media player controller and lib for spotify, vlc, audacious, bmp, xmms2, and others.
 AddPackage tealdeer # A fast tldr client in Rust
 AddPackage wev # A tool for debugging wayland events on a Wayland window, analagous to the X11 tool xev
 AddPackage --foreign catnap-git # A minimalistic and fast system fetch written in Nim.
-AddPackage --foreign isd # TUI for systemd
 AddPackage --foreign python-terminaltexteffects # Visual effects engine applied to text in the terminal.
 AddPackage --foreign tty-share # Shares terminal session with no setup on remote end (browser)

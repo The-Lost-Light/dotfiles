@@ -3,7 +3,6 @@ if status is-login
 	set -x LANG zh_TW.UTF-8
 	set -x DISPLAY :0 # xwayland-satellite
 	set -x ELECTRON_OZONE_PLATFORM_HINT auto
-	set -x STEAM_FORCE_DESKTOPUI_SCALING 1.25
 	set -x ZED_WINDOW_DECORATIONS server
 	set -x QT_QPA_PLATFORMTHEME qt6ct
 	set -x XCURSOR_THEME Bibata-Modern-Ice
