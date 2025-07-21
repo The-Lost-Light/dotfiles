@@ -1,8 +1,8 @@
 import QtQuick
 import Quickshell
-import "root:services"
+import qs.services
+import qs.osd.power
 import "widgets"
-import "root:osd/power"
 
 BarButton {
 	text: "⏻"

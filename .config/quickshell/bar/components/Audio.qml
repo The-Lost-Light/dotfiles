@@ -10,20 +10,11 @@ Row {
 
 	component Audio: BarMouseLabel {
 		required property string name
+		required property PwNode device
 		required property string icon
-		text: {
-			let device =
-				name === "speaker" ? Pipewire.defaultAudioSink :
-				name === "microphone" ? Pipewire.defaultAudioSource :
-				null
-
-			if (device) {
-				let audio = device?.audio
-				icon + (audio.muted ? "Mute" : (audio.volume * 100).toFixed(0) + '%')
-			} else {
-				`Not found ${name}!`
-			}
-		}
+		readonly property PwNodeAudio audio: device?.audio ?? null
+		visible: !!device?.ready && audio.volume >= 0
+		text: icon + (audio?.muted ? "Mute" : `${(audio?.volume * 100).toFixed(0)}%`)
 		onClicked: process.script(`${name} toggle`)
 		onWheel: event => {
 			if (event.angleDelta.y > 0) {
@@ -36,11 +27,13 @@ Row {
 
 	Audio {
 		name: "microphone"
+		device: Pipewire.defaultAudioSource
 		icon: "󰍮"
 	}
 
 	Audio {
 		name: "speaker"
+		device: Pipewire.defaultAudioSink
 		icon: "󰕾"
 	}
 

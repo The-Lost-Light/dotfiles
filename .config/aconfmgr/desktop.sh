@@ -11,13 +11,14 @@ CopyFile /etc/greetd/quickshell.qml
 CopyFile /etc/pam.d/greetd # For gnome-keyring
 
 # Widget
-AddPackage quickshell # Flexible toolkit for making desktop shells with QtQuick
 AddPackage swaync # A simple GTK based notification daemon for Sway
+AddPackage --foreign quickshell-git # Flexible toolkit for making desktop shells with QtQuick
 
 # XDG Desktop
 AddPackage dex # Program to generate and execute DesktopEntry files of type Application
 AddPackage handlr-regex # Powerful alternative to xdg-utils written in Rust
 AddPackage xdg-desktop-portal-gnome # Backend implementation for xdg-desktop-portal for the GNOME desktop environment
+AddPackage --foreign pinapp-git # Create your own application shortcuts
 
 # Polkit
 AddPackage polkit-gnome # Legacy polkit authentication agent for GNOME

@@ -4,7 +4,7 @@ import Quickshell.Services.SystemTray
 import Quickshell.Widgets
 
 IconImage {
-	id: icon
+	id: root
 	required property SystemTrayItem modelData
 	asynchronous: true
 	implicitSize: 18
@@ -19,14 +19,13 @@ IconImage {
 	}
 
 	MouseArea {
-		id: root
 		acceptedButtons: Qt.LeftButton | Qt.RightButton
 		anchors.fill: parent
 
 		onClicked: event => {
-			if (!icon.modelData.onlyMenu && event.button === Qt.LeftButton)
-				icon.modelData.activate();
-			else if (icon.modelData.hasMenu && event.button === Qt.RightButton)
+			if (!root.modelData.onlyMenu && event.button === Qt.LeftButton)
+				root.modelData.activate();
+			else if (root.modelData.hasMenu && event.button === Qt.RightButton)
 				menu.open();
 		}
 	}
@@ -34,9 +33,9 @@ IconImage {
 	QsMenuAnchor {
 		id: menu
 		anchor {
-			item: icon
-			rect.y: icon.y + 16
+			item: root
+			rect.y: root.y + 16
 		}
-		menu: icon.modelData.menu
+		menu: root.modelData.menu
 	}
 }

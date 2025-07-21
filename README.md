@@ -3,7 +3,7 @@
 
 ![screenshot](.dotfiles/assets/screenshot.png)
 # TODO
-- [ ] Quickshell
+- Quickshell
 	- [x] bar
 		- [ ] client name
 		- [ ] Media display
@@ -21,7 +21,7 @@
 |Icon  |Tela Icon Theme  |
 |Cursor|Bibata Cursor    |
 
-# Fonts
+## Fonts
 |Type           |Package           |
 |---------------|------------------|
 |Chinese        |Noto Sans CJK (TC)|

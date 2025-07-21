@@ -22,19 +22,19 @@ AddPackage foliate # A simple and modern GTK eBook reader
 AddPackage papers # Document viewer for PDF and other document formats aimed at the GNOME desktop
 
 # Documents
+AddPackage errands # Todo application for those who prefer simplicity
 AddPackage iotas # Simple note taking with Markdown support and optional Nextcloud Notes sync
 AddPackage onlyoffice-bin # An office suite that combines text, spreadsheet and presentation editors
 AddPackage --foreign appflowy-bin # AppFlowy is an open-source alternative to Notion. You are in charge of your data and customizations.
-AddPackage --foreign planify # Task manager with Todoist and Nextcloud support
 
 # Art
 AddPackage blender # A fully integrated 3D graphics creation suite
 AddPackage --foreign aseprite # Create animated sprites and pixel art
-AddPackage --foreign pixelorama-bin # A free & open-source 2D sprite editor, made with the Godot Engine
 
 # Image
 AddPackage imagemagick # An image viewing/manipulation program
 AddPackage oculante # A minimalistic image viewer with analysis and editing tools
+AddPackage --foreign gradia # Make your screenshots ready for the world.
 
 # Music
 AddPackage decibels # Audio player for GNOME
@@ -49,6 +49,7 @@ AddPackage --foreign spicetify-marketplace-bin # Spicetify app that integrates a
 # Video
 AddPackage celluloid # Simple GTK+ frontend for mpv
 AddPackage mpv # a free, open source, and cross-platform media player
+AddPackage --foreign animeko-appimage # 集找番、追番、看番的一站式弹幕追番平台
 
 # Screen Record
 AddPackage kooha # Elegantly record your screen
@@ -78,13 +79,14 @@ AddPackage xpadneo-dkms # Advanced Linux Driver for Xbox One Wireless Gamepad
 # System Monitor
 AddPackage btop # A monitor of system resources, bpytop ported to C++
 AddPackage mission-center # Monitor your CPU, Memory, Disk, Network and GPU usage
+AddPackage --foreign speedtest-librespeed # A graphical librespeed client written using gtk4 + libadwaita
 
 # Share/Sync/Download
 AddPackage baidupcs-go # Terminal utility for Baidu Network Disk
+AddPackage localsend # An open source cross-platform alternative to AirDrop
 AddPackage syncthing # Open Source Continuous Replication / Cluster Synchronization Thing
 AddPackage yt-dlp # A youtube-dl fork with additional features and fixes
 AddPackage --foreign abdownloadmanager-bin # A Download Manager that speeds up your downloads
-AddPackage --foreign localsend-bin # An open source cross-platform alternative to AirDrop
 AddPackage --foreign lux-dl # Fast and simple video download library and CLI tool written in Go
 AddPackage --foreign megatools # CLI for MEGA
 
@@ -103,7 +105,6 @@ AddPackage baobab # A graphical directory tree analyzer
 AddPackage piper # GTK application to configure gaming mice
 
 # Terminal tools
-AddPackage brightnessctl # Lightweight brightness control tool
 AddPackage gping # Ping, but with a graph
 AddPackage isd # TUI for systemd
 AddPackage man-pages-zh_tw # Traditional Chinese Linux man pages

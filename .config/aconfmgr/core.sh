@@ -24,6 +24,7 @@ CopyFile /etc/fwupd/remotes.d/lvfs-testing.conf
 CopyFile /etc/fwupd/remotes.d/lvfs.conf
 AddPackage linux-firmware # Firmware files for Linux
 
+## Device
 # Audio
 AddPackage alsa-utils # Advanced Linux Sound Architecture - Utilities
 AddPackage easyeffects # Audio Effects for Pipewire applications
@@ -32,12 +33,12 @@ AddPackage pipewire-alsa # Low-latency audio/video router and processor - ALSA c
 AddPackage pipewire-pulse # Low-latency audio/video router and processor - PulseAudio replacement
 AddPackage realtime-privileges # Realtime privileges for users
 AddPackage --foreign sonusmix # Next-gen Pipewire audio routing tool
-
+# Brightness
+AddPackage --foreign brightnessctl-git # Lightweight brightness control tool
 # Network
 AddPackage network-manager-applet # Applet for managing network connections
 AddPackage networkmanager # Network connection manager and user applications
 CopyFile /etc/NetworkManager/conf.d/wifi-powersave.conf
-
 # Bluetooth
 AddPackage blueman # GTK+ Bluetooth Manager
 AddPackage gnome-bluetooth-3.0 # GNOME Bluetooth Subsystem

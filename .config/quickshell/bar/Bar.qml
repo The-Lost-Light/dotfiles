@@ -20,7 +20,6 @@ BarWidget {
 	right: Row {
 		spacing: 4
 
-		Monitor {}
 		Battery {}
 		Brightness {}
 		Audio {}

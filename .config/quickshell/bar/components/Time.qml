@@ -1,4 +1,4 @@
-import "root:services"
+import qs.services
 import "widgets"
 
 BarMouseLabel {

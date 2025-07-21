@@ -7,6 +7,7 @@ PanelWindow {
 	default required property list<PowerButton> buttons
 	anchors.right: true
 	color: "transparent"
+	exclusionMode: ExclusionMode.Ignore
 	implicitHeight: column.implicitHeight
 	implicitWidth: column.implicitWidth
 	margins.right: 16

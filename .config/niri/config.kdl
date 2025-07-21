@@ -17,13 +17,16 @@ input {
 
 
 output "eDP-1" {
-	off
 	scale 1.25
 	variable-refresh-rate
 }
-output "HDMI-A-1" {
+output "Philips Consumer Electronics Company PHL 275M8RZ UK52208002066" {
 	mode "2560x1440"
 	scale 1.25
+	variable-refresh-rate
+	focus-at-startup
+}
+output "PNP(BNQ) BenQ GW2450H D7D00271SL0" {
 	variable-refresh-rate
 	focus-at-startup
 }

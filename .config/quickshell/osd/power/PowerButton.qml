@@ -1,7 +1,7 @@
 import QtQuick
 import QtQuick.Controls
 import Quickshell.Io
-import "root:services"
+import qs.services
 
 Button {
 	id: button
