@@ -24,6 +24,7 @@ ShellRoot {
 			color: "transparent"
 			exclusionMode: ExclusionMode.Ignore
 			focusable: true
+			screen: modelData
 
 			Image {
 				anchors.fill: parent
@@ -42,7 +43,7 @@ ShellRoot {
 					text: root.username
 					onTextChanged: root.username = text
 					onAccepted: {
-						if (text.length > 0) password.focus = true
+						if (text.length > 0) password.focus = true;
 					}
 				}
 
@@ -54,8 +55,8 @@ ShellRoot {
 					text: root.password
 					onTextChanged: root.password = text
 					onAccepted: {
-						root.status = ""
-						Greetd.createSession(root.username)
+						root.status = "";
+						Greetd.createSession(root.username);
 					}
 				}
 
@@ -73,16 +74,18 @@ ShellRoot {
 		target: Greetd
 
 		function onAuthMessage(message, error, responseRequired, echoResponse) {
-			if(echoResponse) root.status = message
-			if(responseRequired) Greetd.respond(root.password)
+			if (echoResponse)
+				root.status = message;
+			if (responseRequired)
+				Greetd.respond(root.password);
 		}
 
 		function onAuthFailure(message) {
-			root.status = message
+			root.status = message;
 		}
 
 		function onReadyToLaunch() {
-			Greetd.launch(["niri-session"])
+			Greetd.launch(["niri-session"]);
 		}
 	}
 }

@@ -4,6 +4,7 @@ AddPackage git-delta # Syntax-highlighting pager for git and diff output
 AddPackage jujutsu # Git-compatible VCS that is both simple and powerful
 AddPackage onefetch # Git repository summary on your terminal
 AddPackage --foreign better-commits # A CLI for creating better commits following the conventional commit guidelines.
+AddPackage --foreign turtle # Manage your git repositories with easy-to-use dialogs in Nautilus.
 
 # Editor
 AddPackage helix # A post-modern modal text editor

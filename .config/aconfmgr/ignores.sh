@@ -1,6 +1,7 @@
 IgnorePath "/usr/*"
 IgnorePath "/var/*"
 IgnorePath "/opt/*"
+
 # Timeshift
 IgnorePath "/timeshift-btrfs/*"
 # Nix
@@ -19,7 +20,7 @@ IgnorePath "/efi/EFI/Microsoft/*"
 IgnorePath "/efi/EFI/Arch/*.img"
 IgnorePath "/efi/EFI/Arch/vmlinuz-linux*"
 
-# ETC
+## ETC
 IgnorePath "/etc/ca-certificates/*"
 IgnorePath "/etc/fonts/*"
 IgnorePath "/etc/spotify-launcher.conf"

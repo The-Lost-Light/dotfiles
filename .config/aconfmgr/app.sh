@@ -4,6 +4,8 @@ AddPackage firefox-developer-edition-i18n-zh-tw # Chinese (Traditional) language
 AddPackage chromium # A web browser built for speed, simplicity, and security
 
 # File Manager
+AddPackage nautilus # Default file manager for GNOME
+AddPackage nautilus-python # Python bindings for the Nautilus Extension API
 AddPackage yazi # Blazing fast terminal file manager written in Rust, based on async I/O
 AddPackage termscp # A feature rich terminal UI file transfer and explorer
 
@@ -49,6 +51,7 @@ AddPackage --foreign spicetify-marketplace-bin # Spicetify app that integrates a
 # Video
 AddPackage celluloid # Simple GTK+ frontend for mpv
 AddPackage mpv # a free, open source, and cross-platform media player
+AddPackage vlc # Multi-platform MPEG, VCD/DVD, and DivX player
 AddPackage --foreign animeko-appimage # 集找番、追番、看番的一站式弹幕追番平台
 
 # Screen Record
