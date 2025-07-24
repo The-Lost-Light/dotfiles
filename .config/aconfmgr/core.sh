@@ -18,13 +18,12 @@ AddPackage btrfs-progs # Btrfs filesystem utilities
 AddPackage trash-cli # Command line trashcan (recycle bin) interface
 CopyFile /etc/fstab
 
+## Device
 # Firmware
 AddPackage fwupd # Simple daemon to allow session software to update firmware
 CopyFile /etc/fwupd/remotes.d/lvfs-testing.conf
 CopyFile /etc/fwupd/remotes.d/lvfs.conf
 AddPackage linux-firmware # Firmware files for Linux
-
-## Device
 # Audio
 AddPackage alsa-utils # Advanced Linux Sound Architecture - Utilities
 AddPackage easyeffects # Audio Effects for Pipewire applications
@@ -108,7 +107,4 @@ AddPackage wine-staging # A compatibility layer for running Windows programs - S
 AddPackage wine-gecko # Wine's built-in replacement for Microsoft's Internet Explorer
 AddPackage wine-mono # Wine's built-in replacement for Microsoft's .NET Framework
 AddPackage winetricks # Script to install various redistributable runtime libraries in Wine.
-AddPackage lib32-gnutls # A library which provides a secure layer over a reliable transport layer (32-bit)
-AddPackage lib32-sdl2-compat # An SDL2 compatibility layer that uses SDL3 behind the scenes - 32-bit
-AddPackage lib32-pipewire # Low-latency audio/video router and processor - 32-bit
-AddPackage samba # SMB Fileserver and AD Domain server
+AddPackage --foreign bottles # Easily manage wine and proton prefix

@@ -33,8 +33,6 @@ AddPackage --foreign flutter-bin # Cross platform widget toolkit for Dart (monol
 
 # Java
 AddPackage jdk-openjdk # OpenJDK Java development kit
-AddPackage jre8-openjdk # OpenJDK Java 8 full runtime environment
-AddPackage jre17-openjdk # OpenJDK Java 17 full runtime environment
 
 # Python
 AddPackage uv # An extremely fast Python package installer and resolver written in Rust
