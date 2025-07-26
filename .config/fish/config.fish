@@ -55,7 +55,7 @@ if status is-interactive
 	zoxide init --cmd cd fish | source
 
 	# Initial Jujutsu
-	jj util completion fish | source
+	COMPLETE=fish jj | source
 
 	# Initial UV
 	uv generate-shell-completion fish | source

@@ -1,6 +1,6 @@
 import QtQuick
 import QtQuick.Controls
-import Quickshell.Io
+import Quickshell
 import qs.services
 
 Button {
@@ -13,7 +13,10 @@ Button {
 		pixelSize: 48
 	}
 	palette.buttonText: color || undefined
-	onClicked: process.running = true
+	onClicked: {
+		Quickshell.execDetached(button.command.split(/\s+/));
+		EventBus.requestPowerMenuClose();
+	}
 
 	background: Rectangle {
 		color: {
@@ -27,11 +30,5 @@ Button {
 		implicitHeight: 96
 		implicitWidth: 96
 		radius: 16
-	}
-
-	Process {
-		id: process
-		command: button.command.split(/\s+/)
-		onRunningChanged: if (!running) EventBus.requestPowerMenuClose()
 	}
 }

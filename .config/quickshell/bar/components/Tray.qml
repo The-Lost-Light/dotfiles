@@ -1,5 +1,6 @@
 import QtQuick
 import Quickshell.Services.SystemTray
+import "widgets"
 
 Row {
 	anchors.verticalCenter: parent.verticalCenter
@@ -8,6 +9,6 @@ Row {
 	Repeater {
 		model: SystemTray.items
 
-		TrayItem {}
+		BarTrayItem {}
 	}
 }

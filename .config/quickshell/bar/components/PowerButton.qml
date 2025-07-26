@@ -8,8 +8,9 @@ BarButton {
 	text: "⏻"
 
 	onClicked: {
-		powerMenu.activeAsync = true
-		timer.restart()
+		powerMenu.activeAsync = !powerMenu.activeAsync;
+		if (timer.running) timer.stop();
+		else timer.start();
 	}
 
 	LazyLoader {

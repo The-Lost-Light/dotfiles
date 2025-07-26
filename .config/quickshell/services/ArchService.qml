@@ -21,8 +21,7 @@ Singleton {
 			const new_parts = new_version.split(/([:.\-_+])/);
 
 			let diffIndex = old_parts.findIndex((part, i) => part !== new_parts[i]);
-			if (diffIndex === -1)
-				diffIndex = old_parts.length;
+			if (diffIndex === -1) diffIndex = old_parts.length;
 
 			const unchanged = old_parts.slice(0, diffIndex).join("");
 			const changed = new_parts.slice(diffIndex).join("");
