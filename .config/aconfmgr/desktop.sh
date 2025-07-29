@@ -2,7 +2,6 @@
 AddPackage niri # A scrollable-tiling Wayland compositor
 
 # Greeter
-AddPackage gnome-keyring # Stores passwords and encryption keys
 AddPackage greetd # Generic greeter daemon
 CopyFile /etc/greetd/config.toml
 CopyFile /etc/greetd/login.png
@@ -10,9 +9,13 @@ CopyFile /etc/greetd/niri.kdl
 CopyFile /etc/greetd/quickshell.qml
 CopyFile /etc/pam.d/greetd # For gnome-keyring
 
+# Encryption
+AddPackage gnome-keyring # Stores passwords and encryption keys
+AddPackage seahorse # GNOME application for managing PGP keys
+
 # Widget
+AddPackage quickshell # Flexible toolkit for making desktop shells with QtQuick
 AddPackage swaync # A simple GTK based notification daemon for Sway
-AddPackage --foreign quickshell-git # Flexible toolkit for making desktop shells with QtQuick
 
 # XDG Desktop
 AddPackage dex # Program to generate and execute DesktopEntry files of type Application

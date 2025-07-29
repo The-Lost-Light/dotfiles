@@ -15,6 +15,7 @@ Singleton {
 	}
 
 	function version(list) {
+		if (list === "") return []
 		return list.trim().split("\n").map(line => {
 			const [name, old_verion, , new_version] = line.split(" ");
 			const old_parts = old_verion.split(/([:.\-_+])/);

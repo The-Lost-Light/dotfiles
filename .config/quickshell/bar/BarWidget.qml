@@ -1,6 +1,7 @@
 pragma ComponentBehavior: Bound
 import QtQuick
 import Quickshell
+import Quickshell.Widgets
 
 Variants {
 	id: root
@@ -25,12 +26,12 @@ Variants {
 				left: parent.left
 				leftMargin: 8
 			}
-			sourceComponent: root.left
+			items: root.left
 		}
 
 		BarSection {
 			anchors.centerIn: parent
-			sourceComponent: root.center
+			items: root.center
 		}
 
 		BarSection {
@@ -38,7 +39,21 @@ Variants {
 				right: parent.right
 				rightMargin: 8
 			}
-			sourceComponent: root.right
+			items: root.right
+		}
+
+		component BarSection: WrapperRectangle {
+			property alias items: loader.sourceComponent
+			anchors.verticalCenter: parent.verticalCenter
+			color: "#1e1e2e"
+			implicitHeight: 30
+			leftMargin: 8
+			rightMargin: 8
+			radius: 8
+
+			Loader {
+				id: loader
+			}
 		}
 	}
 }

@@ -82,14 +82,13 @@ AddPackage xpadneo-dkms # Advanced Linux Driver for Xbox One Wireless Gamepad
 # System Monitor
 AddPackage btop # A monitor of system resources, bpytop ported to C++
 AddPackage mission-center # Monitor your CPU, Memory, Disk, Network and GPU usage
-AddPackage --foreign speedtest-librespeed # A graphical librespeed client written using gtk4 + libadwaita
 
 # Share/Sync/Download
+AddPackage ab-download-manager # A Download Manager that speeds up your downloads
 AddPackage baidupcs-go # Terminal utility for Baidu Network Disk
 AddPackage localsend # An open source cross-platform alternative to AirDrop
 AddPackage syncthing # Open Source Continuous Replication / Cluster Synchronization Thing
 AddPackage yt-dlp # A youtube-dl fork with additional features and fixes
-AddPackage --foreign abdownloadmanager-bin # A Download Manager that speeds up your downloads
 AddPackage --foreign lux-dl # Fast and simple video download library and CLI tool written in Go
 AddPackage --foreign megatools # CLI for MEGA
 
@@ -105,7 +104,6 @@ AddPackage scrcpy # Display and control your Android device
 
 # Devices
 AddPackage baobab # A graphical directory tree analyzer
-AddPackage piper # GTK application to configure gaming mice
 
 # Terminal tools
 AddPackage gping # Ping, but with a graph
