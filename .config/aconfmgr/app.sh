@@ -53,6 +53,7 @@ AddPackage celluloid # Simple GTK+ frontend for mpv
 AddPackage mpv # a free, open source, and cross-platform media player
 AddPackage vlc # Multi-platform MPEG, VCD/DVD, and DivX player
 AddPackage --foreign animeko-appimage # 集找番、追番、看番的一站式弹幕追番平台
+AddPackage --foreign kazumi # 基于自定义规则的番剧采集APP，支持流媒体在线观看，支持弹幕
 
 # Screen Record
 AddPackage kooha # Elegantly record your screen

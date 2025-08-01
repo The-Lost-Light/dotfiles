@@ -4,8 +4,9 @@ import qs.widgets
 Popup {
 	required property var item
 	property alias text: label.text
+	implicitHeight: toolTip.implicitHeight
+	implicitWidth: toolTip.implicitWidth
 	parent: item
-	child: toolTip
 	visible: item.containsMouse
 
 	WrapperRectangle {

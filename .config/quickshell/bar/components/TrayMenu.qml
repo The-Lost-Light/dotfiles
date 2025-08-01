@@ -2,28 +2,26 @@ pragma ComponentBehavior: Bound
 import QtQuick
 import QtQuick.Controls
 import Quickshell
-import Quickshell.Widgets
 import qs.widgets
 
 Popup {
 	id: root
 	property alias menu: initialItem.menu
-	child: wrapMenu
+	implicitHeight: stackView.currentItem?.implicitHeight
+	implicitWidth: stackView.currentItem?.implicitWidth
+	visible: true
 
-	WrapperRectangle {
-		id: wrapMenu
-		color: "#1e1e2e"
-		margin: 8
-		radius: 8
-		implicitWidth: stackView.currentItem?.implicitWidth
-		implicitHeight: stackView.currentItem?.implicitHeight
+	StackView {
+		id: stackView
+		anchors.fill: parent
 
-		StackView {
-			id: stackView
-			anchors.fill: parent
-			initialItem: SubMenu {
-				id: initialItem
-			}
+		background: Rectangle {
+			color: "#1e1e2e"
+			radius: 8
+		}
+
+		initialItem: SubMenu {
+			id: initialItem
 		}
 	}
 
@@ -139,10 +137,10 @@ Popup {
 				isSubMenu: true
 			});
 			else {
-				root.visible = false;
 				stackView.replace(subMenu, {
 					menu: column.menu
 				}, StackView.Immediate);
+				root.destroy()
 			}
 		}
 	}
@@ -169,9 +167,5 @@ Popup {
 			radius: 4
 			visible: indicator.entry.checkState
 		}
-	}
-
-	function toggle() {
-		root.visible = !root.visible;
 	}
 }

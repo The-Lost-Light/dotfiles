@@ -4,14 +4,22 @@
 ![screenshot](.dotfiles/assets/screenshot.png)
 # TODO
 - Quickshell
-	- [x] bar
-		- [ ] client name
+	- [x] Bar
+		- [x] Launcher
+		- [x] Overview
+		- [ ] Workspce/Client
+		- [x] Arch update checker
+		- [x] Time
 		- [ ] Media display
+		- [x] Battery
+		- [x] Brightness
+		- [x] Volumn
 		- [ ] Net speed
+		- [x] Tray menu
 		- [ ] Settings center
-	- [x] powermenu
-	- [x] greeter
-	- [ ] notifications
+	- [x] Powermenu
+	- [x] Greeter
+	- [ ] Notifications
 
 # Themes
 |Type  |Package          |

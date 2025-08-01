@@ -4,7 +4,6 @@ import Quickshell
 PopupWindow {
 	id: root
 	required property Item parent
-	required property Item child
 
 	anchor {
 		item: root.parent
@@ -14,6 +13,4 @@ PopupWindow {
 		}
 	}
 	color: "transparent"
-	implicitWidth: child.implicitWidth
-	implicitHeight: child.implicitHeight
 }
