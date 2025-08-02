@@ -11,6 +11,6 @@ BarLabel {
 		anchors.fill: parent
 		id: mouseArea
 		onClicked: root.clicked()
-		onWheel: event => parent.wheel(event)
+		onWheel: event => root.wheel(event)
 	}
 }

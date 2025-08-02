@@ -1,16 +1,16 @@
 pragma ComponentBehavior: Bound
 import QtQuick
+import QtQuick.Controls
+import Quickshell
 import Quickshell.Services.SystemTray
 import Quickshell.Widgets
 
 Row {
+	id: root
 	anchors.verticalCenter: parent.verticalCenter
 	spacing: 2
 
 	Repeater {
-		id: repeater
-		property QtObject menuInstance: null
-		property string menuID: ""
 		model: SystemTray.items
 
 		IconImage {
@@ -32,31 +32,54 @@ Row {
 				acceptedButtons: Qt.LeftButton | Qt.RightButton
 				anchors.fill: parent
 				onClicked: event => {
-					if (!item.modelData.onlyMenu && event.button === Qt.LeftButton)
-						item.modelData.activate();
-					else if (item.modelData.hasMenu && event.button === Qt.RightButton) {
-						let sameItem = repeater.menuID === item.modelData.id;
-						if (repeater.menuInstance) {
-							repeater.menuInstance.destroy();
-							repeater.menuInstance = null;
-							if (sameItem) repeater.menuID = "";
-						}
-						if (!sameItem) {
-							repeater.menuInstance = menu.createObject(item, {
-								parent: item,
-								menu: item.modelData.menu
-							});
-							repeater.menuID = item.modelData.id;
-						}
+					if (popup.trayItem === item) root.trayMenuClose()
+					else {
+						popup.trayItem = item
+						menu.replace(subMenu, { menu: item.modelData.menu }, StackView.Immediate);
 					}
 				}
 			}
 		}
 	}
 
-	Component {
-		id: menu
+	PopupWindow {
+		id: popup
+		property Item trayItem: root
+		anchor {
+			item: root
+			rect {
+				x: trayItem.x + (trayItem.width - width) / 2
+				y: trayItem.y + trayItem.height + 8
+			}
+		}
+		color: "transparent"
+		implicitHeight: menu.currentItem?.implicitHeight ?? implicitHeight
+		implicitWidth: menu.currentItem?.implicitWidth ?? implicitWidth
+		visible: !menu.empty
 
-		TrayMenu {}
+		StackView {
+			id: menu
+			anchors.fill: parent
+
+			background: Rectangle {
+				color: "#1e1e2e"
+				radius: 8
+			}
+		}
+	}
+
+	Component {
+		id: subMenu
+
+		TrayMenu {
+			onRequestTrayMenuPush: entry => menu.pushItem(subMenu, { menu: entry, isSubMenu: true }, StackView.Immediate);
+			onRequestTrayMenuPop: menu.pop()
+			onRequestTrayMenuClose: root.trayMenuClose()
+		}
+	}
+
+	function trayMenuClose() {
+		menu.clear()
+		popup.trayItem = root
 	}
 }

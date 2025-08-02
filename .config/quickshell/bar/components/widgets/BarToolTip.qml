@@ -1,12 +1,19 @@
+import Quickshell
 import Quickshell.Widgets
-import qs.widgets
 
-Popup {
+PopupWindow {
 	required property var item
 	property alias text: label.text
+	anchor {
+		item: item
+		rect {
+			x: (item.width - width) / 2
+			y: item.height + 8
+		}
+	}
+	color: "transparent"
 	implicitHeight: toolTip.implicitHeight
 	implicitWidth: toolTip.implicitWidth
-	parent: item
 	visible: item.containsMouse
 
 	WrapperRectangle {

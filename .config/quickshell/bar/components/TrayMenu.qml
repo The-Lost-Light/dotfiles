@@ -4,151 +4,112 @@ import QtQuick.Controls
 import Quickshell
 import qs.widgets
 
-Popup {
-	id: root
-	property alias menu: initialItem.menu
-	implicitHeight: stackView.currentItem?.implicitHeight
-	implicitWidth: stackView.currentItem?.implicitWidth
-	visible: true
+Column {
+	id: column
+	signal requestTrayMenuPush (QsMenuHandle entry)
+	signal requestTrayMenuPop
+	signal requestTrayMenuClose
+	property alias menu: menuOpener.menu
+	property bool isSubMenu: false
+	padding: 8
 
-	StackView {
-		id: stackView
-		anchors.fill: parent
-
-		background: Rectangle {
-			color: "#1e1e2e"
-			radius: 8
-		}
-
-		initialItem: SubMenu {
-			id: initialItem
-		}
+	QsMenuOpener {
+		id: menuOpener
 	}
 
-	component SubMenu: Column {
-		id: column
-		property alias menu: menuOpener.menu
-		property bool isSubMenu: false
-		padding: 8
-
-		QsMenuOpener {
-			id: menuOpener
-		}
-
-		Repeater {
-			model: menuOpener.children
-
-			Loader {
-				id: loader
-				required property QsMenuEntry modelData
-				asynchronous: true
-				sourceComponent: {
-					let entry = modelData
-					if (entry.isSeparator) return separator;
-					switch (entry.buttonType) {
-						case QsMenuButtonType.CheckBox:	return checkBox;
-						case QsMenuButtonType.RadioButton: return radioButton;
-						default: return button;
-					}
-				}
-
-				Component {
-					id: separator
-					Item {
-						implicitHeight: 8
-						implicitWidth: 1
-					}
-				}
-
-				Component {
-					id: button
-
-					Button {
-						property QsMenuEntry entry: loader.modelData
-						background: null
-						enabled: entry.enabled
-						icon {
-							height: 8
-							source: entry.icon
-						}
-						text: entry.text
-						onClicked: column.trigger(entry)
-					}
-				}
-
-				Component {
-					id: checkBox
-
-					CheckBox {
-						id: cb
-						property QsMenuEntry entry: loader.modelData
-						background: null
-						tristate: true
-						checkState: entry.checkState
-						enabled: entry.enabled
-						icon {
-							height: 8
-							source: entry.icon
-						}
-						text: entry.text
-						indicator: Indicator {
-							entry: cb.entry
-						}
-						onClicked: column.trigger(entry)
-					}
-				}
-
-				Component {
-					id: radioButton
-
-					RadioButton {
-						id: rb
-						property QsMenuEntry entry: loader.modelData
-						background: null
-						checked: entry.checkState > 0
-						enabled: entry.enabled
-						icon {
-							height: 8
-							source: entry.icon
-						}
-						text: entry.text
-						indicator: Indicator {
-							entry: rb.entry
-						}
-						onClicked: column.trigger(entry)
-					}
-				}
-			}
-		}
+	Repeater {
+		model: menuOpener.children
 
 		Loader {
-			active: column.isSubMenu
-			sourceComponent: Button {
-				background: null
-				text: "Back"
-				onClicked: stackView.pop()
+			id: loader
+			required property QsMenuEntry modelData
+			asynchronous: true
+			sourceComponent: {
+				let entry = modelData
+				if (entry.isSeparator) return separator;
+				switch (entry.buttonType) {
+					case QsMenuButtonType.CheckBox:	return checkBox;
+					case QsMenuButtonType.RadioButton: return radioButton;
+					default: return button;
+				}
 			}
-		}
 
-		function trigger(entry) {
-			entry.triggered();
-			if (entry.hasChildren) stackView.pushItem(subMenu, {
-				menu: entry,
-				isSubMenu: true
-			});
-			else {
-				stackView.replace(subMenu, {
-					menu: column.menu
-				}, StackView.Immediate);
-				root.destroy()
+			Component {
+				id: separator
+				Item {
+					implicitHeight: 8
+					implicitWidth: 1
+				}
+			}
+
+			Component {
+				id: button
+
+				Button {
+					property QsMenuEntry entry: loader.modelData
+					background: null
+					enabled: entry.enabled
+					icon {
+						height: 8
+						source: entry.icon
+					}
+					text: entry.text
+					onClicked: column.trigger(entry)
+				}
+			}
+
+			Component {
+				id: checkBox
+
+				CheckBox {
+					id: cb
+					property QsMenuEntry entry: loader.modelData
+					background: null
+					tristate: true
+					checkState: entry.checkState
+					enabled: entry.enabled
+					icon {
+						height: 8
+						source: entry.icon
+					}
+					text: entry.text
+					indicator: Indicator {
+						entry: cb.entry
+					}
+					onClicked: column.trigger(entry)
+				}
+			}
+
+			Component {
+				id: radioButton
+
+				RadioButton {
+					id: rb
+					property QsMenuEntry entry: loader.modelData
+					background: null
+					checked: entry.checkState > 0
+					enabled: entry.enabled
+					icon {
+						height: 8
+						source: entry.icon
+					}
+					text: entry.text
+					indicator: Indicator {
+						entry: rb.entry
+					}
+					onClicked: column.trigger(entry)
+				}
 			}
 		}
 	}
 
-	Component {
-		id: subMenu
-
-		SubMenu {}
+	Loader {
+		active: column.isSubMenu
+		sourceComponent: Button {
+			background: null
+			text: "Back"
+			onClicked: column.requestTrayMenuPop()
+		}
 	}
 
 	component Indicator: Circle {
@@ -167,5 +128,11 @@ Popup {
 			radius: 4
 			visible: indicator.entry.checkState
 		}
+	}
+
+	function trigger(entry) {
+		entry.triggered();
+		if (entry.hasChildren) requestTrayMenuPush (entry)
+		else requestTrayMenuClose();
 	}
 }
