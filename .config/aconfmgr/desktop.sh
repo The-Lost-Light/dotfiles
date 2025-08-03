@@ -16,6 +16,7 @@ AddPackage seahorse # GNOME application for managing PGP keys
 # Widget
 AddPackage quickshell # Flexible toolkit for making desktop shells with QtQuick
 AddPackage swaync # A simple GTK based notification daemon for Sway
+AddPackage --foreign bongocat # A Wayland overlay that displays an animated bongo cat reacting to keyboard input
 
 # XDG Desktop
 AddPackage dex # Program to generate and execute DesktopEntry files of type Application

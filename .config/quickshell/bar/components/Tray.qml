@@ -32,10 +32,14 @@ Row {
 				acceptedButtons: Qt.LeftButton | Qt.RightButton
 				anchors.fill: parent
 				onClicked: event => {
-					if (popup.trayItem === item) root.trayMenuClose()
-					else {
-						popup.trayItem = item
-						menu.replace(subMenu, { menu: item.modelData.menu }, StackView.Immediate);
+					if (event.button === Qt.LeftButton && !item.modelData.onlyMenu)
+						item.modelData.activate();
+					else if (item.modelData.hasMenu) {
+						if (popup.trayItem === item) root.trayMenuClose()
+						else {
+							popup.trayItem = item
+							menu.replaceCurrentItem(subMenu, { menu: item.modelData.menu }, StackView.Immediate);
+						}
 					}
 				}
 			}
@@ -53,8 +57,8 @@ Row {
 			}
 		}
 		color: "transparent"
-		implicitHeight: menu.currentItem?.implicitHeight ?? implicitHeight
-		implicitWidth: menu.currentItem?.implicitWidth ?? implicitWidth
+		implicitHeight: menu.currentItem?.implicitHeight ?? 1
+		implicitWidth: menu.currentItem?.implicitWidth ?? 1
 		visible: !menu.empty
 
 		StackView {
