@@ -20,6 +20,7 @@ Row {
 			implicitSize: 18
 			mipmap: true
 			source: {
+				if (!modelData) return
 				let icon = modelData.icon;
 				if (icon.includes("?path=")) {
 					const [name, path] = icon.split("?path=");
@@ -32,13 +33,18 @@ Row {
 				acceptedButtons: Qt.LeftButton | Qt.RightButton
 				anchors.fill: parent
 				onClicked: event => {
+
 					if (event.button === Qt.LeftButton && !item.modelData.onlyMenu)
 						item.modelData.activate();
 					else if (item.modelData.hasMenu) {
-						if (popup.trayItem === item) root.trayMenuClose()
-						else {
-							popup.trayItem = item
+						if (popup.trayItem === item && popup.visible) {
+							popup.visible = false;
+							menu.clear();
+						} else {
+							popup.visible = false;
 							menu.replaceCurrentItem(subMenu, { menu: item.modelData.menu }, StackView.Immediate);
+							popup.trayItem = item;
+							popup.visible = true;
 						}
 					}
 				}
@@ -48,22 +54,22 @@ Row {
 
 	PopupWindow {
 		id: popup
-		property Item trayItem: root
+		property Item trayItem
 		anchor {
-			item: root
+			item: trayItem
 			rect {
-				x: trayItem.x + (trayItem.width - width) / 2
-				y: trayItem.y + trayItem.height + 8
+				x: (trayItem?.width - width) / 2
+				y: trayItem?.height + 8
 			}
 		}
 		color: "transparent"
 		implicitHeight: menu.currentItem?.implicitHeight ?? 1
 		implicitWidth: menu.currentItem?.implicitWidth ?? 1
-		visible: !menu.empty
 
 		StackView {
 			id: menu
-			anchors.fill: parent
+			implicitHeight: menu.currentItem?.implicitHeight ?? 0
+			implicitWidth: menu.currentItem?.implicitWidth ?? 0
 
 			background: Rectangle {
 				color: "#1e1e2e"
@@ -78,12 +84,10 @@ Row {
 		TrayMenu {
 			onRequestTrayMenuPush: entry => menu.pushItem(subMenu, { menu: entry, isSubMenu: true }, StackView.Immediate);
 			onRequestTrayMenuPop: menu.pop()
-			onRequestTrayMenuClose: root.trayMenuClose()
+			onRequestTrayMenuClose: {
+				popup.visible = false;
+				menu.clear();
+			}
 		}
-	}
-
-	function trayMenuClose() {
-		menu.clear()
-		popup.trayItem = root
 	}
 }
