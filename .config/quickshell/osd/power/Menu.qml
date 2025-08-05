@@ -1,6 +1,7 @@
 pragma ComponentBehavior: Bound
 import QtQuick
 import Quickshell
+import qs.config
 
 PanelWindow {
 	id: root
@@ -10,11 +11,11 @@ PanelWindow {
 	exclusionMode: ExclusionMode.Ignore
 	implicitHeight: column.implicitHeight
 	implicitWidth: column.implicitWidth
-	margins.right: 16
+	margins.right: Config.powerMenu.windowMargin
 
 	Column {
 		id: column
-		spacing: 16
+		spacing: Config.powerMenu.spacing
 		children: root.buttons
 	}
 }

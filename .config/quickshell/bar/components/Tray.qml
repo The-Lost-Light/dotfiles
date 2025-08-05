@@ -4,11 +4,12 @@ import QtQuick.Controls
 import Quickshell
 import Quickshell.Services.SystemTray
 import Quickshell.Widgets
+import qs.config
 
 Row {
 	id: root
 	anchors.verticalCenter: parent.verticalCenter
-	spacing: 2
+	spacing: Config.bar.traySpacing
 
 	Repeater {
 		model: SystemTray.items
@@ -17,7 +18,7 @@ Row {
 			id: item
 			required property SystemTrayItem modelData
 			asynchronous: true
-			implicitSize: 18
+			implicitSize: Config.bar.trayIconSize
 			mipmap: true
 			source: {
 				if (!modelData) return
@@ -59,7 +60,7 @@ Row {
 			item: trayItem
 			rect {
 				x: (trayItem?.width - width) / 2
-				y: trayItem?.height + 8
+				y: trayItem?.height + Config.bar.popupOffsetY
 			}
 		}
 		color: "transparent"
@@ -73,7 +74,7 @@ Row {
 
 			background: Rectangle {
 				color: "#1e1e2e"
-				radius: 8
+				radius: Config.bar.radius
 			}
 		}
 	}

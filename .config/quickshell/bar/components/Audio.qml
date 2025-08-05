@@ -2,11 +2,12 @@ pragma ComponentBehavior: Bound
 import QtQuick
 import Quickshell.Io
 import Quickshell.Services.Pipewire
+import qs.config
 import "widgets"
 
 Row {
 	anchors.verticalCenter: parent.verticalCenter
-	spacing: 4
+	spacing: Config.bar.spacing
 
 	component Audio: BarMouseLabel {
 		required property string name

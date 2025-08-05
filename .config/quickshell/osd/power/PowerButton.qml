@@ -1,7 +1,7 @@
 import QtQuick
 import QtQuick.Controls
 import Quickshell
-import qs.services
+import qs.config
 
 Button {
 	id: button
@@ -10,7 +10,7 @@ Button {
 	font {
 		bold: true
 		family: "Symbols Nerd Font"
-		pixelSize: 48
+		pixelSize: Config.powerMenu.fontSize
 	}
 	palette.buttonText: color || undefined
 	onClicked: {
@@ -20,15 +20,12 @@ Button {
 
 	background: Rectangle {
 		color: {
-			if (button.pressed)
-				return "#242933";
-			else if (button.hovered)
-				return "#292e39";
-			else
-				return "#2e3440";
+			if (button.pressed)	return Color.pressed;
+			else if (button.hovered) return Color.hovered;
+			else return Color.background;
 		}
-		implicitHeight: 96
-		implicitWidth: 96
-		radius: 16
+		implicitHeight: Config.powerMenu.length
+		implicitWidth: Config.powerMenu.length
+		radius: Config.powerMenu.radius
 	}
 }

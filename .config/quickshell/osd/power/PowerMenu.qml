@@ -1,4 +1,5 @@
 import QtQuick
+import qs.config
 
 Menu {
 	PowerButton {
@@ -12,7 +13,7 @@ Menu {
 	}
 
 	PowerButton {
-		color: "#dd6777"
+		color: Color.red
 		command: "systemctl poweroff"
 		text: "⏻"
 	}

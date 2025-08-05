@@ -3,6 +3,7 @@ import QtQuick
 import QtQuick.Controls
 import Quickshell
 import qs.widgets
+import qs.config
 
 Column {
 	id: column
@@ -11,7 +12,7 @@ Column {
 	signal requestTrayMenuClose
 	property alias menu: menuOpener.menu
 	property bool isSubMenu: false
-	padding: 8
+	padding: Config.bar.margin
 
 	QsMenuOpener {
 		id: menuOpener
@@ -37,7 +38,7 @@ Column {
 			Component {
 				id: separator
 				Item {
-					implicitHeight: 8
+					implicitHeight: Config.bar.trayMenuSeparator
 					implicitWidth: 1
 				}
 			}
@@ -50,7 +51,7 @@ Column {
 					background: null
 					enabled: entry.enabled
 					icon {
-						height: 8
+						height: Config.bar.trayMenuIconSize
 						source: entry.icon
 					}
 					text: entry.text
@@ -69,7 +70,7 @@ Column {
 					checkState: entry.checkState
 					enabled: entry.enabled
 					icon {
-						height: 8
+						height: Config.bar.trayMenuIconSize
 						source: entry.icon
 					}
 					text: entry.text
@@ -90,7 +91,7 @@ Column {
 					checked: entry.checkState > 0
 					enabled: entry.enabled
 					icon {
-						height: 8
+						height: Config.bar.trayMenuIconSize
 						source: entry.icon
 					}
 					text: entry.text

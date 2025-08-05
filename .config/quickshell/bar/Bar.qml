@@ -1,16 +1,17 @@
 import QtQuick
+import qs.config
 import "components"
 
 BarWidget {
 	left: Row {
-		spacing: 4
+		spacing: Config.bar.spacing
 
 		Launcher {}
 		Overview {}
 	}
 
 	center: Row {
-		spacing: 4
+		spacing: Config.bar.spacing
 
 		Arch {}
 		Time {}
@@ -18,7 +19,7 @@ BarWidget {
 	}
 
 	right: Row {
-		spacing: 4
+		spacing: Config.bar.spacing
 
 		Battery {}
 		Brightness {}

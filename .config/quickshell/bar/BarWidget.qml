@@ -2,6 +2,7 @@ pragma ComponentBehavior: Bound
 import QtQuick
 import Quickshell
 import Quickshell.Widgets
+import qs.config
 
 Variants {
 	id: root
@@ -18,13 +19,17 @@ Variants {
 			top: true
 		}
 		color: "transparent"
-		implicitHeight: 40
+		implicitHeight: Config.bar.height
+		margins {
+			top: Config.bar.verticalMargin
+			bottom: Config.bar.verticalMargin
+		}
 		screen: modelData
 
 		BarSection {
 			anchors{
 				left: parent.left
-				leftMargin: 8
+				leftMargin: Config.bar.horizonMargin
 			}
 			items: root.left
 		}
@@ -37,7 +42,7 @@ Variants {
 		BarSection {
 			anchors {
 				right: parent.right
-				rightMargin: 8
+				rightMargin: Config.bar.horizonMargin
 			}
 			items: root.right
 		}
@@ -46,10 +51,10 @@ Variants {
 			property alias items: loader.sourceComponent
 			anchors.verticalCenter: parent.verticalCenter
 			color: "#1e1e2e"
-			implicitHeight: 30
-			leftMargin: 8
-			rightMargin: 8
-			radius: 8
+			implicitHeight: Config.bar.height
+			leftMargin: Config.bar.horizonMargin
+			rightMargin: Config.bar.horizonMargin
+			radius: Config.bar.radius
 
 			Loader {
 				id: loader

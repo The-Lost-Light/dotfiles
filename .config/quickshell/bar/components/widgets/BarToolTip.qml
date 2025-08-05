@@ -1,5 +1,6 @@
 import Quickshell
 import Quickshell.Widgets
+import qs.config
 
 PopupWindow {
 	required property var item
@@ -8,7 +9,7 @@ PopupWindow {
 		item: item
 		rect {
 			x: (item.width - width) / 2
-			y: item.height + 8
+			y: item.height + Config.bar.popupOffsetY
 		}
 	}
 	color: "transparent"
@@ -19,8 +20,8 @@ PopupWindow {
 	WrapperRectangle {
 		id: toolTip
 		color: "#1e1e2e"
-		margin: 8
-		radius: 8
+		margin: Config.bar.margin
+		radius: Config.bar.radius
 
 		BarLabel {
 			id: label
