@@ -14,15 +14,15 @@ Button {
 	}
 	palette.buttonText: color || undefined
 	onClicked: {
-		Quickshell.execDetached(button.command.split(/\s+/));
-		EventBus.requestPowerMenuClose();
+		Quickshell.execDetached(button.command.split(/\s+/))
+		EventBus.requestPowerMenuClose()
 	}
 
 	background: Rectangle {
 		color: {
-			if (button.pressed)	return Color.pressed;
-			else if (button.hovered) return Color.hovered;
-			else return Color.background;
+			if (button.pressed)	return Color.pressed
+			else if (button.hovered) return Color.hovered
+			else return Color.background
 		}
 		implicitHeight: Config.powerMenu.length
 		implicitWidth: Config.powerMenu.length

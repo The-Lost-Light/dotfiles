@@ -7,9 +7,9 @@ import "widgets"
 BarButton {
 	text: "⏻"
 	onClicked: {
-		powerMenu.activeAsync = !powerMenu.activeAsync;
-		if (timer.running) timer.stop();
-		else timer.start();
+		powerMenu.activeAsync = !powerMenu.activeAsync
+		if (timer.running) timer.stop()
+		else timer.start()
 	}
 
 	LazyLoader {

@@ -46,7 +46,7 @@ Row {
 		id: process
 
 		function script(parameter) {
-			exec(["sh", "-c", `~/.config/niri/scripts/audio.nu ${parameter}`]);
+			exec(["sh", "-c", `~/.config/niri/scripts/audio.nu ${parameter}`])
 		}
 	}
 }

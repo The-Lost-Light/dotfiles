@@ -17,6 +17,6 @@ Singleton {
 	}
 
 	function script(command) {
-		process.exec(["sh", "-c", `~/.config/niri/scripts/brightness.nu ${command}`]);
+		process.exec(["sh", "-c", `~/.config/niri/scripts/brightness.nu ${command}`])
 	}
 }

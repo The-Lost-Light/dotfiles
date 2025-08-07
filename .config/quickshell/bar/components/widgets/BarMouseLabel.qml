@@ -8,8 +8,8 @@ BarLabel {
 	property alias containsMouse: mouseArea.containsMouse
 
 	MouseArea {
-		anchors.fill: parent
 		id: mouseArea
+		anchors.fill: parent
 		onClicked: root.clicked()
 		onWheel: event => root.wheel(event)
 	}

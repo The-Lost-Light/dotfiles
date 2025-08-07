@@ -12,10 +12,13 @@ Column {
 	signal requestTrayMenuClose
 	property alias menu: menuOpener.menu
 	property bool isSubMenu: false
-	padding: Config.bar.margin
+	padding: children.length > 2 ? Config.bar.margin : 0
+
 
 	QsMenuOpener {
 		id: menuOpener
+		onChildrenChanged: if (isSubMenu && children.values.length === 0) column.requestTrayMenuPop()
+
 	}
 
 	Repeater {
@@ -27,11 +30,11 @@ Column {
 			asynchronous: true
 			sourceComponent: {
 				let entry = modelData
-				if (entry.isSeparator) return separator;
+				if (entry.isSeparator) return separator
 				switch (entry.buttonType) {
-					case QsMenuButtonType.CheckBox:	return checkBox;
-					case QsMenuButtonType.RadioButton: return radioButton;
-					default: return button;
+					case QsMenuButtonType.CheckBox:	return checkBox
+					case QsMenuButtonType.RadioButton: return radioButton
+					default: return button
 				}
 			}
 
@@ -132,8 +135,8 @@ Column {
 	}
 
 	function trigger(entry) {
-		entry.triggered();
+		entry.triggered()
 		if (entry.hasChildren) requestTrayMenuPush (entry)
-		else requestTrayMenuClose();
+		else requestTrayMenuClose()
 	}
 }

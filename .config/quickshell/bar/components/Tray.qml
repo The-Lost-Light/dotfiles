@@ -1,9 +1,9 @@
 pragma ComponentBehavior: Bound
 import QtQuick
 import QtQuick.Controls
-import Quickshell
 import Quickshell.Services.SystemTray
 import Quickshell.Widgets
+import qs.widgets
 import qs.config
 
 Row {
@@ -22,12 +22,12 @@ Row {
 			mipmap: true
 			source: {
 				if (!modelData) return
-				let icon = modelData.icon;
+				let icon = modelData.icon
 				if (icon.includes("?path=")) {
-					const [name, path] = icon.split("?path=");
-					icon = `file://${path}/${name.slice(name.lastIndexOf("/") + 1)}`;
+					const [name, path] = icon.split("?path=")
+					icon = `file://${path}/${name.slice(name.lastIndexOf("/") + 1)}`
 				}
-				return icon;
+				return icon
 			}
 
 			MouseArea {
@@ -36,16 +36,16 @@ Row {
 				onClicked: event => {
 
 					if (event.button === Qt.LeftButton && !item.modelData.onlyMenu)
-						item.modelData.activate();
+						item.modelData.activate()
 					else if (item.modelData.hasMenu) {
-						if (popup.trayItem === item && popup.visible) {
-							popup.visible = false;
-							menu.clear();
+						if (menu.trayItem === item && overlay.visible) {
+							overlay.visible = false
+							menu.clear()
 						} else {
-							popup.visible = false;
-							menu.replaceCurrentItem(subMenu, { menu: item.modelData.menu }, StackView.Immediate);
-							popup.trayItem = item;
-							popup.visible = true;
+							overlay.visible = false
+							menu.replaceCurrentItem(subMenu, { menu: item.modelData.menu }, StackView.Immediate)
+							menu.trayItem = item
+							overlay.visible = true
 						}
 					}
 				}
@@ -53,24 +53,17 @@ Row {
 		}
 	}
 
-	PopupWindow {
-		id: popup
-		property Item trayItem
-		anchor {
-			item: trayItem
-			rect {
-				x: (trayItem?.width - width) / 2
-				y: trayItem?.height + Config.bar.popupOffsetY
-			}
-		}
-		color: "transparent"
-		implicitHeight: menu.currentItem?.implicitHeight ?? 1
-		implicitWidth: menu.currentItem?.implicitWidth ?? 1
+	OverlayWindow {
+		id: overlay
 
 		StackView {
 			id: menu
-			implicitHeight: menu.currentItem?.implicitHeight ?? 0
-			implicitWidth: menu.currentItem?.implicitWidth ?? 0
+			property Item trayItem
+			readonly property point position: trayItem?.mapToItem(null, trayItem.x, trayItem.y) ?? Qt.point(0,0)
+			implicitHeight: currentItem?.implicitHeight ?? 0
+			implicitWidth: currentItem?.implicitWidth ?? 0
+			x: Math.min(position.x - width / 2, Screen.width - width - Config.bar.margin)
+			y: Math.min(position.y + Config.bar.height, Screen.height - height)
 
 			background: Rectangle {
 				color: "#1e1e2e"
@@ -83,11 +76,11 @@ Row {
 		id: subMenu
 
 		TrayMenu {
-			onRequestTrayMenuPush: entry => menu.pushItem(subMenu, { menu: entry, isSubMenu: true }, StackView.Immediate);
-			onRequestTrayMenuPop: menu.pop()
+			onRequestTrayMenuPush: entry => menu.pushItem(subMenu, { menu: entry, isSubMenu: true }, StackView.Immediate)
+			onRequestTrayMenuPop: menu.pop(StackView.Immediate)
 			onRequestTrayMenuClose: {
-				popup.visible = false;
-				menu.clear();
+				overlay.visible = false
+				menu.clear()
 			}
 		}
 	}
