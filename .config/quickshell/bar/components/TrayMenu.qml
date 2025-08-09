@@ -12,7 +12,7 @@ Column {
 	signal requestTrayMenuClose
 	property alias menu: menuOpener.menu
 	property bool isSubMenu: false
-	padding: children.length > 2 ? Config.bar.margin : 0
+	padding: children.length > 2 ? Config.bar.popupMargin : 0
 
 
 	QsMenuOpener {

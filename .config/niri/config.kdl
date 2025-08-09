@@ -178,6 +178,7 @@ window-rule {
 
 window-rule {
 	match app-id="org.gnome.Nautilus" title="Open Folder"
+	match app-id="org.gnome.NautilusPreviewer"
 	open-floating true
 }
 

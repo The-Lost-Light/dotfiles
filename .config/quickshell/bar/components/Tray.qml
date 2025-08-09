@@ -62,7 +62,7 @@ Row {
 			readonly property point position: trayItem?.mapToItem(null, trayItem.x, trayItem.y) ?? Qt.point(0,0)
 			implicitHeight: currentItem?.implicitHeight ?? 0
 			implicitWidth: currentItem?.implicitWidth ?? 0
-			x: Math.min(position.x - width / 2, Screen.width - width - Config.bar.margin)
+			x: Math.min(position.x - width / 2, Screen.width - width - Config.bar.horizonMargin)
 			y: Math.min(position.y + Config.bar.height, Screen.height - height)
 
 			background: Rectangle {

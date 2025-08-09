@@ -6,6 +6,7 @@ AddPackage chromium # A web browser built for speed, simplicity, and security
 # File Manager
 AddPackage nautilus # Default file manager for GNOME
 AddPackage nautilus-python # Python bindings for the Nautilus Extension API
+AddPackage sushi # A quick previewer for Nautilus
 AddPackage yazi # Blazing fast terminal file manager written in Rust, based on async I/O
 AddPackage termscp # A feature rich terminal UI file transfer and explorer
 

@@ -20,7 +20,7 @@ PopupWindow {
 	WrapperRectangle {
 		id: toolTip
 		color: "#1e1e2e"
-		margin: Config.bar.margin
+		margin: Config.bar.popupMargin
 		radius: Config.bar.radius
 
 		BarLabel {

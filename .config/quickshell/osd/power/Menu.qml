@@ -11,7 +11,7 @@ PanelWindow {
 	exclusionMode: ExclusionMode.Ignore
 	implicitHeight: column.implicitHeight
 	implicitWidth: column.implicitWidth
-	margins.right: Config.powerMenu.windowMargin
+	margins.right: Config.powerMenu.margin
 
 	Column {
 		id: column

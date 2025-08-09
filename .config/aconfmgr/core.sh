@@ -1,7 +1,6 @@
 # Boot
 AddPackage amd-ucode # Microcode update image for AMD CPUs
-AddPackage linux-cachyos # The Linux BORE + LTO + Cachy Sauce Kernel by CachyOS with other patches and improvements. kernel and modules
-AddPackage linux-cachyos-headers # Headers and scripts for building modules for the Linux BORE + LTO + Cachy Sauce Kernel by CachyOS with other patches and improvements. kernel
+AddPackage linux # The Linux kernel and modules
 AddPackage booster # Fast and secure initramfs generator
 CopyFile /etc/booster.yaml
 
@@ -99,6 +98,7 @@ AddPackage ttf-iosevka-nerd # Patched font Iosevka from nerd fonts library
 AddPackage ttf-jetbrains-mono-nerd # Patched font JetBrains Mono from nerd fonts library
 AddPackage ttf-nerd-fonts-symbols-mono # High number of extra glyphs from popular 'iconic fonts' (monospace)
 AddPackage wqy-zenhei # A Hei Ti Style (sans-serif) Chinese Outline Font.
+AddPackage --foreign ttf-material-symbols-variable-git # Material Design icons by Google - variable fonts
 AddPackage --foreign ttc-monocraft # A programming font based on the typeface used in Minecraft
 AddPackage --foreign ttf-ubraille # Unicode Braillt font
 
