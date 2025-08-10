@@ -134,7 +134,7 @@ Column {
 
 	function trigger(entry) {
 		entry.triggered()
-		if (entry.hasChildren) requestTrayMenuPush (entry)
+		if (entry.hasChildren) requestTrayMenuPush(entry)
 		else requestTrayMenuClose()
 	}
 }

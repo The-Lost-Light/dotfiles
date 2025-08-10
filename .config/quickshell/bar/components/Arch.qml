@@ -5,7 +5,7 @@ import "widgets"
 
 StyledLabel {
 	visible: ArchService.updates > 0
-	text: `${ArchService.updates}`
+	text: `${ArchService.updates}`
 
 	MouseArea {
 		id: mouseArea

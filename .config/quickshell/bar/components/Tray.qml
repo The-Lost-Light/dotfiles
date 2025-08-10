@@ -59,11 +59,11 @@ Row {
 		StackView {
 			id: menu
 			property Item trayItem
-			readonly property point position: trayItem?.mapToItem(null, trayItem.x, trayItem.y) ?? Qt.point(0,0)
+			readonly property point position: trayItem?.mapToItem(null, -width/2, Config.bar.height) ?? Qt.point(0,0)
 			implicitHeight: currentItem?.implicitHeight ?? 0
 			implicitWidth: currentItem?.implicitWidth ?? 0
-			x: Math.min(position.x - width / 2, Screen.width - width - Config.bar.horizonMargin)
-			y: Math.min(position.y + Config.bar.height, Screen.height - height)
+			x: Math.min(position.x , Screen.width - width - Config.bar.horizonMargin)
+			y: Math.min(position.y, Screen.height - height)
 
 			background: Rectangle {
 				color: "#1e1e2e"

@@ -2,9 +2,8 @@ import QtQuick
 import qs.services
 import qs.widgets
 
-IconLabel {
-	icon: "brightness_medium"
-	label: BrightnessService.percent
+StyledLabel {
+	text: `󰃟${BrightnessService.percent}`
 
 	MouseArea {
 		anchors.fill: parent

@@ -9,7 +9,7 @@ Row {
 	spacing: Config.bar.spacing
 
 	component Audio:
-	IconLabel {
+	StyledLabel {
 		id: audio
 		required property string name
 		required property PwNode device
@@ -17,8 +17,7 @@ Row {
 		required property string iconOff
 		readonly property PwNodeAudio audioNode: device?.audio ?? null
 		visible: !!device?.ready && audioNode.volume >= 0
-		icon: audioNode?.muted ? iconOff : iconOn
-		label: audioNode?.muted ? "Mute" : `${(audioNode?.volume * 100).toFixed(0)}%`
+		text: audioNode?.muted ? `${iconOff}Mute` : `${iconOn}${(audioNode?.volume * 100).toFixed(0)}%`
 
 		MouseArea {
 			anchors.fill: parent
@@ -33,14 +32,14 @@ Row {
 	Audio {
 		name: "microphone"
 		device: AudioService.source
-		iconOn: "mic"
-		iconOff: "mic_off"
+		iconOn: ""
+		iconOff: ""
 	}
 
 	Audio {
 		name: "speaker"
 		device: AudioService.sink
-		iconOn: "volume_up"
-		iconOff: "volume_off"
+		iconOn: ""
+		iconOff: ""
 	}
 }
