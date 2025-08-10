@@ -12,11 +12,11 @@ Singleton {
 		command: ["sh", "-c", "~/.config/niri/scripts/brightness.nu"]
 		running: true
 		stdout: StdioCollector {
-			onStreamFinished: process.text = `󰃟${text.trim()}`
+			onStreamFinished: process.text = `${text.trim()}`
 		}
 	}
 
 	function script(command) {
-		process.exec(["sh", "-c", `~/.config/niri/scripts/brightness.nu ${command}`])
+		if (!process.running) process.exec(["sh", "-c", `~/.config/niri/scripts/brightness.nu ${command}`])
 	}
 }

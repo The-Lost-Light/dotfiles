@@ -9,7 +9,7 @@ import qs.config
 Row {
 	id: root
 	anchors.verticalCenter: parent.verticalCenter
-	spacing: Config.bar.traySpacing
+	spacing: Config.bar.spacing
 
 	Repeater {
 		model: SystemTray.items

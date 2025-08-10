@@ -1,52 +1,46 @@
-pragma ComponentBehavior: Bound
 import QtQuick
-import Quickshell.Io
 import Quickshell.Services.Pipewire
+import qs.services
+import qs.widgets
 import qs.config
-import "widgets"
 
 Row {
 	anchors.verticalCenter: parent.verticalCenter
 	spacing: Config.bar.spacing
 
-	component Audio: BarMouseLabel {
+	component Audio:
+	IconLabel {
+		id: audio
 		required property string name
 		required property PwNode device
-		required property string icon
-		readonly property PwNodeAudio audio: device?.audio ?? null
-		visible: !!device?.ready && audio.volume >= 0
-		text: icon + (audio?.muted ? "Mute" : `${(audio?.volume * 100).toFixed(0)}%`)
-		onClicked: process.script(`${name} toggle`)
-		onWheel: event => {
-			if (event.angleDelta.y > 0) {
-				process.script(`${name} increase`)
-			} else if (event.angleDelta.y < 0) {
-				process.script(`${name} decrease`)
+		required property string iconOn
+		required property string iconOff
+		readonly property PwNodeAudio audioNode: device?.audio ?? null
+		visible: !!device?.ready && audioNode.volume >= 0
+		icon: audioNode?.muted ? iconOff : iconOn
+		label: audioNode?.muted ? "Mute" : `${(audioNode?.volume * 100).toFixed(0)}%`
+
+		MouseArea {
+			anchors.fill: parent
+			onClicked: AudioService.script(`${audio.name} toggle`)
+			onWheel: event => {
+				if (event.angleDelta.y > 0) AudioService.script(`${audio.name} increase`)
+				else if (event.angleDelta.y < 0) AudioService.script(`${audio.name} decrease`)
 			}
 		}
 	}
 
 	Audio {
 		name: "microphone"
-		device: Pipewire.defaultAudioSource
-		icon: "󰍮"
+		device: AudioService.source
+		iconOn: "mic"
+		iconOff: "mic_off"
 	}
 
 	Audio {
 		name: "speaker"
-		device: Pipewire.defaultAudioSink
-		icon: "󰕾"
-	}
-
-	PwObjectTracker {
-		objects: [Pipewire.defaultAudioSink, Pipewire.defaultAudioSource]
-	}
-
-	Process {
-		id: process
-
-		function script(parameter) {
-			exec(["sh", "-c", `~/.config/niri/scripts/audio.nu ${parameter}`])
-		}
+		device: AudioService.sink
+		iconOn: "volume_up"
+		iconOff: "volume_off"
 	}
 }

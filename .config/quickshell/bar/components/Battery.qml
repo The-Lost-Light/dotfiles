@@ -1,6 +1,6 @@
 import Quickshell.Services.UPower
-import "widgets"
+import qs.widgets
 
-BarLabel {
+StyledLabel {
 	text: `${(UPower.displayDevice.percentage * 100).toFixed(0)}%  `
 }

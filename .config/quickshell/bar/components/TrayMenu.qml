@@ -14,11 +14,9 @@ Column {
 	property bool isSubMenu: false
 	padding: children.length > 2 ? Config.bar.popupMargin : 0
 
-
 	QsMenuOpener {
 		id: menuOpener
-		onChildrenChanged: if (isSubMenu && children.values.length === 0) column.requestTrayMenuPop()
-
+		onChildrenChanged: if (column.isSubMenu && children.values.length === 0) column.requestTrayMenuPop()
 	}
 
 	Repeater {

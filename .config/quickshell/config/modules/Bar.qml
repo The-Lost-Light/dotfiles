@@ -5,12 +5,11 @@ QtObject {
 	readonly property int verticalMargin: 4
 	readonly property int horizonMargin: 8
 	readonly property int radius: 8
-	readonly property int spacing: 4
+	readonly property int spacing: 2
 	// Popup
 	readonly property int popupMargin: 8
 	readonly property int popupOffsetY: 8
 	// Tray
-	readonly property int traySpacing: 2
 	readonly property int trayIconSize: 18
 	readonly property int trayMenuSeparator: 8
 	readonly property int trayMenuIconSize: 8
