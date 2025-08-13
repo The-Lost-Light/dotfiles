@@ -16,6 +16,6 @@ Singleton {
 	}
 
 	function script(device) {
-		if (!process.running) process.exec(["sh", "-c", `~/.config/niri/scripts/audio.nu ${device}`])
+		if(!process.running) process.exec(["sh", "-c", `~/.config/niri/scripts/audio.nu ${device}`])
 	}
 }

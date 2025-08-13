@@ -11,6 +11,7 @@ CopyFile /etc/pam.d/greetd # For gnome-keyring
 
 # Encryption
 AddPackage gnome-keyring # Stores passwords and encryption keys
+AddPackage pantheon-polkit-agent # Pantheon Polkit Agent
 AddPackage seahorse # GNOME application for managing PGP keys
 
 # Widget
@@ -24,8 +25,6 @@ AddPackage handlr-regex # Powerful alternative to xdg-utils written in Rust
 AddPackage xdg-desktop-portal-gnome # Backend implementation for xdg-desktop-portal for the GNOME desktop environment
 AddPackage --foreign pinapp-git # Create your own application shortcuts
 
-# Polkit
-AddPackage polkit-gnome # Legacy polkit authentication agent for GNOME
 
 # IME
 AddPackage fcitx5-configtool # Configuration Tool for Fcitx5

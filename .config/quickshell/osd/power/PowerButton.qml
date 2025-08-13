@@ -20,8 +20,8 @@ Button {
 
 	background: Rectangle {
 		color: {
-			if (button.pressed)	return Color.pressed
-			else if (button.hovered) return Color.hovered
+			if(button.pressed)	return Color.pressed
+			else if(button.hovered) return Color.hovered
 			else return Color.background
 		}
 		implicitHeight: Config.powerMenu.length

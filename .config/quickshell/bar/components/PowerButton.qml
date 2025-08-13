@@ -8,7 +8,7 @@ BarButton {
 	text: "⏻"
 	onClicked: {
 		powerMenu.activeAsync = !powerMenu.activeAsync
-		if (timer.running) timer.stop()
+		if(timer.running) timer.stop()
 		else timer.start()
 	}
 

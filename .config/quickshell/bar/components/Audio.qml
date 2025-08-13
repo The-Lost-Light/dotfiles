@@ -23,8 +23,8 @@ Row {
 			anchors.fill: parent
 			onClicked: AudioService.script(`${audio.name} toggle`)
 			onWheel: event => {
-				if (event.angleDelta.y > 0) AudioService.script(`${audio.name} increase`)
-				else if (event.angleDelta.y < 0) AudioService.script(`${audio.name} decrease`)
+				if(event.angleDelta.y > 0) AudioService.script(`${audio.name} increase`)
+				else if(event.angleDelta.y < 0) AudioService.script(`${audio.name} decrease`)
 			}
 		}
 	}
