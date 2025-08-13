@@ -7,7 +7,7 @@ import qs.config
 
 Column {
 	id: column
-	signal requestTrayMenuPush (QsMenuHandle entry)
+	signal requestTrayMenuPush(QsMenuHandle entry)
 	signal requestTrayMenuPop
 	signal requestTrayMenuClose
 	property alias menu: menuOpener.menu
@@ -16,7 +16,7 @@ Column {
 
 	QsMenuOpener {
 		id: menuOpener
-		onChildrenChanged: if (column.isSubMenu && children.values.length === 0) column.requestTrayMenuPop()
+		onChildrenChanged: if(column.isSubMenu && children.values.length === 0) column.requestTrayMenuPop()
 	}
 
 	Repeater {
@@ -27,10 +27,10 @@ Column {
 			required property QsMenuEntry modelData
 			asynchronous: true
 			sourceComponent: {
-				let entry = modelData
-				if (entry.isSeparator) return separator
-				switch (entry.buttonType) {
-					case QsMenuButtonType.CheckBox:	return checkBox
+				if(modelData.isSeparator) return separator
+
+				switch (modelData.buttonType) {
+					case QsMenuButtonType.CheckBox: return checkBox
 					case QsMenuButtonType.RadioButton: return radioButton
 					default: return button
 				}
@@ -38,6 +38,7 @@ Column {
 
 			Component {
 				id: separator
+
 				Item {
 					implicitHeight: Config.bar.trayMenuSeparator
 					implicitWidth: 1
@@ -134,7 +135,7 @@ Column {
 
 	function trigger(entry) {
 		entry.triggered()
-		if (entry.hasChildren) requestTrayMenuPush(entry)
+		if(entry.hasChildren) requestTrayMenuPush(entry)
 		else requestTrayMenuClose()
 	}
 }

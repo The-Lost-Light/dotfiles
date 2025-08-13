@@ -1,25 +1,5 @@
 #!/usr/bin/env nu
 
-def notify [device: string, volume: int, --muted] {
-	let threshold = [0, 1, 34, 67] | where { |threshold| $volume >= $threshold } | last
-
-	let icon = match $device {
-		speaker => (if $muted or $threshold == 0 {
-			"mute"
-		} else match $threshold {
-			1 => "low"
-			34 => "mid"
-			67 => "high"
-		} | $"~/.config/niri/assets/icons/volume-($in).png")
-		microphone => (if $muted or $threshold == 0 {
-			"-mute"
-		} | $"~/.config/niri/assets/icons/microphone($in).png")
-	}
-
-	let message = [(if $muted { "Mute" } else { "Volume:" }), (if not $muted { $"($volume)%" } )] | compact
-	notify-send -h string:x-canonical-private-synchronous:sys-notify --urgency low --icon ($icon | path expand) ...$message
-}
-
 def volume [device: string, tweak?: string] {
 	let target = match $device {
 		speaker => "@DEFAULT_AUDIO_SINK@"
@@ -39,7 +19,6 @@ def volume [device: string, tweak?: string] {
 
 	let status = wpctl get-volume $target | split row ' '
 	let muted = $status | any  {|s| $s == "[MUTED]"}
-	notify $device (($status.1 | into float) * 100 | math floor) --muted=$muted
 }
 
 def main [] {}

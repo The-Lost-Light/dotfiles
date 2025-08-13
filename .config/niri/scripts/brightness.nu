@@ -1,11 +1,5 @@
 #!/usr/bin/env nu
 
-def notify [value: int] {
-	let percent = [0, 20, 40, 60, 80, 100] | where { |threshold| $value >= $threshold } | last
-	let icon = $"~/.config/niri/assets/icons/brightness-($percent).png"
-	notify-send --urgency low --icon ($icon | path expand) --hint string:x-canonical-private-synchronous:sys-notify  "Brightness: " $"($value)%"
-}
-
 def calculate_percent [flags: list] {
 	let value = brightnessctl get ...$flags | into int
 	let max_value = brightnessctl max ...$flags | into int
@@ -22,7 +16,6 @@ def brightness [tweak?: string, --keyboard (-k)] {
 	})
 	brightnessctl set $operator -q ...$flags
 	let percent = calculate_percent ($flags)
-	notify ($percent)
 	print $"($percent)%"
 }
 

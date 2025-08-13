@@ -1,8 +1,9 @@
 # Boot
 AddPackage amd-ucode # Microcode update image for AMD CPUs
-AddPackage linux # The Linux kernel and modules
 AddPackage booster # Fast and secure initramfs generator
 CopyFile /etc/booster.yaml
+AddPackage linux-cachyos # The Linux BORE + LTO + AutoFDO + Propeller Cachy Sauce Kernel by CachyOS with other patches and improvements. kernel and modules
+AddPackage linux-cachyos-headers # Headers and scripts for building modules for the Linux BORE + LTO + AutoFDO + Propeller Cachy Sauce Kernel by CachyOS with other patches and improvements. kernel
 
 # Base
 AddPackage base # Minimal package set to define a basic Arch Linux installation

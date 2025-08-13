@@ -1,6 +1,8 @@
 import Quickshell
-import "bar"
+import qs.bar
+import qs.osd.volume
 
 ShellRoot {
 	Bar {}
+	Volume {}
 }

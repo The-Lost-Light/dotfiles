@@ -15,14 +15,14 @@ Singleton {
 	}
 
 	function version(list) {
-		if (list === "") return []
+		if(list === "") return []
 		return list.trim().split("\n").map(line => {
 			const [name, old_verion, , new_version] = line.split(" ")
 			const old_parts = old_verion.split(/([:.\-_+])/)
 			const new_parts = new_version.split(/([:.\-_+])/)
 
 			let diffIndex = old_parts.findIndex((part, i) => part !== new_parts[i])
-			if (diffIndex === -1) diffIndex = old_parts.length
+			if(diffIndex === -1) diffIndex = old_parts.length
 
 			const unchanged = old_parts.slice(0, diffIndex).join("")
 			const changed = new_parts.slice(diffIndex).join("")
