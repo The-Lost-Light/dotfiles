@@ -1,15 +1,15 @@
 import QtQuick
 import Quickshell.Services.Pipewire
 import qs.services
-import qs.widgets
 import qs.config
+import "widgets"
 
 Row {
 	anchors.verticalCenter: parent.verticalCenter
 	spacing: Config.bar.spacing
 
 	component Audio:
-	StyledLabel {
+	BarLabel {
 		id: audio
 		required property string name
 		required property PwNode device

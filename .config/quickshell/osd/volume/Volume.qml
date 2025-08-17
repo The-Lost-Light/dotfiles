@@ -32,20 +32,35 @@ Scope {
 				bottom: true
 			}
 			color: "transparent"
-			implicitHeight: progress.implicitHeight
-			implicitWidth: progress.implicitWidth
+			implicitHeight: column.implicitHeight
+			implicitWidth: column.implicitWidth
+			margins {
+				right: 32
+				bottom: 32
+			}
 			mask: Region {}
 
-			RingProgress {
-				id: progress
-				percent: Pipewire.defaultAudioSink?.audio.volume * 100 ?? 0
-				backgroundColor: "#2a2a2a"
-				color: "#00E5FF"
-				radius: 32
-				thickness: 8
+			Column {
+				id: column
+				spacing: 4
+
+				RadioBar {
+					percent: Pipewire.defaultAudioSink?.audio.volume * 100 ?? 0
+					backgroundColor: "#2a2a2a"
+					color: "white"
+					radius: 24
+					thickness: 8
+
+					StyledLabel {
+						anchors.centerIn: parent
+						font.pixelSize: 16
+						text: ""
+					}
+				}
 
 				StyledLabel {
-					anchors.centerIn: parent
+					anchors.horizontalCenter: parent.horizontalCenter
+					font.pixelSize: 16
 					text: Math.round(Pipewire.defaultAudioSink?.audio.volume * 100 ?? 0) + "%"
 				}
 			}

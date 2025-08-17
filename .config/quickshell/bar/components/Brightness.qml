@@ -1,8 +1,8 @@
 import QtQuick
 import qs.services
-import qs.widgets
+import "widgets"
 
-StyledLabel {
+BarLabel {
 	text: `󰃟${BrightnessService.percent}`
 
 	MouseArea {

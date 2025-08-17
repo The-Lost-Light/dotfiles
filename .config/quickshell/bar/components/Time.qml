@@ -1,9 +1,8 @@
 import QtQuick
 import qs.services
-import qs.widgets
 import "widgets"
 
-StyledLabel {
+BarLabel {
 	text: TimeService.time
 
 	MouseArea {

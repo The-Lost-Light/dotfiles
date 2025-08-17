@@ -1,6 +1,6 @@
-import qs.widgets
+import "widgets"
 
-StyledLabel {
+BarLabel {
 	property bool test: false
 	text: test ? '' : ''
 }

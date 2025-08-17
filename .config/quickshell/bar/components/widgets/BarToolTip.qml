@@ -1,6 +1,5 @@
 import Quickshell
 import Quickshell.Widgets
-import qs.widgets
 import qs.config
 
 PopupWindow {
@@ -24,7 +23,7 @@ PopupWindow {
 		margin: Config.bar.popupMargin
 		radius: Config.bar.radius
 
-		StyledLabel {
+		BarLabel {
 			id: label
 		}
 	}
