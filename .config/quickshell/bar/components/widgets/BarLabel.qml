@@ -1,5 +1,5 @@
 import qs.widgets
 
-StyledLabel {
+QsLabel {
 	anchors.verticalCenter: parent.verticalCenter
 }

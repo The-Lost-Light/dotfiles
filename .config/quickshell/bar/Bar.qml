@@ -1,5 +1,5 @@
 import QtQuick
-import qs.config
+import qs.configs
 import "components"
 
 BarWidget {

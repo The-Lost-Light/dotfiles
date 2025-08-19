@@ -2,7 +2,7 @@ import QtQuick
 import QtQuick.Controls
 import Quickshell
 import qs.services
-import qs.config
+import qs.configs
 
 Button {
 	id: button
@@ -16,14 +16,14 @@ Button {
 	palette.buttonText: color
 	onClicked: {
 		Quickshell.execDetached(button.command.split(/\s+/))
-		EventBus.requestPowerMenuClose()
+		EventBus.requestPowerPanelClose()
 	}
 
 	background: Rectangle {
 		color: {
-			if(button.pressed)	return Color.pressed
-			else if(button.hovered) return Color.hovered
-			else return Color.background
+			if(button.pressed)	return Color.powerMenu.pressed
+			else if(button.hovered) return Color.powerMenu.hovered
+			else return Color.powerMenu.background
 		}
 		implicitHeight: Config.powerMenu.length
 		implicitWidth: Config.powerMenu.length

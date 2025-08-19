@@ -2,7 +2,7 @@ pragma ComponentBehavior: Bound
 import QtQuick
 import Quickshell
 import Quickshell.Widgets
-import qs.config
+import qs.configs
 
 Variants {
 	id: root
@@ -50,7 +50,7 @@ Variants {
 		component BarSection: WrapperRectangle {
 			property alias items: loader.sourceComponent
 			anchors.verticalCenter: parent.verticalCenter
-			color: "#1e1e2e"
+			color: Color.background
 			implicitHeight: Config.bar.height
 			leftMargin: Config.bar.horizonMargin
 			rightMargin: Config.bar.horizonMargin

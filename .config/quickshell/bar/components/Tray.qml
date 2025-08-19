@@ -1,11 +1,10 @@
 pragma ComponentBehavior: Bound
 import QtQuick
-import QtQuick.Controls
 import Quickshell.Services.SystemTray
 import Quickshell.Widgets
-import qs.widgets
-import qs.bar.popups
-import qs.config
+import qs.services
+import qs.osd.tray
+import qs.configs
 
 Row {
 	id: root
@@ -21,15 +20,7 @@ Row {
 			asynchronous: true
 			implicitSize: Config.bar.trayIconSize
 			mipmap: true
-			source: {
-				if(!modelData) return
-				let icon = modelData.icon
-				if(icon.includes("?path=")) {
-					const [name, path] = icon.split("?path=")
-					icon = `file://${path}/${name.slice(name.lastIndexOf("/") + 1)}`
-				}
-				return icon
-			}
+			source: Lib.iconResolve(modelData?.icon)
 
 			MouseArea {
 				acceptedButtons: Qt.LeftButton | Qt.RightButton
@@ -37,56 +28,14 @@ Row {
 				onClicked: event => {
 					if(event.button === Qt.LeftButton && !item.modelData.onlyMenu)
 						item.modelData.activate()
-					else if(item.modelData.hasMenu) {
-						if(menu.trayItem === item && overlay.visible) {
-							overlay.visible = false
-							menu.clear()
-						} else {
-							overlay.visible = false
-							menu.replaceCurrentItem(subMenu, {
-								menu: item.modelData.menu
-							}, StackView.Immediate)
-							menu.trayItem = item
-							overlay.visible = true
-						}
-					}
+					else if(item.modelData.hasMenu)
+						trayPanel.toggle(item, item.modelData.menu)
 				}
 			}
 		}
 	}
 
-	OverlayWindow {
-		id: overlay
-
-		StackView {
-			id: menu
-			property Item trayItem
-			readonly property point position: trayItem?.mapToItem(null, -width / 2, Config.bar.height) ?? Qt.point(0, 0)
-			implicitHeight: currentItem?.implicitHeight ?? 0
-			implicitWidth: currentItem?.implicitWidth ?? 0
-			x: Math.min(position.x, Screen.width - width - Config.bar.horizonMargin)
-			y: Math.min(position.y, Screen.height - height)
-
-			background: Rectangle {
-				color: "#1e1e2e"
-				radius: Config.bar.radius
-			}
-		}
-	}
-
-	Component {
-		id: subMenu
-
-		TrayMenu {
-			onRequestTrayMenuPush: entry => menu.pushItem(subMenu, {
-					menu: entry,
-					isSubMenu: true
-				}, StackView.Immediate)
-			onRequestTrayMenuPop: menu.pop(StackView.Immediate)
-			onRequestTrayMenuClose: {
-				overlay.visible = false
-				menu.clear()
-			}
-		}
+	TrayPanel {
+		id: trayPanel
 	}
 }

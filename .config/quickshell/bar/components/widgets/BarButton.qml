@@ -1,7 +1,10 @@
-import QtQuick.Controls
+import QtQuick
 
-Button {
+MouseArea {
+	property alias text: barLabel.text
 	anchors.verticalCenter: parent.verticalCenter
-	background: null
-	font.family: "Symbols Nerd Font"
+	implicitHeight: barLabel.implicitHeight
+	implicitWidth: barLabel.implicitWidth
+
+	BarLabel { id: barLabel }
 }

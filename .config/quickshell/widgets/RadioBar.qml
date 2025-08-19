@@ -12,6 +12,14 @@ Shape {
 	asynchronous: true
 	preferredRendererType: Shape.CurveRenderer
 
+	Behavior on percent {
+        SmoothedAnimation {
+	        velocity: 10
+	        duration: 600
+	        easing.type: Easing.OutCubic
+        }
+    }
+
 	component Ring: ShapePath {
 		id: ring
 		required property real radius
@@ -44,6 +52,6 @@ Shape {
 		radius: root.radius
 		thickness: root.thickness
 		startAngle: -90 + root.capAngle
-		sweepAngle: root.percent > 0 ? 360 * root.percent / 100 - 2 * root.capAngle : 0
+		sweepAngle: root.percent >= 1 ? Math.max(1, 360 * root.percent / 100 - 2 * root.capAngle) : 0
 	}
 }

@@ -1,7 +1,8 @@
 # Browser
 AddPackage firefox-developer-edition # Fast, Private & Safe Web Browser (Developer Edition)
 AddPackage firefox-developer-edition-i18n-zh-tw # Chinese (Traditional) language pack for Firefox Developer Edition
-AddPackage chromium # A web browser built for speed, simplicity, and security
+AddPackage vivaldi # An advanced browser made with the power user in mind.
+AddPackage vivaldi-ffmpeg-codecs # additional support for proprietary codecs for vivaldi
 
 # File Manager
 AddPackage nautilus # Default file manager for GNOME

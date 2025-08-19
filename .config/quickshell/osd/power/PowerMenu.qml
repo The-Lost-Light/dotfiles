@@ -1,30 +1,21 @@
+pragma ComponentBehavior: Bound
 import QtQuick
-import qs.config
+import Quickshell
+import qs.configs
 
-Menu {
-	PowerButton {
-		text: ""
-		command: "notify-send undefined"
-	}
+PanelWindow {
+	id: root
+	default required property list<PowerButton> buttons
+	anchors.right: true
+	color: "transparent"
+	exclusionMode: ExclusionMode.Ignore
+	implicitHeight: column.implicitHeight
+	implicitWidth: column.implicitWidth
+	margins.right: Config.powerMenu.margin
 
-	PowerButton {
-		text: ""
-		command: "niri msg action quit"
-	}
-
-	PowerButton {
-		color: Color.red
-		text: "⏻"
-		command: "systemctl poweroff"
-	}
-
-	PowerButton {
-		text: ""
-		command: "systemctl reboot"
-	}
-
-	PowerButton {
-		text: "󰤄"
-		command: "systemctl suspend"
+	Column {
+		id: column
+		spacing: Config.powerMenu.spacing
+		children: root.buttons
 	}
 }

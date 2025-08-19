@@ -7,27 +7,27 @@ import "widgets"
 BarButton {
 	text: "⏻"
 	onClicked: {
-		powerMenu.activeAsync = !powerMenu.activeAsync
+		powerPanel.activeAsync = !powerPanel.activeAsync
 		if(timer.running) timer.stop()
 		else timer.start()
 	}
 
 	LazyLoader {
-		id: powerMenu
-		PowerMenu {}
+		id: powerPanel
+		PowerPanel {}
 	}
 
 	Timer {
 		id: timer
 		interval: 3000
-		onTriggered: powerMenu.activeAsync = false
+		onTriggered: powerPanel.activeAsync = false
 	}
 
 	Connections {
 		target: EventBus
 
-		function onRequestPowerMenuClose() {
-			powerMenu.activeAsync = false
+		function onRequestPowerPanelClose() {
+			powerPanel.activeAsync = false
 		}
 	}
 }

@@ -1,7 +1,7 @@
 import QtQuick
 import Quickshell.Services.Pipewire
 import qs.services
-import qs.config
+import qs.configs
 import "widgets"
 
 Row {
