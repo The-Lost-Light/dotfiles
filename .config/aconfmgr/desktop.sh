@@ -1,4 +1,4 @@
-# Niri
+# Compositor
 AddPackage niri # A scrollable-tiling Wayland compositor
 
 # Greeter
@@ -19,12 +19,14 @@ AddPackage quickshell # Flexible toolkit for making desktop shells with QtQuick
 AddPackage swaync # A simple GTK based notification daemon for Sway
 AddPackage --foreign bongocat # A Wayland overlay that displays an animated bongo cat reacting to keyboard input
 
+# Filter
+AddPackage --foreign sunsetr-bin # Automatic blue light filter for Hyprland, Niri, and everything Wayland (pre-compiled binary)
+
 # XDG Desktop
 AddPackage dex # Program to generate and execute DesktopEntry files of type Application
 AddPackage handlr-regex # Powerful alternative to xdg-utils written in Rust
 AddPackage xdg-desktop-portal-gnome # Backend implementation for xdg-desktop-portal for the GNOME desktop environment
 AddPackage --foreign pinapp-git # Create your own application shortcuts
-
 
 # IME
 AddPackage fcitx5-configtool # Configuration Tool for Fcitx5

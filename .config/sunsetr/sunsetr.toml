@@ -1,0 +1,17 @@
+backend = "auto"
+start_hyprsunset = true
+startup_transition = true
+startup_transition_duration = 1
+night_temp = 5000
+day_temp = 6500
+night_gamma = 90
+day_gamma = 100
+update_interval = 60
+transition_mode = "geo"
+
+sunset = "19:00:00"
+sunrise = "06:00:00"
+transition_duration = 45
+
+latitude = 25.050389343101706
+longitude = 121.5870859420611

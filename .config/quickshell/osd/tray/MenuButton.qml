@@ -17,8 +17,8 @@ MouseArea {
 	Row {
 		id: row
 		spacing: 4
-		leftPadding: Config.trayMenu.padding
-		rightPadding: Config.trayMenu.padding
+		leftPadding: Config.trayMenu.horizontalPadding
+		rightPadding: Config.trayMenu.horizontalPadding
 
 		Indicator {
 			readonly property int buttonType: root.entry.buttonType

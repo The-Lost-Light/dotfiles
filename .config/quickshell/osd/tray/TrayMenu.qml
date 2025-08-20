@@ -19,7 +19,9 @@ ColumnLayout {
 		onChildrenChanged: if(column.isSubMenu && children.values.length === 0) column.requestTrayMenuPop()
 	}
 
-	Separator {}
+	Separator {
+		implicitHeight: Config.trayMenu.verticalPadding
+	}
 
 	Repeater {
 		id: repeater
@@ -68,8 +70,8 @@ ColumnLayout {
 		Layout.fillWidth: true
 		sourceComponent: QsLabel {
 			text: "Back"
-			leftPadding: Config.trayMenu.padding
-			rightPadding: Config.trayMenu.padding
+			leftPadding: Config.trayMenu.horizontalPadding
+			rightPadding: Config.trayMenu.horizontalPadding
 
 			MouseArea {
 				anchors.fill: parent
@@ -78,7 +80,9 @@ ColumnLayout {
 		}
 	}
 
-	Separator {}
+	Separator {
+		implicitHeight: Config.trayMenu.verticalPadding
+	}
 
 	component Separator: Item {
 		implicitHeight: Config.trayMenu.separator
