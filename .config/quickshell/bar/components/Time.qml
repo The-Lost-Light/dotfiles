@@ -2,17 +2,13 @@ import QtQuick
 import qs.services
 import "widgets"
 
-BarLabel {
+BarButton {
+	id: root
+	hoverEnabled: true
 	text: TimeService.time
 
-	MouseArea {
-		id: mouseArea
-		anchors.fill: parent
-		hoverEnabled: true
-	}
-
 	BarToolTip {
-		item: mouseArea
+		item: root
 		text: TimeService.date
 	}
 }

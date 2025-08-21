@@ -16,20 +16,21 @@ ColumnLayout {
 
 	QsMenuOpener {
 		id: menuOpener
-		onChildrenChanged: if(column.isSubMenu && children.values.length === 0) column.requestTrayMenuPop()
+		onChildrenChanged: if (column.isSubMenu && children.values.length === 0) column.requestTrayMenuPop()
 	}
 
 	Separator {
+		visible: repeater.count > 0
 		implicitHeight: Config.trayMenu.verticalPadding
 	}
 
 	Repeater {
 		id: repeater
 		model: {
-		    const entrys = menuOpener.children.values
-		    let end = entrys.length
-		    while (end > 0 && entrys[end-1].isSeparator) end--
-		    return entrys.slice(0, end)
+			const entrys = menuOpener.children.values
+			let end = entrys.length
+			while (end > 0 && entrys[end - 1].isSeparator) end--
+			return entrys.slice(0, end)
 		}
 
 		Loader {
@@ -39,8 +40,8 @@ ColumnLayout {
 			asynchronous: true
 			Layout.fillWidth: true
 			sourceComponent: {
-				if(modelData.isSeparator) return separator
-			 	else return menuButton
+				if (modelData.isSeparator) return separator
+				else return menuButton
 			}
 
 			Component {
@@ -56,7 +57,7 @@ ColumnLayout {
 					entry: loader.modelData
 					onMenuTrigger: entry => {
 						entry.triggered()
-						if(entry.hasChildren) column.requestTrayMenuPush(entry)
+						if (entry.hasChildren) column.requestTrayMenuPush(entry)
 						else column.requestTrayMenuClose()
 					}
 				}
@@ -81,6 +82,7 @@ ColumnLayout {
 	}
 
 	Separator {
+		visible: repeater.count > 0
 		implicitHeight: Config.trayMenu.verticalPadding
 	}
 

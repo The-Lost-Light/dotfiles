@@ -15,9 +15,7 @@ Singleton {
 		objects: [Pipewire.defaultAudioSink, Pipewire.defaultAudioSource]
 	}
 
-	Process {
-		id: process
-	}
+	Process { id: process }
 
 	Connections {
 		target: Pipewire.defaultAudioSink?.audio ?? null

@@ -35,7 +35,5 @@ Row {
 		}
 	}
 
-	TrayPanel {
-		id: trayPanel
-	}
+	TrayPanel { id: trayPanel }
 }

@@ -23,8 +23,6 @@ PopupWindow {
 		margin: Config.bar.popupMargin
 		radius: Config.bar.radius
 
-		BarLabel {
-			id: label
-		}
+		BarLabel { id: label }
 	}
 }

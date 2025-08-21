@@ -1,10 +1,15 @@
+pragma ComponentBehavior: Bound
 import QtQuick
 
 MouseArea {
-	property alias text: barLabel.text
+	id: root
+	property alias reverse: label.reverse
+	property alias iconFont: label.iconFont
+	property alias icon: label.icon
+	property alias text: label.text
 	anchors.verticalCenter: parent.verticalCenter
-	implicitHeight: barLabel.implicitHeight
-	implicitWidth: barLabel.implicitWidth
+	implicitHeight: label.implicitHeight
+	implicitWidth: label.implicitWidth
 
-	BarLabel { id: barLabel }
+	BarLabel { id: label }
 }

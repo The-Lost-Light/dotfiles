@@ -8,6 +8,7 @@ Singleton {
 	readonly property TrayMenu trayMenu: TrayMenu {}
 
 	readonly property color background: "#1e1e2e"
+	readonly property color font: "white"
 
 	// Arch
 

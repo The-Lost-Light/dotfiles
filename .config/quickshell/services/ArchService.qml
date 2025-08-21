@@ -32,7 +32,6 @@ Singleton {
 
 	Process {
 		id: checker
-
 		property list<string> packages
 
 		command: ["sh", "-c", "checkupdates; yay -Qua"]
@@ -53,7 +52,6 @@ Singleton {
 
 	Process {
 		id: updater
-
 		command: ["kitty", "fish", "-c", `yay; read -P "${root.prompt}"`]
 
 		stdout: StdioCollector {

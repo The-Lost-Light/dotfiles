@@ -56,9 +56,7 @@ Variants {
 			rightMargin: Config.bar.horizonMargin
 			radius: Config.bar.radius
 
-			Loader {
-				id: loader
-			}
+			Loader { id: loader	}
 		}
 	}
 }

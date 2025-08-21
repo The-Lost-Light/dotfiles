@@ -3,7 +3,8 @@ import Quickshell.Io
 import "widgets"
 
 BarButton {
-	text: " "
+	iconFont: "Symbols Nerd Font"
+	icon: " "
 	onClicked: process.running = true
 
 	Process {

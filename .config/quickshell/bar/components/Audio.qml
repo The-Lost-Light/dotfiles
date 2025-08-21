@@ -8,8 +8,7 @@ Row {
 	anchors.verticalCenter: parent.verticalCenter
 	spacing: Config.bar.spacing
 
-	component Audio:
-	BarLabel {
+	component Audio: BarButton {
 		id: audio
 		required property string name
 		required property PwNode device
@@ -17,15 +16,13 @@ Row {
 		required property string iconOff
 		readonly property PwNodeAudio audioNode: device?.audio ?? null
 		visible: !!device?.ready && audioNode.volume >= 0
-		text: audioNode?.muted ? `${iconOff}Mute` : `${iconOn}${(audioNode?.volume * 100).toFixed(0)}%`
-
-		MouseArea {
-			anchors.fill: parent
-			onClicked: AudioService.script(`${audio.name} toggle`)
-			onWheel: event => {
-				if(event.angleDelta.y > 0) AudioService.script(`${audio.name} increase`)
-				else if(event.angleDelta.y < 0) AudioService.script(`${audio.name} decrease`)
-			}
+		iconFont: "Symbols Nerd Font"
+		icon: audioNode?.muted ? iconOff : iconOn
+		text: audioNode?.muted ? "Mute" : `${(audioNode?.volume * 100).toFixed(0)}%`
+		onClicked: AudioService.script(`${audio.name} toggle`)
+		onWheel: event => {
+			if (event.angleDelta.y > 0)	AudioService.script(`${audio.name} increase`)
+			else if (event.angleDelta.y < 0) AudioService.script(`${audio.name} decrease`)
 		}
 	}
 

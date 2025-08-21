@@ -5,7 +5,8 @@ import qs.osd.power
 import "widgets"
 
 BarButton {
-	text: "⏻"
+	iconFont: "Symbols Nerd Font"
+	icon: "⏻"
 	onClicked: {
 		powerPanel.activeAsync = !powerPanel.activeAsync
 		if(timer.running) timer.stop()

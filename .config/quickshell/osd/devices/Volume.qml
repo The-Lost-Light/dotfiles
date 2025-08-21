@@ -11,8 +11,8 @@ Scope {
 		target: AudioService
 
 		function onSinkAudioChanged() {
-			loader.active = true;
-			hideTimer.restart();
+			loader.active = true
+			hideTimer.restart()
 		}
 	}
 
