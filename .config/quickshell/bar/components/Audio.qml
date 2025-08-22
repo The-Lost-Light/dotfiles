@@ -12,13 +12,18 @@ Row {
 		id: audio
 		required property string name
 		required property PwNode device
-		required property string iconOn
-		required property string iconOff
+		required property list<string> icons
 		readonly property PwNodeAudio audioNode: device?.audio ?? null
 		visible: !!device?.ready && audioNode.volume >= 0
-		iconFont: "Symbols Nerd Font"
-		icon: audioNode?.muted ? iconOff : iconOn
-		text: audioNode?.muted ? "Mute" : `${(audioNode?.volume * 100).toFixed(0)}%`
+		iconFont: "lucide"
+		icon: {
+			if(audioNode?.muted) return icons[0]
+
+			let levels = icons.length - 1
+			let index = Math.min(levels - 1, Math.floor(audioNode?.volume * levels)) + 1
+			return icons[index] ?? ""
+		}
+		text: `${(audioNode?.volume * 100).toFixed(0)}%`
 		onClicked: AudioService.script(`${audio.name} toggle`)
 		onWheel: event => {
 			if (event.angleDelta.y > 0)	AudioService.script(`${audio.name} increase`)
@@ -29,14 +34,12 @@ Row {
 	Audio {
 		name: "microphone"
 		device: AudioService.source
-		iconOn: ""
-		iconOff: ""
+		icons: ['', '']
 	}
 
 	Audio {
 		name: "speaker"
 		device: AudioService.sink
-		iconOn: ""
-		iconOff: ""
+		icons: ['', '', '', '']
 	}
 }

@@ -4,7 +4,7 @@ import "widgets"
 
 BarButton {
 	iconFont: "Symbols Nerd Font"
-	icon: " "
+	icon: ''
 	onClicked: process.running = true
 
 	Process {

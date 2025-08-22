@@ -6,6 +6,7 @@ Row {
 	id: root
 	property bool reverse
 	property string iconFont
+	property int iconSize
 	property string icon
 	property string text
 	anchors.verticalCenter: parent.verticalCenter
@@ -17,6 +18,7 @@ Row {
 
 		sourceComponent: QsLabel {
 			font.family: root.iconFont
+			font.pixelSize: root.iconSize
 			text: root.icon
 		}
 	}

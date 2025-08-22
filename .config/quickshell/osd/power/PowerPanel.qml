@@ -3,28 +3,28 @@ import qs.configs
 
 PowerMenu {
 	PowerButton {
-		text: ""
+		text: ''
 		command: "notify-send undefined"
 	}
 
 	PowerButton {
-		text: ""
+		text: ''
 		command: "niri msg action quit"
 	}
 
 	PowerButton {
 		color: Color.red
-		text: "⏻"
+		text: ''
 		command: "systemctl poweroff"
 	}
 
 	PowerButton {
-		text: ""
+		text: ''
 		command: "systemctl reboot"
 	}
 
 	PowerButton {
-		text: "󰤄"
+		text: ''
 		command: "systemctl suspend"
 	}
 }

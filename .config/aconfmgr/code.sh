@@ -29,7 +29,7 @@ CopyFile /etc/nix/nix.conf
 AddPackage ccache # Compiler cache that speeds up recompilation by caching previous compilations
 
 # Flutter
-AddPackage --foreign flutter-bin # Cross platform widget toolkit for Dart (monolithic)
+AddPackage fvm # Flutter Version Management: A simple CLI to manage Flutter SDK versions.
 
 # Java
 AddPackage jdk-openjdk # OpenJDK Java development kit

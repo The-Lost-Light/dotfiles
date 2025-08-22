@@ -10,13 +10,13 @@ def brightness [tweak?: string, --keyboard (-k)] {
 	let flags = if $keyboard { [--device *::kbd_backlight] } | default []
 
 	let operator = (if $keyboard { "1" } else { "20%" }) + (match $tweak {
-		get => (calculate_percent ($flags) | $"($in)%" | print; exit)
+		get => (calculate_percent ($flags) | print; exit)
 		increase => '+'
 		decrease => '-'
 	})
 	brightnessctl set $operator -q ...$flags
 	let percent = calculate_percent ($flags)
-	print $"($percent)%"
+	print $"($percent)"
 }
 
 def main [--keyboard (-k)] { brightness get --keyboard=$keyboard }

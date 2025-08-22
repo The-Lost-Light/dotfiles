@@ -6,8 +6,8 @@ BarButton {
 	id: root
 	visible: ArchService.updates > 0
 	hoverEnabled: true
-	iconFont: "Symbols Nerd Font"
-	icon: ''
+	iconFont: "lucide"
+	icon: ''
 	text: `${ArchService.updates}`
 	onClicked: ArchService.update()
 

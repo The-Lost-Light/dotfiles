@@ -53,14 +53,12 @@ Scope {
 
 					QsLabel {
 						anchors.centerIn: parent
-						font.pixelSize: 16
-						text: ""
+						text: ''
 					}
 				}
 
 				QsLabel {
 					anchors.horizontalCenter: parent.horizontalCenter
-					font.pixelSize: 16
 					text: Math.round(Pipewire.defaultAudioSink?.audio.volume * 100 ?? 0) + "%"
 				}
 			}
