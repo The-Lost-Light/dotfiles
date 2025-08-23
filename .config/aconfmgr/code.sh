@@ -21,12 +21,8 @@ AddPackage prettier # An opinionated code formatter
 AddPackage cloc # Count lines of code
 AddPackage cmake # A cross-platform open-source make system
 AddPackage cpio # A tool to copy files into or out of a cpio or tar archive
-AddPackage meson # High productivity build system
 AddPackage nix # A purely functional package manager
 CopyFile /etc/nix/nix.conf
-
-# C/C++
-AddPackage ccache # Compiler cache that speeds up recompilation by caching previous compilations
 
 # Flutter
 AddPackage fvm # Flutter Version Management: A simple CLI to manage Flutter SDK versions.

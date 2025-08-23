@@ -69,7 +69,7 @@ ColumnLayout {
 		active: column.isSubMenu
 		visible: active
 		Layout.fillWidth: true
-		sourceComponent: QsLabel {
+		sourceComponent: QuickLabel {
 			text: "Back"
 			leftPadding: Config.trayMenu.horizontalPadding
 			rightPadding: Config.trayMenu.horizontalPadding

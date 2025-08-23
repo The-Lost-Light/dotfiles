@@ -34,6 +34,7 @@ AddPackage fcitx5-gtk # Fcitx5 gtk im module and glib based dbus client library
 AddPackage --foreign fcitx5-mcbopomofo-git # McBopomofo for fcitx5
 AddPackage --foreign fcitx5-theme-ayaya # pink style fcitx5 theme
 AddPackage gnome-characters # A character map application
+AddPackage gucharmap # Gnome Unicode Charmap
 
 # Clipboard
 AddPackage wl-clipboard # Command-line copy/paste utilities for Wayland

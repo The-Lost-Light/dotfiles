@@ -1,13 +1,14 @@
 pragma ComponentBehavior: Bound
 import QtQuick
 import qs.widgets
+import qs.configs
 
 Row {
 	id: root
 	property bool reverse
-	property string iconFont
-	property int iconSize
+	property var iconFont
 	property string icon
+	property var font
 	property string text
 	anchors.verticalCenter: parent.verticalCenter
 	layoutDirection: reverse ? Qt.RightToLeft : Qt.LeftToRight
@@ -16,9 +17,8 @@ Row {
 		anchors.verticalCenter: parent.verticalCenter
 		active: root.icon
 
-		sourceComponent: QsLabel {
-			font.family: root.iconFont
-			font.pixelSize: root.iconSize
+		sourceComponent: QuickLabel {
+			font: Qt.font(Object.assign({ family: "lucide" }, root.iconFont))
 			text: root.icon
 		}
 	}
@@ -27,7 +27,9 @@ Row {
 		anchors.verticalCenter: parent.verticalCenter
 		active: root.text
 
-		sourceComponent: QsLabel {
+		sourceComponent: QuickLabel {
+			id: test
+			font: Qt.font(Object.assign({ family: Config.fontFamily }, root.font))
 			text: root.text
 		}
 	}

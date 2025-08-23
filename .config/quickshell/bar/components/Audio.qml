@@ -15,7 +15,6 @@ Row {
 		required property list<string> icons
 		readonly property PwNodeAudio audioNode: device?.audio ?? null
 		visible: !!device?.ready && audioNode.volume >= 0
-		iconFont: "lucide"
 		icon: {
 			if(audioNode?.muted) return icons[0]
 
@@ -23,6 +22,7 @@ Row {
 			let index = Math.min(levels - 1, Math.floor(audioNode?.volume * levels)) + 1
 			return icons[index] ?? ""
 		}
+		font: ({ strikeout: audioNode?.muted })
 		text: `${(audioNode?.volume * 100).toFixed(0)}%`
 		onClicked: AudioService.script(`${audio.name} toggle`)
 		onWheel: event => {

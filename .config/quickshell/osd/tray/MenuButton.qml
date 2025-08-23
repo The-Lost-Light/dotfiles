@@ -37,7 +37,7 @@ MouseArea {
 			source: Lib.iconResolve(root.entry.icon)
 		}
 
-		QsLabel {
+		QuickLabel {
 			anchors.verticalCenter: parent.verticalCenter
 			color: root.entry.enabled ? Color.trayMenu.label : Color.trayMenu.disableLabel
 			text: root.entry.text

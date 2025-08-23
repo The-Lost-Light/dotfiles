@@ -4,6 +4,5 @@ import qs.osd.devices
 
 ShellRoot {
 	Bar {}
-
 	Volume {}
 }

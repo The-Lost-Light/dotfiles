@@ -51,13 +51,13 @@ Scope {
 					radius: 24
 					thickness: 8
 
-					QsLabel {
+					QuickLabel {
 						anchors.centerIn: parent
 						text: ''
 					}
 				}
 
-				QsLabel {
+				QuickLabel {
 					anchors.horizontalCenter: parent.horizontalCenter
 					text: Math.round(Pipewire.defaultAudioSink?.audio.volume * 100 ?? 0) + "%"
 				}

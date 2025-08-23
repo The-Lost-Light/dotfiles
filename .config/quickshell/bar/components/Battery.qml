@@ -4,8 +4,7 @@ import "widgets"
 BarLabel {
 	visible: UPower.displayDevice.isLaptopBattery
 	reverse: true
-	iconFont: "lucide"
-	iconSize: 20
+	iconFont: ({ pixelSize: 20 })
 	icon: {
 		if(UPower.displayDevice.state === UPowerDeviceState.Charging || UPower.displayDevice.state === UPowerDeviceState.FullyCharged || UPower.displayDevice.state === UPowerDeviceState.PendingCharge) return ''
 		else if(UPower.displayDevice.percentage > 0.8) return ''

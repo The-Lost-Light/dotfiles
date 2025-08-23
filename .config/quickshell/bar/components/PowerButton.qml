@@ -5,7 +5,6 @@ import qs.osd.power
 import "widgets"
 
 BarButton {
-	iconFont: "Lucide"
 	icon: ''
 	onClicked: {
 		powerPanel.activeAsync = !powerPanel.activeAsync

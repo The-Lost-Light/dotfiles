@@ -3,7 +3,6 @@ import qs.services
 import "widgets"
 
 BarButton {
-	iconFont: "lucide"
 	icon: {
 		if(BrightnessService.percent >= 67) return ''
 		else if(BrightnessService.percent >= 34) return ''
