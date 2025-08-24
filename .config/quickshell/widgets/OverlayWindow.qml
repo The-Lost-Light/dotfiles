@@ -3,7 +3,6 @@ import Quickshell
 
 PanelWindow {
 	id: root
-	signal clicked
 	anchors {
 		top: true
 		right: true
@@ -18,9 +17,6 @@ PanelWindow {
 		id: mouseArea
 		acceptedButtons: Qt.AllButtons
 		anchors.fill: parent
-		onClicked: {
-			root.visible = false
-			root.clicked()
-		}
+		onClicked: root.visible = false
 	}
 }

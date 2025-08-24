@@ -6,6 +6,7 @@ if status is-login
 	set -x ZED_WINDOW_DECORATIONS server
 	set -x QT_QPA_PLATFORMTHEME qt6ct
 	set -x XCURSOR_THEME Bibata-Modern-Ice
+	
 	# SSH
 	set -x SSH_AUTH_SOCK $XDG_RUNTIME_DIR/ssh-agent.socket
 

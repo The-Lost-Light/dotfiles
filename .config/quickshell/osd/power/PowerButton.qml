@@ -16,7 +16,7 @@ Button {
 	palette.buttonText: color
 	onClicked: {
 		Quickshell.execDetached(button.command.split(/\s+/))
-		EventBus.requestPowerPanelClose()
+		EventBus.requestPowerPanelToggle()
 	}
 
 	background: Rectangle {

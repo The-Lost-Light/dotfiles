@@ -19,12 +19,12 @@ Scope {
 	Timer {
 		id: hideTimer
 		interval: 1000
-		onTriggered: loader.active = false
+		onTriggered: loader.activeAsync = false
 	}
 
 	LazyLoader {
 		id: loader
-		active: false
+		activeAsync: false
 
 		PanelWindow {
 			anchors {

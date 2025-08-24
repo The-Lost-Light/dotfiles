@@ -7,7 +7,6 @@ import qs.configs
 OverlayWindow {
 	id: root
 	property Item trayItem
-	onClosed: root.active = false
 
 	StackView {
 		id: stackView

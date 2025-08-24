@@ -18,6 +18,8 @@ AddPackage --foreign unityhub # The Unity Hub is a standalone application that s
 AddPackage prettier # An opinionated code formatter
 
 # Tool
+AddPackage ccache # Compiler cache that speeds up recompilation by caching previous compilations
+AddPackage sccache # Shared compilation cache
 AddPackage cloc # Count lines of code
 AddPackage cmake # A cross-platform open-source make system
 AddPackage cpio # A tool to copy files into or out of a cpio or tar archive
@@ -36,7 +38,6 @@ AddPackage --foreign marimo # A reactive Python notebook that's reproducible, gi
 
 # Rust
 AddPackage rustup # The Rust toolchain installer
-AddPackage sccache # Shared compilation cache
 
 # Web
 AddPackage bun-bin # All-in-one JavaScript runtime built for speed, with bundler, transpiler, test runner, and package manager. Includes bunx, shell completions and support for baseline CPUs

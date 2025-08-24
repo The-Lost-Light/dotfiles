@@ -2,5 +2,5 @@ pragma Singleton
 import Quickshell
 
 Singleton {
-	signal requestPowerPanelClose
+	signal requestPowerPanelToggle
 }
