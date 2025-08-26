@@ -1,3 +1,4 @@
+pragma ComponentBehavior: Bound
 import QtQuick
 import Quickshell
 import Quickshell.Services.Pipewire
@@ -6,20 +7,14 @@ import qs.widgets
 
 Scope {
 	id: root
+	property real percent
 
-	Connections {
-		target: AudioService
-
-		function onSinkAudioChanged() {
-			loader.active = true
-			hideTimer.restart()
+	Behavior on percent {
+		SmoothedAnimation {
+			velocity: 10
+			duration: 600
+			easing.type: Easing.OutCubic
 		}
-	}
-
-	Timer {
-		id: hideTimer
-		interval: 1000
-		onTriggered: loader.activeAsync = false
 	}
 
 	LazyLoader {
@@ -45,7 +40,7 @@ Scope {
 				spacing: 4
 
 				RadioBar {
-					percent: Pipewire.defaultAudioSink?.audio.volume * 100 ?? 0
+					percent: root.percent
 					backgroundColor: "#2a2a2a"
 					color: "white"
 					radius: 24
@@ -63,5 +58,21 @@ Scope {
 				}
 			}
 		}
+	}
+
+	Connections {
+		target: AudioService
+
+		function onSinkAudioChanged() {
+			root.percent = Pipewire.defaultAudioSink?.audio.volume * 100 ?? 0
+			loader.active = true
+			hideTimer.restart()
+		}
+	}
+
+	Timer {
+		id: hideTimer
+		interval: 1000
+		onTriggered: loader.activeAsync = false
 	}
 }

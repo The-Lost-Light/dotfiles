@@ -7,18 +7,10 @@ Shape {
 	required property real thickness
 	property alias backgroundColor: background.strokeColor
 	property alias color: progress.strokeColor
-	property real percent: 100
+	property real percent
 	readonly property real capAngle: Math.asin((thickness / 2) / radius) * 180 / Math.PI
 	asynchronous: true
 	preferredRendererType: Shape.CurveRenderer
-
-	Behavior on percent {
-        SmoothedAnimation {
-	        velocity: 10
-	        duration: 600
-	        easing.type: Easing.OutCubic
-        }
-    }
 
 	component Ring: ShapePath {
 		id: ring

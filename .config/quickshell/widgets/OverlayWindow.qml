@@ -1,22 +1,28 @@
+pragma ComponentBehavior: Bound
 import QtQuick
 import Quickshell
 
-PanelWindow {
+LazyLoader {
 	id: root
-	anchors {
-		top: true
-		right: true
-		left: true
-		bottom: true
-	}
-	color: "transparent"
-	exclusionMode: ExclusionMode.Ignore
-	visible: false
+	default property list<QtObject> items
 
-	MouseArea {
-		id: mouseArea
-		acceptedButtons: Qt.AllButtons
-		anchors.fill: parent
-		onClicked: root.visible = false
+	PanelWindow {
+		signal clicked
+		anchors {
+			top: true
+			right: true
+			left: true
+			bottom: true
+		}
+		color: "transparent"
+		exclusionMode: ExclusionMode.Ignore
+
+		readonly property Item mouseArea: MouseArea {
+			acceptedButtons: Qt.AllButtons
+			anchors.fill: parent
+			onClicked: root.activeAsync = false
+		}
+
+		data: [mouseArea, ...root.items]
 	}
 }

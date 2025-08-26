@@ -1,24 +1,39 @@
 pragma ComponentBehavior: Bound
 import QtQuick
 import QtQuick.Controls
+import Quickshell
+import qs.services
 import qs.widgets
 import qs.configs
 
-OverlayWindow {
-	id: root
-	property Item trayItem
+Scope {
+	OverlayWindow {
+		id: overlayWindow
 
-	StackView {
-		id: stackView
-		readonly property point position: root.trayItem?.mapToItem(null, -width / 2, Config.bar.height) ?? Qt.point(0, 0)
-		implicitHeight: currentItem?.implicitHeight ?? 0
-		implicitWidth: currentItem?.implicitWidth ?? 0
-		x: Math.min(position.x, Screen.width - width - Config.bar.horizonMargin)
-		y: Math.min(position.y, Screen.height - height)
+		StackView {
+			id: stackView
+			property point position
+			implicitHeight: currentItem?.implicitHeight ?? 0
+			implicitWidth: currentItem?.implicitWidth ?? 0
+			x: Math.min(position.x - width / 2, Screen.width - width - Config.bar.horizonMargin)
+			y: Math.min(position.y, Screen.height - height)
 
-		background: Rectangle {
-			color: Color.background
-			radius: Config.bar.radius
+			background: Rectangle {
+				color: Color.background
+				radius: Config.bar.radius
+			}
+		}
+	}
+
+	Connections {
+		target: EventBus
+
+		function onRequestTrayPanelToggle(trayIcon, menu) {
+			overlayWindow.activeAsync = true
+			stackView.position = trayIcon.mapToItem(null, trayIcon.width / 2, Config.bar.height)
+			stackView.replaceCurrentItem(subMenu, {
+				menu: menu
+			}, StackView.Immediate)
 		}
 	}
 
@@ -31,24 +46,10 @@ OverlayWindow {
 				isSubMenu: true
 			}, StackView.Immediate)
 			onRequestTrayMenuPop: stackView.pop(StackView.Immediate)
-			onRequestTrayMenuClose: {
-				root.visible = false
+			onRequestTrayMenuDestroy: {
 				stackView.clear()
+				overlayWindow.activeAsync = false
 			}
-		}
-	}
-
-	function toggle(trayIcon, menu) {
-		if(trayItem === trayIcon && root.visible) {
-			root.visible = false
-			stackView.clear()
-		} else {
-			root.visible = false
-			stackView.replaceCurrentItem(subMenu, {
-				menu: menu
-			}, StackView.Immediate)
-			trayItem = trayIcon
-			root.visible = true
 		}
 	}
 }

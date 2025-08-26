@@ -9,7 +9,7 @@ ColumnLayout {
 	id: column
 	signal requestTrayMenuPush(QsMenuEntry entry)
 	signal requestTrayMenuPop
-	signal requestTrayMenuClose
+	signal requestTrayMenuDestroy
 	property alias menu: menuOpener.menu
 	property bool isSubMenu: false
 	spacing: Config.trayMenu.spacing
@@ -58,7 +58,7 @@ ColumnLayout {
 					onMenuTrigger: entry => {
 						entry.triggered()
 						if (entry.hasChildren) column.requestTrayMenuPush(entry)
-						else column.requestTrayMenuClose()
+						else column.requestTrayMenuDestroy()
 					}
 				}
 			}
