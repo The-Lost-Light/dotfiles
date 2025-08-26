@@ -20,7 +20,7 @@ Scope {
 
 			background: Rectangle {
 				color: Color.background
-				radius: Config.bar.radius
+				radius: Config.popupRadius
 			}
 		}
 	}

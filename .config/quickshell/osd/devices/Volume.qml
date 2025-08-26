@@ -2,8 +2,10 @@ pragma ComponentBehavior: Bound
 import QtQuick
 import Quickshell
 import Quickshell.Services.Pipewire
+import Quickshell.Widgets
 import qs.services
 import qs.widgets
+import qs.configs
 
 Scope {
 	id: root
@@ -11,8 +13,8 @@ Scope {
 
 	Behavior on percent {
 		SmoothedAnimation {
-			velocity: 10
-			duration: 600
+			velocity: Config.devices.animationVelocity
+			duration: Config.devices.animationMaxDuration
 			easing.type: Easing.OutCubic
 		}
 	}
@@ -27,34 +29,51 @@ Scope {
 				bottom: true
 			}
 			color: "transparent"
-			implicitHeight: column.implicitHeight
-			implicitWidth: column.implicitWidth
+			implicitHeight: wrapperRectangle.implicitHeight
+			implicitWidth: wrapperRectangle.implicitWidth
+
 			margins {
-				right: 32
-				bottom: 32
+				right: Config.devices.marginRight
+				bottom: Config.devices.marginBottom
 			}
 			mask: Region {}
 
-			Column {
-				id: column
-				spacing: 4
+			WrapperRectangle {
+				id: wrapperRectangle
+				readonly property real size: Math.max(column.implicitWidth, column.implicitHeight) + 2 * margin + 2 * extraMargin
+				border {
+					color: Color.border
+					width: Config.devices.borderWidth
+				}
+				color: Color.background
+				margin: Config.popupMargin
+				extraMargin: Config.devices.borderWidth
+				radius: Config.popupRadius
+				implicitWidth: size
+				implicitHeight: size
 
-				RadioBar {
-					percent: root.percent
-					backgroundColor: "#2a2a2a"
-					color: "white"
-					radius: 24
-					thickness: 8
+				Column {
+					id: column
+					spacing: Config.devices.contentSpacing
+
+					RadioBar {
+						anchors.horizontalCenter: parent.horizontalCenter
+						percent: root.percent
+						backgroundColor: Color.devices.ringBackground
+						color: Color.devices.ringForeground
+						radius: Config.devices.radius
+						thickness: Config.devices.thickness
+
+						QuickLabel {
+							anchors.centerIn: parent
+							text: ''
+						}
+					}
 
 					QuickLabel {
-						anchors.centerIn: parent
-						text: ''
+						anchors.horizontalCenter: parent.horizontalCenter
+						text: Math.round(Pipewire.defaultAudioSink?.audio.volume * 100 ?? 0) + "%"
 					}
-				}
-
-				QuickLabel {
-					anchors.horizontalCenter: parent.horizontalCenter
-					text: Math.round(Pipewire.defaultAudioSink?.audio.volume * 100 ?? 0) + "%"
 				}
 			}
 		}
