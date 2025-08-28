@@ -10,7 +10,7 @@ BarButton {
 	}
 	text: `${BrightnessService.percent}%`
 	onWheel: event => {
-		if (event.angleDelta.y > 0) BrightnessService.script("increase")
-		else if (event.angleDelta.y < 0) BrightnessService.script("decrease")
+		if(event.angleDelta.y > 0) BrightnessService.script("increase")
+		else if(event.angleDelta.y < 0) BrightnessService.script("decrease")
 	}
 }

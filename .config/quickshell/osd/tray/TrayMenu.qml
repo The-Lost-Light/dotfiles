@@ -6,7 +6,7 @@ import qs.widgets
 import qs.configs
 
 ColumnLayout {
-	id: column
+	id: root
 	signal requestTrayMenuPush(QsMenuEntry entry)
 	signal requestTrayMenuPop
 	signal requestTrayMenuDestroy
@@ -16,7 +16,7 @@ ColumnLayout {
 
 	QsMenuOpener {
 		id: menuOpener
-		onChildrenChanged: if (column.isSubMenu && children.values.length === 0) column.requestTrayMenuPop()
+		onChildrenChanged: if(root.isSubMenu && children.values.length === 0) root.requestTrayMenuPop()
 	}
 
 	Separator {
@@ -26,21 +26,22 @@ ColumnLayout {
 
 	Repeater {
 		id: repeater
-		model: {
-			const entrys = menuOpener.children.values
-			let end = entrys.length
-			while (end > 0 && entrys[end - 1].isSeparator) end--
-			return entrys.slice(0, end)
+		readonly property int endIndex: {
+			let index = menuOpener.children.values.length
+			while (index > 0 && menuOpener.children.values[index - 1].isSeparator) index--
+			return index
 		}
+		model: menuOpener.children
 
 		Loader {
 			id: loader
 			required property int index
 			required property QsMenuEntry modelData
 			asynchronous: true
+			visible: index < repeater.endIndex
 			Layout.fillWidth: true
 			sourceComponent: {
-				if (modelData.isSeparator) return separator
+				if(modelData.isSeparator) return separator
 				else return menuButton
 			}
 
@@ -57,8 +58,8 @@ ColumnLayout {
 					entry: loader.modelData
 					onMenuTrigger: entry => {
 						entry.triggered()
-						if (entry.hasChildren) column.requestTrayMenuPush(entry)
-						else column.requestTrayMenuDestroy()
+						if(entry.hasChildren) root.requestTrayMenuPush(entry)
+						else root.requestTrayMenuDestroy()
 					}
 				}
 			}
@@ -66,7 +67,7 @@ ColumnLayout {
 	}
 
 	Loader {
-		active: column.isSubMenu
+		active: root.isSubMenu
 		visible: active
 		Layout.fillWidth: true
 		sourceComponent: QuickLabel {
@@ -76,7 +77,7 @@ ColumnLayout {
 
 			MouseArea {
 				anchors.fill: parent
-				onClicked: column.requestTrayMenuPop()
+				onClicked: root.requestTrayMenuPop()
 			}
 		}
 	}
