@@ -60,6 +60,9 @@ AddPackage --foreign kazumi # 基于自定义规则的番剧采集APP，支持�
 # Screen Record
 AddPackage kooha # Elegantly record your screen
 
+# Remote Desktop
+AddPackage --foreign rustdesk # Yet another remote desktop software, written in Rust. Works out of the box, no configuration required. Great alternative to TeamViewer and AnyDesk!
+
 # Tools
 AddPackage gnome-calculator # GNOME Scientific calculator
 

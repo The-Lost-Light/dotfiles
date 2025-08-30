@@ -42,9 +42,9 @@ Scope {
 
 		TrayMenu {
 			onRequestTrayMenuPush: entry => stackView.pushItem(subMenu, {
-				menu: entry,
-				isSubMenu: true
-			}, StackView.Immediate)
+					menu: entry,
+					isSubMenu: true
+				}, StackView.Immediate)
 			onRequestTrayMenuPop: stackView.pop(StackView.Immediate)
 			onRequestTrayMenuDestroy: {
 				stackView.clear()

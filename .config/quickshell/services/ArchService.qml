@@ -7,7 +7,7 @@ Singleton {
 	id: root
 
 	readonly property list<string> packages: checker.packages
-	property string prompt: "\x1b[34m\n:: Update Completed!\n\x1b[33m:: Press Enter to exit!\x1b[0m"
+	property string prompt: "(ansi blue)\n:: Update Completed!\n(ansi yellow):: Press Enter to exit!(ansi reset)"
 	readonly property int updates: checker.packages.length
 
 	function update() {
@@ -27,7 +27,7 @@ Singleton {
 			const unchanged = old_parts.slice(0, diffIndex).join("")
 			const changed = new_parts.slice(diffIndex).join("")
 			return `${name}: ${unchanged}<font color="#A6DA95">${changed}</font>`
-		})
+		});
 	}
 
 	Process {
@@ -52,7 +52,7 @@ Singleton {
 
 	Process {
 		id: updater
-		command: ["kitty", "fish", "-c", `yay; read -P "${root.prompt}"`]
+		command: ["kitty", "nu", "-c", `yay; print $'${root.prompt}'; input`]
 
 		stdout: StdioCollector {
 			onStreamFinished: {

@@ -1,6 +1,5 @@
 # Shell
 - dash: for system sh
-- fish: for interactive
 - nushell: for scripts
 # System
 ## UEFI boot manager

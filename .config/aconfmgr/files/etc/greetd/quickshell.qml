@@ -85,7 +85,7 @@ ShellRoot {
 		}
 
 		function onReadyToLaunch() {
-			Greetd.launch(["niri-session"]);
+			Greetd.launch(["niri-session", ">", "/dev/null", "2>&1"]);
 		}
 	}
 }

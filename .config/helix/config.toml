@@ -1,7 +1,7 @@
 theme = "kanagawa"
 
 [editor]
-shell = ["fish", "-c"]
+shell = ["nu", "-c"]
 line-number = "relative"
 cursorline = true
 auto-format = false

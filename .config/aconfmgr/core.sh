@@ -59,9 +59,9 @@ AddPackage cachyos-v4-mirrorlist # CachyOS repository mirrorlist
 AddPackage cachyos-rate-mirrors # CachyOS - Rate mirrors service
 
 # Shell
-AddPackage fish # Smart and user friendly shell intended mostly for interactive use
 AddPackage nushell # A new type of shell
 AddPackage --foreign dashbinsh # Relink /bin/sh to dash
+AddPackage --foreign carapace-bin # multi-shell multi-command argument completer
 # Shell tools
 AddPackage bat # Cat clone with syntax highlighting and git integration
 AddPackage fd # Simple, fast and user-friendly alternative to find
