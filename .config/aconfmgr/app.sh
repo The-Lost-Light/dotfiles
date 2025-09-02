@@ -119,5 +119,4 @@ AddPackage playerctl # mpris media player controller and lib for spotify, vlc, a
 AddPackage tealdeer # A fast tldr client in Rust
 AddPackage wev # A tool for debugging wayland events on a Wayland window, analagous to the X11 tool xev
 AddPackage --foreign catnap-git # A minimalistic and fast system fetch written in Nim.
-AddPackage --foreign python-terminaltexteffects # Visual effects engine applied to text in the terminal.
 AddPackage --foreign tty-share # Shares terminal session with no setup on remote end (browser)

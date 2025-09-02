@@ -69,8 +69,8 @@ binds {
 	Mod+Equal            { set-column-width "+10%"; }
 	Mod+Shift+Minus      { set-window-height "-10%"; }
 	Mod+Shift+Equal      { set-window-height "+10%"; }
-	Mod+F                { switch-focus-between-floating-and-tiling; }
-	Mod+Shift+F          { toggle-window-floating; }
+	Mod+F                { toggle-window-floating; }
+	Mod+Shift+F          { switch-focus-between-floating-and-tiling; }
 	// Screenshot
 	Print                { screenshot; }
 	Mod+Print            { screenshot-window; }
@@ -160,6 +160,7 @@ clipboard {
 
 hotkey-overlay {
 	skip-at-startup
+	hide-not-bound
 }
 
 

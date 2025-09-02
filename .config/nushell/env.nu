@@ -2,7 +2,6 @@ $env.path ++= ["~/.cargo/bin"]
 
 # Desktop
 $env.LANG = "zh_TW.UTF-8"
-$env.DISPLAY = ":0"
 $env.ELECTRON_OZONE_PLATFORM_HINT = "auto"
 $env.ZED_WINDOW_DECORATIONS = "server"
 $env.QT_QPA_PLATFORMTHEME = "qt6ct"
