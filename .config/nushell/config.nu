@@ -27,6 +27,9 @@ $env.config.display_errors.exit_code = true
 
 # Table Display
 $env.config.footer_mode = "auto"
+$env.config.table.index_mode = "auto"
+$env.config.table.header_on_separator = true
+$env.config.table.footer_inheritance = true
 
 # Themes/Colors and Syntax Highlighting
 $env.config.highlight_resolved_externals = true

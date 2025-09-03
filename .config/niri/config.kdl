@@ -9,6 +9,7 @@ input {
 		tap
 		dwt
 		drag true
+		drag-lock
 		disabled-on-external-mouse
 	}
 	warp-mouse-to-focus mode="center-xy"
