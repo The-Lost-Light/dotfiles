@@ -10,20 +10,13 @@
 		"enabled_in_text_threads": false
 	},
 	"autosave": "on_focus_change",
-	"buffer_font_family": "FiraCode Nerd Font",
+	"buffer_font_family": "Maple Mono NF CN",
 	"buffer_font_features": {
-		"cv01": true,
-		"cv02": true,
-		"cv03": true,
-		"ss01": true,
-		"cv11": true,
-		"ss05": true,
-		"ss03": true,
-		"cv29": true,
-		"cv25": true,
-		"cv26": true,
-		"cv32": true,
-		"cv28": true
+		"cv07": true,
+		"cv61": true,
+		"cv97": true,
+		"cv99": true,
+		"ss03": true
 	},
 	"buffer_font_size": 18,
 	"tabs": { "git_status": true },

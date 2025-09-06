@@ -7,7 +7,7 @@ $env.config.rm.always_trash = true
 $env.config.buffer_editor = "helix"
 
 # Completions Behavior
-$env.config.completions.algorithm = "fuzzy"
+$env.config.completions.algorithm = "substring"
 $env.config.completions.external = {
 	completer: { |spans: list<string>|
 		let expanded_alias = scope aliases | where name == $spans.0 | get --optional 0 | get --optional expansion
@@ -40,17 +40,3 @@ alias la = lsd --all
 alias ll = lsd --long --all
 alias lt = lsd --tree
 alias dotfiles = git --git-dir=($env.HOME)/.dotfiles --work-tree=($env.HOME)
-
-let autoload = $nu.data-dir | path join "vendor/autoload"
-mkdir $autoload
-
-jj util completion nushell | save --force ($autoload | path join "jj.nu")
-
-niri completions nushell | save --force ($autoload | path join "niri.nu")
-
-starship init nu | save --force ($autoload | path join "starship.nu")
-
-uv generate-shell-completion nushell | save --force ($autoload | path join "uv.nu")
-uvx --generate-shell-completion nushell | save --force ($autoload | path join "uvx.nu")
-
-zoxide init nushell | save --force ($autoload | path join "zoxide.nu")

@@ -3,6 +3,7 @@ input {
 		xkb {
 			options "caps:ctrl_modifier"
 		}
+		numlock
 	}
 	touchpad {
 		natural-scroll
