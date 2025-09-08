@@ -26,7 +26,11 @@
 	"hard_tabs": true,
 	"use_smartcase_search": true,
 	"soft_wrap": "editor_width",
-	"terminal": { "cursor_shape": "bar" },
+	"terminal": {
+		"cursor_shape": "bar",
+		"font_family": "FiraCode Nerd Font",
+		"line_height": "standard"
+	},
 	"minimap": { "show": "auto" },
 	"theme": "Ayu Mirage",
 	"agent": {
@@ -46,6 +50,11 @@
 				}
 			}
 		},
-		"qml": {}
+		"dart": {
+			"binary": {
+				"path": "fvm",
+				"arguments": ["dart", "language-server", "--protocol=lsp"]
+			}
+		}
 	}
 }

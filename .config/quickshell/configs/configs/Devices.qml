@@ -3,6 +3,7 @@ import QtQuick
 QtObject {
 	readonly property int marginRight: 24
 	readonly property int marginBottom: 32
+	readonly property int marginOffset: 2
 	readonly property int borderWidth: 1
 
 	readonly property int contentSpacing: 4

@@ -47,6 +47,7 @@ Scope {
 				}
 				color: Color.background
 				margin: Config.popupMargin
+				topMargin: Config.popupMargin + Config.devices.marginOffset
 				extraMargin: Config.devices.borderWidth
 				radius: Config.popupRadius
 				implicitWidth: size
