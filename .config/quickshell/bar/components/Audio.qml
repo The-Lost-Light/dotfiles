@@ -23,6 +23,7 @@ Row {
 			return icons[index] ?? ""
 		}
 		font: ({ strikeout: audioNode?.muted })
+		color: audioNode?.muted ? Color.fontDisabled : Color.font
 		text: `${(audioNode?.volume * 100).toFixed(0)}%`
 		onClicked: AudioService.script(`${audio.name} toggle`)
 		onWheel: event => {

@@ -34,8 +34,25 @@ $env.config.table.footer_inheritance = true
 # Themes/Colors and Syntax Highlighting
 $env.config.highlight_resolved_externals = true
 
+# Keybinds
+$env.config.keybindings ++= [
+    {
+        name: toggle_sudo
+        modifier: alt
+        keycode: char_s
+        mode: [emacs vi_insert vi_normal]
+        event: {
+            send: executehostcommand
+            cmd: "let cmd = (commandline); commandline edit (if $cmd starts-with sudo { $cmd | str replace -r '^sudo ' '' } else { 'sudo ' ++ $cmd });"
+        }
+    }
+]
+
+# Alias
 alias hx = helix
-alias l = lsd
+alias flutter = fvm flutter
+alias l = ls
+alias ls = lsd
 alias la = lsd --all
 alias ll = lsd --long --all
 alias lt = lsd --tree

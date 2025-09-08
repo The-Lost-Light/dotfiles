@@ -7,6 +7,7 @@ Singleton {
 	readonly property color background: "#1e1e2e"
 	readonly property color border: "#4a4a57"
 	readonly property color font: "white"
+	readonly property color fontDisabled: "gray"
 
 	readonly property color red: "#dd6777"
 
