@@ -9,5 +9,5 @@ ShellRoot {
 
 	PowerPanel {}
 	TrayPanel {}
-	Volume {}
+	Devices {}
 }

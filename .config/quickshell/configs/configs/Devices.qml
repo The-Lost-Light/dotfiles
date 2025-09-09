@@ -5,6 +5,8 @@ QtObject {
 	readonly property int marginBottom: 32
 	readonly property int marginOffset: 2
 	readonly property int borderWidth: 1
+	readonly property int chartSpacing: 8
+	readonly property int showInterval: 2000
 
 	readonly property int contentSpacing: 4
 
