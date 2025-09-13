@@ -35,12 +35,12 @@ Row {
 	Audio {
 		name: "microphone"
 		device: AudioService.source
-		icons: ['', '']
+		icons: [LucideService.unicode("mic-off"), LucideService.unicode("mic")]
 	}
 
 	Audio {
 		name: "speaker"
 		device: AudioService.sink
-		icons: ['', '', '', '']
+		icons: [LucideService.unicode("volume-x"), LucideService.unicode("volume"), LucideService.unicode("volume-1"), LucideService.unicode("volume-2")]
 	}
 }

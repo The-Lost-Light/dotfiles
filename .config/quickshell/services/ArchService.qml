@@ -27,7 +27,7 @@ Singleton {
 			const unchanged = old_parts.slice(0, diffIndex).join("")
 			const changed = new_parts.slice(diffIndex).join("")
 			return `${name}: ${unchanged}<font color="#A6DA95">${changed}</font>`
-		});
+		})
 	}
 
 	Process {

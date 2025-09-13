@@ -4,9 +4,9 @@ import "widgets"
 
 BarButton {
 	icon: {
-		if(BrightnessService.percent >= 67) return ''
-		else if(BrightnessService.percent >= 34) return ''
-		else return ''
+		if(BrightnessService.percent >= 67) return LucideService.unicode("sun")
+		else if(BrightnessService.percent >= 34) return LucideService.unicode("sun-medium")
+		else return LucideService.unicode("sun-dim")
 	}
 	text: `${BrightnessService.percent}%`
 	onWheel: event => {

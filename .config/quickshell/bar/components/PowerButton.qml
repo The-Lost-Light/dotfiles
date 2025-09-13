@@ -3,6 +3,6 @@ import qs.services
 import "widgets"
 
 BarButton {
-	icon: ''
+	icon: LucideService.unicode("power")
 	onClicked: EventBus.requestPowerPanelToggle()
 }

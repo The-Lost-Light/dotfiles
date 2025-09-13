@@ -21,7 +21,7 @@ Row {
 		visible: active
 
 		sourceComponent: QuickLabel {
-			font: Qt.font(Object.assign({ family: "lucide" }, root.iconFont))
+			font: Qt.font(Object.assign({ family: Config.iconFontFamily }, root.iconFont))
 			color: root.iconColor
 			text: root.icon
 		}

@@ -4,6 +4,7 @@ import "configs"
 
 Singleton {
 	readonly property string fontFamily: "Noto Sans CJK TC"
+	readonly property string iconFontFamily: "lucide"
 
 	readonly property int popupMargin: 8
 	readonly property int popupRadius: 8

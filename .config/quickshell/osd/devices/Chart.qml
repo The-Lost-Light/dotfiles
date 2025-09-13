@@ -36,6 +36,7 @@ WrapperRectangle {
 			QuickLabel {
 				id: icon
 				anchors.centerIn: parent
+				font.family: Config.iconFontFamily
 			}
 		}
 

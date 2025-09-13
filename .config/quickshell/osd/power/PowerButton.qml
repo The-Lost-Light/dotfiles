@@ -10,7 +10,7 @@ Button {
 	property color color: "white"
 	font {
 		bold: true
-		family: "lucide"
+		family: Config.iconFontFamily
 		pixelSize: Config.powerMenu.fontSize
 	}
 	palette.buttonText: color

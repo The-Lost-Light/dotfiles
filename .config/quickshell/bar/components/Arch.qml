@@ -6,7 +6,7 @@ BarButton {
 	id: root
 	visible: ArchService.updates > 0
 	hoverEnabled: true
-	icon: ''
+	icon: LucideService.unicode("download")
 	text: `${ArchService.updates}`
 	onClicked: ArchService.update()
 

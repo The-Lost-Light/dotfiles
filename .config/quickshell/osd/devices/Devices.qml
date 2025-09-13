@@ -53,16 +53,13 @@ Scope {
 				spacing: Config.devices.chartSpacing
 
 				Chart {
-
 					visible: root.sourceActive
-					iconFont.family: "lucide"
-					icon: ''
+					icon: LucideService.unicode("mic")
 					percent: root.sourcePercent
 				}
 				Chart {
 					visible: root.sinkActive
-					iconFont.family: "lucide"
-					icon: ''
+					icon: LucideService.unicode("volume-2")
 					percent: root.sinkPercent
 				}
 			}
