@@ -1,6 +1,4 @@
 # Browser
-AddPackage firefox-developer-edition # Fast, Private & Safe Web Browser (Developer Edition)
-AddPackage firefox-developer-edition-i18n-zh-tw # Chinese (Traditional) language pack for Firefox Developer Edition
 AddPackage vivaldi # An advanced browser made with the power user in mind.
 AddPackage vivaldi-ffmpeg-codecs # additional support for proprietary codecs for vivaldi
 
@@ -28,12 +26,13 @@ AddPackage papers # Document viewer for PDF and other document formats aimed at 
 # Documents
 AddPackage errands # Todo application for those who prefer simplicity
 AddPackage iotas # Simple note taking with Markdown support and optional Nextcloud Notes sync
-AddPackage onlyoffice-bin # An office suite that combines text, spreadsheet and presentation editors
+AddPackage libreoffice-fresh-zh-tw # Chinese (traditional) language pack for LibreOffice Fresh
 AddPackage --foreign appflowy-bin # AppFlowy is an open-source alternative to Notion. You are in charge of your data and customizations.
 
 # Art
 AddPackage blender # A fully integrated 3D graphics creation suite
 AddPackage --foreign aseprite # Create animated sprites and pixel art
+AddPackage --foreign pixieditor-bin # Universal 2D Graphics Editor
 
 # Image
 AddPackage imagemagick # An image viewing/manipulation program
@@ -80,7 +79,7 @@ AddPackage --foreign glfw-wayland-minecraft-cursorfix # A free, open source, por
 AddPackage steam # Valve's digital software delivery system
 AddPackage gamescope # SteamOS session compositing window manager
 AddPackage proton-cachyos # Compatibility tool for Steam Play based on Wine and additional components, experimental branch with extra CachyOS flavour
-AddPackage proton-ge-custom # Compatibility tool for Steam Play based on Wine and additional components, GloriousEggroll's custom build
+AddPackage proton-ge-custom-bin # A fancy custom distribution of Valves Proton with various patches
 AddPackage --foreign adwsteamgtk # A simple Gtk wrapper for Adwaita-for-Steam
 AddPackage waydroid # A container-based approach to boot a full Android system on a regular Linux system
 AddPackage xpadneo-dkms # Advanced Linux Driver for Xbox One Wireless Gamepad

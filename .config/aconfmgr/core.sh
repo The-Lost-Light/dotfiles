@@ -99,6 +99,7 @@ AddPackage ttf-iosevka-nerd # Patched font Iosevka from nerd fonts library
 AddPackage ttf-jetbrains-mono-nerd # Patched font JetBrains Mono from nerd fonts library
 AddPackage ttf-nerd-fonts-symbols-mono # High number of extra glyphs from popular 'iconic fonts' (monospace)
 AddPackage wqy-zenhei # A Hei Ti Style (sans-serif) Chinese Outline Font.
+AddPackage --foreign maplemono-nf-cn-unhinted # Open source monospace font with round corner, ligatures and Nerd-Font for IDE and command line
 AddPackage --foreign ttf-lucide-font # Beautiful & consistent icon toolkit made by the community.
 AddPackage --foreign ttf-material-symbols-variable-git # Material Design icons by Google - variable fonts
 AddPackage --foreign ttc-monocraft # A programming font based on the typeface used in Minecraft

@@ -2,5 +2,5 @@
 vt = "next"
 
 [default_session]
-command = "sh -c 'niri --config /etc/greetd/niri.kdl' >/dev/null 2>&1"
+command = "niri --config /etc/greetd/niri.kdl"
 user = "greeter"
