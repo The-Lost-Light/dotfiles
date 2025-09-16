@@ -60,7 +60,7 @@ AddPackage --foreign kazumi # 基于自定义规则的番剧采集APP，支持�
 AddPackage kooha # Elegantly record your screen
 
 # Remote Desktop
-AddPackage --foreign rustdesk # Yet another remote desktop software, written in Rust. Works out of the box, no configuration required. Great alternative to TeamViewer and AnyDesk!
+AddPackage --foreign rustdesk-bin # Yet another remote desktop software, written in Rust. Works out of the box, no configuration required.
 
 # Tools
 AddPackage gnome-calculator # GNOME Scientific calculator
@@ -75,7 +75,6 @@ AddPackage lib32-gamemode # A daemon/lib combo that allows games to request a se
 AddPackage mangohud # A Vulkan overlay layer for monitoring FPS, temperatures, CPU/GPU load and more.
 AddPackage mangojuice # A convenient alternative to GOverlay for configuring MangoHud
 AddPackage prismlauncher # Minecraft launcher with ability to manage multiple instances
-AddPackage --foreign glfw-wayland-minecraft-cursorfix # A free, open source, portable framework for graphical application development (wayland, patched for Minecraft)
 AddPackage steam # Valve's digital software delivery system
 AddPackage gamescope # SteamOS session compositing window manager
 AddPackage proton-cachyos # Compatibility tool for Steam Play based on Wine and additional components, experimental branch with extra CachyOS flavour
@@ -94,7 +93,6 @@ AddPackage baidupcs-go # Terminal utility for Baidu Network Disk
 AddPackage localsend # An open source cross-platform alternative to AirDrop
 AddPackage syncthing # Open Source Continuous Replication / Cluster Synchronization Thing
 AddPackage yt-dlp # A youtube-dl fork with additional features and fixes
-AddPackage --foreign lux-dl # Fast and simple video download library and CLI tool written in Go
 AddPackage --foreign megatools # CLI for MEGA
 
 # Record

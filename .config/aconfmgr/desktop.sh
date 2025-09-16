@@ -60,7 +60,6 @@ AddPackage --foreign tela-icon-theme # A flat colorful design icon theme.
 AddPackage swaybg # Wallpaper tool for Wayland compositors
 AddPackage swww # A Solution to your Wayland Wallpaper Woes
 AddPackage --foreign gowall # A tool to convert a Wallpaper's color scheme - palette
-AddPackage --foreign linux-wallpaperengine-git # use steam's wallpaperengine on linux
 
 # Launcher
 AddPackage nwg-drawer # Application drawer for sway and other wlroots-based compositors

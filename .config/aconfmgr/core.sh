@@ -95,7 +95,6 @@ AddPackage noto-fonts-cjk # Google Noto CJK fonts
 AddPackage noto-fonts-emoji # Google Noto emoji fonts
 AddPackage noto-fonts-extra # Google Noto TTF fonts - additional variants
 AddPackage ttf-firacode-nerd # Patched font Fira (Fura) Code from nerd fonts library
-AddPackage ttf-iosevka-nerd # Patched font Iosevka from nerd fonts library
 AddPackage ttf-jetbrains-mono-nerd # Patched font JetBrains Mono from nerd fonts library
 AddPackage ttf-nerd-fonts-symbols-mono # High number of extra glyphs from popular 'iconic fonts' (monospace)
 AddPackage wqy-zenhei # A Hei Ti Style (sans-serif) Chinese Outline Font.
