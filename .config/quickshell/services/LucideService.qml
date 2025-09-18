@@ -20,6 +20,7 @@ Singleton {
 	FileView {
 		id: fileView
 		property var data
+		blockLoading: true
 		path: root.cachePath
 		onLoaded: data = JSON.parse(fileView.text())
 	}

@@ -186,7 +186,7 @@ window-rule {
 }
 
 window-rule {
-	match app-id="firefox-developer-edition$" title="子母畫面" //Picture-in-Picture
+	match title="子母畫面"
 	open-floating true
 	default-floating-position x=0 y=0 relative-to="bottom-right"
 }
