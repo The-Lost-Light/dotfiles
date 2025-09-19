@@ -52,7 +52,7 @@ Singleton {
 
 	Process {
 		id: updater
-		command: ["kitty", "nu", "-c", `yay; print $'${root.prompt}'; input`]
+		command: ["kitty", "nu", "-c", `do --ignore-errors { yay }; print $'${root.prompt}'; input`]
 
 		stdout: StdioCollector {
 			onStreamFinished: {

@@ -4,5 +4,5 @@ After=graphical-session.target
 Requisite=graphical-session.target
 
 [Service]
-ExecStart=swaybg --image %h/.config/niri/assets/wallpaper-blur.jpg
+ExecStart=swww-daemon --namespace wallpaper-blur
 Restart=on-failure

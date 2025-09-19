@@ -64,6 +64,7 @@ AddPackage --foreign rustdesk-bin # Yet another remote desktop software, written
 
 # Tools
 AddPackage gnome-calculator # GNOME Scientific calculator
+AddPackage --foreign wordbook # A dictionary application built for GNOME.
 
 # Mail
 AddPackage thunderbird # Standalone mail and news reader from mozilla.org

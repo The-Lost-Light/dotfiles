@@ -167,7 +167,7 @@ hotkey-overlay {
 
 
 layer-rule {
-    match namespace="^wallpaper$"
+    match namespace="wallpaper-blur"
     place-within-backdrop true
 }
 
