@@ -1,5 +1,6 @@
 # History-related Settings
 $env.config.history.file_format = "sqlite"
+$env.config.history.isolation = true
 
 # Miscellaneous Settings
 $env.config.show_banner = false

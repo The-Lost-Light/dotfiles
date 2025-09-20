@@ -42,6 +42,12 @@
 	"calls": { "mute_on_join": true },
 	"features": { "edit_prediction_provider": "zed" },
 
+	"languages": {
+		"Python": {
+			"language_servers": ["ty", "!basedpyright"]
+		}
+	},
+
 	"lsp": {
 		"typescript-language-server": {
 			"initialization_options": {

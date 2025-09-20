@@ -66,10 +66,6 @@ AddPackage --foreign rustdesk-bin # Yet another remote desktop software, written
 AddPackage gnome-calculator # GNOME Scientific calculator
 AddPackage --foreign wordbook # A dictionary application built for GNOME.
 
-# Mail
-AddPackage thunderbird # Standalone mail and news reader from mozilla.org
-AddPackage thunderbird-i18n-zh-tw # Chinese (Traditional) language pack for Thunderbird
-
 # Game
 AddPackage gamemode # A daemon/lib combo that allows games to request a set of optimisations be temporarily applied to the host OS
 AddPackage lib32-gamemode # A daemon/lib combo that allows games to request a set of optimisations be temporarily applied to the host OS
