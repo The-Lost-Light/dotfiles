@@ -6,7 +6,6 @@ shell        = { icon = " ", name = "shell", color = "(MA)" }
 packages     = { icon = " ", name = "packages", color = "(RD)" }
 sep_hardware = "SEPARATOR"
 cpu          = { icon = " ", name = "cpu", color = "(RD)" }
-gpu          = { icon = "󱔐 ", name = "gpu", color = "(MA)" }
 memory       = { icon = " ", name = "memory", color = "(YW)" }
 disk_0       = { icon = " ", name = "disk", color = "(GN)" }
 sep_color    = "SEPARATOR"

@@ -1,4 +1,3 @@
-pragma ComponentBehavior: Bound
 import QtQuick
 
 MouseArea {

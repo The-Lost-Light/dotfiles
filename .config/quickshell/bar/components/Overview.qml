@@ -1,4 +1,3 @@
-import QtQuick
 import Quickshell.Io
 import "widgets"
 

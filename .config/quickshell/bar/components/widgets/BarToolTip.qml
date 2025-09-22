@@ -15,6 +15,7 @@ PopupWindow {
 	color: "transparent"
 	implicitHeight: toolTip.implicitHeight
 	implicitWidth: toolTip.implicitWidth
+	mask: Region {}
 	visible: item.containsMouse
 
 	WrapperRectangle {

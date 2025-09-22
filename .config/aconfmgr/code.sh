@@ -34,6 +34,7 @@ AddPackage jdk-openjdk # OpenJDK Java development kit
 
 # Python
 AddPackage uv # An extremely fast Python package installer and resolver written in Rust
+AddPackage tk # A windowing toolkit for use with tcl
 AddPackage --foreign marimo # A reactive Python notebook that's reproducible, git-friendly, and deployable as scripts or apps
 
 # Rust
