@@ -7,11 +7,12 @@ import qs.services
 Singleton {
 	id: root
 	readonly property var json: fileView.data
+	property string lucideURL: "https://unpkg.com/lucide-static/font/info.json"
 	property string cachePath: Lib.cachePath("lucide.json")
 
 	Process {
 		running: true
-		command: ["wget", "https://unpkg.com/lucide-static/font/info.json", "--output-document", root.cachePath]
+		command: ["curl", "--fail", "--location", root.lucideURL, "--output", root.cachePath]
 		onExited: exitCode => {
 			if(exitCode === 0) fileView.reload()
 		}
