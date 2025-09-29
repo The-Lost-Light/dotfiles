@@ -35,6 +35,7 @@ IgnorePath "/etc/ssl/*"
 # Systemd
 IgnorePath "/etc/systemd/system/*"
 IgnorePath "/etc/systemd/user/*"
+IgnorePath "/etc/userdb"
 IgnorePath "/etc/vconsole.conf"
 # Tailscale
 IgnorePath "/etc/resolv.conf"

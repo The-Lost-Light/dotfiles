@@ -44,7 +44,7 @@
 
 	"languages": {
 		"Python": {
-			"language_servers": ["ty", "!basedpyright"]
+			"language_servers": ["ty", "!basedpyright", "discord_presence"]
 		}
 	},
 

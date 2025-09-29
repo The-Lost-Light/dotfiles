@@ -24,7 +24,7 @@ $env.config.completions.external = {
 $env.config.use_kitty_protocol = true
 
 # Error Display Settings
-$env.config.display_errors.exit_code = true
+$env.config.display_errors.termination_signal = false
 
 # Table Display
 $env.config.footer_mode = "auto"

@@ -14,10 +14,10 @@ AddPackage kitty # A modern, hackable, featureful, OpenGL-based terminal emulato
 AddPackage zellij # A terminal multiplexer
 
 # Communication
-AddPackage discord # All-in-one voice and text chat for gamers
 AddPackage fractal # Matrix group messaging app
 AddPackage signal-desktop # Signal Private Messenger for Linux
 AddPackage telegram-desktop # Official Telegram Desktop client
+AddPackage vesktop # A standalone Electron-based Discord app with Vencord & improved Linux support
 
 # Reader
 AddPackage foliate # A simple and modern GTK eBook reader
@@ -28,6 +28,7 @@ AddPackage errands # Todo application for those who prefer simplicity
 AddPackage iotas # Simple note taking with Markdown support and optional Nextcloud Notes sync
 AddPackage libreoffice-fresh-zh-tw # Chinese (traditional) language pack for LibreOffice Fresh
 AddPackage --foreign appflowy-bin # AppFlowy is an open-source alternative to Notion. You are in charge of your data and customizations.
+AddPackage --foreign project-graph-bin # A simple tool to create topology diagrams.
 
 # Art
 AddPackage blender # A fully integrated 3D graphics creation suite

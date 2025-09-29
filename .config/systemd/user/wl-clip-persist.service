@@ -4,5 +4,5 @@ After=graphical-session.target
 Requisite=graphical-session.target
 
 [Service]
-ExecStart=wl-clip-persist --clipboard regular --reconnect-tries 0
+ExecStart=wl-clip-persist --clipboard regular
 Restart=on-failure
