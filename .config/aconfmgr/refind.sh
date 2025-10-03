@@ -1,15 +1,11 @@
-AddPackage refind # An EFI boot manager
+AddPackage --foreign refi2nd # A fork of rEFInd with bug-fixes and optimizations.
 
 IgnorePath "/efi/EFI/refind/vars/*"
 
 CopyFile /efi/EFI/Arch/refind_linux.conf 755
 CopyFile /efi/EFI/refind/BOOT.CSV 755
-CopyFile /efi/EFI/refind/drivers_x64/btrfs_x64.efi 755
-CopyFile /efi/EFI/refind/drivers_x64/ext2_x64.efi 755
-CopyFile /efi/EFI/refind/drivers_x64/ext4_x64.efi 755
-CopyFile /efi/EFI/refind/drivers_x64/hfs_x64.efi 755
-CopyFile /efi/EFI/refind/drivers_x64/iso9660_x64.efi 755
-CopyFile /efi/EFI/refind/drivers_x64/reiserfs_x64.efi 755
+CopyFile /efi/EFI/refind/HashTool.efi 755
+CopyFile /efi/EFI/refind/PreLoader.efi 755
 CopyFile /efi/EFI/refind/icons/arrow_left.png 755
 CopyFile /efi/EFI/refind/icons/arrow_right.png 755
 CopyFile /efi/EFI/refind/icons/boot_linux.png 755
@@ -24,6 +20,7 @@ CopyFile /efi/EFI/refind/icons/func_install.png 755
 CopyFile /efi/EFI/refind/icons/func_reset.png 755
 CopyFile /efi/EFI/refind/icons/func_shutdown.png 755
 CopyFile /efi/EFI/refind/icons/mouse.png 755
+CopyFile /efi/EFI/refind/icons/os_aos.png 755
 CopyFile /efi/EFI/refind/icons/os_arch.png 755
 CopyFile /efi/EFI/refind/icons/os_artful.png 755
 CopyFile /efi/EFI/refind/icons/os_bionic.png 755
@@ -35,6 +32,7 @@ CopyFile /efi/EFI/refind/icons/os_crunchbang.png 755
 CopyFile /efi/EFI/refind/icons/os_debian.png 755
 CopyFile /efi/EFI/refind/icons/os_devuan.png 755
 CopyFile /efi/EFI/refind/icons/os_elementary.png 755
+CopyFile /efi/EFI/refind/icons/os_endeavouros.png 755
 CopyFile /efi/EFI/refind/icons/os_fedora.png 755
 CopyFile /efi/EFI/refind/icons/os_freebsd.png 755
 CopyFile /efi/EFI/refind/icons/os_frugalware.png 755
@@ -106,8 +104,8 @@ CopyFile /efi/EFI/refind/icons/vol_internal.png 755
 CopyFile /efi/EFI/refind/icons/vol_net.png 755
 CopyFile /efi/EFI/refind/icons/vol_optical.png 755
 CreateDir /efi/EFI/refind/keys
+CopyFile /efi/EFI/refind/loader.efi 755
 CopyFile /efi/EFI/refind/refind.conf 755
-CopyFile /efi/EFI/refind/refind_x64.efi 755
 CopyFile /efi/EFI/refind/themes/refind-ambience/background.png 755
 CopyFile /efi/EFI/refind/themes/refind-ambience/icons/func_about.png 755
 CopyFile /efi/EFI/refind/themes/refind-ambience/icons/func_exit.png 755

@@ -18,6 +18,7 @@ AddPackage fractal # Matrix group messaging app
 AddPackage signal-desktop # Signal Private Messenger for Linux
 AddPackage telegram-desktop # Official Telegram Desktop client
 AddPackage vesktop # A standalone Electron-based Discord app with Vencord & improved Linux support
+AddPackage discord # All-in-one voice and text chat for gamers
 
 # Reader
 AddPackage foliate # A simple and modern GTK eBook reader

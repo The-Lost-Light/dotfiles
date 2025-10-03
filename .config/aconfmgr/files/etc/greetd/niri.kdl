@@ -1,14 +1,10 @@
-spawn-at-startup "sh" "-c" "quickshell --path /etc/greetd/quickshell.qml; niri msg action quit --skip-confirmation"
+spawn-sh-at-startup  "GTK_USE_PORTAL=0 GDK_DEBUG=no-portals regreet --config /etc/greetd/regreet.toml; niri msg action quit --skip-confirmation"
 
 output "eDP-1"  {
-	scale 1.25
 	variable-refresh-rate
 }
 output "HDMI-A-1"  {
-	mode "2560x1440"
-	scale 1.25
 	variable-refresh-rate
-	focus-at-startup
 }
 
 cursor  {

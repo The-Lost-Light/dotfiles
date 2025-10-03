@@ -2,11 +2,11 @@
 AddPackage niri # A scrollable-tiling Wayland compositor
 
 # Greeter
-AddPackage greetd # Generic greeter daemon
+AddPackage greetd-regreet # Clean and customizable greeter for greetd
 CopyFile /etc/greetd/config.toml
 CopyFile /etc/greetd/login.png
 CopyFile /etc/greetd/niri.kdl
-CopyFile /etc/greetd/quickshell.qml
+CopyFile /etc/greetd/regreet.toml
 CopyFile /etc/pam.d/greetd # For gnome-keyring
 
 # Encryption

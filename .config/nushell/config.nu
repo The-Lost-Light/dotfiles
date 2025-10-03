@@ -32,9 +32,6 @@ $env.config.table.index_mode = "auto"
 $env.config.table.header_on_separator = true
 $env.config.table.footer_inheritance = true
 
-# Themes/Colors and Syntax Highlighting
-$env.config.highlight_resolved_externals = true
-
 # Keybinds
 $env.config.keybindings ++= [
     {
@@ -49,6 +46,9 @@ $env.config.keybindings ++= [
     }
 ]
 
+# Themes/Colors and Syntax Highlighting
+$env.config.highlight_resolved_externals = true
+
 # Alias
 alias hx = helix
 alias flutter = fvm flutter
@@ -58,3 +58,6 @@ alias la = lsd --all
 alias ll = lsd --long --all
 alias lt = lsd --tree
 alias dotfiles = git --git-dir=($env.HOME)/.dotfiles --work-tree=($env.HOME)
+
+# Startup
+kotofetch

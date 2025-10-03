@@ -18,7 +18,6 @@
 		- [x] Tray menu
 		- [ ] Settings center
 	- [x] Powermenu
-	- [x] Greeter
 	- [ ] Notifications
 
 # Themes
@@ -33,7 +32,7 @@
 |Type           |Package           |
 |---------------|------------------|
 |Chinese        |Noto Sans CJK (TC)|
-|Monospaced Font|FiraCode Nerd Font|
+|Monospaced Font|Maple Mono NF CN <br/>FiraCode Nerd Font|
 
 # [Dependences](.config/aconfmgr/README.md)
 |Type          |Package   |
@@ -41,4 +40,5 @@
 |Window manager|Niri      |
 |Shell         |Quickshell|
 |Boot manager  |Refind    |
+|Login         |Regreet   |
 |Maintain      |Aconfmgr  |

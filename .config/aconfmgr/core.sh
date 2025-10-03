@@ -4,6 +4,7 @@ AddPackage booster # Fast and secure initramfs generator
 CopyFile /etc/booster.yaml
 AddPackage linux-cachyos # The Linux BORE + LTO + AutoFDO + Propeller Cachy Sauce Kernel by CachyOS with other patches and improvements. kernel and modules
 AddPackage linux-cachyos-headers # Headers and scripts for building modules for the Linux BORE + LTO + AutoFDO + Propeller Cachy Sauce Kernel by CachyOS with other patches and improvements. kernel
+AddPackage --foreign preloader-signed # Linux Foundation UEFI secure boot system (prebuilt X64 EFI binaries)
 
 # Base
 AddPackage base # Minimal package set to define a basic Arch Linux installation
@@ -71,6 +72,7 @@ AddPackage repgrep # An interactive command line replacer for ripgrep
 AddPackage ripgrep-all # rga: ripgrep, but also search in PDFs, E-Books, Office documents, zip, tar.gz, etc.
 AddPackage starship # The cross-shell prompt for astronauts
 AddPackage zoxide # A smarter cd command for your terminal
+AddPackage --foreign kotofetch # Minimalist fetch tool for Japanese quotes (written in Rust)
 
 # Settings
 AddPackage cachyos-settings # CachyOS - Settings

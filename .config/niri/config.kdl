@@ -17,7 +17,6 @@ input {
 	focus-follows-mouse max-scroll-amount="33%"
 }
 
-
 output "eDP-1" {
 	scale 1.25
 	variable-refresh-rate
@@ -31,7 +30,6 @@ output "Philips Consumer Electronics Company PHL 275M8RZ UK52208002066" {
 output "PNP(BNQ) BenQ GW2450H D7D00271SL0" {
 	focus-at-startup
 }
-
 
 binds {
 	/* Global */
@@ -105,7 +103,6 @@ binds {
 	XF86Launch4          { spawn "asusctl" "profile" "-n"; }
 }
 
-
 layout {
 	gaps 16
 	struts {
@@ -140,10 +137,8 @@ layout {
 	}
 }
 
-
 prefer-no-csd
 screenshot-path "~/Pictures/screenshot/%Y-%m-%d %H-%M-%S.png"
-
 
 environment {
 	DISPLAY ":0"
@@ -154,23 +149,19 @@ cursor {
 	hide-after-inactive-ms 5000
 }
 
-
 clipboard {
 	disable-primary
 }
-
 
 hotkey-overlay {
 	skip-at-startup
 	hide-not-bound
 }
 
-
 layer-rule {
-    match namespace="wallpaper-blur"
+    match namespace="swww-daemonblur"
     place-within-backdrop true
 }
-
 
 window-rule {
 	geometry-corner-radius 16
