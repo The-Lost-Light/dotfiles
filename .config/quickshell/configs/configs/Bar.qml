@@ -9,5 +9,5 @@ QtObject {
 
 	readonly property int popupOffsetY: 8
 	// Tray
-	readonly property int trayIconSize: 18
+	readonly property int trayIconSize: 16
 }

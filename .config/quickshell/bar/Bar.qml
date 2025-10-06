@@ -25,6 +25,5 @@ BarWidget {
 		Brightness {}
 		Audio {}
 		Tray {}
-		// Notification {}
 	}
 }
