@@ -1,6 +1,7 @@
 pragma ComponentBehavior: Bound
 import QtQuick
 import Quickshell
+import Quickshell.Wayland
 import Quickshell.Services.Pipewire
 import qs.services
 import qs.configs
@@ -41,12 +42,12 @@ Scope {
 			color: "transparent"
 			implicitHeight: column.implicitHeight
 			implicitWidth: column.implicitWidth
-
 			margins {
 				right: Config.devices.marginRight
 				bottom: Config.devices.marginBottom
 			}
 			mask: Region {}
+			WlrLayershell.layer: WlrLayer.Overlay
 
 			Column {
 				id: column

@@ -34,16 +34,16 @@ $env.config.table.footer_inheritance = true
 
 # Keybinds
 $env.config.keybindings ++= [
-    {
-        name: toggle_sudo
-        modifier: alt
-        keycode: char_s
-        mode: [emacs vi_insert vi_normal]
-        event: {
-            send: executehostcommand
-            cmd: "let cmd = (commandline); commandline edit (if $cmd starts-with sudo { $cmd | str replace -r '^sudo ' '' } else { 'sudo ' ++ $cmd });"
-        }
-    }
+	{
+		name: toggle_sudo
+		modifier: alt
+		keycode: char_s
+		mode: [emacs vi_insert vi_normal]
+		event: {
+			send: executehostcommand
+			cmd: "let cmd = (commandline); commandline edit (if $cmd starts-with sudo { $cmd | str replace -r '^sudo ' '' } else { 'sudo ' ++ $cmd });"
+		}
+	}
 ]
 
 # Themes/Colors and Syntax Highlighting
@@ -60,4 +60,6 @@ alias lt = lsd --tree
 alias dotfiles = git --git-dir=($env.HOME)/.dotfiles --work-tree=($env.HOME)
 
 # Startup
-kotofetch
+if $nu.is-interactive {
+	kotofetch
+}

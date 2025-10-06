@@ -2,5 +2,5 @@
 vt = "next"
 
 [default_session]
-command = "niri --config /etc/greetd/niri.kdl"
+command = "tuigreet --time --remember --remember-session --user-menu"
 user = "greeter"
