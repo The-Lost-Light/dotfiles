@@ -57,6 +57,7 @@ AddPackage mpv # a free, open source, and cross-platform media player
 AddPackage vlc # Multi-platform MPEG, VCD/DVD, and DivX player
 AddPackage --foreign animeko-appimage # 集找番、追番、看番的一站式弹幕追番平台
 AddPackage --foreign kazumi # 基于自定义规则的番剧采集APP，支持流媒体在线观看，支持弹幕
+AddPackage --foreign piliplus-bin # A Bilibili third-party client built with Flutter. | 使用Flutter开发的BiliBili第三方客户端
 
 # Screen Record
 AddPackage kooha # Elegantly record your screen
@@ -81,6 +82,7 @@ AddPackage proton-ge-custom-bin # A fancy custom distribution of Valves Proton w
 AddPackage --foreign adwsteamgtk # A simple Gtk wrapper for Adwaita-for-Steam
 AddPackage waydroid # A container-based approach to boot a full Android system on a regular Linux system
 AddPackage xpadneo-dkms # Advanced Linux Driver for Xbox One Wireless Gamepad
+AddPackage --foreign osu-lazer-bin # The future of osu! and the beginning of an open era! Commonly known by the codename osu!lazer. Pew pew.
 
 # System Monitor
 AddPackage btop # A monitor of system resources, bpytop ported to C++
