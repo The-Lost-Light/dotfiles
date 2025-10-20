@@ -1,4 +1,21 @@
 {
+	"code_actions_on_format": {
+		"source.organizeImports": true
+	},
+	"ssh_connections": [
+		{
+			"host": "pdc21.csie.ncu.edu.tw",
+			"username": "s114525006",
+			"port": 11126,
+			"args": [],
+			"projects": [
+				{
+					"paths": ["/home/s114525006"]
+				}
+			],
+			"nickname": "hooda"
+		}
+	],
 	"base_keymap": "SublimeText",
 	"show_edit_predictions": true,
 	"edit_predictions": {
@@ -20,7 +37,6 @@
 	},
 	"buffer_font_size": 18,
 	"tabs": { "git_status": true },
-	"code_actions_on_format": { "source.organizeImports": true },
 	"git": {
 		"blame": { "show_avatar": true },
 		"inline_blame": { "show_commit_summary": true }

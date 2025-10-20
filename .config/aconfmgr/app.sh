@@ -17,8 +17,7 @@ AddPackage zellij # A terminal multiplexer
 AddPackage fractal # Matrix group messaging app
 AddPackage signal-desktop # Signal Private Messenger for Linux
 AddPackage telegram-desktop # Official Telegram Desktop client
-AddPackage vesktop # A standalone Electron-based Discord app with Vencord & improved Linux support
-AddPackage discord # All-in-one voice and text chat for gamers
+AddPackage vesktop-bin # A cross platform electron-based desktop app aiming to give you a snappier Discord experience with Vencord pre-installed.(Prebuilt version.Use system-wide electron)
 
 # Reader
 AddPackage foliate # A simple and modern GTK eBook reader
@@ -29,7 +28,6 @@ AddPackage errands # Todo application for those who prefer simplicity
 AddPackage iotas # Simple note taking with Markdown support and optional Nextcloud Notes sync
 AddPackage libreoffice-fresh-zh-tw # Chinese (traditional) language pack for LibreOffice Fresh
 AddPackage --foreign appflowy-bin # AppFlowy is an open-source alternative to Notion. You are in charge of your data and customizations.
-AddPackage --foreign project-graph-bin # A simple tool to create topology diagrams.
 
 # Art
 AddPackage blender # A fully integrated 3D graphics creation suite
@@ -56,7 +54,7 @@ AddPackage celluloid # Simple GTK+ frontend for mpv
 AddPackage mpv # a free, open source, and cross-platform media player
 AddPackage vlc # Multi-platform MPEG, VCD/DVD, and DivX player
 AddPackage --foreign animeko-appimage # 集找番、追番、看番的一站式弹幕追番平台
-AddPackage --foreign kazumi # 基于自定义规则的番剧采集APP，支持流媒体在线观看，支持弹幕
+AddPackage --foreign kazumi-bin # 基于自定义规则的番剧采集APP，支持流媒体在线观看，支持弹幕
 AddPackage --foreign piliplus-bin # A Bilibili third-party client built with Flutter. | 使用Flutter开发的BiliBili第三方客户端
 
 # Screen Record
@@ -78,7 +76,6 @@ AddPackage prismlauncher # Minecraft launcher with ability to manage multiple in
 AddPackage steam # Valve's digital software delivery system
 AddPackage gamescope # SteamOS session compositing window manager
 AddPackage proton-cachyos # Compatibility tool for Steam Play based on Wine and additional components, experimental branch with extra CachyOS flavour
-AddPackage proton-ge-custom-bin # A fancy custom distribution of Valves Proton with various patches
 AddPackage --foreign adwsteamgtk # A simple Gtk wrapper for Adwaita-for-Steam
 AddPackage waydroid # A container-based approach to boot a full Android system on a regular Linux system
 AddPackage xpadneo-dkms # Advanced Linux Driver for Xbox One Wireless Gamepad
