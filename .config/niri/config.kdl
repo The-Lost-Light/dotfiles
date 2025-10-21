@@ -77,7 +77,7 @@ binds {
 	Alt+Print            { screenshot-screen; }
 
 	/* Applications */
-	Ctrl+Space           { spawn "hexecute"; }
+	Ctrl+Space           { spawn "kando" "--menu" "Main"; }
 	Mod+Space            { spawn "kitty"; }
 	Mod+A                { spawn "nwg-drawer"; }
 	Mod+E                { spawn "kitty" "yazi"; }
@@ -169,6 +169,14 @@ window-rule {
 	clip-to-geometry true
 	draw-border-with-background false
 	open-maximized true
+}
+
+window-rule {
+    match title="Kando Menu"
+    open-floating true
+    focus-ring { off; }
+    border { off; }
+    shadow { off; }
 }
 
 window-rule {

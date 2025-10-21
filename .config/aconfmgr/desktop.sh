@@ -16,7 +16,7 @@ AddPackage seahorse # GNOME application for managing PGP keys
 AddPackage quickshell # Flexible toolkit for making desktop shells with QtQuick
 AddPackage swaync # A simple GTK based notification daemon for Sway
 AddPackage --foreign bongocat # A Wayland overlay that displays an animated bongo cat reacting to keyboard input
-AddPackage --foreign hexecute # Launch apps by casting spells!
+AddPackage --foreign kando-bin # A pie menu for the desktop. It will be highly customizable and will allow you to create your own menus and actions.(Prebuilt version.Use system-wide electron)
 
 # Filter
 AddPackage --foreign sunsetr-bin # Automatic blue light filter for Hyprland, Niri, and everything Wayland (pre-compiled binary)

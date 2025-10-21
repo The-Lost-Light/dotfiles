@@ -1,0 +1,393 @@
+{
+  "version": "2.1.0",
+  "menus": [
+    {
+      "root": {
+        "type": "submenu",
+        "name": "Main",
+        "icon": "star_shine",
+        "iconTheme": "material-symbols-rounded",
+        "children": [
+          {
+            "type": "command",
+            "data": {
+              "command": "niri msg action switch-focus-between-floating-and-tiling\nniri msg action focus-window-or-workspace-up",
+              "detached": true,
+              "isolated": false,
+              "delayed": false
+            },
+            "name": "移到上一個工作區",
+            "icon": "arrow_upward",
+            "iconTheme": "material-symbols-rounded"
+          },
+          {
+            "type": "submenu",
+            "name": "網頁",
+            "icon": "public",
+            "iconTheme": "material-symbols-rounded",
+            "children": [
+              {
+                "type": "uri",
+                "data": {
+                  "uri": "https://www.twitch.tv"
+                },
+                "name": "Twitch",
+                "icon": "twitch",
+                "iconTheme": "simple-icons-colored"
+              },
+              {
+                "type": "uri",
+                "data": {
+                  "uri": "https://www.bilibili.com"
+                },
+                "name": "BiliBili",
+                "icon": "bilibili",
+                "iconTheme": "simple-icons-colored"
+              },
+              {
+                "type": "uri",
+                "data": {
+                  "uri": "https://www.google.com"
+                },
+                "name": "Google",
+                "icon": "google",
+                "iconTheme": "simple-icons-colored"
+              },
+              {
+                "type": "uri",
+                "data": {
+                  "uri": "https://www.reddit.com/"
+                },
+                "name": "ChatGPT",
+                "icon": "openai",
+                "iconTheme": "simple-icons-colored"
+              },
+              {
+                "type": "uri",
+                "data": {
+                  "uri": "https://github.com"
+                },
+                "name": "Github",
+                "icon": "github",
+                "iconTheme": "simple-icons-colored"
+              },
+              {
+                "type": "uri",
+                "data": {
+                  "uri": "https://www.reddit.com/"
+                },
+                "name": "Reddit",
+                "icon": "reddit",
+                "iconTheme": "simple-icons-colored"
+              },
+              {
+                "type": "uri",
+                "data": {
+                  "uri": "https://www.youtube.com/"
+                },
+                "name": "YouTube",
+                "icon": "youtube",
+                "iconTheme": "simple-icons-colored"
+              }
+            ]
+          },
+          {
+            "type": "command",
+            "data": {
+              "command": "niri msg action switch-focus-between-floating-and-tiling\nniri msg action focus-column-right",
+              "detached": false,
+              "isolated": false,
+              "delayed": false
+            },
+            "name": "向右聚焦",
+            "icon": "arrow_right_alt",
+            "iconTheme": "material-symbols-rounded"
+          },
+          {
+            "type": "submenu",
+            "name": "媒體",
+            "icon": "play_circle",
+            "iconTheme": "material-symbols-rounded",
+            "children": [
+              {
+                "type": "command",
+                "data": {
+                  "command": "playerctl --player playerctld next",
+                  "detached": false,
+                  "isolated": false,
+                  "delayed": false
+                },
+                "name": "下一首",
+                "icon": "skip_next",
+                "iconTheme": "material-symbols-rounded"
+              },
+              {
+                "type": "command",
+                "data": {
+                  "command": "playerctl --player playerctld play-pause",
+                  "detached": false,
+                  "isolated": false,
+                  "delayed": false
+                },
+                "name": "播放/暫停",
+                "icon": "play_pause",
+                "iconTheme": "material-symbols-rounded"
+              },
+              {
+                "type": "command",
+                "data": {
+                  "command": "playerctl --player playerctld previous",
+                  "detached": false,
+                  "isolated": false,
+                  "delayed": false
+                },
+                "name": "上一首",
+                "icon": "skip_previous",
+                "iconTheme": "material-symbols-rounded"
+              }
+            ]
+          },
+          {
+            "type": "command",
+            "data": {
+              "command": "niri msg action switch-focus-between-floating-and-tiling\nniri msg action focus-window-or-workspace-down",
+              "detached": true,
+              "isolated": false,
+              "delayed": false
+            },
+            "name": "移到下一個工作區",
+            "icon": "arrow_downward",
+            "iconTheme": "material-symbols-rounded"
+          },
+          {
+            "type": "submenu",
+            "name": "窗口管理",
+            "icon": "select_window",
+            "iconTheme": "material-symbols-rounded",
+            "children": [
+              {
+                "type": "submenu",
+                "data": {},
+                "name": "視窗",
+                "icon": "drag_pan",
+                "iconTheme": "material-symbols-rounded",
+                "children": [
+                  {
+                    "type": "command",
+                    "data": {
+                      "command": "niri msg action switch-focus-between-floating-and-tiling\nniri msg action fullscreen-window",
+                      "detached": false,
+                      "isolated": false,
+                      "delayed": false
+                    },
+                    "name": "全螢幕",
+                    "icon": "fullscreen",
+                    "iconTheme": "material-symbols-rounded"
+                  },
+                  {
+                    "type": "command",
+                    "data": {
+                      "command": "niri msg action switch-focus-between-floating-and-tiling\nniri msg action maximize-column",
+                      "detached": false,
+                      "isolated": false,
+                      "delayed": false
+                    },
+                    "name": "最大化",
+                    "icon": "open_in_full",
+                    "iconTheme": "material-symbols-rounded"
+                  },
+                  {
+                    "type": "command",
+                    "data": {
+                      "command": "niri msg action switch-focus-between-floating-and-tiling\nniri msg action toggle-column-tabbed-display",
+                      "detached": false,
+                      "isolated": false,
+                      "delayed": false
+                    },
+                    "name": "切換寬度",
+                    "icon": "fit_page_width",
+                    "iconTheme": "material-symbols-rounded"
+                  },
+                  {
+                    "type": "command",
+                    "data": {
+                      "command": "niri msg action switch-focus-between-floating-and-tiling\nniri msg action switch-preset-window-height",
+                      "detached": false,
+                      "isolated": false,
+                      "delayed": false
+                    },
+                    "name": "切換高度",
+                    "icon": "fit_page_height",
+                    "iconTheme": "material-symbols-rounded"
+                  },
+                  {
+                    "type": "command",
+                    "data": {
+                      "command": "niri msg action switch-focus-between-floating-and-tiling\nniri msg action toggle-column-tabbed-display",
+                      "detached": false,
+                      "isolated": false,
+                      "delayed": false
+                    },
+                    "name": "切換堆疊模式",
+                    "icon": "tab_inactive",
+                    "iconTheme": "material-symbols-rounded"
+                  }
+                ]
+              },
+              {
+                "type": "command",
+                "data": {
+                  "command": "niri msg action switch-focus-between-floating-and-tiling\nniri msg action close-window",
+                  "detached": false,
+                  "isolated": false,
+                  "delayed": false
+                },
+                "name": "執行命令",
+                "icon": "cancel_presentation",
+                "iconTheme": "material-symbols-rounded"
+              },
+              {
+                "type": "submenu",
+                "data": {},
+                "name": "截圖",
+                "icon": "photo_camera_back",
+                "iconTheme": "material-symbols-rounded",
+                "children": [
+                  {
+                    "type": "command",
+                    "data": {
+                      "command": "niri msg action switch-focus-between-floating-and-tiling\nniri msg action screenshot-screen",
+                      "detached": false,
+                      "isolated": false,
+                      "delayed": false
+                    },
+                    "name": "擷取全螢幕",
+                    "icon": "screenshot_monitor",
+                    "iconTheme": "material-symbols-rounded"
+                  },
+                  {
+                    "type": "command",
+                    "data": {
+                      "command": "niri msg action switch-focus-between-floating-and-tiling\nniri msg action screenshot",
+                      "detached": false,
+                      "isolated": false,
+                      "delayed": false
+                    },
+                    "name": "選取區域",
+                    "icon": "screenshot_region",
+                    "iconTheme": "material-symbols-rounded"
+                  },
+                  {
+                    "type": "command",
+                    "data": {
+                      "command": "niri msg action switch-focus-between-floating-and-tiling\nniri msg action screenshot-window",
+                      "detached": false,
+                      "isolated": false,
+                      "delayed": false
+                    },
+                    "name": "擷取視窗",
+                    "icon": "new_window",
+                    "iconTheme": "material-symbols-rounded"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "command",
+            "data": {
+              "command": "niri msg action switch-focus-between-floating-and-tiling\nniri msg action focus-column-left",
+              "detached": false,
+              "isolated": false,
+              "delayed": false
+            },
+            "name": "向左聚焦",
+            "icon": "arrow_back",
+            "iconTheme": "material-symbols-rounded"
+          },
+          {
+            "type": "submenu",
+            "name": "應用程式",
+            "icon": "apps",
+            "iconTheme": "material-symbols-rounded",
+            "children": [
+              {
+                "type": "command",
+                "data": {
+                  "command": "zeditor"
+                },
+                "name": "Zed",
+                "icon": "zedindustries",
+                "iconTheme": "simple-icons"
+              },
+              {
+                "type": "command",
+                "data": {
+                  "command": "errands"
+                },
+                "name": "Errands",
+                "icon": "io.github.mrvladus.List",
+                "iconTheme": "system"
+              },
+              {
+                "type": "command",
+                "data": {
+                  "command": "AppFlowy"
+                },
+                "name": "AppFlowy",
+                "icon": "appflowy",
+                "iconTheme": "system"
+              },
+              {
+                "type": "command",
+                "data": {
+                  "command": "kitty"
+                },
+                "name": "kitty",
+                "icon": "terminal",
+                "iconTheme": "material-symbols-rounded"
+              },
+              {
+                "type": "command",
+                "data": {
+                  "command": "vivaldi"
+                },
+                "name": "瀏覽器",
+                "icon": "globe",
+                "iconTheme": "material-symbols-rounded"
+              },
+              {
+                "type": "command",
+                "data": {
+                  "command": "xdg-open ~"
+                },
+                "name": "文件管理器",
+                "icon": "folder_shared",
+                "iconTheme": "material-symbols-rounded"
+              },
+              {
+                "type": "command",
+                "data": {
+                  "command": "nwg-drawer",
+                  "detached": true,
+                  "isolated": false,
+                  "delayed": false
+                },
+                "name": "執行命令",
+                "icon": "apps",
+                "iconTheme": "material-symbols-rounded"
+              }
+            ]
+          }
+        ]
+      },
+      "shortcut": "Control+Space",
+      "shortcutID": "",
+      "centered": false,
+      "anchored": false,
+      "hoverMode": false,
+      "tags": []
+    }
+  ],
+  "collections": []
+}
