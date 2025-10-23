@@ -4,5 +4,5 @@ After=graphical-session.target
 Requisite=graphical-session.target
 
 [Service]
-ExecStart=swww-daemon --namespace blur
+ExecStart=swww-daemon --namespace %i
 Restart=on-failure

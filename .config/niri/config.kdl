@@ -77,10 +77,9 @@ binds {
 	Alt+Print            { screenshot-screen; }
 
 	/* Applications */
-	Ctrl+Space           { spawn "kando" "--menu" "Main"; }
+	Mod+e                { spawn "kando" "--menu" "Main"; }
 	Mod+Space            { spawn "kitty"; }
 	Mod+A                { spawn "nwg-drawer"; }
-	Mod+E                { spawn "kitty" "yazi"; }
 
 	/* System */
 	// Change volume

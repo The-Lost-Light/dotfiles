@@ -13,7 +13,7 @@
   "ignoreWriteProtectedConfigFiles": false,
   "settingsWindowColorScheme": "system",
   "settingsWindowFlavor": "sakura-light",
-  "trayIconFlavor": "light",
+  "trayIconFlavor": "none",
   "hardwareAcceleration": true,
   "lazyInitialization": false,
   "zoomFactor": 1,
