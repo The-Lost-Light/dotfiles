@@ -1,4 +1,9 @@
 {
+	"diagnostics": {
+		"inline": {
+			"enabled": true
+		}
+	},
 	"code_actions_on_format": {
 		"source.organizeImports": true
 	},
@@ -46,6 +51,9 @@
 	"use_smartcase_search": true,
 	"soft_wrap": "editor_width",
 	"terminal": {
+		"shell": {
+			"program": "nu"
+		},
 		"cursor_shape": "bar",
 		"font_family": "FiraCode Nerd Font",
 		"line_height": "standard"
@@ -54,8 +62,8 @@
 	"theme": "Ayu Mirage",
 	"agent": {
 		"default_model": {
-			"provider": "zed.dev",
-			"model": "claude-3-7-sonnet-latest"
+			"provider": "copilot_chat",
+			"model": "gpt-5-mini"
 		}
 	},
 	"calls": { "mute_on_join": true },
@@ -63,10 +71,9 @@
 
 	"languages": {
 		"Python": {
-			"language_servers": ["ty", "!basedpyright", "discord_presence"]
+			"language_servers": ["ty", "ruff", "!basedpyright", "discord_presence"]
 		}
 	},
-
 	"lsp": {
 		"typescript-language-server": {
 			"initialization_options": {

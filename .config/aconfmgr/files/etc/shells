@@ -1,0 +1,15 @@
+# Pathnames of valid login shells.
+# See shells(5) for details.
+
+/bin/sh
+/bin/bash
+/bin/rbash
+/bin/dash
+/bin/nu
+/usr/bin/sh
+/usr/bin/bash
+/usr/bin/rbash
+/usr/bin/dash
+/usr/bin/nu
+/usr/bin/systemd-home-fallback-shell
+/usr/bin/git-shell
