@@ -40,8 +40,8 @@ AddPackage --foreign marimo # A reactive Python notebook that's reproducible, gi
 AddPackage rustup # The Rust toolchain installer
 
 # Web
-AddPackage bun-bin # All-in-one JavaScript runtime built for speed, with bundler, transpiler, test runner, and package manager. Includes bunx, shell completions and support for baseline CPUs
 AddPackage caddy # Fast web server with automatic HTTPS
+AddPackage deno # A secure runtime for JavaScript and TypeScript
 
 # typst
 AddPackage typst # A markup-based typesetting system for the sciences

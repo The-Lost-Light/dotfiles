@@ -75,7 +75,7 @@ AddPackage mangojuice # A convenient alternative to GOverlay for configuring Man
 AddPackage prismlauncher # Minecraft launcher with ability to manage multiple instances
 AddPackage steam # Valve's digital software delivery system
 AddPackage gamescope # SteamOS session compositing window manager
-AddPackage proton-cachyos # Compatibility tool for Steam Play based on Wine and additional components, experimental branch with extra CachyOS flavour
+AddPackage proton-cachyos-slr # A compatibility tool for Steam Play based on Wine and additional components, experimental branch with extra CachyOS flavour (Steam Linux Runtime build)
 AddPackage --foreign adwsteamgtk # A simple Gtk wrapper for Adwaita-for-Steam
 AddPackage waydroid # A container-based approach to boot a full Android system on a regular Linux system
 AddPackage xpadneo-dkms # Advanced Linux Driver for Xbox One Wireless Gamepad
