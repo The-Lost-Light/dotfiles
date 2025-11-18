@@ -1,0 +1,18 @@
+input {
+	keyboard {
+		xkb {
+			options "caps:ctrl_modifier"
+		}
+		numlock
+	}
+	touchpad {
+		natural-scroll
+		tap
+		dwt
+		drag true
+		drag-lock
+		disabled-on-external-mouse
+	}
+	warp-mouse-to-focus mode="center-xy"
+	focus-follows-mouse max-scroll-amount="33%"
+}

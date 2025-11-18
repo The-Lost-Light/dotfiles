@@ -1,0 +1,33 @@
+layout {
+	gaps 16
+	struts {
+		top -12
+		bottom -4
+	}
+	always-center-single-column
+	empty-workspace-above-first
+	default-column-display "tabbed"
+	tab-indicator {
+		hide-when-single-tab
+		place-within-column
+		gaps-between-tabs 8
+		corner-radius 8
+	}
+	preset-window-heights {
+		proportion 0.5
+		proportion 1.0
+	}
+	focus-ring {
+		width 2
+		active-color "#f5c2e7cc"
+		inactive-color "#00000000"
+		urgent-color "#9b0000"
+	}
+	shadow {
+		on
+		softness 20
+		spread 8
+		color "#f5c2e744"
+		inactive-color "#00000000"
+	}
+}

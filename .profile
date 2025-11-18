@@ -35,3 +35,5 @@ export VISUAL="helix"
 export EDITOR="helix"
 export DIFFPROG="helix"
 
+
+. "$HOME/.local/bin/env"

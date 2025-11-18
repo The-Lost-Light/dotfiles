@@ -25,9 +25,10 @@ AddPackage fwupd # Simple daemon to allow session software to update firmware
 CopyFile /etc/fwupd/remotes.d/lvfs-testing.conf
 CopyFile /etc/fwupd/remotes.d/lvfs.conf
 AddPackage linux-firmware # Firmware files for Linux
+# CPU
+AddPackage cpupower-gui # A GUI utility to set CPU frequency limits
 # Audio
 AddPackage alsa-utils # Advanced Linux Sound Architecture - Utilities
-AddPackage easyeffects # Audio Effects for Pipewire applications
 AddPackage pipewire # Low-latency audio/video router and processor
 AddPackage pipewire-alsa # Low-latency audio/video router and processor - ALSA configuration
 AddPackage pipewire-pulse # Low-latency audio/video router and processor - PulseAudio replacement
@@ -36,13 +37,12 @@ AddPackage --foreign sonusmix # Next-gen Pipewire audio routing tool
 # Brightness
 AddPackage --foreign brightnessctl-git # Lightweight brightness control tool
 # Network
-AddPackage network-manager-applet # Applet for managing network connections
 AddPackage networkmanager # Network connection manager and user applications
+AddPackage network-manager-applet # Applet for managing network connections
 CopyFile /etc/NetworkManager/conf.d/wifi-powersave.conf
 # Bluetooth
 AddPackage blueman # GTK+ Bluetooth Manager
-AddPackage gnome-bluetooth-3.0 # GNOME Bluetooth Subsystem
-AddPackage --foreign overskride # A simple yet powerful bluetooth client
+AddPackage --foreign overskride-bin # A simple yet powerful bluetooth client (binary release)
 
 # Pacman
 AddPackage downgrade # Bash script for downgrading one or more packages to a version in your cache or the A.L.A.

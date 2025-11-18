@@ -1,4 +1,5 @@
 # Browser
+AddPackage helium-browser-bin # Private, fast, and honest web browser based on Chromium
 AddPackage vivaldi # An advanced browser made with the power user in mind.
 AddPackage vivaldi-ffmpeg-codecs # additional support for proprietary codecs for vivaldi
 
@@ -14,10 +15,10 @@ AddPackage kitty # A modern, hackable, featureful, OpenGL-based terminal emulato
 AddPackage zellij # A terminal multiplexer
 
 # Communication
+AddPackage discord # All-in-one voice and text chat for gamers
 AddPackage fractal # Matrix group messaging app
 AddPackage signal-desktop # Signal Private Messenger for Linux
 AddPackage telegram-desktop # Official Telegram Desktop client
-AddPackage vesktop-bin # A cross platform electron-based desktop app aiming to give you a snappier Discord experience with Vencord pre-installed.(Prebuilt version.Use system-wide electron)
 
 # Reader
 AddPackage foliate # A simple and modern GTK eBook reader
@@ -65,6 +66,7 @@ AddPackage --foreign rustdesk-bin # Yet another remote desktop software, written
 
 # Tools
 AddPackage gnome-calculator # GNOME Scientific calculator
+AddPackage --foreign ente-auth-bin # Ente two-factor authenticator.
 AddPackage --foreign wordbook # A dictionary application built for GNOME.
 
 # Game
@@ -75,7 +77,8 @@ AddPackage mangojuice # A convenient alternative to GOverlay for configuring Man
 AddPackage prismlauncher # Minecraft launcher with ability to manage multiple instances
 AddPackage steam # Valve's digital software delivery system
 AddPackage gamescope # SteamOS session compositing window manager
-AddPackage proton-cachyos-slr # A compatibility tool for Steam Play based on Wine and additional components, experimental branch with extra CachyOS flavour (Steam Linux Runtime build)
+AddPackage protonplus # A simple Wine and Proton-based compatiblity tools manager for GNOME
+AddPackage protontricks # Run Winetricks commands for Steam Play/Proton games among other common Wine features
 AddPackage --foreign adwsteamgtk # A simple Gtk wrapper for Adwaita-for-Steam
 AddPackage waydroid # A container-based approach to boot a full Android system on a regular Linux system
 AddPackage xpadneo-dkms # Advanced Linux Driver for Xbox One Wireless Gamepad
@@ -105,6 +108,7 @@ AddPackage scrcpy # Display and control your Android device
 
 # Devices
 AddPackage baobab # A graphical directory tree analyzer
+AddPackage gnome-disk-utility # Disk Management Utility for GNOME
 
 # Terminal tools
 AddPackage gping # Ping, but with a graph

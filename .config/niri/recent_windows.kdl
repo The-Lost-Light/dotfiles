@@ -1,0 +1,15 @@
+recent-windows {
+		highlight {
+		active-color "#fff596aa"
+		urgent-color "#9b0000"
+		padding 16
+		corner-radius 8
+	}
+
+	binds {
+		Alt+Tab         { next-window; }
+		Alt+Shift+Tab   { previous-window; }
+		Alt+grave       { next-window     filter="app-id"; }
+		Alt+Shift+grave { previous-window filter="app-id"; }
+	}
+}

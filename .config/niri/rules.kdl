@@ -1,0 +1,37 @@
+layer-rule {
+    match namespace="swww-daemonblur"
+    place-within-backdrop true
+}
+
+window-rule {
+	geometry-corner-radius 16
+	clip-to-geometry true
+	draw-border-with-background false
+	open-maximized true
+}
+
+window-rule {
+    match title="Kando Menu"
+    open-floating true
+    focus-ring { off; }
+    border { off; }
+    shadow { off; }
+}
+
+window-rule {
+	match app-id="org.gnome.Nautilus" title="Open Folder"
+	match app-id="org.gnome.NautilusPreviewer"
+	open-floating true
+}
+
+window-rule {
+	match title="子母畫面"
+	open-floating true
+	default-floating-position x=0 y=0 relative-to="bottom-right"
+}
+
+window-rule {
+    match app-id="steam" title=r#"^notificationtoasts_\d+_desktop$"#
+    default-floating-position x=0 y=0 relative-to="bottom-right"
+    open-focused false
+}

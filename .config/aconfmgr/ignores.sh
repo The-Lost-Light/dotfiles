@@ -41,6 +41,8 @@ IgnorePath "/etc/vconsole.conf"
 IgnorePath "/etc/resolv.conf"
 IgnorePath "/etc/resolv.pre-tailscale-backup.conf"
 # System File
+IgnorePath "/etc/audisp"
+IgnorePath "/etc/audit"
 IgnorePath "/etc/cni/net.d"
 IgnorePath "/etc/group"
 IgnorePath "/etc/gshadow"

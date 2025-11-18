@@ -1,0 +1,20 @@
+prefer-no-csd
+screenshot-path "~/Pictures/screenshot/%Y-%m-%d %H-%M-%S.png"
+
+environment {
+	DISPLAY ":0"
+}
+
+cursor {
+	hide-when-typing
+	hide-after-inactive-ms 5000
+}
+
+clipboard {
+	disable-primary
+}
+
+hotkey-overlay {
+	skip-at-startup
+	hide-not-bound
+}

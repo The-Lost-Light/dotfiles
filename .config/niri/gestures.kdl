@@ -1,0 +1,11 @@
+gestures {
+	dnd-edge-view-scroll {
+		max-speed 2000
+	}
+	dnd-edge-workspace-switch {
+		max-speed 2000
+	}
+	hot-corners {
+		off
+	}
+}
