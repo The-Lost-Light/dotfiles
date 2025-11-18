@@ -27,7 +27,6 @@ CopyFile /etc/fwupd/remotes.d/lvfs.conf
 AddPackage linux-firmware # Firmware files for Linux
 # Audio
 AddPackage alsa-utils # Advanced Linux Sound Architecture - Utilities
-AddPackage easyeffects # Audio Effects for Pipewire applications
 AddPackage pipewire # Low-latency audio/video router and processor
 AddPackage pipewire-alsa # Low-latency audio/video router and processor - ALSA configuration
 AddPackage pipewire-pulse # Low-latency audio/video router and processor - PulseAudio replacement
