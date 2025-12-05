@@ -34,6 +34,3 @@ export RUSTC_WRAPPER="sccache"
 export VISUAL="helix"
 export EDITOR="helix"
 export DIFFPROG="helix"
-
-
-. "$HOME/.local/bin/env"

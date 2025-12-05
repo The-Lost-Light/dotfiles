@@ -1,29 +1,23 @@
+IgnorePath "*.cache"
+IgnorePath "*.lock"
+
 IgnorePath "/usr/*"
 IgnorePath "/var/*"
 IgnorePath "/opt/*"
 
-# Timeshift
-IgnorePath "/timeshift-btrfs/*"
-# Nix
-IgnorePath "/nix/*"
-# Cache Files
-IgnorePath "*.cache"
-
-# ESP
-IgnorePath "/boot/*"
-IgnorePath "/etc/.*"
-IgnorePath "/efi/FSCK*.REC"
-IgnorePath "/efi/EFI/tools"
-IgnorePath "/efi/System\ Volume\ Information"
-IgnorePath "/efi/EFI/Boot/*"
-IgnorePath "/efi/EFI/Microsoft/*"
-IgnorePath "/efi/EFI/Arch/*.img"
-IgnorePath "/efi/EFI/Arch/vmlinuz-linux*"
+# Boot
+IgnorePath "/boot/vmlinuz-linux*"
+IgnorePath "/boot/*.img"
+# Snapper
+IgnorePath "/.snapshots/*"
+IgnorePath "/etc/conf.d/snapper"
+IgnorePath "/etc/snapper"
 
 ## ETC
 IgnorePath "/etc/ca-certificates/*"
 IgnorePath "/etc/fonts/*"
 IgnorePath "/etc/spotify-launcher.conf"
+IgnorePath "/etc/fwupd/*"
 # Network
 IgnorePath "/etc/NetworkManager/system-connections/*"
 # Pacman
@@ -37,6 +31,7 @@ IgnorePath "/etc/systemd/system/*"
 IgnorePath "/etc/systemd/user/*"
 IgnorePath "/etc/userdb"
 IgnorePath "/etc/vconsole.conf"
+IgnorePath "/etc/.updated"
 # Tailscale
 IgnorePath "/etc/resolv.conf"
 IgnorePath "/etc/resolv.pre-tailscale-backup.conf"
@@ -44,10 +39,10 @@ IgnorePath "/etc/resolv.pre-tailscale-backup.conf"
 IgnorePath "/etc/audisp"
 IgnorePath "/etc/audit"
 IgnorePath "/etc/cni/net.d"
+IgnorePath "/etc/fstab"
 IgnorePath "/etc/group"
 IgnorePath "/etc/gshadow"
 IgnorePath "/etc/hostname"
-IgnorePath "/etc/locale.gen"
 IgnorePath "/etc/machine-id"
 IgnorePath "/etc/os-release"
 IgnorePath "/etc/passwd*"

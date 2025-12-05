@@ -7,7 +7,7 @@ AddPackage vdpauinfo # Command line utility for querying the capabilities of a V
 AddPackage vulkan-mesa-layers # Mesa's Vulkan layers
 
 #NVIDIA
-AddPackage linux-cachyos-nvidia-open # nvidia open modules of 580.76.05 driver for the linux-cachyos kernel
+AddPackage linux-cachyos-nvidia-open # nvidia open modules driver for the linux-cachyos kernel
 AddPackage nvidia-utils # NVIDIA drivers utilities
 AddPackage nvidia-prime # NVIDIA Prime Render Offload configuration and utilities
 AddPackage libva-nvidia-driver # VA-API implementation that uses NVDEC as a backend

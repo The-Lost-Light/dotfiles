@@ -1,5 +1,4 @@
 # Browser
-AddPackage helium-browser-bin # Private, fast, and honest web browser based on Chromium
 AddPackage vivaldi # An advanced browser made with the power user in mind.
 AddPackage vivaldi-ffmpeg-codecs # additional support for proprietary codecs for vivaldi
 
@@ -8,15 +7,12 @@ AddPackage nautilus # Default file manager for GNOME
 AddPackage nautilus-python # Python bindings for the Nautilus Extension API
 AddPackage sushi # A quick previewer for Nautilus
 AddPackage yazi # Blazing fast terminal file manager written in Rust, based on async I/O
-AddPackage termscp # A feature rich terminal UI file transfer and explorer
 
 # Terminal
 AddPackage kitty # A modern, hackable, featureful, OpenGL-based terminal emulator
-AddPackage zellij # A terminal multiplexer
 
 # Communication
 AddPackage discord # All-in-one voice and text chat for gamers
-AddPackage fractal # Matrix group messaging app
 AddPackage signal-desktop # Signal Private Messenger for Linux
 AddPackage telegram-desktop # Official Telegram Desktop client
 
@@ -26,7 +22,6 @@ AddPackage papers # Document viewer for PDF and other document formats aimed at 
 
 # Documents
 AddPackage errands # Todo application for those who prefer simplicity
-AddPackage iotas # Simple note taking with Markdown support and optional Nextcloud Notes sync
 AddPackage libreoffice-fresh-zh-tw # Chinese (traditional) language pack for LibreOffice Fresh
 AddPackage --foreign appflowy-bin # AppFlowy is an open-source alternative to Notion. You are in charge of your data and customizations.
 
@@ -38,24 +33,20 @@ AddPackage --foreign pixieditor-bin # Universal 2D Graphics Editor
 # Image
 AddPackage imagemagick # An image viewing/manipulation program
 AddPackage oculante # A minimalistic image viewer with analysis and editing tools
-AddPackage --foreign gradia # Make your screenshots ready for the world.
-
 # Music
 AddPackage decibels # Audio player for GNOME
 AddPackage mousai # Simple application to identify songs
 AddPackage musescore # Create, play and print beautiful sheet music
 AddPackage spotify-launcher # Client for spotify's apt repository in Rust for Arch Linux
-AddPackage --foreign gapless # Play your music elegantly (AKA: G4Music)
-AddPackage --foreign lowfi # An extremely simple lofi player.
 AddPackage --foreign spicetify-cli # Command-line tool to customize Spotify client
 AddPackage --foreign spicetify-marketplace-bin # Spicetify app that integrates a marketplace for extensions, themes and snippets
+CopyFile /etc/pacman.d/hooks/spicetify.hook
+AddPackage --foreign gapless # Play your music elegantly (AKA: G4Music)
+AddPackage --foreign lowfi # An extremely simple lofi player.
 
 # Video
 AddPackage celluloid # Simple GTK+ frontend for mpv
 AddPackage mpv # a free, open source, and cross-platform media player
-AddPackage vlc # Multi-platform MPEG, VCD/DVD, and DivX player
-AddPackage --foreign animeko-appimage # 集找番、追番、看番的一站式弹幕追番平台
-AddPackage --foreign kazumi-bin # 基于自定义规则的番剧采集APP，支持流媒体在线观看，支持弹幕
 AddPackage --foreign piliplus-bin # A Bilibili third-party client built with Flutter. | 使用Flutter开发的BiliBili第三方客户端
 
 # Screen Record
@@ -80,7 +71,6 @@ AddPackage gamescope # SteamOS session compositing window manager
 AddPackage protonplus # A simple Wine and Proton-based compatiblity tools manager for GNOME
 AddPackage protontricks # Run Winetricks commands for Steam Play/Proton games among other common Wine features
 AddPackage --foreign adwsteamgtk # A simple Gtk wrapper for Adwaita-for-Steam
-AddPackage waydroid # A container-based approach to boot a full Android system on a regular Linux system
 AddPackage xpadneo-dkms # Advanced Linux Driver for Xbox One Wireless Gamepad
 AddPackage --foreign osu-lazer-bin # The future of osu! and the beginning of an open era! Commonly known by the codename osu!lazer. Pew pew.
 
@@ -111,11 +101,9 @@ AddPackage baobab # A graphical directory tree analyzer
 AddPackage gnome-disk-utility # Disk Management Utility for GNOME
 
 # Terminal tools
-AddPackage gping # Ping, but with a graph
 AddPackage isd # TUI for systemd
 AddPackage man-pages-zh_tw # Traditional Chinese Linux man pages
 AddPackage playerctl # mpris media player controller and lib for spotify, vlc, audacious, bmp, xmms2, and others.
 AddPackage tealdeer # A fast tldr client in Rust
 AddPackage wev # A tool for debugging wayland events on a Wayland window, analagous to the X11 tool xev
 AddPackage --foreign catnap-git # A minimalistic and fast system fetch written in Nim.
-AddPackage --foreign tty-share # Shares terminal session with no setup on remote end (browser)

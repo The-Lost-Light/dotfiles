@@ -6,6 +6,7 @@ environment {
 }
 
 cursor {
+	xcursor-theme "Bibata-Modern-Ice"
 	hide-when-typing
 	hide-after-inactive-ms 5000
 }

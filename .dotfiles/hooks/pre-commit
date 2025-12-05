@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 
-configs=$(git --git-dir=$HOME/.dotfiles --work-tree=$HOME -C $HOME/.config ls-tree --name-only HEAD $HOME/.config/)
+configs=$(git --git-dir=$HOME/dotfiles.git --work-tree=$HOME -C $HOME/.config ls-tree --name-only HEAD $HOME/.config/)
 
 printf "%s\n" $configs | while read -r config; do
-	git --git-dir=$HOME/.dotfiles --work-tree=$HOME add $HOME/.config/$config
+	git --git-dir=$HOME/dotfiles.git --work-tree=$HOME add $HOME/.config/$config
 done

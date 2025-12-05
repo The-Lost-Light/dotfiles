@@ -5,25 +5,26 @@ CopyFile /etc/booster.yaml
 AddPackage linux-cachyos # The Linux BORE + LTO + AutoFDO + Propeller Cachy Sauce Kernel by CachyOS with other patches and improvements. kernel and modules
 AddPackage linux-cachyos-headers # Headers and scripts for building modules for the Linux BORE + LTO + AutoFDO + Propeller Cachy Sauce Kernel by CachyOS with other patches and improvements. kernel
 AddPackage --foreign preloader-signed # Linux Foundation UEFI secure boot system (prebuilt X64 EFI binaries)
+AddPackage --foreign refi2nd # A fork of rEFInd with bug-fixes and optimizations.
+CopyFile /boot/refind_linux.conf
 
 # Base
 AddPackage base # Minimal package set to define a basic Arch Linux installation
 AddPackage base-devel # Basic tools to build Arch Linux packages
 CopyFile /etc/adjtime
+CopyFile /etc/locale.gen
 CopyFile /etc/locale.conf
 CreateLink /etc/localtime ../usr/share/zoneinfo/Asia/Taipei
 
 # File System
 AddPackage 7zip # File archiver for extremely high compression
 AddPackage btrfs-progs # Btrfs filesystem utilities
+AddPackage btrfs-assistant # An application for managing BTRFS subvolumes and Snapper snapshots
 AddPackage trash-cli # Command line trashcan (recycle bin) interface
-CopyFile /etc/fstab
 
 ## Device
 # Firmware
 AddPackage fwupd # Simple daemon to allow session software to update firmware
-CopyFile /etc/fwupd/remotes.d/lvfs-testing.conf
-CopyFile /etc/fwupd/remotes.d/lvfs.conf
 AddPackage linux-firmware # Firmware files for Linux
 # CPU
 AddPackage cpupower-gui # A GUI utility to set CPU frequency limits
@@ -33,7 +34,6 @@ AddPackage pipewire # Low-latency audio/video router and processor
 AddPackage pipewire-alsa # Low-latency audio/video router and processor - ALSA configuration
 AddPackage pipewire-pulse # Low-latency audio/video router and processor - PulseAudio replacement
 AddPackage realtime-privileges # Realtime privileges for users
-AddPackage --foreign sonusmix # Next-gen Pipewire audio routing tool
 # Brightness
 AddPackage --foreign brightnessctl-git # Lightweight brightness control tool
 # Network
@@ -51,7 +51,6 @@ AddPackage rebuild-detector # Detects which packages need to be rebuilt
 AddPackage yay # Yet another yogurt. Pacman wrapper and AUR helper written in go.
 CopyFile /etc/makepkg.conf
 CopyFile /etc/pacman.conf
-CopyFile /etc/pacman.d/hooks/spicetify.hook
 # CachyOS
 AddPackage cachyos-keyring # CachyOS keyring
 AddPackage cachyos-mirrorlist # CachyOS repository mirrorlist
@@ -86,11 +85,7 @@ CopyFile /etc/sysctl.d/99-vm-zram-parameters.conf
 
 # Backup
 AddPackage --foreign aconfmgr-git # A configuration manager for Arch Linux
-AddPackage timeshift # A system restore utility for Linux
-AddPackage xorg-xhost # Server access control program for X
-AddPackage --foreign timeshift-autosnap # Timeshift auto-snapshot script which runs before package upgrade using Pacman hook.
-CopyFile /etc/cron.d/timeshift-hourly
-CopyFile /etc/timeshift/timeshift.json
+AddPackage cachyos-snapper-support # CachyOS package that handles snapper configs.
 
 # Font
 AddPackage noto-fonts # Google Noto TTF fonts
@@ -112,4 +107,3 @@ AddPackage wine-staging # A compatibility layer for running Windows programs - S
 AddPackage wine-gecko # Wine's built-in replacement for Microsoft's Internet Explorer
 AddPackage wine-mono # Wine's built-in replacement for Microsoft's .NET Framework
 AddPackage winetricks # Script to install various redistributable runtime libraries in Wine.
-AddPackage --foreign bottles # Easily manage wine and proton prefix

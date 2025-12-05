@@ -57,7 +57,7 @@ alias ls = lsd
 alias la = lsd --all
 alias ll = lsd --long --all
 alias lt = lsd --tree
-alias dotfiles = git --git-dir=($env.HOME)/.dotfiles --work-tree=($env.HOME)
+alias dotfiles = git --git-dir=($env.HOME)/dotfiles.git --work-tree=($env.HOME)
 
 # Startup
 if $nu.is-interactive {

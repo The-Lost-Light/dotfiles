@@ -1,4 +1,3 @@
-sudo gpasswd -a $USER flutter
 sudo gpasswd -a $USER gamemode
 sudo gpasswd -a $USER games
 sudo gpasswd -a $USER input
