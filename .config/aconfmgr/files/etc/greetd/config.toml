@@ -4,3 +4,7 @@ vt = "next"
 [default_session]
 command = "tuigreet --time --remember --remember-session --user-menu"
 user = "greeter"
+
+[initial_session]
+command = "niri-session"
+user = "mono"

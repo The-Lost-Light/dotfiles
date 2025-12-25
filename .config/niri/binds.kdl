@@ -1,6 +1,6 @@
 binds {
 	/* Global */
-	Mod+Tab              { toggle-overview; }
+	Mod+grave              { toggle-overview; }
 	Mod+Q                { close-window; }
 	Mod+Slash            { show-hotkey-overlay; }
 	// Focus
@@ -54,6 +54,7 @@ binds {
 	XF86AudioLowerVolume  allow-when-locked=true { spawn "~/.config/niri/scripts/audio.nu" "speaker" "decrease"; }
 	XF86AudioMute         allow-when-locked=true { spawn "~/.config/niri/scripts/audio.nu" "speaker" "toggle"; }
 	XF86AudioMicMute      allow-when-locked=true { spawn "~/.config/niri/scripts/audio.nu" "microphone" "toggle"; }
+	Mod+M                 allow-when-locked=true { spawn "~/.config/niri/scripts/audio.nu" "microphone" "toggle"; }
 	// Change brightness
 	XF86MonBrightnessUp   allow-when-locked=true { spawn "~/.config/niri/scripts/brightness.nu" "increase"; }
 	XF86MonBrightnessDown allow-when-locked=true { spawn "~/.config/niri/scripts/brightness.nu" "decrease"; }
@@ -65,7 +66,4 @@ binds {
 	XF86AudioStop         allow-when-locked=true { spawn "playerctl" "--player" "playerctld" "stop"; }
 	XF86AudioNext         allow-when-locked=true { spawn "playerctl" "--player" "playerctld" "next"; }
 	XF86AudioPrev         allow-when-locked=true { spawn "playerctl" "--player" "playerctld" "previous"; }
-	// G14
-	XF86Launch1          { spawn "rog-control-center"; }
-	XF86Launch4          { spawn "asusctl" "profile" "-n"; }
 }

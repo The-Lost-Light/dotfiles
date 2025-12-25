@@ -34,15 +34,19 @@ AddPackage pipewire # Low-latency audio/video router and processor
 AddPackage pipewire-alsa # Low-latency audio/video router and processor - ALSA configuration
 AddPackage pipewire-pulse # Low-latency audio/video router and processor - PulseAudio replacement
 AddPackage realtime-privileges # Realtime privileges for users
-# Brightness
+# Monitor
+AddPackage ddcutil # Query and change Linux monitor settings using DDC/CI and USB.
 AddPackage --foreign brightnessctl-git # Lightweight brightness control tool
 # Network
 AddPackage networkmanager # Network connection manager and user applications
 AddPackage network-manager-applet # Applet for managing network connections
+AddPackage --foreign nmgui-bin # GTK4-based GUI for NetworkManager (nmcli) — binary release
 CopyFile /etc/NetworkManager/conf.d/wifi-powersave.conf
 # Bluetooth
 AddPackage blueman # GTK+ Bluetooth Manager
 AddPackage --foreign overskride-bin # A simple yet powerful bluetooth client (binary release)
+# Others
+AddPackage openrgb # Open source RGB lighting control that doesn't depend on manufacturer software
 
 # Pacman
 AddPackage downgrade # Bash script for downgrading one or more packages to a version in your cache or the A.L.A.

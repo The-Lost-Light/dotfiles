@@ -77,6 +77,7 @@ AddPackage --foreign osu-lazer-bin # The future of osu! and the beginning of an 
 # System Monitor
 AddPackage btop # A monitor of system resources, bpytop ported to C++
 AddPackage mission-center # Monitor your CPU, Memory, Disk, Network and GPU usage
+AddPackage --foreign zenergy-dkms-git # Linux kernel driver for reading RAPL registers for AMD Zen CPUs
 
 # Share/Sync/Download
 AddPackage ab-download-manager # A Download Manager that speeds up your downloads

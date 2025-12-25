@@ -10,6 +10,7 @@ AddPackage vulkan-mesa-layers # Mesa's Vulkan layers
 AddPackage linux-cachyos-nvidia-open # nvidia open modules driver for the linux-cachyos kernel
 AddPackage nvidia-utils # NVIDIA drivers utilities
 AddPackage nvidia-prime # NVIDIA Prime Render Offload configuration and utilities
+AddPackage nvidia-settings # Tool for configuring the NVIDIA graphics driver
 AddPackage libva-nvidia-driver # VA-API implementation that uses NVDEC as a backend
 AddPackage lib32-nvidia-utils # NVIDIA drivers utilities (32-bit)
 AddPackage cuda # NVIDIA's GPU programming toolkit

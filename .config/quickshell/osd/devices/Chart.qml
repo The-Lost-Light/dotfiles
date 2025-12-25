@@ -6,8 +6,10 @@ import qs.configs
 WrapperRectangle {
 	id: root
 	property alias iconFont: icon.font
-	property alias icon: icon.text
+	required property string icon
+	required property string mutedIcon
 	required property real percent
+	required property bool muted
 	readonly property real size: Math.max(content.implicitWidth, content.implicitHeight) + 2 * margin + 2 * extraMargin
 	border {
 		color: Color.border
@@ -37,6 +39,7 @@ WrapperRectangle {
 				id: icon
 				anchors.centerIn: parent
 				font.family: Config.iconFontFamily
+				text: root.muted ? root.mutedIcon : root.icon
 			}
 		}
 

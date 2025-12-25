@@ -1,15 +1,17 @@
 pragma ComponentBehavior: Bound
 import QtQuick
 import Quickshell
-import Quickshell.Wayland
 import Quickshell.Services.Pipewire
+import Quickshell.Wayland
 import qs.services
 import qs.configs
 
 Scope {
 	id: root
 	property real sinkPercent
+	property bool sinkMuted
 	property real sourcePercent
+	property bool sourceMuted
 	property bool sinkActive: false
 	property bool sourceActive: false
 
@@ -56,12 +58,16 @@ Scope {
 				Chart {
 					visible: root.sourceActive
 					icon: LucideService.unicode("mic")
+					mutedIcon: LucideService.unicode("mic-off")
 					percent: root.sourcePercent
+					muted: root.sourceMuted
 				}
 				Chart {
 					visible: root.sinkActive
 					icon: LucideService.unicode("volume-2")
+					mutedIcon: LucideService.unicode("volume-off")
 					percent: root.sinkPercent
+					muted: root.sinkMuted
 				}
 			}
 		}
@@ -70,14 +76,16 @@ Scope {
 	Connections {
 		target: AudioService
 
-		function onSinkAudioChanged() {
-			root.sinkPercent = Pipewire.defaultAudioSink?.audio.volume * 100 ?? 0
+		function onSinkAudioChanged(percent, muted) {
+			root.sinkPercent = percent || 0
+			root.sinkMuted = muted ?? true
 			root.sinkActive = true
 			hideTimer.restart()
 		}
 
-		function onSourceAudioChanged() {
-			root.sourcePercent = Pipewire.defaultAudioSource?.audio.volume * 100 ?? 0
+		function onSourceAudioChanged(percent, muted) {
+			root.sourcePercent = percent || 0
+			root.sourceMuted = muted ?? true
 			root.sourceActive = true
 			hideTimer.restart()
 		}
