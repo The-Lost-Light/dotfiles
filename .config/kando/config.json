@@ -1,5 +1,5 @@
 {
-  "version": "2.1.2",
+  "version": "2.2.0",
   "locale": "zh-Hant",
   "showIntroductionDialog": false,
   "menuTheme": "clean-circle",
@@ -7,6 +7,7 @@
   "menuThemeColors": {},
   "darkMenuThemeColors": {},
   "enableDarkModeForMenuThemes": false,
+  "enableSelectionWedges": false,
   "soundTheme": "none",
   "soundVolume": 0.5,
   "enableVersionCheck": true,
@@ -39,5 +40,6 @@
   "gamepadBackButton": 1,
   "gamepadCloseButton": 2,
   "sameShortcutBehavior": "close",
-  "useDefaultOsShowSettingsHotkey": true
+  "useDefaultOsShowSettingsHotkey": true,
+  "enableAchievements": true
 }

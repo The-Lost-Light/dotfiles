@@ -13,6 +13,7 @@ AddPackage kitty # A modern, hackable, featureful, OpenGL-based terminal emulato
 
 # Communication
 AddPackage discord # All-in-one voice and text chat for gamers
+AddPackage vesktop-bin # A cross platform electron-based desktop app aiming to give you a snappier Discord experience with Vencord pre-installed.(Prebuilt version.Use system-wide electron)
 AddPackage signal-desktop # Signal Private Messenger for Linux
 AddPackage telegram-desktop # Official Telegram Desktop client
 
@@ -68,7 +69,7 @@ AddPackage mangojuice # A convenient alternative to GOverlay for configuring Man
 AddPackage prismlauncher # Minecraft launcher with ability to manage multiple instances
 AddPackage steam # Valve's digital software delivery system
 AddPackage gamescope # SteamOS session compositing window manager
-AddPackage protonplus # A simple Wine and Proton-based compatiblity tools manager for GNOME
+AddPackage proton-cachyos-slr # A compatibility tool for Steam Play based on Wine and additional components, experimental branch with extra CachyOS flavour (Steam Linux Runtime build)
 AddPackage protontricks # Run Winetricks commands for Steam Play/Proton games among other common Wine features
 AddPackage --foreign adwsteamgtk # A simple Gtk wrapper for Adwaita-for-Steam
 AddPackage xpadneo-dkms # Advanced Linux Driver for Xbox One Wireless Gamepad

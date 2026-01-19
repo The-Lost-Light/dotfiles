@@ -40,5 +40,5 @@
 |Window manager|Niri      |
 |Shell         |Quickshell|
 |Boot manager  |Refind    |
-|Login         |Regreet   |
+|Login         |TUIgreet   |
 |Maintain      |Aconfmgr  |

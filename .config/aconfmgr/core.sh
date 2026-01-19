@@ -45,8 +45,6 @@ CopyFile /etc/NetworkManager/conf.d/wifi-powersave.conf
 # Bluetooth
 AddPackage blueman # GTK+ Bluetooth Manager
 AddPackage --foreign overskride-bin # A simple yet powerful bluetooth client (binary release)
-# Others
-AddPackage openrgb # Open source RGB lighting control that doesn't depend on manufacturer software
 
 # Pacman
 AddPackage downgrade # Bash script for downgrading one or more packages to a version in your cache or the A.L.A.
