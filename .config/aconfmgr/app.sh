@@ -1,6 +1,5 @@
 # Browser
-AddPackage vivaldi # An advanced browser made with the power user in mind.
-AddPackage vivaldi-ffmpeg-codecs # additional support for proprietary codecs for vivaldi
+AddPackage helium-browser-bin # Private, fast, and honest web browser based on Chromium (Latest/Stable)
 
 # File Manager
 AddPackage nautilus # Default file manager for GNOME
@@ -54,11 +53,14 @@ AddPackage --foreign piliplus-bin # A Bilibili third-party client built with Flu
 AddPackage kooha # Elegantly record your screen
 
 # Remote Desktop
-AddPackage --foreign rustdesk-bin # Yet another remote desktop software, written in Rust. Works out of the box, no configuration required.
+AddPackage rustdesk-bin # Yet another remote desktop software, written in Rust. Works out of the box, no configuration required
+
+# Password
+AddPackage --foreign ente-auth-bin # Ente two-factor authenticator.
+AddPackage --foreign proton-pass-bin # Open-source password manager for effortless protection. Securely store, share and auto-login your accounts with Proton Pass, using end-to-end encryption trusted by millions.
 
 # Tools
 AddPackage gnome-calculator # GNOME Scientific calculator
-AddPackage --foreign ente-auth-bin # Ente two-factor authenticator.
 AddPackage --foreign wordbook # A dictionary application built for GNOME.
 
 # Game
