@@ -28,6 +28,7 @@ AddPackage fwupd # Simple daemon to allow session software to update firmware
 AddPackage linux-firmware # Firmware files for Linux
 # CPU
 AddPackage cpupower-gui # A GUI utility to set CPU frequency limits
+AddPackage zenergy-dkms-git # Linux kernel driver for reading RAPL registers for AMD Zen CPUs
 # Audio
 AddPackage alsa-utils # Advanced Linux Sound Architecture - Utilities
 AddPackage pipewire # Low-latency audio/video router and processor
@@ -83,6 +84,7 @@ AddPackage power-profiles-daemon # Makes power profiles handling available over 
 AddPackage --foreign ryzenadj # RyzenAdj tool for adjusting Ryzen Mobile power states
 CopyFile /etc/systemd/logind.conf
 # Zram
+CopyFile /etc/systemd/zram-generator.conf
 CopyFile /etc/sysctl.d/99-vm-zram-parameters.conf
 
 # Backup

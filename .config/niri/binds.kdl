@@ -1,6 +1,6 @@
 binds {
 	/* Global */
-	Mod+grave              { toggle-overview; }
+	Mod+Tab              { toggle-overview; }
 	Mod+Q                { close-window; }
 	Mod+Slash            { show-hotkey-overlay; }
 	// Focus

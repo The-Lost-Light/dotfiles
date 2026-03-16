@@ -1,4 +1,5 @@
 # Browser
+AddPackage firefox # Fast, Private & Safe Web Browser
 AddPackage helium-browser-bin # Private, fast, and honest web browser based on Chromium (Latest/Stable)
 
 # File Manager
@@ -53,7 +54,7 @@ AddPackage --foreign piliplus-bin # A Bilibili third-party client built with Flu
 AddPackage kooha # Elegantly record your screen
 
 # Remote Desktop
-AddPackage rustdesk-bin # Yet another remote desktop software, written in Rust. Works out of the box, no configuration required
+AddPackage --foreign rustdesk-bin # Yet another remote desktop software, written in Rust. Works out of the box, no configuration required.
 
 # Password
 AddPackage --foreign ente-auth-bin # Ente two-factor authenticator.
@@ -80,7 +81,6 @@ AddPackage --foreign osu-lazer-bin # The future of osu! and the beginning of an 
 # System Monitor
 AddPackage btop # A monitor of system resources, bpytop ported to C++
 AddPackage mission-center # Monitor your CPU, Memory, Disk, Network and GPU usage
-AddPackage --foreign zenergy-dkms-git # Linux kernel driver for reading RAPL registers for AMD Zen CPUs
 
 # Share/Sync/Download
 AddPackage ab-download-manager # A Download Manager that speeds up your downloads

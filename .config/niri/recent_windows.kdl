@@ -7,7 +7,7 @@ recent-windows {
 	}
 
 	binds {
-		Mod+Tab         { next-window; }
-		Mod+Shift+Tab   { next-window     filter="app-id"; }
+		Mod+Grave         { next-window; }
+		Mod+Shift+Grave   { next-window     filter="app-id"; }
 	}
 }
