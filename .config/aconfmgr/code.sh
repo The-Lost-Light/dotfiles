@@ -21,7 +21,6 @@ AddPackage prettier # An opinionated code formatter
 AddPackage ccache # Compiler cache that speeds up recompilation by caching previous compilations
 AddPackage sccache # Shared compilation cache
 AddPackage cloc # Count lines of code
-AddPackage cmake # A cross-platform open-source make system
 
 # Flutter
 AddPackage fvm # Flutter Version Management: A simple CLI to manage Flutter SDK versions.

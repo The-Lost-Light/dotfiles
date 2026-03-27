@@ -48,6 +48,7 @@ AddPackage --foreign lowfi # An extremely simple lofi player.
 # Video
 AddPackage celluloid # Simple GTK+ frontend for mpv
 AddPackage mpv # a free, open source, and cross-platform media player
+AddPackage --foreign kazumi-bin # 基于自定义规则的番剧采集APP，支持流媒体在线观看，支持弹幕
 AddPackage --foreign piliplus-bin # A Bilibili third-party client built with Flutter. | 使用Flutter开发的BiliBili第三方客户端
 
 # Screen Record
@@ -76,6 +77,7 @@ AddPackage proton-cachyos-slr # A compatibility tool for Steam Play based on Win
 AddPackage protontricks # Run Winetricks commands for Steam Play/Proton games among other common Wine features
 AddPackage --foreign adwsteamgtk # A simple Gtk wrapper for Adwaita-for-Steam
 AddPackage xpadneo-dkms # Advanced Linux Driver for Xbox One Wireless Gamepad
+AddPackage --foreign deadlock-modmanager-bin # A mod manager for the Valve game Deadlock (binary)
 AddPackage --foreign osu-lazer-bin # The future of osu! and the beginning of an open era! Commonly known by the codename osu!lazer. Pew pew.
 
 # System Monitor

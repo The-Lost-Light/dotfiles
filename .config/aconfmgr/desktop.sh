@@ -56,7 +56,7 @@ AddPackage --foreign plasma6-themes-colloid-git # colloid theme for KDE Plasma
 AddPackage --foreign tela-icon-theme # A flat colorful design icon theme.
 
 # Wallpaper
-AddPackage swww # A Solution to your Wayland Wallpaper Woes
+AddPackage awww # An Answer to your Wayland Wallpaper Woes
 AddPackage --foreign gowall # A tool to convert a Wallpaper's color scheme - palette
 
 # Launcher
