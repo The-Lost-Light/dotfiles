@@ -25,7 +25,7 @@ AddPackage --foreign sunsetr-bin # Automatic blue light filter for Hyprland, Nir
 AddPackage dex # Program to generate and execute DesktopEntry files of type Application
 AddPackage handlr-regex # Powerful alternative to xdg-utils written in Rust
 AddPackage xdg-desktop-portal-gnome # Backend implementation for xdg-desktop-portal for the GNOME desktop environment
-AddPackage --foreign pinapp-git # Create your own application shortcuts
+AddPackage --foreign pins # Create your own application shortcuts
 
 # IME
 AddPackage fcitx5-configtool # Configuration Tool for Fcitx5

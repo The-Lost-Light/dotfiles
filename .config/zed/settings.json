@@ -1,11 +1,11 @@
 {
 	"diagnostics": {
 		"inline": {
-			"enabled": true
-		}
+			"enabled": true,
+		},
 	},
 	"code_actions_on_format": {
-		"source.organizeImports": true
+		"source.organizeImports": true,
 	},
 	"ssh_connections": [
 		{
@@ -15,21 +15,22 @@
 			"args": [],
 			"projects": [
 				{
-					"paths": ["/home/s114525006"]
-				}
+					"paths": ["/home/s114525006"],
+				},
 			],
-			"nickname": "hadoop"
-		}
+			"nickname": "hadoop",
+		},
 	],
 	"base_keymap": "SublimeText",
 	"show_edit_predictions": true,
 	"edit_predictions": {
+		"provider": "zed",
 		"mode": "subtle",
 		"copilot": {
 			"proxy": null,
-			"proxy_no_verify": null
+			"proxy_no_verify": null,
 		},
-		"enabled_in_text_threads": false
+		"enabled_in_text_threads": false,
 	},
 	"autosave": "on_focus_change",
 	"buffer_font_family": "Maple Mono NF CN",
@@ -38,13 +39,13 @@
 		"cv61": true,
 		"cv97": true,
 		"cv99": true,
-		"ss03": true
+		"ss03": true,
 	},
 	"buffer_font_size": 18,
 	"tabs": { "git_status": true },
 	"git": {
 		"blame": { "show_avatar": true },
-		"inline_blame": { "show_commit_summary": true }
+		"inline_blame": { "show_commit_summary": true },
 	},
 	"indent_guides": { "active_line_width": 2 },
 	"hard_tabs": true,
@@ -52,41 +53,40 @@
 	"soft_wrap": "editor_width",
 	"terminal": {
 		"shell": {
-			"program": "nu"
+			"program": "nu",
 		},
 		"cursor_shape": "bar",
 		"font_family": "FiraCode Nerd Font",
-		"line_height": "standard"
+		"line_height": "standard",
 	},
 	"minimap": { "show": "auto" },
 	"theme": "Ayu Mirage",
 	"agent": {
 		"default_model": {
 			"provider": "copilot_chat",
-			"model": "gpt-5-mini"
-		}
+			"model": "gpt-5-mini",
+		},
 	},
 	"calls": { "mute_on_join": true },
-	"features": { "edit_prediction_provider": "zed" },
 
 	"languages": {
 		"Python": {
-			"language_servers": ["ty", "ruff", "!basedpyright", "discord_presence"]
-		}
+			"language_servers": ["ty", "ruff", "!basedpyright", "discord_presence"],
+		},
 	},
 	"lsp": {
 		"typescript-language-server": {
 			"initialization_options": {
 				"vtsls": {
-					"autoUseWorkspaceTsdk": true
-				}
-			}
+					"autoUseWorkspaceTsdk": true,
+				},
+			},
 		},
 		"dart": {
 			"binary": {
 				"path": "fvm",
-				"arguments": ["dart", "language-server", "--protocol=lsp"]
-			}
-		}
-	}
+				"arguments": ["dart", "language-server", "--protocol=lsp"],
+			},
+		},
+	},
 }

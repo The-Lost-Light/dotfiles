@@ -32,3 +32,5 @@
 	navigate = true
 	side-by-side = true
 	tabs = 2
+[init]
+	defaultBranch = main
