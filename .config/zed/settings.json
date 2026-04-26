@@ -1,5 +1,17 @@
 {
-	"diagnostics": {
+	"project_panel": {
+  "dock": "left"
+ },
+ "outline_panel": {
+  "dock": "left"
+ },
+ "collaboration_panel": {
+  "dock": "left"
+ },
+ "git_panel": {
+  "dock": "left"
+ },
+ "diagnostics": {
 		"inline": {
 			"enabled": true,
 		},
@@ -62,7 +74,8 @@
 	"minimap": { "show": "auto" },
 	"theme": "Ayu Mirage",
 	"agent": {
-		"default_model": {
+		"dock": "right",
+  "default_model": {
 			"provider": "copilot_chat",
 			"model": "gpt-5-mini",
 		},

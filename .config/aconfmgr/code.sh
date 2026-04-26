@@ -12,7 +12,6 @@ AddPackage zed # A high-performance, multiplayer code editor from the creators o
 
 # Game
 AddPackage godot # Advanced cross-platform 2D and 3D game engine
-AddPackage --foreign unityhub # The Unity Hub is a standalone application that streamlines the way you find, download, and manage your Unity Projects and installations.
 
 # LSP
 AddPackage prettier # An opinionated code formatter

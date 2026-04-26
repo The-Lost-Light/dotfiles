@@ -78,6 +78,7 @@ AddPackage protontricks # Run Winetricks commands for Steam Play/Proton games am
 AddPackage --foreign adwsteamgtk # A simple Gtk wrapper for Adwaita-for-Steam
 AddPackage xpadneo-dkms # Advanced Linux Driver for Xbox One Wireless Gamepad
 AddPackage --foreign deadlock-modmanager-bin # A mod manager for the Valve game Deadlock (binary)
+AddPackage --foreign fflogs-uploader-bin # FFLogs Uploader - pre-built binary AppImage
 AddPackage --foreign osu-lazer-bin # The future of osu! and the beginning of an open era! Commonly known by the codename osu!lazer. Pew pew.
 
 # System Monitor
