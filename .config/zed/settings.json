@@ -72,7 +72,7 @@
 		"line_height": "standard",
 	},
 	"minimap": { "show": "auto" },
-	"theme": "Ayu Mirage",
+	"theme": "Ayu Glass Mirage",
 	"agent": {
 		"dock": "right",
   "default_model": {

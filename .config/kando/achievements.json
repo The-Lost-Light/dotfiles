@@ -1,10 +1,10 @@
 {
   "version": "2.3.0",
   "achievementDates": {},
-  "selections": 0,
+  "selections": 1,
   "clickSelections": 0,
   "keyboardSelections": 0,
-  "gestureSelections": 0,
+  "gestureSelections": 1,
   "gamepadSelections": 0,
   "selectionsSpeed1Depth1": 0,
   "selectionsSpeed2Depth1": 0,
