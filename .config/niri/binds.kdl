@@ -44,9 +44,8 @@ binds {
 	Alt+Print            { screenshot-screen; }
 
 	/* Applications */
-	Mod+e                { spawn "kando" "--menu" "Main"; }
 	Mod+Space            { spawn "kitty"; }
-	Mod+A                { spawn "nwg-drawer"; }
+	Mod+A                { spawn-sh "quickshell --config noctalia-shell ipc call launcher toggle"; }
 
 	/* System */
 	// Change volume

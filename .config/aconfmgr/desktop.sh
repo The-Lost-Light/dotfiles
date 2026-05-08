@@ -1,6 +1,13 @@
 # Compositor
 AddPackage niri # A scrollable-tiling Wayland compositor
 
+# Noctalia
+AddPackage noctalia-shell # A sleek and minimal desktop shell thoughtfully crafted for Wayland, built with Quickshell.
+AddPackage cliphist # wayland clipboard manager
+AddPackage evtest # Input device event monitor and query tool
+AddPackage fastfetch # A feature-rich and performance oriented neofetch like system information tool
+AddPackage wtype # xdotool type for wayland
+
 # Greeter
 AddPackage greetd-tuigreet # A console UI greeter for greetd
 CopyFile /etc/greetd/config.toml
@@ -11,12 +18,6 @@ CopyFile /etc/pam.d/greetd # For gnome-keyring
 AddPackage gnome-keyring # Stores passwords and encryption keys
 AddPackage pantheon-polkit-agent # Pantheon Polkit Agent
 AddPackage seahorse # GNOME application for managing PGP keys
-
-# Widget
-AddPackage quickshell # Flexible toolkit for making desktop shells with QtQuick
-AddPackage swaync # A simple GTK based notification daemon for Sway
-AddPackage --foreign bongocat # A Wayland overlay that displays an animated bongo cat reacting to keyboard input
-AddPackage --foreign kando-bin # A pie menu for the desktop. It will be highly customizable and will allow you to create your own menus and actions.(Prebuilt version.Use system-wide electron)
 
 # Filter
 AddPackage --foreign sunsetr-bin # Automatic blue light filter for Hyprland, Niri, and everything Wayland (pre-compiled binary)
@@ -54,13 +55,6 @@ AddPackage adw-gtk-theme # Unofficial GTK 3 port of the libadwaita theme
 AddPackage --foreign bibata-cursor-theme-bin # Material Based Cursor Theme
 AddPackage --foreign plasma6-themes-colloid-git # colloid theme for KDE Plasma
 AddPackage --foreign tela-icon-theme # A flat colorful design icon theme.
-
-# Wallpaper
-AddPackage awww # An Answer to your Wayland Wallpaper Woes
-AddPackage --foreign gowall # A tool to convert a Wallpaper's color scheme - palette
-
-# Launcher
-AddPackage nwg-drawer # Application drawer for sway and other wlroots-based compositors
 
 # Xwayland
 AddPackage xwayland-satellite # Xwayland outside your Wayland

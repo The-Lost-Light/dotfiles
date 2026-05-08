@@ -1,13 +1,6 @@
 layer-rule {
-    place-within-backdrop true
-}
-layout {
-    background-color "transparent"
-}
-overview {
-    workspace-shadow {
-        off
-    }
+  match namespace="^noctalia-overview*"
+  place-within-backdrop true
 }
 
 window-rule {

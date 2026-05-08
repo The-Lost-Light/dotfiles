@@ -1,9 +1,5 @@
 layout {
 	gaps 16
-	struts {
-		top -12
-		bottom -4
-	}
 	always-center-single-column
 	empty-workspace-above-first
 	default-column-display "tabbed"

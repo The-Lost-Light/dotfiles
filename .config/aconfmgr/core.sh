@@ -35,6 +35,7 @@ AddPackage pipewire # Low-latency audio/video router and processor
 AddPackage pipewire-alsa # Low-latency audio/video router and processor - ALSA configuration
 AddPackage pipewire-pulse # Low-latency audio/video router and processor - PulseAudio replacement
 AddPackage realtime-privileges # Realtime privileges for users
+AddPackage pavucontrol # PulseAudio Volume Control
 # Monitor
 AddPackage ddcutil # Query and change Linux monitor settings using DDC/CI and USB.
 AddPackage --foreign brightnessctl-git # Lightweight brightness control tool
