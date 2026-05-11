@@ -6,6 +6,7 @@ AddPackage noctalia-shell # A sleek and minimal desktop shell thoughtfully craft
 AddPackage cliphist # wayland clipboard manager
 AddPackage evtest # Input device event monitor and query tool
 AddPackage fastfetch # A feature-rich and performance oriented neofetch like system information tool
+AddPackage wlsunset # Day/night gamma adjustments for Wayland compositors
 AddPackage wtype # xdotool type for wayland
 
 # Greeter
@@ -16,7 +17,6 @@ CopyFile /etc/pam.d/greetd # For gnome-keyring
 
 # Encryption
 AddPackage gnome-keyring # Stores passwords and encryption keys
-AddPackage pantheon-polkit-agent # Pantheon Polkit Agent
 AddPackage seahorse # GNOME application for managing PGP keys
 
 # Filter

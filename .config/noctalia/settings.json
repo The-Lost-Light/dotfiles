@@ -14,7 +14,7 @@
         "enableSessionSearch": true,
         "enableSettingsSearch": true,
         "enableWindowsSearch": true,
-        "iconMode": "tabler",
+        "iconMode": "native",
         "ignoreMouseInput": false,
         "overviewLayer": true,
         "pinnedApps": [
@@ -201,7 +201,7 @@
                     "occupiedColor": "secondary",
                     "pillSize": 0.6,
                     "showApplications": false,
-                    "showApplicationsHover": false,
+                    "showApplicationsHover": true,
                     "showBadge": true,
                     "showLabelsOnlyWhenOccupied": true,
                     "unfocusedIconsOpacity": 1
@@ -264,7 +264,8 @@
                     "id": "Tray",
                     "pinned": [
                         "Discord",
-                        "鍵盤 - 英語 (美式)"
+                        "鍵盤 - 英語 (美式)",
+                        "steam"
                     ]
                 },
                 {
@@ -296,13 +297,6 @@
                     "iconColor": "none",
                     "id": "Microphone",
                     "middleClickCommand": "pwvucontrol || pavucontrol",
-                    "textColor": "none"
-                },
-                {
-                    "applyToAllMonitors": false,
-                    "displayMode": "onhover",
-                    "iconColor": "none",
-                    "id": "Brightness",
                     "textColor": "none"
                 },
                 {
@@ -363,7 +357,7 @@
                 "id": "shortcuts-card"
             },
             {
-                "enabled": true,
+                "enabled": false,
                 "id": "audio-card"
             },
             {

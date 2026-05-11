@@ -45,7 +45,8 @@ binds {
 
 	/* Applications */
 	Mod+Space            { spawn "kitty"; }
-	Mod+A                { spawn-sh "quickshell --config noctalia-shell ipc call launcher toggle"; }
+	Mod+A                { spawn "quickshell" "--config" "noctalia-shell" "ipc" "call" "launcher" "toggle"; }
+	Mod+E                { spawn "nautilus"; }
 
 	/* System */
 	// Change volume
