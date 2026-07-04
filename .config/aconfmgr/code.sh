@@ -39,6 +39,7 @@ AddPackage rustup # The Rust toolchain installer
 # Web
 AddPackage caddy # Fast web server with automatic HTTPS
 AddPackage deno # A secure runtime for JavaScript and TypeScript
+AddPackage pnpm # Fast, disk space efficient package manager
 
 # typst
 AddPackage typst # A markup-based typesetting system for the sciences

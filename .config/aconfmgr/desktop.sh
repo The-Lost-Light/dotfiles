@@ -2,18 +2,12 @@
 AddPackage niri # A scrollable-tiling Wayland compositor
 
 # Noctalia
-AddPackage noctalia-shell # A sleek and minimal desktop shell thoughtfully crafted for Wayland, built with Quickshell.
-AddPackage cliphist # wayland clipboard manager
-AddPackage evtest # Input device event monitor and query tool
-AddPackage fastfetch # A feature-rich and performance oriented neofetch like system information tool
-AddPackage wlsunset # Day/night gamma adjustments for Wayland compositors
-AddPackage wtype # xdotool type for wayland
+AddPackage noctalia # Lightweight Wayland shell built directly on Wayland and OpenGL ES
 
 # Greeter
-AddPackage greetd-tuigreet # A console UI greeter for greetd
+AddPackage --foreign noctalia-greeter # Minimal greetd login greeter with a bundled wlroots compositor
 CopyFile /etc/greetd/config.toml
-CopyFile /etc/greetd/login.png
-CopyFile /etc/pam.d/greetd # For gnome-keyring
+CopyFile /etc/pam.d/greetd
 
 # Encryption
 AddPackage gnome-keyring # Stores passwords and encryption keys

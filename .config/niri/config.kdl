@@ -1,3 +1,5 @@
+spawn-at-startup "noctalia"
+
 include "binds.kdl"
 include "gestures.kdl"
 include "input.kdl"
@@ -6,5 +8,3 @@ include "miscellaneous.kdl"
 include "outputs.kdl"
 include "recent_windows.kdl"
 include "rules.kdl"
-
-spawn-at-startup "quickshell" "--config" "noctalia-shell"

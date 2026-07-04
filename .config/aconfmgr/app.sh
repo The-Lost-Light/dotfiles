@@ -1,5 +1,4 @@
 # Browser
-AddPackage firefox # Fast, Private & Safe Web Browser
 AddPackage helium-browser-bin # Private, fast, and honest web browser based on Chromium (Latest/Stable)
 
 # File Manager
@@ -12,7 +11,6 @@ AddPackage yazi # Blazing fast terminal file manager written in Rust, based on a
 AddPackage kitty # A modern, hackable, featureful, OpenGL-based terminal emulator
 
 # Communication
-AddPackage discord # All-in-one voice and text chat for gamers
 AddPackage vesktop-bin # A cross platform electron-based desktop app aiming to give you a snappier Discord experience with Vencord pre-installed.(Prebuilt version.Use system-wide electron)
 AddPackage signal-desktop # Signal Private Messenger for Linux
 AddPackage telegram-desktop # Official Telegram Desktop client
@@ -49,7 +47,6 @@ AddPackage --foreign lowfi # An extremely simple lofi player.
 AddPackage celluloid # Simple GTK+ frontend for mpv
 AddPackage mpv # a free, open source, and cross-platform media player
 AddPackage --foreign kazumi-bin # 基于自定义规则的番剧采集APP，支持流媒体在线观看，支持弹幕
-AddPackage --foreign piliplus-bin # A Bilibili third-party client built with Flutter. | 使用Flutter开发的BiliBili第三方客户端
 
 # Screen Record
 AddPackage kooha # Elegantly record your screen
@@ -71,6 +68,7 @@ AddPackage lib32-gamemode # A daemon/lib combo that allows games to request a se
 AddPackage mangohud # A Vulkan overlay layer for monitoring FPS, temperatures, CPU/GPU load and more.
 AddPackage mangojuice # A convenient alternative to GOverlay for configuring MangoHud
 AddPackage prismlauncher # Minecraft launcher with ability to manage multiple instances
+AddPackage --foreign glfw-wayland-minecraft-cursorfix # A free, open source, portable framework for graphical application development (wayland, patched for Minecraft)
 AddPackage steam # Valve's digital software delivery system
 AddPackage gamescope # SteamOS session compositing window manager
 AddPackage proton-cachyos-slr # A compatibility tool for Steam Play based on Wine and additional components, experimental branch with extra CachyOS flavour (Steam Linux Runtime build)
@@ -78,7 +76,6 @@ AddPackage protontricks # Run Winetricks commands for Steam Play/Proton games am
 AddPackage --foreign adwsteamgtk # A simple Gtk wrapper for Adwaita-for-Steam
 AddPackage xpadneo-dkms # Advanced Linux Driver for Xbox One Wireless Gamepad
 AddPackage --foreign deadlock-modmanager-bin # A mod manager for the Valve game Deadlock (binary)
-AddPackage --foreign fflogs-uploader-bin # FFLogs Uploader - pre-built binary AppImage
 AddPackage --foreign osu-lazer-bin # The future of osu! and the beginning of an open era! Commonly known by the codename osu!lazer. Pew pew.
 
 # System Monitor
@@ -86,8 +83,8 @@ AddPackage btop # A monitor of system resources, bpytop ported to C++
 AddPackage mission-center # Monitor your CPU, Memory, Disk, Network and GPU usage
 
 # Share/Sync/Download
-AddPackage ab-download-manager # A Download Manager that speeds up your downloads
 AddPackage baidupcs-go # Terminal utility for Baidu Network Disk
+AddPackage --foreign ghost-downloader-bin # A multi-threading async downloader with QThread based on PyQt/PySide (Prebuilt version)多线程下载器,协程下载器
 AddPackage localsend # An open source cross-platform alternative to AirDrop
 AddPackage syncthing # Open Source Continuous Replication / Cluster Synchronization Thing
 AddPackage yt-dlp # A youtube-dl fork with additional features and fixes

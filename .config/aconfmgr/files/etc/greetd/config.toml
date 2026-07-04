@@ -2,9 +2,5 @@
 vt = "next"
 
 [default_session]
-command = "tuigreet --time --remember --remember-session --user-menu"
+command = "/usr/bin/noctalia-greeter-session -- --session niri"
 user = "greeter"
-
-[initial_session]
-command = "niri-session"
-user = "mono"
