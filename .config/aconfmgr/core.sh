@@ -2,8 +2,8 @@
 AddPackage amd-ucode # Microcode update image for AMD CPUs
 AddPackage booster # Fast and secure initramfs generator
 CopyFile /etc/booster.yaml
-AddPackage linux-cachyos # The Linux BORE + LTO + AutoFDO + Propeller Cachy Sauce Kernel by CachyOS with other patches and improvements. kernel and modules
-AddPackage linux-cachyos-headers # Headers and scripts for building modules for the Linux BORE + LTO + AutoFDO + Propeller Cachy Sauce Kernel by CachyOS with other patches and improvements. kernel
+AddPackage linux-cachyos-lts # The Linux EEVDF + Cachy Sauce Kernel by CachyOS with other patches and improvements - Long Term Service kernel and modules
+AddPackage linux-cachyos-lts-headers # Headers and scripts for building modules for the Linux EEVDF + Cachy Sauce Kernel by CachyOS with other patches and improvements - Long Term Service kernel
 AddPackage --foreign preloader-signed # Linux Foundation UEFI secure boot system (prebuilt X64 EFI binaries)
 AddPackage --foreign refi2nd # A fork of rEFInd with bug-fixes and optimizations.
 CopyFile /boot/refind_linux.conf
@@ -27,7 +27,6 @@ AddPackage trash-cli # Command line trashcan (recycle bin) interface
 AddPackage fwupd # Simple daemon to allow session software to update firmware
 AddPackage linux-firmware # Firmware files for Linux
 # CPU
-AddPackage cpupower-gui # A GUI utility to set CPU frequency limits
 AddPackage zenergy-dkms-git # Linux kernel driver for reading RAPL registers for AMD Zen CPUs
 # Audio
 AddPackage alsa-utils # Advanced Linux Sound Architecture - Utilities
