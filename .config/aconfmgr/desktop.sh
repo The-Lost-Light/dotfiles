@@ -1,20 +1,17 @@
 # Compositor
 AddPackage niri # A scrollable-tiling Wayland compositor
 
-# Noctalia
+# Shell
 AddPackage noctalia # Lightweight Wayland shell built directly on Wayland and OpenGL ES
+AddPackage --foreign vicinae-bin # Raycast like FOSS app on Linux
 
 # Greeter
-AddPackage --foreign noctalia-greeter # Minimal greetd login greeter with a bundled wlroots compositor
+AddPackage noctalia-greeter # Minimal greetd login greeter with a bundled wlroots compositor
 CopyFile /etc/greetd/config.toml
 CopyFile /etc/pam.d/greetd
 
-# Encryption
-AddPackage gnome-keyring # Stores passwords and encryption keys
-AddPackage seahorse # GNOME application for managing PGP keys
-
-# Filter
-AddPackage --foreign sunsetr-bin # Automatic blue light filter for Hyprland, Niri, and everything Wayland (pre-compiled binary)
+# AD block
+AddPackage --foreign adguard-cli-bin # Surf the Web ad-free and safely. Shields up
 
 # XDG Desktop
 AddPackage dex # Program to generate and execute DesktopEntry files of type Application

@@ -16,25 +16,40 @@ CopyFile /etc/locale.gen
 CopyFile /etc/locale.conf
 CreateLink /etc/localtime ../usr/share/zoneinfo/Asia/Taipei
 
+# Systemd
+AddPackage isd # TUI for systemd
+systemctl enable --now greetd.service
+systemctl enable --now NetworkManager.service
+systemctl enable --now rustdesk.service
+systemctl enable --now sshd.service
+systemctl enable --now tailscaled.service
+
 # File System
 AddPackage 7zip # File archiver for extremely high compression
 AddPackage btrfs-progs # Btrfs filesystem utilities
 AddPackage btrfs-assistant # An application for managing BTRFS subvolumes and Snapper snapshots
+AddPackage ntfsprogs # NTFS userspace utilities
 AddPackage trash-cli # Command line trashcan (recycle bin) interface
 
 ## Device
 # Firmware
 AddPackage fwupd # Simple daemon to allow session software to update firmware
 AddPackage linux-firmware # Firmware files for Linux
-# CPU
-AddPackage zenergy-dkms-git # Linux kernel driver for reading RAPL registers for AMD Zen CPUs
+# Hardware Video Acceleration
+AddPackage libva # Video Acceleration (VA) API for Linux
+AddPackage libva-utils # Intel VA-API Media Applications and Scripts for libva
+AddPackage mesa # Open-source OpenGL drivers
+AddPackage mesa-utils # Essential Mesa utilities
+AddPackage vdpauinfo # Command line utility for querying the capabilities of a VDPAU device
+AddPackage vulkan-mesa-layers # Mesa's Vulkan layers
 # Audio
 AddPackage alsa-utils # Advanced Linux Sound Architecture - Utilities
 AddPackage pipewire # Low-latency audio/video router and processor
 AddPackage pipewire-alsa # Low-latency audio/video router and processor - ALSA configuration
 AddPackage pipewire-pulse # Low-latency audio/video router and processor - PulseAudio replacement
+AddPackage pwvucontrol # Pipewire volume control for GNOME
 AddPackage realtime-privileges # Realtime privileges for users
-AddPackage pavucontrol # PulseAudio Volume Control
+AddPackage playerctl # mpris media player controller and lib for spotify, vlc, audacious, bmp, xmms2, and others.
 # Monitor
 AddPackage ddcutil # Query and change Linux monitor settings using DDC/CI and USB.
 AddPackage --foreign brightnessctl-git # Lightweight brightness control tool
@@ -51,6 +66,7 @@ AddPackage --foreign overskride-bin # A simple yet powerful bluetooth client (bi
 AddPackage downgrade # Bash script for downgrading one or more packages to a version in your cache or the A.L.A.
 AddPackage lostfiles # Find orphaned files not owned by any Arch packages
 AddPackage rebuild-detector # Detects which packages need to be rebuilt
+AddPackage shelly # Shelly: A Modern Arch Package Manager
 AddPackage yay # Yet another yogurt. Pacman wrapper and AUR helper written in go.
 CopyFile /etc/makepkg.conf
 CopyFile /etc/pacman.conf
@@ -62,9 +78,8 @@ AddPackage cachyos-v4-mirrorlist # CachyOS repository mirrorlist
 AddPackage cachyos-rate-mirrors # CachyOS - Rate mirrors service
 
 # Shell
-AddPackage nushell # A new type of shell
+AddPackage fish # Smart and user friendly shell intended mostly for interactive use
 AddPackage --foreign dashbinsh # Relink /bin/sh to dash
-AddPackage --foreign carapace-bin # multi-shell multi-command argument completer
 CopyFile /etc/shells
 # Shell tools
 AddPackage bat # Cat clone with syntax highlighting and git integration
@@ -86,6 +101,10 @@ CopyFile /etc/systemd/logind.conf
 # Zram
 CopyFile /etc/systemd/zram-generator.conf
 CopyFile /etc/sysctl.d/99-vm-zram-parameters.conf
+
+# Encryption
+AddPackage gnome-keyring # Stores passwords and encryption keys
+AddPackage seahorse # GNOME application for managing PGP keys
 
 # Backup
 AddPackage --foreign aconfmgr-git # A configuration manager for Arch Linux

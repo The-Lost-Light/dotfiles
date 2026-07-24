@@ -46,6 +46,7 @@ AddPackage --foreign lowfi # An extremely simple lofi player.
 # Video
 AddPackage celluloid # Simple GTK+ frontend for mpv
 AddPackage mpv # a free, open source, and cross-platform media player
+AddPackage --foreign frame-bin # FFmpeg GUI media conversion utility (binary release)
 AddPackage --foreign kazumi-bin # 基于自定义规则的番剧采集APP，支持流媒体在线观看，支持弹幕
 
 # Screen Record
@@ -105,9 +106,7 @@ AddPackage baobab # A graphical directory tree analyzer
 AddPackage gnome-disk-utility # Disk Management Utility for GNOME
 
 # Terminal tools
-AddPackage isd # TUI for systemd
 AddPackage man-pages-zh_tw # Traditional Chinese Linux man pages
-AddPackage playerctl # mpris media player controller and lib for spotify, vlc, audacious, bmp, xmms2, and others.
 AddPackage tealdeer # A fast tldr client in Rust
 AddPackage wev # A tool for debugging wayland events on a Wayland window, analagous to the X11 tool xev
 AddPackage --foreign catnap-git # A minimalistic and fast system fetch written in Nim.

@@ -1,8 +1,0 @@
-[Unit]
-PartOf=graphical-session.target
-After=graphical-session.target
-Requisite=graphical-session.target
-
-[Service]
-ExecStart=/usr/lib/policykit-1-pantheon/io.elementary.desktop.agent-polkit
-Restart=on-failure

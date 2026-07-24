@@ -1,3 +1,5 @@
+config_version = 7
+
 [audio]
 enable_sounds = true
 
@@ -6,13 +8,13 @@ blur_intensity = 0.19999999552965164
 enabled = true
 
 [bar.default]
-auto_hide = true
 capsule = true
 center = [ "media", "clock", "session" ]
 contact_shadow = true
-end = [ "tray", "network", "bluetooth", "volume", "battery", "clipboard", "notifications" ]
+end = [ "shelly", "tray", "network", "bluetooth", "volume", "battery", "clipboard", "todo", "notifications" ]
 layer = "overlay"
 reserve_space = false
+smart_auto_hide = true
 start = [ "workspaces", "Overview", "active_window" ]
 
 [brightness]
@@ -24,14 +26,16 @@ enabled = true
 [control_center]
 sidebar = "full"
 
+    [control_center.calendar]
+    show_events_card = false
+
 [desktop_widgets]
 schema_version = 2
 widget_order = [
     "desktop-widget-0000000000000001",
     "desktop-widget-0000000000000006",
     "desktop-widget-0000000000000007",
-    "desktop-widget-0000000000000008",
-    "desktop-widget-0000000000000009"
+    "desktop-widget-0000000000000008"
 ]
 
     [desktop_widgets.grid]
@@ -121,28 +125,16 @@ widget_order = [
         stat = "net_rx"
         stat2 = ""
 
-    [desktop_widgets.widget.desktop-widget-0000000000000009]
-    box_height = 0.0
-    box_width = 0.0
-    cx = 1701.0
-    cy = 156.0
-    output = "HDMI-A-1"
-    rotation = 0.0
-    type = "clock"
-
-        [desktop_widgets.widget.desktop-widget-0000000000000009.settings]
-        center_text = false
-        clock_style = "digital"
-
 [dock]
-auto_hide = true
 enabled = true
 icon_size = 36
 launcher_icon = "rocket"
 launcher_position = "start"
-pinned = [ "helium", "dev.zed.Zed" ]
+layer = "overlay"
+pinned = [ "helium", "dev.zed.Zed", "AppFlowy" ]
 reserve_space = false
 show_dots = true
+smart_auto_hide = true
 
 [idle]
 behavior_order = [ "lock", "screen-off", "lock-and-suspend" ]
@@ -155,12 +147,12 @@ behavior_order = [ "lock", "screen-off", "lock-and-suspend" ]
     [idle.behavior.lock-and-suspend]
     action = "lock_and_suspend"
     enabled = true
-    timeout = 900.0
+    timeout = 1800.0
 
     [idle.behavior.screen-off]
     action = "screen_off"
     enabled = true
-    timeout = 660.0
+    timeout = 900.0
 
 [location]
 auto_locate = true
@@ -185,23 +177,26 @@ widget_order = [
     visible = true
 
     [lockscreen_widgets.widget."lockscreen-login-box@DP-1"]
-    box_height = 70.0
-    box_width = 400.0
+    box_height = 201.0
+    box_width = 720.0
     cx = 1024.0
-    cy = 1037.0
+    cy = 983.5
     output = "DP-1"
     rotation = 0.0
     type = "login_box"
 
         [lockscreen_widgets.widget."lockscreen-login-box@DP-1".settings]
+        center_password_text = false
+        layout = "regular"
         show_caps_lock = true
         show_keyboard_layout = true
         show_login_button = true
         show_password_hint = true
+        show_session_buttons = true
 
     [lockscreen_widgets.widget."lockscreen-login-box@HDMI-A-1"]
-    box_height = 70.0
-    box_width = 400.0
+    box_height = 201.0
+    box_width = 720.0
     cx = 960.0
     cy = 957.0
     output = "HDMI-A-1"
@@ -209,25 +204,34 @@ widget_order = [
     type = "login_box"
 
         [lockscreen_widgets.widget."lockscreen-login-box@HDMI-A-1".settings]
+        center_password_text = false
+        layout = "regular"
         show_caps_lock = true
         show_keyboard_layout = true
         show_login_button = true
         show_password_hint = true
+        show_session_buttons = true
 
     [lockscreen_widgets.widget.lockscreen-widget-0000000000000001]
-    box_height = 0.0
-    box_width = 0.0
-    cx = 1819.0
-    cy = 195.0
+    box_height = 144.0
+    box_width = 304.0
+    cx = 1024.0
+    cy = 184.0
     output = "DP-1"
     rotation = 0.0
     type = "clock"
 
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000001.settings]
+        background_opacity = 0.59999999999999998
+        center_text = false
+        clock_style = "digital"
+        shadow = true
+
     [lockscreen_widgets.widget.lockscreen-widget-0000000000000002]
     box_height = 0.0
     box_width = 0.0
-    cx = 1812.0
-    cy = 318.0
+    cx = 1796.0
+    cy = 130.0
     output = "DP-1"
     rotation = 0.0
     type = "weather"
@@ -250,8 +254,14 @@ layer = "overlay"
 [osd]
 position = "bottom_center"
 
+[plugin_settings."noctalia/translator"]
+target_lang = "en"
+
+[plugin_settings."nzlov/daily-wallpaper"]
+source = "nasa"
+
 [plugins]
-enabled = [ "noctalia/bongocat" ]
+enabled = [ "lucasoe/proton-pass", "joshuaslate/shelly", "noctalia/timer", "nightwatch75/todo" ]
 
 [shell]
 avatar_path = "/home/mono/.avatar.webp"
@@ -308,7 +318,9 @@ telemetry_enabled = true
 
 [theme]
 builtin = "Ayu"
+community_palette = "Noctalia legacy"
 source = "wallpaper"
+wallpaper_scheme = "m3-content"
 
     [theme.templates]
     enable_builtin_templates = false
@@ -323,12 +335,20 @@ directory = "/home/mono/.config/niri/assets"
     [wallpaper.last]
     path = "/home/mono/.config/niri/assets/wallpaper.jpg"
 
+    [wallpaper.monitors.DP-1]
+    path = "/home/mono/.config/niri/assets/wallpaper.jpg"
+
+    [wallpaper.monitors.HDMI-A-1]
+    path = "/home/mono/.config/niri/assets/wallpaper.jpg"
+
 [widget.Overview]
-command = "niri msg action toggle-overview"
 glyph = "rectangle"
-scroll_down_command = "niri msg action focus-column-right"
-scroll_up_command = "niri msg action focus-column-left"
 type = "custom_button"
+
+    [widget.Overview.actions]
+    left = "exec niri msg action toggle-overview"
+    scroll_down = "exec niri msg action focus-column-right"
+    scroll_up = "exec niri msg action focus-column-left"
 
 [widget.active_window]
 title_scroll = "on_hover"
@@ -344,6 +364,13 @@ show_label = false
 
 [widget.session]
 capsule = true
+
+[widget.shelly]
+hide_when_up_to_date = true
+type = "joshuaslate/shelly:shelly"
+
+[widget.todo]
+type = "nightwatch75/todo:todo"
 
 [widget.tray]
 drawer = true

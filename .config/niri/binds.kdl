@@ -1,65 +1,67 @@
 binds {
 	/* Global */
-	Mod+Tab              { toggle-overview; }
-	Mod+Q                { close-window; }
-	Mod+Slash            { show-hotkey-overlay; }
+	Mod+Tab               repeat=false { toggle-overview; }
+	Mod+Q                 repeat=false { close-window; }
+	Mod+Slash             repeat=false { show-hotkey-overlay; }
 	// Focus
-	Mod+Left             { focus-column-left; }
-	Mod+Right            { focus-column-right; }
-	Mod+Up               { focus-window-or-workspace-up; }
-	Mod+Down             { focus-window-or-workspace-down; }
-	Mod+WheelScrollUp    { focus-column-left; }
-	Mod+WheelScrollDown  { focus-column-right; }
-	Mod+MouseForward     { focus-window-or-workspace-up; }
-	Mod+MouseBack        { focus-window-or-workspace-down; }
-	Mod+Shift+Left       { focus-monitor-left; }
-	Mod+Shift+Right      { focus-monitor-right; }
-	Mod+C                { center-column; }
+	Mod+Left                           { focus-column-left; }
+	Mod+Right                          { focus-column-right; }
+	Mod+Up                             { focus-window-or-workspace-up; }
+	Mod+Down                           { focus-window-or-workspace-down; }
+	Mod+WheelScrollUp                  { focus-column-left; }
+	Mod+WheelScrollDown                { focus-column-right; }
+	Mod+MouseForward                   { focus-window-or-workspace-up; }
+	Mod+MouseBack                      { focus-window-or-workspace-down; }
+	Mod+Shift+Left                     { focus-monitor-left; }
+	Mod+Shift+Right                    { focus-monitor-right; }
+	Mod+C                              { center-column; }
+
 	// Move
-	Mod+Ctrl+Left        { move-column-left; }
-	Mod+Ctrl+Right       { move-column-right; }
-	Mod+Ctrl+Up          { move-window-up-or-to-workspace-up; }
-	Mod+Ctrl+Down        { move-window-down-or-to-workspace-down; }
-	Mod+Shift+Ctrl+Left  { move-column-to-monitor-left; }
-	Mod+Shift+Ctrl+Right { move-column-to-monitor-right; }
-	Mod+BracketLeft      { consume-or-expel-window-left; }
-	Mod+BracketRight     { consume-or-expel-window-right; }
-	Mod+S                { toggle-column-tabbed-display; }
+	Mod+Ctrl+Left                      { move-column-left; }
+	Mod+Ctrl+Right                     { move-column-right; }
+	Mod+Ctrl+Up                        { move-window-up-or-to-workspace-up; }
+	Mod+Ctrl+Down                      { move-window-down-or-to-workspace-down; }
+	Mod+Shift+Ctrl+Left                { move-column-to-monitor-left; }
+	Mod+Shift+Ctrl+Right               { move-column-to-monitor-right; }
+	Mod+Comma                          { consume-or-expel-window-left; }
+	Mod+Period                         { consume-or-expel-window-right; }
+	Mod+S                              { toggle-column-tabbed-display; }
 	// Resize
-	Mod+R                { switch-preset-column-width; }
-	Mod+Shift+R          { switch-preset-window-height; }
-	Mod+G                { maximize-column; }
-	Mod+Shift+G          { fullscreen-window; }
-	Mod+Ctrl+G           { expand-column-to-available-width; }
-	Mod+Ctrl+R           { reset-window-height; }
-	Mod+Minus            { set-column-width "-10%"; }
-	Mod+Equal            { set-column-width "+10%"; }
-	Mod+Shift+Minus      { set-window-height "-10%"; }
-	Mod+Shift+Equal      { set-window-height "+10%"; }
-	Mod+F                { toggle-window-floating; }
-	Mod+Shift+F          { switch-focus-between-floating-and-tiling; }
+	Mod+Minus                          { set-column-width "-10%"; }
+	Mod+Equal                          { set-column-width "+10%"; }
+	Mod+Shift+Minus                    { set-window-height "-10%"; }
+	Mod+Shift+Equal                    { set-window-height "+10%"; }
+	Mod+R                 repeat=false { switch-preset-column-width; }
+	Mod+Ctrl+R            repeat=false { expand-column-to-available-width; }
+	Mod+Shift+R           repeat=false { switch-preset-window-height; }
+	Mod+Ctrl+G            repeat=false { reset-window-height; }
+	Mod+G                 repeat=false { maximize-column; }
+	Mod+MouseMiddle       repeat=false { maximize-column; }
+	Mod+Shift+G           repeat=false { fullscreen-window; }
+	Mod+F                 repeat=false { switch-focus-between-floating-and-tiling; }
+	Mod+Shift+F           repeat=false { toggle-window-floating; }
+
 	// Screenshot
-	Print                { screenshot; }
-	Mod+Print            { screenshot-window; }
-	Alt+Print            { screenshot-screen; }
+	Print                 repeat=false { screenshot; }
+	Mod+Print             repeat=false { screenshot-window; }
+	Mod+Shift+Print       repeat=false { screenshot-screen; }
 
 	/* Applications */
-	Mod+Space            { spawn "kitty"; }
-	Mod+A                { spawn "noctalia" "msg" "panel-toggle" "launcher"; }
-	Mod+E                { spawn "nautilus"; }
+	Mod+Space             repeat=false { spawn "vicinae" "toggle"; }
+	Mod+A                 repeat=false { spawn "noctalia" "msg" "panel-toggle" "launcher"; }
 
 	/* System */
 	// Change volume
-	XF86AudioRaiseVolume  allow-when-locked=true { spawn "~/.config/niri/scripts/audio.nu" "speaker" "increase"; }
-	XF86AudioLowerVolume  allow-when-locked=true { spawn "~/.config/niri/scripts/audio.nu" "speaker" "decrease"; }
-	XF86AudioMute         allow-when-locked=true { spawn "~/.config/niri/scripts/audio.nu" "speaker" "toggle"; }
-	XF86AudioMicMute      allow-when-locked=true { spawn "~/.config/niri/scripts/audio.nu" "microphone" "toggle"; }
-	Mod+M                 allow-when-locked=true { spawn "~/.config/niri/scripts/audio.nu" "microphone" "toggle"; }
+	XF86AudioRaiseVolume  allow-when-locked=true { spawn "noctalia" "msg" "volume-up"; }
+	XF86AudioLowerVolume  allow-when-locked=true { spawn "noctalia" "msg" "volume-down"; }
+	XF86AudioMute         allow-when-locked=true { spawn "noctalia" "msg" "volume-mute"; }
+	XF86AudioMicMute      allow-when-locked=true { spawn "noctalia" "msg" "mic-mute"; }
+	Mod+M                 allow-when-locked=true { spawn "noctalia" "msg" "mic-mute"; }
 	// Change brightness
-	XF86MonBrightnessUp   allow-when-locked=true { spawn "~/.config/niri/scripts/brightness.nu" "increase"; }
-	XF86MonBrightnessDown allow-when-locked=true { spawn "~/.config/niri/scripts/brightness.nu" "decrease"; }
-	XF86KbdBrightnessUp   allow-when-locked=true { spawn "~/.config/niri/scripts/brightness.nu" "increase" "--keyboard"; }
-	XF86KbdBrightnessDown allow-when-locked=true { spawn "~/.config/niri/scripts/brightness.nu" "decrease" "--keyboard"; }
+	XF86MonBrightnessUp   allow-when-locked=true { spawn "noctalia" "msg" "brightness-up"; }
+	XF86MonBrightnessDown allow-when-locked=true { spawn "noctalia" "msg" "brightness-down"; }
+	XF86KbdBrightnessUp   allow-when-locked=true { spawn "noctalia" "msg" "keyboard-backlight-up";  }
+	XF86KbdBrightnessDown allow-when-locked=true { spawn "noctalia" "msg" "keyboard-backlight-down";  }
 	// Media control
 	XF86AudioPlay         allow-when-locked=true { spawn "playerctl" "--player" "playerctld" "play-pause"; }
 	XF86AudioPause        allow-when-locked=true { spawn "playerctl" "--player" "playerctld" "pause"; }

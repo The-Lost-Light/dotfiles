@@ -38,7 +38,6 @@
       "proxy": null,
       "proxy_no_verify": null,
     },
-    "enabled_in_text_threads": false,
   },
   "autosave": "on_focus_change",
   "buffer_font_family": "Maple Mono NF CN",
@@ -60,7 +59,7 @@
   "soft_wrap": "editor_width",
   "terminal": {
     "shell": {
-      "program": "nu",
+      "program": "fish",
     },
     "cursor_shape": "bar",
     "font_family": "FiraCode Nerd Font",
@@ -88,12 +87,6 @@
         "vtsls": {
           "autoUseWorkspaceTsdk": true,
         },
-      },
-    },
-    "dart": {
-      "binary": {
-        "path": "fvm",
-        "arguments": ["dart", "language-server", "--protocol=lsp"],
       },
     },
   },

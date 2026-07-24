@@ -12,8 +12,8 @@ export XCURSOR_THEME="Bibata-Modern-Ice"
 export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/ssh-agent.socket"
 
 # Hardware Video Acceleration
-export LIBVA_DRIVER_NAME="radeonsi"
-export VDPAU_DRIVER="radeonsi"
+export LIBVA_DRIVER_NAME="nvidia"
+export VDPAU_DRIVER="nvidia"
 
 # Vulkan
 export MESA_VK_DEVICE_SELECT="0x1002:0x1636"

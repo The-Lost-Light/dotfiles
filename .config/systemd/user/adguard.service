@@ -1,0 +1,17 @@
+[Unit]
+Description=AdGuard CLI
+After=network.target
+
+[Service]
+Type=forking
+WorkingDirectory=/usr/share/adguard-cli
+ExecStart=adguard-cli start
+ExecStop=adguard-cli stop
+Restart=always
+TimeoutStartSec=0
+TimeoutStopSec=0
+StandardOutput=journal
+RemainAfterExit=yes
+
+[Install]
+WantedBy=default.target

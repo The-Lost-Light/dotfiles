@@ -14,7 +14,7 @@
 |Chinese        |Noto Sans CJK (TC)|
 |Monospaced Font|Maple Mono NF CN <br/>FiraCode Nerd Font|
 
-# [Dependences](.config/aconfmgr/README.md)
+# Dependences
 |Type          |Package   |
 |--------------|----------|
 |Window manager|Niri      |
