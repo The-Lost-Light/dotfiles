@@ -8,6 +8,7 @@ IgnorePath "/opt/*"
 # Boot
 IgnorePath "/boot/vmlinuz-linux*"
 IgnorePath "/boot/*.img"
+IgnorePath "/efi"
 # Snapper
 IgnorePath "/.snapshots/*"
 IgnorePath "/etc/conf.d/snapper"
