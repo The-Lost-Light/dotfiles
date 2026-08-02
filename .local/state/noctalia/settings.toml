@@ -1,4 +1,4 @@
-config_version = 7
+config_version = 8
 
 [audio]
 enable_sounds = true
@@ -11,11 +11,35 @@ enabled = true
 capsule = true
 center = [ "media", "clock", "session" ]
 contact_shadow = true
-end = [ "shelly", "tray", "network", "bluetooth", "volume", "battery", "clipboard", "todo", "notifications" ]
+end = [ "shelly", "tray", "group:g1", "group:g2" ]
 layer = "overlay"
 reserve_space = false
 smart_auto_hide = true
-start = [ "workspaces", "Overview", "active_window" ]
+start = [ "group:g3", "active_window" ]
+
+    [[bar.default.capsule_group]]
+    enabled = true
+    fill = "surface_variant"
+    id = "g1"
+    members = [ "network", "bluetooth", "volume", "battery" ]
+    opacity = 1.0
+    padding = 6.0
+
+    [[bar.default.capsule_group]]
+    enabled = true
+    fill = "surface_variant"
+    id = "g2"
+    members = [ "todo", "clipboard", "notifications" ]
+    opacity = 1.0
+    padding = 6.0
+
+    [[bar.default.capsule_group]]
+    enabled = true
+    fill = "surface_variant"
+    id = "g3"
+    members = [ "workspaces", "Overview" ]
+    opacity = 1.0
+    padding = 6.0
 
 [brightness]
 enable_ddcutil = true
@@ -130,8 +154,7 @@ enabled = true
 icon_size = 36
 launcher_icon = "rocket"
 launcher_position = "start"
-layer = "overlay"
-pinned = [ "helium", "dev.zed.Zed", "AppFlowy" ]
+pinned = [ "helium", "org.gnome.Nautilus", "dev.zed.Zed", "kitty" ]
 reserve_space = false
 show_dots = true
 smart_auto_hide = true
@@ -177,7 +200,7 @@ widget_order = [
     visible = true
 
     [lockscreen_widgets.widget."lockscreen-login-box@DP-1"]
-    box_height = 201.0
+    box_height = 229.0
     box_width = 720.0
     cx = 1024.0
     cy = 983.5
@@ -191,11 +214,12 @@ widget_order = [
         show_caps_lock = true
         show_keyboard_layout = true
         show_login_button = true
-        show_password_hint = true
+        show_media = true
         show_session_buttons = true
+        show_weather = true
 
     [lockscreen_widgets.widget."lockscreen-login-box@HDMI-A-1"]
-    box_height = 201.0
+    box_height = 229.0
     box_width = 720.0
     cx = 960.0
     cy = 957.0
@@ -209,8 +233,9 @@ widget_order = [
         show_caps_lock = true
         show_keyboard_layout = true
         show_login_button = true
-        show_password_hint = true
+        show_media = true
         show_session_buttons = true
+        show_weather = true
 
     [lockscreen_widgets.widget.lockscreen-widget-0000000000000001]
     box_height = 144.0
@@ -261,10 +286,11 @@ target_lang = "en"
 source = "nasa"
 
 [plugins]
-enabled = [ "lucasoe/proton-pass", "joshuaslate/shelly", "noctalia/timer", "nightwatch75/todo" ]
+enabled = [ "lucasoe/proton-pass", "noctalia/timer", "nightwatch75/todo", "ramosdetrigo/godot-provider", "joshuaslate/shelly" ]
 
 [shell]
 avatar_path = "/home/mono/.avatar.webp"
+clipboard_confirm_clear_history = false
 polkit_agent = true
 screen_time_enabled = true
 settings_show_advanced = true
@@ -359,6 +385,10 @@ type = "noctalia/bongocat:cat"
 [widget.clock]
 anchor = true
 
+[widget.media]
+hide_artist = true
+hide_when_no_media = true
+
 [widget.network]
 show_label = false
 
@@ -366,6 +396,7 @@ show_label = false
 capsule = true
 
 [widget.shelly]
+bar_label = "count_only"
 hide_when_up_to_date = true
 type = "joshuaslate/shelly:shelly"
 

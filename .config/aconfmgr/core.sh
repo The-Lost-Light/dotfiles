@@ -18,11 +18,6 @@ CreateLink /etc/localtime ../usr/share/zoneinfo/Asia/Taipei
 
 # Systemd
 AddPackage isd # TUI for systemd
-systemctl enable --now greetd.service
-systemctl enable --now NetworkManager.service
-systemctl enable --now rustdesk.service
-systemctl enable --now sshd.service
-systemctl enable --now tailscaled.service
 
 # File System
 AddPackage 7zip # File archiver for extremely high compression
@@ -67,6 +62,7 @@ AddPackage downgrade # Bash script for downgrading one or more packages to a ver
 AddPackage lostfiles # Find orphaned files not owned by any Arch packages
 AddPackage rebuild-detector # Detects which packages need to be rebuilt
 AddPackage shelly # Shelly: A Modern Arch Package Manager
+AddPackage shelly-flatpak-backend # Optional native Flatpak backend for Shelly
 AddPackage yay # Yet another yogurt. Pacman wrapper and AUR helper written in go.
 CopyFile /etc/makepkg.conf
 CopyFile /etc/pacman.conf

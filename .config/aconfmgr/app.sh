@@ -85,10 +85,10 @@ AddPackage mission-center # Monitor your CPU, Memory, Disk, Network and GPU usag
 
 # Share/Sync/Download
 AddPackage baidupcs-go # Terminal utility for Baidu Network Disk
-AddPackage --foreign ghost-downloader-bin # A multi-threading async downloader with QThread based on PyQt/PySide (Prebuilt version)多线程下载器,协程下载器
 AddPackage localsend # An open source cross-platform alternative to AirDrop
 AddPackage syncthing # Open Source Continuous Replication / Cluster Synchronization Thing
 AddPackage yt-dlp # A youtube-dl fork with additional features and fixes
+AddPackage --foreign motrix-next-bin # A full-featured download manager rebuilt with Tauri 2, Vue 3, and Rust
 AddPackage --foreign megatools # CLI for MEGA
 
 # Record
