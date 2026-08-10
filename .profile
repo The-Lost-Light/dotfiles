@@ -8,9 +8,6 @@ export ZED_WINDOW_DECORATIONS="server"
 export QT_QPA_PLATFORMTHEME="qt6ct"
 export XCURSOR_THEME="Bibata-Modern-Ice"
 
-# SSH
-export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/ssh-agent.socket"
-
 # Hardware Video Acceleration
 export LIBVA_DRIVER_NAME="nvidia"
 export VDPAU_DRIVER="nvidia"

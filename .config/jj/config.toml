@@ -1,0 +1,14 @@
+[user]
+name = "Mono"
+email = "monotone1427@gmail.com"
+
+[signing]
+behavior = "own"
+backend = "ssh"
+key = "~/.ssh/id_ed25519.pub"
+
+[ui]
+default-command = "log"
+pager = "delta"
+diff-formatter = ":git"
+

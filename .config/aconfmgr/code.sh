@@ -10,8 +10,8 @@ AddPackage --foreign turtle # Manage your git repositories with easy-to-use dial
 AddPackage helix # A post-modern modal text editor
 AddPackage zed # A high-performance, multiplayer code editor from the creators of Atom and Tree-sitter
 
-# Game
-AddPackage godot # Advanced cross-platform 2D and 3D game engine
+# AI
+AddPackage opencode # The open source coding agent
 
 # LSP
 AddPackage prettier # An opinionated code formatter
@@ -21,6 +21,9 @@ AddPackage ccache # Compiler cache that speeds up recompilation by caching previ
 AddPackage cloc # Count lines of code
 AddPackage cmake # A cross-platform open-source make system
 AddPackage sccache # Shared compilation cache
+
+# Game
+AddPackage godot # Advanced cross-platform 2D and 3D game engine
 
 # Flutter
 AddPackage fvm # Flutter Version Management: A simple CLI to manage Flutter SDK versions.

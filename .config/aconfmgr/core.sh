@@ -99,7 +99,6 @@ CopyFile /etc/systemd/zram-generator.conf
 CopyFile /etc/sysctl.d/99-vm-zram-parameters.conf
 
 # Encryption
-AddPackage gnome-keyring # Stores passwords and encryption keys
 AddPackage seahorse # GNOME application for managing PGP keys
 
 # Backup
