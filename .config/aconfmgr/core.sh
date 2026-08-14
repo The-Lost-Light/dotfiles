@@ -1,11 +1,10 @@
 # Boot
 AddPackage amd-ucode # Microcode update image for AMD CPUs
 AddPackage booster # Fast and secure initramfs generator
-CopyFile /etc/booster.yaml
 AddPackage linux-cachyos-lts # The Linux EEVDF + Cachy Sauce Kernel by CachyOS with other patches and improvements - Long Term Service kernel and modules
 AddPackage linux-cachyos-lts-headers # Headers and scripts for building modules for the Linux EEVDF + Cachy Sauce Kernel by CachyOS with other patches and improvements - Long Term Service kernel
+AddPackage refind # An EFI boot manager
 AddPackage --foreign preloader-signed # Linux Foundation UEFI secure boot system (prebuilt X64 EFI binaries)
-AddPackage --foreign refi2nd # A fork of rEFInd with bug-fixes and optimizations.
 CopyFile /boot/refind_linux.conf
 
 # Base
@@ -47,15 +46,11 @@ AddPackage realtime-privileges # Realtime privileges for users
 AddPackage playerctl # mpris media player controller and lib for spotify, vlc, audacious, bmp, xmms2, and others.
 # Monitor
 AddPackage ddcutil # Query and change Linux monitor settings using DDC/CI and USB.
-AddPackage --foreign brightnessctl-git # Lightweight brightness control tool
 # Network
 AddPackage networkmanager # Network connection manager and user applications
-AddPackage network-manager-applet # Applet for managing network connections
-AddPackage --foreign nmgui-bin # GTK4-based GUI for NetworkManager (nmcli) — binary release
 CopyFile /etc/NetworkManager/conf.d/wifi-powersave.conf
 # Bluetooth
-AddPackage blueman # GTK+ Bluetooth Manager
-AddPackage --foreign overskride-bin # A simple yet powerful bluetooth client (binary release)
+AddPackage bluez # Daemons for the bluetooth protocol stack
 
 # Pacman
 AddPackage downgrade # Bash script for downgrading one or more packages to a version in your cache or the A.L.A.
@@ -92,7 +87,6 @@ AddPackage --foreign kotofetch # Minimalist fetch tool for Japanese quotes (writ
 AddPackage cachyos-settings # CachyOS - Settings
 # Power
 AddPackage power-profiles-daemon # Makes power profiles handling available over D-Bus
-AddPackage --foreign ryzenadj # RyzenAdj tool for adjusting Ryzen Mobile power states
 CopyFile /etc/systemd/logind.conf
 # Zram
 CopyFile /etc/systemd/zram-generator.conf

@@ -41,7 +41,6 @@ AddPackage --foreign spicetify-cli # Command-line tool to customize Spotify clie
 AddPackage --foreign spicetify-marketplace-bin # Spicetify app that integrates a marketplace for extensions, themes and snippets
 CopyFile /etc/pacman.d/hooks/spicetify.hook
 AddPackage --foreign gapless # Play your music elegantly (AKA: G4Music)
-AddPackage --foreign lowfi # An extremely simple lofi player.
 
 # Video
 AddPackage celluloid # Simple GTK+ frontend for mpv
@@ -56,12 +55,11 @@ AddPackage kooha # Elegantly record your screen
 AddPackage --foreign rustdesk-bin # Yet another remote desktop software, written in Rust. Works out of the box, no configuration required.
 
 # Password
+AddPackage proton-pass # Open-source and secure identity manager
 AddPackage --foreign ente-auth-bin # Ente two-factor authenticator.
-AddPackage --foreign proton-pass-bin # Open-source password manager for effortless protection. Securely store, share and auto-login your accounts with Proton Pass, using end-to-end encryption trusted by millions.
 
 # Tools
 AddPackage gnome-calculator # GNOME Scientific calculator
-AddPackage --foreign wordbook # A dictionary application built for GNOME.
 
 # Game
 AddPackage gamemode # A daemon/lib combo that allows games to request a set of optimisations be temporarily applied to the host OS
