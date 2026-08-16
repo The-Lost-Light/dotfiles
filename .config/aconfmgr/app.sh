@@ -3,8 +3,8 @@ AddPackage helium-browser-bin # Private, fast, and honest web browser based on C
 
 # File Manager
 AddPackage nautilus # Default file manager for GNOME
-AddPackage nautilus-python # Python bindings for the Nautilus Extension API
 AddPackage sushi # A quick previewer for Nautilus
+AddPackage --foreign turtle # Manage your git repositories with easy-to-use dialogs in Nautilus.
 AddPackage yazi # Blazing fast terminal file manager written in Rust, based on async I/O
 
 # Terminal
@@ -104,6 +104,7 @@ AddPackage baobab # A graphical directory tree analyzer
 AddPackage gnome-disk-utility # Disk Management Utility for GNOME
 
 # Terminal tools
+AddPackage duf # Disk Usage/Free Utility
 AddPackage man-pages-zh_tw # Traditional Chinese Linux man pages
 AddPackage tealdeer # A fast tldr client in Rust
 AddPackage wev # A tool for debugging wayland events on a Wayland window, analagous to the X11 tool xev

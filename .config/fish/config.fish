@@ -6,7 +6,7 @@ if status is-interactive
     alias hx helix
     alias ls lsd
     alias lst "ls --tree"
-    alias dotfiles "git --git-dir=$HOME/dotfiles.git --work-tree=$HOME"
+    alias config "git --git-dir=$HOME/dotfiles.git --work-tree=$HOME"
 
     # Plugins
     function starship_transient_prompt_func

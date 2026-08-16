@@ -1,5 +1,5 @@
 # PATH
-export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/.local/bin:$HOME/.cargo/bin:$PATH"
 
 # Desktop
 export LANG="zh_TW.UTF-8"

@@ -80,6 +80,15 @@
     "Python": {
       "language_servers": ["ty", "ruff", "!basedpyright", "discord_presence"],
     },
+    "GDScript": {
+      "formatter": {
+        "external": {
+          "command": "gdscript-formatter",
+          "arguments": ["--reorder-code"],
+        },
+      },
+      "format_on_save": "on"
+    },
   },
   "lsp": {
     "typescript-language-server": {

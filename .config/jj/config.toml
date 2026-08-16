@@ -11,3 +11,7 @@ key = "~/.ssh/id_ed25519.pub"
 default-command = "log"
 pager = "delta"
 diff-formatter = ":git"
+
+[aliases]
+all.definition = ["log", "--revision", "all()"]
+all.doc = "Show all logs"

@@ -9,31 +9,21 @@ enabled = true
 
 [bar.default]
 capsule = true
-center = [ "weather", "clock", "session", "shelly" ]
+center = [ "weather", "clock", "group:g2" ]
 contact_shadow = true
-end = [ "sysmon", "tray", "group:g1", "group:g2" ]
+end = [ "group:g4", "tray", "group:g1", "group:g6" ]
 layer = "overlay"
 reserve_space = false
 smart_auto_hide = true
-start = [ "group:g3", "Overview", "media" ]
-
-    [[bar.default.capsule_group]]
-    accordion = false
-    accordion_direction = "end"
-    enabled = true
-    fill = "surface_variant"
-    id = "g1"
-    members = [ "network", "bluetooth", "volume", "battery" ]
-    opacity = 1.0
-    padding = 6.0
+start = [ "group:g3", "group:g5" ]
 
     [[bar.default.capsule_group]]
     accordion = true
-    accordion_direction = "start"
+    accordion_direction = "end"
     enabled = true
     fill = "surface_variant"
     id = "g2"
-    members = [ "notifications", "widget", "todo", "clipboard" ]
+    members = [ "session", "clipboard", "todo", "widget", "bar" ]
     opacity = 1.0
     padding = 6.0
 
@@ -47,17 +37,62 @@ start = [ "group:g3", "Overview", "media" ]
     opacity = 1.0
     padding = 6.0
 
+    [[bar.default.capsule_group]]
+    accordion = true
+    accordion_direction = "start"
+    enabled = true
+    fill = "surface_variant"
+    id = "g4"
+    members = [ "sysmon", "status" ]
+    opacity = 1.0
+    padding = 6.0
+
+    [[bar.default.capsule_group]]
+    accordion = false
+    accordion_direction = "end"
+    enabled = true
+    fill = "surface_variant"
+    id = "g1"
+    members = [ "network", "bluetooth", "volume", "battery", "privacy" ]
+    opacity = 1.0
+    padding = 6.0
+
+    [[bar.default.capsule_group]]
+    accordion = false
+    accordion_direction = "end"
+    enabled = true
+    fill = "surface_variant"
+    id = "g5"
+    members = [ "audio_visualizer", "media" ]
+    opacity = 1.0
+    padding = 6.0
+
+    [[bar.default.capsule_group]]
+    accordion = false
+    accordion_direction = "end"
+    enabled = true
+    fill = "surface_variant"
+    id = "g6"
+    members = [ "widget_2", "notifications" ]
+    opacity = 1.0
+    padding = 6.0
+
 [brightness]
 enable_ddcutil = true
 
 [calendar]
 enabled = true
 
+    [calendar.account.personal_google]
+    name = "Google"
+    type = "google"
+
 [control_center]
 sidebar = "full"
 
     [control_center.calendar]
     show_events_card = false
+    show_week_numbers = true
 
 [desktop_widgets]
 schema_version = 2
@@ -288,11 +323,18 @@ orientation = "vertical"
 position_vertical = "center_right"
 scale = 0.90000000596046448
 
+[plugin_settings."davemhammer/tailscale"]
+notify_on_peer_change = false
+
 [plugin_settings."noctalia/translator"]
 target_lang = "en"
 
 [plugin_settings."nzlov/daily-wallpaper"]
 source = "nasa"
+
+[plugin_settings."yuuto/arch-updater"]
+auto_check_hours = 1
+notify_on_updates = false
 
 [plugins]
 enabled = [
@@ -300,8 +342,9 @@ enabled = [
     "noctalia/timer",
     "nightwatch75/todo",
     "ramosdetrigo/godot-provider",
-    "joshuaslate/shelly",
-    "oldirtty/color_picker"
+    "oldirtty/color_picker",
+    "davemhammer/tailscale",
+    "yuuto/arch-updater"
 ]
 
 [shell]
@@ -330,35 +373,43 @@ telemetry_enabled = true
     [shell.screenshot]
     confirm_region = true
 
-    [[shell.session.actions]]
-    action = "lock"
-    countdown_seconds = 0.0
-    enabled = true
-    variant = "default"
+    [shell.session]
+    show_shortcuts = false
 
-    [[shell.session.actions]]
-    action = "logout"
-    countdown_seconds = 0.0
-    enabled = true
-    variant = "default"
+        [[shell.session.actions]]
+        action = "lock"
+        countdown_seconds = 0.0
+        enabled = true
+        shortcut = "1"
+        variant = "default"
 
-    [[shell.session.actions]]
-    action = "lock_and_suspend"
-    countdown_seconds = 0.0
-    enabled = true
-    variant = "default"
+        [[shell.session.actions]]
+        action = "logout"
+        countdown_seconds = 1.0
+        enabled = true
+        shortcut = "2"
+        variant = "default"
 
-    [[shell.session.actions]]
-    action = "reboot"
-    countdown_seconds = 0.0
-    enabled = true
-    variant = "default"
+        [[shell.session.actions]]
+        action = "lock_and_suspend"
+        countdown_seconds = 1.0
+        enabled = true
+        shortcut = "3"
+        variant = "default"
 
-    [[shell.session.actions]]
-    action = "shutdown"
-    countdown_seconds = 0.0
-    enabled = true
-    variant = "destructive"
+        [[shell.session.actions]]
+        action = "reboot"
+        countdown_seconds = 5.0
+        enabled = true
+        shortcut = "4"
+        variant = "default"
+
+        [[shell.session.actions]]
+        action = "shutdown"
+        countdown_seconds = 5.0
+        enabled = true
+        shortcut = "5"
+        variant = "destructive"
 
 [theme]
 builtin = "Ayu"
@@ -385,27 +436,25 @@ directory = "/home/mono/.config/niri/assets"
     [wallpaper.monitors.HDMI-A-1]
     path = "/home/mono/.config/niri/assets/wallpaper.jpg"
 
-[widget.Overview]
-glyph = "rectangle"
-type = "custom_button"
-
-    [widget.Overview.actions]
-    left = "exec niri msg action toggle-overview"
-    scroll_down = "exec niri msg action focus-column-right"
-    scroll_up = "exec niri msg action focus-column-left"
-
 [widget.active_window]
 display = "text_only"
 title_scroll = "on_hover"
+
+[widget.bar]
+show_idle_on_horizontal = false
+type = "noctalia/timer:bar"
+
+[widget.bluetooth]
+hide_when_no_connected_device = true
 
 [widget.cat]
 type = "noctalia/bongocat:cat"
 
 [widget.clock]
 anchor = true
+tooltip_format = "{:%Y/%m/%d}"
 
 [widget.media]
-hide_artist = true
 hide_when_no_media = true
 max_length = 160
 title_scroll = "on_hover"
@@ -413,13 +462,14 @@ title_scroll = "on_hover"
 [widget.network]
 show_label = false
 
+[widget.privacy]
+hide_inactive = true
+
 [widget.session]
 capsule = true
 
-[widget.shelly]
-bar_label = "count_only"
-hide_when_up_to_date = true
-type = "joshuaslate/shelly:shelly"
+[widget.status]
+type = "davemhammer/tailscale:status"
 
 [widget.todo]
 type = "nightwatch75/todo:todo"
@@ -427,8 +477,7 @@ type = "nightwatch75/todo:todo"
 [widget.tray]
 drawer = true
 drawer_columns = 5
-match_adjacent_spacing = true
-pinned = [ "Fcitx", "Vesktop", "steam" ]
+pinned = [ "Fcitx", "Vesktop" ]
 
 [widget.weather]
 show_condition = false
@@ -436,7 +485,18 @@ show_condition = false
 [widget.widget]
 type = "oldirtty/color_picker:widget"
 
+[widget.widget_2]
+hide_on_empty = true
+type = "yuuto/arch-updater:widget"
+
 [widget.workspaces]
 hide_when_empty = true
 show_labels = false
 style = "focus_hint"
+
+    [widget.workspaces.actions]
+    back = "workspace-switch next"
+    forward = "workspace-switch prev"
+    right = "exec niri msg action toggle-overview"
+    scroll_down = "exec niri msg action focus-column-right"
+    scroll_up = "exec niri msg action focus-column-left"
