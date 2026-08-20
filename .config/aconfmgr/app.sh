@@ -40,7 +40,7 @@ AddPackage spotify-launcher # Client for spotify's apt repository in Rust for Ar
 AddPackage --foreign spicetify-cli # Command-line tool to customize Spotify client
 AddPackage --foreign spicetify-marketplace-bin # Spicetify app that integrates a marketplace for extensions, themes and snippets
 CopyFile /etc/pacman.d/hooks/spicetify.hook
-AddPackage --foreign gapless # Play your music elegantly (AKA: G4Music)
+AddPackage --foreign pano-scrobbler-bin # Feature rich scrobbler. Supports Last.fm, ListenBrainz, Libre.fm & Pleroma. With regex edits, charts & Discord Rich Presence on PC.
 
 # Video
 AddPackage celluloid # Simple GTK+ frontend for mpv
@@ -86,7 +86,7 @@ AddPackage baidupcs-go # Terminal utility for Baidu Network Disk
 AddPackage localsend # An open source cross-platform alternative to AirDrop
 AddPackage syncthing # Open Source Continuous Replication / Cluster Synchronization Thing
 AddPackage yt-dlp # A youtube-dl fork with additional features and fixes
-AddPackage --foreign motrix-next-bin # A full-featured download manager rebuilt with Tauri 2, Vue 3, and Rust
+AddPackage --foreign gopeed-bin # High speed downloader that supports all platforms.(Prebuilt version)
 AddPackage --foreign megatools # CLI for MEGA
 
 # Record

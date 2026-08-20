@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Pano Scrobbler
+Comment=Feature packed music tracker
+Terminal=false
+Exec="pano-scrobbler" --minimized
+Icon=pano-scrobbler
+X-GNOME-Autostart-enabled=true
+StartupWMClass=pano-scrobbler
+Categories=AudioVideo;Audio;

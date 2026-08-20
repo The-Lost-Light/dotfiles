@@ -10,15 +10,14 @@ AddPackage helix # A post-modern modal text editor
 AddPackage zed # A high-performance, multiplayer code editor from the creators of Atom and Tree-sitter
 
 # AI
-AddPackage opencode # The open source coding agent
-
-# LSP
-AddPackage prettier # An opinionated code formatter
+AddPackage --foreign antigravity-cli # Google's agentic development platform (CLI companion)
+AddPackage --foreign antigravity # Google Antigravity 2.0 multi-agent orchestration platform
 
 # Tool
 AddPackage ccache # Compiler cache that speeds up recompilation by caching previous compilations
 AddPackage cloc # Count lines of code
 AddPackage cmake # A cross-platform open-source make system
+AddPackage prettier # An opinionated code formatter
 AddPackage sccache # Shared compilation cache
 
 # Game
@@ -33,7 +32,6 @@ AddPackage jdk-openjdk # OpenJDK Java development kit
 # Python
 AddPackage uv # An extremely fast Python package installer and resolver written in Rust
 AddPackage tk # A windowing toolkit for use with tcl
-# AddPackage --foreign marimo # A reactive Python notebook that's reproducible, git-friendly, and deployable as scripts or apps
 
 # Rust
 AddPackage rustup # The Rust toolchain installer

@@ -5,7 +5,6 @@ AddPackage niri # A scrollable-tiling Wayland compositor
 AddPackage noctalia # Lightweight Wayland shell built directly on Wayland and OpenGL ES
 AddPackage hyprpicker # A wlroots-compatible Wayland color picker that does not suck
 AddPackage jq # Command-line JSON processor
-AddPackage --foreign vicinae-bin # Raycast like FOSS app on Linux
 
 # Greeter
 AddPackage noctalia-greeter # Minimal greetd login greeter with a bundled wlroots compositor

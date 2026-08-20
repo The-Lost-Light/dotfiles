@@ -51,6 +51,7 @@ AddPackage networkmanager # Network connection manager and user applications
 CopyFile /etc/NetworkManager/conf.d/wifi-powersave.conf
 # Bluetooth
 AddPackage bluez # Daemons for the bluetooth protocol stack
+CopyFile /etc/bluetooth/main.conf
 
 # Pacman
 AddPackage downgrade # Bash script for downgrading one or more packages to a version in your cache or the A.L.A.

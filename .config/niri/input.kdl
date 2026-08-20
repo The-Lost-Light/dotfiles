@@ -1,7 +1,7 @@
 input {
 	keyboard {
 		xkb {
-			options "caps:ctrl_modifier"
+		    file "~/.config/niri/keymap.xkb"
 		}
 		numlock
 	}

@@ -13,5 +13,7 @@ pager = "delta"
 diff-formatter = ":git"
 
 [aliases]
-all.definition = ["log", "--revision", "all()"]
+all.definition = ["log", "--revision", "visible() | remote_bookmarks()"]
 all.doc = "Show all logs"
+top.definition = ["edit", "heads(@::)"]
+top.doc = "edit Head"

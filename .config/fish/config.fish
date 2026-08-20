@@ -17,6 +17,7 @@ if status is-interactive
 
     jj util completion fish | source
     niri completions fish | source
+    noctalia completions fish | source
     uv generate-shell-completion fish | source
     uvx --generate-shell-completion fish | source
     zoxide init --cmd cd fish | source

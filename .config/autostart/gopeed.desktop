@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=gopeed
+Comment=gopeed startup script
+Exec=/usr/lib/gopeed/gopeed --hidden
+StartupNotify=false
+Terminal=false

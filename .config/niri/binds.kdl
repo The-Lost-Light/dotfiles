@@ -15,7 +15,6 @@ binds {
 	Mod+Shift+Left                     { focus-monitor-left; }
 	Mod+Shift+Right                    { focus-monitor-right; }
 	Mod+C                              { center-column; }
-
 	// Move
 	Mod+Ctrl+Left                      { move-column-left; }
 	Mod+Ctrl+Right                     { move-column-right; }
@@ -47,7 +46,7 @@ binds {
 	Mod+Shift+Print       repeat=false { screenshot-screen; }
 
 	/* Applications */
-	Mod+Space             repeat=false { spawn "vicinae" "toggle"; }
+	Mod+Space             repeat=false { spawn "kitty"; }
 	Mod+A                 repeat=false { spawn "noctalia" "msg" "panel-toggle" "launcher"; }
 
 	/* System */

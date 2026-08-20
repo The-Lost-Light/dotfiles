@@ -1,36 +1,89 @@
 {
+  // General
   "cli_default_open_behavior": "existing_window",
-  "project_panel": {
-    "dock": "left",
+  // Appearance
+  "theme": "Ayu Glass Mirage",
+  "buffer_font_family": "Maple Mono NF CN",
+  "buffer_font_size": 18,
+  "buffer_font_features": {
+    "cv07": true,
+    "cv61": true,
+    "cv97": true,
+    "cv99": true,
+    "ss03": true,
   },
-  "outline_panel": {
-    "dock": "left",
+  // Editor
+  "autosave": "on_window_change",
+  "which_key": { "enabled": true },
+  "mouse_wheel_zoom": true,
+  "autoscroll_on_clicks": true,
+  "sticky_scroll": { "enabled": true },
+  "auto_signature_help": true,
+  "show_signature_help_after_edits": true,
+  "minimap": { "show": "auto" },
+  "toolbar": { "code_actions": true },
+  "soft_wrap": "editor_width",
+  "indent_guides": { "active_line_width": 2 },
+  "format_on_save": "on",
+  "code_actions_on_format": { "source.organizeImports": true },
+  "completion_menu_scrollbar": "auto",
+  "inlay_hints": { "toggle_on_modifiers_press": { "alt": true } },
+  "code_lens": "menu",
+  "extend_comment_on_newline": false,
+  // Languages & Tools
+  "lsp_results_location": "picker",
+  "semantic_tokens": "combined",
+  "document_folding_ranges": "on",
+  "document_symbols": "on",
+  "completions": { "lsp_insert_mode": "replace_subsequence" },
+  "prettier": { "allowed": true },
+  // Search & Files
+  "use_smartcase_search": true,
+  // Window & Layout
+  "status_bar": {
+    "active_encoding_button": "enabled",
+    "line_endings_button": true,
+    "show_active_file": true,
   },
-  "collaboration_panel": {
-    "dock": "left",
-  },
+  "title_bar": { "show_branch_status_icon": true },
+  "tabs": { "show_diagnostics": "all", "git_status": true, "file_icons": true },
+  "bottom_dock_layout": "right_aligned",
+  // Panels
+  "project_panel": { "diagnostic_badges": true, "bold_folder_labels": true },
   "git_panel": {
+    "status_style": "label_color",
+    "collapse_untracked_diff": true,
     "tree_view": true,
-    "dock": "left",
+    "file_icons": true,
   },
-  "diagnostics": {
-    "inline": {
-      "enabled": true,
+  // Terminal
+  "terminal": {
+    "font_family": "FiraCode Nerd Font",
+    "line_height": { "custom": 1.27 },
+    "cursor_shape": "bar",
+    "bell": "system",
+  },
+  // Version Control
+  "git": {
+    "inline_blame": { "location": "status_bar", "show_commit_summary": true },
+    "path_style": "file_path_first",
+  },
+  // Collaboration
+  "calls": { "mute_on_join": true },
+  // AI
+  "agent": {
+    "single_file_review": true,
+    "default_profile": "write",
+    "play_sound_when_agent_done": "when_hidden",
+    "show_turn_stats": true,
+    "default_model": {
+      "provider": "google",
+      "model": "gemini-3.6-flash",
+      "enable_thinking": true,
+      "effort": "high",
     },
   },
-  "code_actions_on_format": {
-    "source.organizeImports": true,
-  },
-  "ssh_connections": [
-    {
-      "host": "mono-lab",
-      "username": "mono",
-      "args": [],
-      "projects": [],
-    },
-  ],
-  "base_keymap": "SublimeText",
-  "show_edit_predictions": true,
+  "agent_servers": { "antigravity-acp": { "type": "registry" } },
   "edit_predictions": {
     "provider": "zed",
     "mode": "subtle",
@@ -39,43 +92,7 @@
       "proxy_no_verify": null,
     },
   },
-  "autosave": "on_focus_change",
-  "buffer_font_family": "Maple Mono NF CN",
-  "buffer_font_features": {
-    "cv07": true,
-    "cv61": true,
-    "cv97": true,
-    "cv99": true,
-    "ss03": true,
-  },
-  "buffer_font_size": 18,
-  "tabs": { "git_status": true },
-  "git": {
-    "blame": { "show_avatar": true },
-    "inline_blame": { "show_commit_summary": true },
-  },
-  "indent_guides": { "active_line_width": 2 },
-  "use_smartcase_search": true,
-  "soft_wrap": "editor_width",
-  "terminal": {
-    "shell": {
-      "program": "fish",
-    },
-    "cursor_shape": "bar",
-    "font_family": "FiraCode Nerd Font",
-    "line_height": "standard",
-  },
-  "minimap": { "show": "auto" },
-  "theme": "Ayu Glass Mirage",
-  "agent": {
-    "dock": "right",
-    "default_model": {
-      "provider": "copilot_chat",
-      "model": "gpt-5-mini",
-    },
-  },
-  "calls": { "mute_on_join": true },
-
+  // Specify languages
   "languages": {
     "Python": {
       "language_servers": ["ty", "ruff", "!basedpyright", "discord_presence"],
@@ -87,16 +104,11 @@
           "arguments": ["--reorder-code"],
         },
       },
-      "format_on_save": "on"
     },
   },
   "lsp": {
     "typescript-language-server": {
-      "initialization_options": {
-        "vtsls": {
-          "autoUseWorkspaceTsdk": true,
-        },
-      },
+      "initialization_options": { "vtsls": { "autoUseWorkspaceTsdk": true } },
     },
   },
 }
