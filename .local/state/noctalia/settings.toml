@@ -1,4 +1,4 @@
-config_version = 13
+config_version = 14
 
 [audio]
 enable_sounds = true
@@ -372,7 +372,6 @@ enabled = [
     "nightwatch75/todo",
     "ramosdetrigo/godot-provider",
     "oldirtty/color_picker",
-    "h465855hgg/lyrics",
     "yuuto/arch-updater",
     "rylos/tailnet",
     "rylos/syncthing"
@@ -395,6 +394,18 @@ telemetry_enabled = true
     app_grid = true
     pinned = [ "dev.zed.Zed", "AppFlowy", "org.godotengine.Godot", "spotify-launcher", "steam" ]
     show_app_actions = true
+
+        [shell.launcher.providers.emoji]
+        global = true
+
+        [shell.launcher.providers.session]
+        global = true
+
+        [shell.launcher.providers.wallpaper]
+        global = true
+
+        [shell.launcher.providers.windows]
+        global = true
 
     [shell.panel]
     open_near_click_control_center = true

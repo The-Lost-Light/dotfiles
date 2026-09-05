@@ -7,6 +7,7 @@ export ELECTRON_OZONE_PLATFORM_HINT="auto"
 export ZED_WINDOW_DECORATIONS="server"
 export QT_QPA_PLATFORMTHEME="qt6ct"
 export XCURSOR_THEME="Bibata-Modern-Ice"
+export PROTON_ENABLE_WAYLAND=1
 
 # Hardware Video Acceleration
 export LIBVA_DRIVER_NAME="nvidia"
