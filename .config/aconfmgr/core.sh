@@ -1,10 +1,15 @@
 # Boot
 AddPackage amd-ucode # Microcode update image for AMD CPUs
 AddPackage booster # Fast and secure initramfs generator
+CopyFile /etc/booster.yaml
+AddPackage linux-cachyos # The Linux EEVDF + LTO + AutoFDO + Propeller Cachy Sauce Kernel by CachyOS with other patches and improvements. kernel and modules
+AddPackage linux-cachyos-headers # Headers and scripts for building modules for the Linux EEVDF + LTO + AutoFDO + Propeller Cachy Sauce Kernel by CachyOS with other patches and improvements. kernel
 AddPackage linux-cachyos-lts # The Linux EEVDF + Cachy Sauce Kernel by CachyOS with other patches and improvements - Long Term Service kernel and modules
 AddPackage linux-cachyos-lts-headers # Headers and scripts for building modules for the Linux EEVDF + Cachy Sauce Kernel by CachyOS with other patches and improvements - Long Term Service kernel
+AddPackage plymouth # Graphical boot splash screen
+CopyFile /etc/plymouth/plymouthd.conf
 AddPackage refind # An EFI boot manager
-AddPackage --foreign preloader-signed # Linux Foundation UEFI secure boot system (prebuilt X64 EFI binaries)
+CopyFile /etc/pacman.d/hooks/99-refind.hook
 CopyFile /boot/refind_linux.conf
 
 # Base
@@ -14,6 +19,9 @@ CopyFile /etc/adjtime
 CopyFile /etc/locale.gen
 CopyFile /etc/locale.conf
 CreateLink /etc/localtime ../usr/share/zoneinfo/Asia/Taipei
+CopyFile /etc/sudoers.d/config 640
+CopyFile /etc/sudoers.d/wheel 640
+CopyFile /etc/vconsole.conf
 
 # Systemd
 AddPackage isd # TUI for systemd
@@ -99,6 +107,8 @@ AddPackage seahorse # GNOME application for managing PGP keys
 # Backup
 AddPackage --foreign aconfmgr-git # A configuration manager for Arch Linux
 AddPackage cachyos-snapper-support # CachyOS package that handles snapper configs.
+CopyFile /etc/conf.d/snapper
+CopyFile /etc/snapper/configs/root 640
 
 # Font
 AddPackage noto-fonts-cjk # Google Noto CJK fonts

@@ -1,9 +1,11 @@
 [Trigger]
 Operation = Upgrade
 Type = Package
+Target = spotify-launcher
 Target = spicetify-cli
+Target = spicetify-marketplace-bin
 
 [Action]
 Description = Update spicetify.
 When = PostTransaction
-Exec = /usr/bin/sudo -u mono /usr/bin/spicetify restore backup apply
+Exec = /usr/bin/sh -c 'sudo -u "$SUDO_USER" -H /usr/bin/spicetify restore backup apply'

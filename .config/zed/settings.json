@@ -12,6 +12,7 @@
     "cv99": true,
     "ss03": true,
   },
+  "cursor_animation": { "enabled": true },
   // Editor
   "autosave": "on_window_change",
   "which_key": { "enabled": true },
@@ -83,10 +84,14 @@
       "effort": "high",
     },
   },
-  "agent_servers": { "antigravity-acp": { "type": "registry" } },
+  "agent_servers": {
+    "antigravity-acp": {
+      "default_config_options": { "model": "gemini-3.8-flash-high" },
+      "type": "registry",
+    },
+  },
   "edit_predictions": {
-    "provider": "zed",
-    "mode": "subtle",
+    "provider": "copilot",
     "copilot": {
       "proxy": null,
       "proxy_no_verify": null,
