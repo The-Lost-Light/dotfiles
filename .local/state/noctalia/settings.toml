@@ -11,7 +11,7 @@ enabled = true
 capsule = true
 center = [ "weather", "clock", "group:g2" ]
 contact_shadow = true
-end = [ "group:g4", "tray", "group:g1", "group:g6" ]
+end = [ "group:g4", "tray", "group:g1", "notifications" ]
 layer = "overlay"
 reserve_space = false
 smart_auto_hide = true
@@ -23,7 +23,7 @@ start = [ "group:g3", "group:g5" ]
     enabled = true
     fill = "surface_variant"
     id = "g2"
-    members = [ "session", "clipboard", "todo", "widget", "bar" ]
+    members = [ "session", "clipboard", "bar", "widget" ]
     opacity = 1.0
     padding = 6.0
 
@@ -64,16 +64,6 @@ start = [ "group:g3", "group:g5" ]
     fill = "surface_variant"
     id = "g5"
     members = [ "audio_visualizer", "media" ]
-    opacity = 1.0
-    padding = 6.0
-
-    [[bar.default.capsule_group]]
-    accordion = false
-    accordion_direction = "end"
-    enabled = true
-    fill = "surface_variant"
-    id = "g6"
-    members = [ "widget_2", "notifications" ]
     opacity = 1.0
     padding = 6.0
 
@@ -344,38 +334,8 @@ orientation = "vertical"
 position_vertical = "center_right"
 scale = 0.90000000596046448
 
-[plugin_settings."davemhammer/tailscale"]
-notify_on_peer_change = false
-
-[plugin_settings."goatnath/spotify-lyrics"]
-lyrics-panel_placement = "attached"
-
-[plugin_settings."h465855hgg/lyrics"]
-lyrics_sources = [ "spotify", "lrclib", "netease", "splayer", "qqmusic", "kugou", "qishui", "apple_music", "musixmatch" ]
-translation_language = "zh-Hant"
-
-[plugin_settings."noctalia/translator"]
-target_lang = "en"
-
-[plugin_settings."nzlov/daily-wallpaper"]
-source = "nasa"
-
-[plugin_settings."yuuto/arch-updater"]
-auto_check_hours = 1
-notify_on_updates = false
-show_activity_graph = true
-
 [plugins]
-enabled = [
-    "lucasoe/proton-pass",
-    "noctalia/timer",
-    "nightwatch75/todo",
-    "ramosdetrigo/godot-provider",
-    "oldirtty/color_picker",
-    "yuuto/arch-updater",
-    "rylos/tailnet",
-    "rylos/syncthing"
-]
+enabled = [ "lucasoe/proton-pass", "noctalia/timer", "oldirtty/color_picker", "rylos/tailnet", "rylos/syncthing" ]
 
 [shell]
 avatar_path = "/home/mono/.avatar.webp"
@@ -520,9 +480,6 @@ capsule = true
 [widget.sysmon.actions]
 right = "exec missioncenter"
 
-[widget.todo]
-type = "nightwatch75/todo:todo"
-
 [widget.tray]
 drawer = true
 drawer_columns = 5
@@ -533,10 +490,6 @@ show_condition = false
 
 [widget.widget]
 type = "oldirtty/color_picker:widget"
-
-[widget.widget_2]
-hide_on_empty = true
-type = "yuuto/arch-updater:widget"
 
 [widget.workspaces]
 hide_when_empty = true

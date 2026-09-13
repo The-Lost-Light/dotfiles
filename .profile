@@ -4,7 +4,6 @@ export PATH="$HOME/.local/bin:$HOME/.cargo/bin:$PATH"
 # Desktop
 export LANG="zh_TW.UTF-8"
 export ELECTRON_OZONE_PLATFORM_HINT="auto"
-export ZED_WINDOW_DECORATIONS="server"
 export QT_QPA_PLATFORMTHEME="qt6ct"
 export XCURSOR_THEME="Bibata-Modern-Ice"
 export PROTON_ENABLE_WAYLAND=1

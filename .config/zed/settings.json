@@ -85,8 +85,7 @@
   },
   "agent_servers": { "antigravity-acp": { "type": "registry" } },
   "edit_predictions": {
-    "provider": "zed",
-    "mode": "subtle",
+    "provider": "copilot",
     "copilot": {
       "proxy": null,
       "proxy_no_verify": null,

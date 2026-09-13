@@ -9,10 +9,6 @@ AddPackage --foreign better-commits # A CLI for creating better commits followin
 AddPackage helix # A post-modern modal text editor
 AddPackage zed # A high-performance, multiplayer code editor from the creators of Atom and Tree-sitter
 
-# AI
-AddPackage --foreign antigravity-cli # Google's agentic development platform (CLI companion)
-AddPackage --foreign antigravity # Google Antigravity 2.0 multi-agent orchestration platform
-
 # Tool
 AddPackage ccache # Compiler cache that speeds up recompilation by caching previous compilations
 AddPackage cloc # Count lines of code

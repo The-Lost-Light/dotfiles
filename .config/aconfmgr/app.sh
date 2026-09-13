@@ -40,6 +40,7 @@ AddPackage spotify-launcher # Client for spotify's apt repository in Rust for Ar
 AddPackage --foreign spicetify-cli # Command-line tool to customize Spotify client
 AddPackage --foreign spicetify-marketplace-bin # Spicetify app that integrates a marketplace for extensions, themes and snippets
 CopyFile /etc/pacman.d/hooks/spicetify.hook
+AddPackage --foreign sonora-bin # A native music streaming client, built with Rust and GPUI
 AddPackage --foreign pano-scrobbler-bin # Feature rich scrobbler. Supports Last.fm, ListenBrainz, Libre.fm & Pleroma. With regex edits, charts & Discord Rich Presence on PC.
 
 # Video
