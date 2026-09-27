@@ -49,9 +49,6 @@ AddPackage mpv # a free, open source, and cross-platform media player
 AddPackage --foreign frame-bin # FFmpeg GUI media conversion utility (binary release)
 AddPackage --foreign kazumi-bin # 基于自定义规则的番剧采集APP，支持流媒体在线观看，支持弹幕
 
-# Screen Record
-AddPackage kooha # Elegantly record your screen
-
 # Remote Desktop
 AddPackage --foreign rustdesk-bin # Yet another remote desktop software, written in Rust. Works out of the box, no configuration required.
 

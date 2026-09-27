@@ -22,9 +22,6 @@ AddPackage godot # Advanced cross-platform 2D and 3D game engine
 # Flutter
 AddPackage fvm # Flutter Version Management: A simple CLI to manage Flutter SDK versions.
 
-# Java
-AddPackage jdk-openjdk # OpenJDK Java development kit
-
 # Python
 AddPackage uv # An extremely fast Python package installer and resolver written in Rust
 AddPackage tk # A windowing toolkit for use with tcl
