@@ -11,9 +11,6 @@ AddPackage noctalia-greeter # Minimal greetd login greeter with a bundled wlroot
 CopyFile /etc/greetd/config.toml
 CopyFile /etc/pam.d/greetd
 
-# AD block
-AddPackage --foreign adguard-cli-bin # Surf the Web ad-free and safely. Shields up
-
 # XDG Desktop
 AddPackage dex # Program to generate and execute DesktopEntry files of type Application
 AddPackage handlr-regex # Powerful alternative to xdg-utils written in Rust

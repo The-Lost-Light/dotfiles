@@ -57,6 +57,7 @@ AddPackage ddcutil # Query and change Linux monitor settings using DDC/CI and US
 # Network
 AddPackage networkmanager # Network connection manager and user applications
 CopyFile /etc/NetworkManager/conf.d/wifi-powersave.conf
+AddPackage aria2 # Download utility that supports HTTP(S), FTP, BitTorrent, and Metalink
 # Bluetooth
 AddPackage bluez # Daemons for the bluetooth protocol stack
 CopyFile /etc/bluetooth/main.conf

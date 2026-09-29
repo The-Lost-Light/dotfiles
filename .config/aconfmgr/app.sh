@@ -70,6 +70,7 @@ AddPackage steam # Valve's digital software delivery system
 AddPackage gamescope # SteamOS session compositing window manager
 AddPackage proton-cachyos-slr # A compatibility tool for Steam Play based on Wine and additional components, experimental branch with extra CachyOS flavour (Steam Linux Runtime build)
 AddPackage --foreign proton-ge-custom-bin # A fancy custom distribution of Valves Proton with various patches
+AddPackage --foreign proton-wineland # An unofficial fork of proton-cachyos with further improvements and wayland enhancements
 AddPackage protontricks # Run Winetricks commands for Steam Play/Proton games among other common Wine features
 AddPackage --foreign adwsteamgtk # A simple Gtk wrapper for Adwaita-for-Steam
 AddPackage xpadneo-dkms # Advanced Linux Driver for Xbox One Wireless Gamepad
