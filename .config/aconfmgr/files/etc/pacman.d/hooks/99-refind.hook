@@ -7,4 +7,4 @@ Target = usr/lib/modules/*/vmlinuz
 [Action]
 Description = Updating rEFInd kernel timestamp...
 When = PostTransaction
-Exec = touch -c /boot/vmlinuz-linux-cachyos
+Exec = sudo touch -c /boot/vmlinuz-linux-cachyos

@@ -15,10 +15,6 @@ export VDPAU_DRIVER="nvidia"
 # Vulkan
 export MESA_VK_DEVICE_SELECT="0x1002:0x1636"
 
-# CUDA
-export NVD_GPU="0"
-export XLA_FLAGS="--xla_gpu_cuda_data_dir=/opt/cuda"
-
 # Fcitx5
 export XMODIFIERS="@im=fcitx"
 export QT_IM_MODULES="wayland;fcitx;ibus"
