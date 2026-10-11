@@ -69,8 +69,7 @@ AddPackage --foreign glfw-wayland-minecraft-cursorfix # A free, open source, por
 AddPackage steam # Valve's digital software delivery system
 AddPackage gamescope # SteamOS session compositing window manager
 AddPackage proton-cachyos-slr # A compatibility tool for Steam Play based on Wine and additional components, experimental branch with extra CachyOS flavour (Steam Linux Runtime build)
-AddPackage --foreign proton-ge-custom-bin # A fancy custom distribution of Valves Proton with various patches
-AddPackage --foreign proton-wineland # An unofficial fork of proton-cachyos with further improvements and wayland enhancements
+AddPackage --foreign proton-wineland-bin # An unofficial fork of proton-cachyos with further improvements and wayland enhancements
 AddPackage protontricks # Run Winetricks commands for Steam Play/Proton games among other common Wine features
 AddPackage --foreign adwsteamgtk # A simple Gtk wrapper for Adwaita-for-Steam
 AddPackage xpadneo-dkms # Advanced Linux Driver for Xbox One Wireless Gamepad
@@ -86,8 +85,8 @@ AddPackage baidupcs-go # Terminal utility for Baidu Network Disk
 AddPackage localsend # An open source cross-platform alternative to AirDrop
 AddPackage syncthing # Open Source Continuous Replication / Cluster Synchronization Thing
 AddPackage yt-dlp # A youtube-dl fork with additional features and fixes
-AddPackage --foreign gopeed-bin # High speed downloader that supports all platforms.(Prebuilt version)
 AddPackage --foreign megatools # CLI for MEGA
+AddPackage --foreign rayburst-bin # Redefining the open-source download manager.
 
 # Record
 AddPackage obs-studio # Free, open source software for live streaming and recording
