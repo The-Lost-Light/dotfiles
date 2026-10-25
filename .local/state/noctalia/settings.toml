@@ -1,4 +1,4 @@
-config_version = 14
+config_version = 15
 
 [audio]
 enable_sounds = true
@@ -220,6 +220,7 @@ auto_locate = true
 
 [lockscreen]
 blurred_desktop = true
+grace_period_seconds = 10
 
 [lockscreen_widgets]
 enabled = true
@@ -351,7 +352,9 @@ telemetry_enabled = true
 
     [shell.launcher]
     app_grid = true
-    pinned = [ "dev.zed.Zed", "AppFlowy", "org.godotengine.Godot", "spotify-launcher", "steam" ]
+    category_icons_only = true
+    layout = "simple"
+    pinned = [ "dev.zed.Zed", "AppFlowy", "org.godotengine.Godot", "spotify-launcher", "grimoire" ]
     show_app_actions = true
 
         [shell.launcher.providers.emoji]
@@ -466,6 +469,8 @@ display = "full"
 [widget.media]
 art_size = 96
 hide_when_no_media = true
+show_progress = true
+title_scroll = "on_hover"
 
 [widget.network]
 show_label = false
@@ -482,7 +487,7 @@ right = "exec missioncenter"
 [widget.tray]
 drawer = true
 drawer_columns = 5
-pinned = [ "Fcitx", "Vesktop" ]
+pinned = [ "Fcitx", "Vesktop", "steam" ]
 
 [widget.weather]
 show_condition = false

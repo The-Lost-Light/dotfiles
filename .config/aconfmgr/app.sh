@@ -73,7 +73,8 @@ AddPackage --foreign proton-wineland-bin # An unofficial fork of proton-cachyos 
 AddPackage protontricks # Run Winetricks commands for Steam Play/Proton games among other common Wine features
 AddPackage --foreign adwsteamgtk # A simple Gtk wrapper for Adwaita-for-Steam
 AddPackage xpadneo-dkms # Advanced Linux Driver for Xbox One Wireless Gamepad
-AddPackage --foreign deadlock-modmanager-bin # A mod manager for the Valve game Deadlock (binary)
+AddPackage --foreign deadlock-server-picker # A native Linux tool to block/unblock Deadlock game server relays using iptables
+AddPackage --foreign grimoire-bin # Mod manager and companion tool for Deadlock (GameBanana browser, hero locker, crosshair designer)
 AddPackage --foreign osu-lazer-bin # The future of osu! and the beginning of an open era! Commonly known by the codename osu!lazer. Pew pew.
 
 # System Monitor

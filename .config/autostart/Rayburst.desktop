@@ -2,7 +2,6 @@
 Type=Application
 Version=1.0
 Name=Rayburst
-Comment=Rayburststartup script
-Exec=/usr/bin/rayburst --autostart
+Exec=/usr/lib/Rayburst/bin/rayburst --autostart
 StartupNotify=false
 Terminal=false
