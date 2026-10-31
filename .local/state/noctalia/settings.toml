@@ -1,4 +1,4 @@
-config_version = 15
+config_version = 16
 
 [audio]
 enable_sounds = true
@@ -21,7 +21,7 @@ start = [ "group:g3", "group:g5" ]
     accordion = true
     accordion_direction = "end"
     enabled = true
-    fill = "surface_variant"
+    fill = "surface_container"
     id = "g2"
     members = [ "session", "clipboard", "bar", "widget" ]
     opacity = 1.0
@@ -31,7 +31,7 @@ start = [ "group:g3", "group:g5" ]
     accordion = true
     accordion_direction = "end"
     enabled = true
-    fill = "surface_variant"
+    fill = "surface_container"
     id = "g3"
     members = [ "workspaces", "active_window" ]
     opacity = 1.0
@@ -41,7 +41,7 @@ start = [ "group:g3", "group:g5" ]
     accordion = true
     accordion_direction = "start"
     enabled = true
-    fill = "surface_variant"
+    fill = "surface_container"
     id = "g4"
     members = [ "sysmon", "bar_2" ]
     opacity = 1.0
@@ -51,7 +51,7 @@ start = [ "group:g3", "group:g5" ]
     accordion = false
     accordion_direction = "end"
     enabled = true
-    fill = "surface_variant"
+    fill = "surface_container"
     id = "g1"
     members = [ "network", "bluetooth", "volume", "battery", "privacy" ]
     opacity = 1.0
@@ -61,7 +61,7 @@ start = [ "group:g3", "group:g5" ]
     accordion = false
     accordion_direction = "end"
     enabled = true
-    fill = "surface_variant"
+    fill = "surface_container"
     id = "g5"
     members = [ "audio_visualizer", "media" ]
     opacity = 1.0
@@ -82,6 +82,24 @@ sidebar = "full"
 
     [control_center.calendar]
     show_week_numbers = true
+
+    [[control_center.shortcuts]]
+    type = "wifi"
+
+    [[control_center.shortcuts]]
+    type = "bluetooth"
+
+    [[control_center.shortcuts]]
+    type = "caffeine"
+
+    [[control_center.shortcuts]]
+    type = "notification"
+
+    [[control_center.shortcuts]]
+    type = "power_profile"
+
+    [[control_center.shortcuts]]
+    type = "clipboard"
 
 [desktop_widgets]
 schema_version = 2
@@ -341,6 +359,7 @@ enabled = [ "lucasoe/proton-pass", "noctalia/timer", "oldirtty/color_picker", "r
 avatar_path = "/home/mono/.avatar.webp"
 clipboard_confirm_clear_history = false
 external_ip_enabled = true
+niri_overview_close_on_launch_enabled = true
 polkit_agent = true
 screen_time_enabled = true
 settings_show_advanced = true
@@ -464,7 +483,7 @@ anchor = true
 tooltip_format = "{:%Y/%m/%d}"
 
 [widget.keyboard_layout]
-display = "full"
+hide_when_single_layout = true
 
 [widget.media]
 art_size = 96
@@ -487,7 +506,7 @@ right = "exec missioncenter"
 [widget.tray]
 drawer = true
 drawer_columns = 5
-pinned = [ "Fcitx", "Vesktop", "steam" ]
+pinned = [ "Vesktop", "steam" ]
 
 [widget.weather]
 show_condition = false

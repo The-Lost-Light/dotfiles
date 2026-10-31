@@ -20,7 +20,6 @@ AddPackage foliate # A simple and modern GTK eBook reader
 AddPackage papers # Document viewer for PDF and other document formats aimed at the GNOME desktop
 
 # Documents
-AddPackage errands # Todo application for those who prefer simplicity
 AddPackage --foreign appflowy-bin # AppFlowy is an open-source alternative to Notion. You are in charge of your data and customizations.
 AddPackage --foreign collabora-office-bin # Collabora Office - Qt6 desktop document editor powered by Collabora Online
 
@@ -40,7 +39,6 @@ AddPackage spotify-launcher # Client for spotify's apt repository in Rust for Ar
 AddPackage --foreign spicetify-cli # Command-line tool to customize Spotify client
 AddPackage --foreign spicetify-marketplace-bin # Spicetify app that integrates a marketplace for extensions, themes and snippets
 CopyFile /etc/pacman.d/hooks/spicetify.hook
-AddPackage --foreign sonora-bin # A native music streaming client, built with Rust and GPUI
 AddPackage --foreign pano-scrobbler-bin # Feature rich scrobbler. Supports Last.fm, ListenBrainz, Libre.fm & Pleroma. With regex edits, charts & Discord Rich Presence on PC.
 
 # Video
@@ -75,6 +73,7 @@ AddPackage --foreign adwsteamgtk # A simple Gtk wrapper for Adwaita-for-Steam
 AddPackage xpadneo-dkms # Advanced Linux Driver for Xbox One Wireless Gamepad
 AddPackage --foreign deadlock-server-picker # A native Linux tool to block/unblock Deadlock game server relays using iptables
 AddPackage --foreign grimoire-bin # Mod manager and companion tool for Deadlock (GameBanana browser, hero locker, crosshair designer)
+AddPackage --foreign statlocker-companion # Native Linux companion app for Statlocker and Deadlock
 AddPackage --foreign osu-lazer-bin # The future of osu! and the beginning of an open era! Commonly known by the codename osu!lazer. Pew pew.
 
 # System Monitor

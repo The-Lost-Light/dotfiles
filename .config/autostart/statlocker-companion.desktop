@@ -3,6 +3,6 @@ Type=Application
 Version=1.0
 Name=statlocker-companion
 Comment=statlocker-companionstartup script
-Exec=/home/mono/.local/bin/statlocker-companion_amd64.AppImage --hidden
+Exec=/usr/lib/statlocker-companion/statlocker-companion.AppImage --hidden
 StartupNotify=false
 Terminal=false
