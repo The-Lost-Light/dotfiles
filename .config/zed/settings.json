@@ -66,6 +66,7 @@
   },
   // Version Control
   "git": {
+    "auto_fetch": { "enabled": true },
     "inline_blame": { "location": "status_bar", "show_commit_summary": true },
     "path_style": "file_path_first",
   },

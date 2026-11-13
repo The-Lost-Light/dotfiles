@@ -24,6 +24,7 @@ CopyFile /etc/sudoers.d/wheel 640
 CopyFile /etc/vconsole.conf
 
 # Systemd
+SetFileProperty / mode 555
 AddPackage isd # TUI for systemd
 
 # File System
