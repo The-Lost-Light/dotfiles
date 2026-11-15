@@ -1,4 +1,4 @@
-config_version = 16
+config_version = 20
 
 [audio]
 enable_sounds = true
@@ -20,6 +20,7 @@ start = [ "group:g3", "group:g5" ]
     [[bar.default.capsule_group]]
     accordion = true
     accordion_direction = "end"
+    border_width = 1.0
     enabled = true
     fill = "surface_container"
     id = "g2"
@@ -30,6 +31,7 @@ start = [ "group:g3", "group:g5" ]
     [[bar.default.capsule_group]]
     accordion = true
     accordion_direction = "end"
+    border_width = 1.0
     enabled = true
     fill = "surface_container"
     id = "g3"
@@ -40,6 +42,7 @@ start = [ "group:g3", "group:g5" ]
     [[bar.default.capsule_group]]
     accordion = true
     accordion_direction = "start"
+    border_width = 1.0
     enabled = true
     fill = "surface_container"
     id = "g4"
@@ -50,20 +53,22 @@ start = [ "group:g3", "group:g5" ]
     [[bar.default.capsule_group]]
     accordion = false
     accordion_direction = "end"
+    border_width = 1.0
     enabled = true
     fill = "surface_container"
     id = "g1"
-    members = [ "network", "bluetooth", "volume", "battery", "privacy" ]
+    members = [ "network", "bluetooth", "output_volume", "input_volume", "battery", "privacy" ]
     opacity = 1.0
     padding = 6.0
 
     [[bar.default.capsule_group]]
     accordion = false
     accordion_direction = "end"
+    border_width = 1.0
     enabled = true
     fill = "surface_container"
     id = "g5"
-    members = [ "audio_visualizer", "media" ]
+    members = [ "media", "audio_visualizer" ]
     opacity = 1.0
     padding = 6.0
 
@@ -207,6 +212,7 @@ widget_order = [
 
 [dock]
 enabled = true
+icon_shadow = true
 icon_size = 36
 launcher_icon = "rocket"
 launcher_position = "start"
@@ -345,6 +351,7 @@ enabled = true
 [notification]
 history_retention_hours = 24
 layer = "overlay"
+newest_on_edge = true
 
 [osd]
 background_opacity = 0.4999999888241291
@@ -472,8 +479,13 @@ type = "noctalia/timer:bar"
 [widget.bar_2]
 type = "rylos/tailnet:bar"
 
+[widget.battery]
+peek = true
+
 [widget.bluetooth]
 hide_when_no_connected_device = true
+peek = true
+show_label = true
 
 [widget.cat]
 type = "noctalia/bongocat:cat"
@@ -481,6 +493,9 @@ type = "noctalia/bongocat:cat"
 [widget.clock]
 anchor = true
 tooltip_format = "{:%Y/%m/%d}"
+
+[widget.input_volume]
+peek = true
 
 [widget.keyboard_layout]
 hide_when_single_layout = true
@@ -492,7 +507,11 @@ show_progress = true
 title_scroll = "on_hover"
 
 [widget.network]
-show_label = false
+peek = true
+show_vpn_label = true
+
+[widget.output_volume]
+peek = true
 
 [widget.privacy]
 hide_inactive = true
@@ -506,9 +525,11 @@ right = "exec missioncenter"
 [widget.tray]
 drawer = true
 drawer_columns = 5
+glyph_position = "after"
 pinned = [ "Vesktop", "steam" ]
 
 [widget.weather]
+peek = true
 show_condition = false
 
 [widget.widget]
